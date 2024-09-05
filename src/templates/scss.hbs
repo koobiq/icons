@@ -1,0 +1,35 @@
+@font-face {
+font-family: "Koobiq Icons";
+font-weight:normal;
+font-style:normal;
+src: {{{ fontSrc }}};
+}
+
+.kbq {
+font-family: "Koobiq Icons";
+display:inline-block;
+vertical-align:middle;
+line-height:1;
+font-weight:normal;
+font-style:normal;
+speak:none;
+text-decoration:inherit;
+text-transform:none;
+text-rendering:auto;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+transform:rotate(0.001deg);
+}
+
+/*---------------------
+*  Icons
+*-------------------*/
+
+{{# each codepoints }}
+    .{{ ../prefix }}-{{ @key }} {
+        font-size: {{ splitFontSize @key }}px;
+        &:before {
+            content: "\\{{ codepoint this }}";
+        }
+    }
+{{/ each }}
