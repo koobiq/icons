@@ -1,3 +1,9 @@
+## 8.0.1 (2024-09-05)
+
+### Icons
+
+ * bug fix  added pr templates 2105502
+
 # 8.0.0 (2024-09-05)
 
 ### Icons
