@@ -1,3 +1,9 @@
+## 8.0.2 (2024-09-05)
+
+### Icons
+
+ * bug fix  updated empty state images 2911025
+
 ## 8.0.1 (2024-09-05)
 
 ### Icons
