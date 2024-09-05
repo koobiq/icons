@@ -18,4 +18,4 @@ jobs:
         uses: ./.github/workflows/actions/setup-yarn
 
       - name: Build packages
-        uses: yarn run build
+        run: yarn run build
