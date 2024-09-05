@@ -18,7 +18,12 @@ if (!fs.existsSync('dist/icons/svg')) {
     fs.mkdirSync('dist/icons/svg');
 }
 
+if (!fs.existsSync('dist/icons/images')) {
+    fs.mkdirSync('dist/icons/images');
+}
+
 fsExtra.copySync('./src/svg', 'dist/icons/svg');
+fsExtra.copySync('./src/images', 'dist/icons/images');
 
 import mapping from '../mapping.json' assert { type: 'json' };
 import packageJSON from '../package.json' assert { type: 'json' };
