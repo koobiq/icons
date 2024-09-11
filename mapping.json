@@ -2816,5 +2816,9 @@
     "xmark-circle-s_16": {
         "codepoint": "0xF7EF",
         "tags": ""
-    }
+    },
+    "test-roma": {
+        "codepoint": "0xF7F0",
+        "tags": ["тест", "рома"]
+    } 
 }
