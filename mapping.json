@@ -2413,7 +2413,7 @@
         "description": "",
         "tags": ["add", "directory", "директория", "добавить", "папка"]
     },
-    "forward-end_16": {
+    "forward_16": {
         "codepoint": "0xF79A",
         "description": "",
         "tags": ["next", "далее", "дальше", "конец", "следующий"]
