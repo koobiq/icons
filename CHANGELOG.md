@@ -1,9 +1,3 @@
-# 9.0.0 "roma test" (2024-09-11)
-
-### Icons
-
- * feature  test commit for stas demo d5b5c43
-
 ## 8.0.2 (2024-09-05)
 
 ### Icons
