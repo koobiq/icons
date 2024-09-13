@@ -38,7 +38,6 @@ Massive rename company and 4 new icons
 * file-badge-arrow-through-line_16 -> file-badge-arrow-through-line-o_16
 * file-badge-ban_16 -> file-badge-ban-o_16
 * file-badge-ban_24 -> file-badge-ban-o_24
-* file-badge-plus_16 -> file-badge-plus-o_16
 * file-code_16 -> file-code-o_16
 * file-cut_16 -> file-cut-o_16
 * file-doc_48 -> file-doc-o_48
