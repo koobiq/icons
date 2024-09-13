@@ -1,3 +1,71 @@
+## 9.0.0 (2024-09-13)
+
+Massive rename company and 4 new icons 
+
+### Added
+* bucket-s3_16
+* chart-index_16
+* magnifying-glass-badge-sparkles_16
+* sparkles_16
+
+### Renamed
+
+🚨 Warning: breaking changes!
+* bars-horizontal_16 -> bars-bold-horizontal_16
+* bolt_32 -> bolt-o_32
+* chart-bar_24 -> chart-bar-horizontal_24
+* chart-bar_32 -> chart-bar-horizontal_32
+* chart-bar_48 -> chart-bar-horizontal_48
+* chart-stacked-bar_24 -> chart-stacked-bar-horizontal_24
+* chevron-down-m_32 -> chevron-down_32
+* chevron-left-m_32 -> chevron-left_32
+* chevron-right-m_32 -> chevron-right_32
+* chevron-up-m_32 -> chevron-up_32
+* circle-6_16 -> circle-xs_16
+* cloud-arrow-down_32 -> cloud-arrow-down-o_32
+* cloud-arrow-up_24 -> cloud-arrow-up-o_24
+* cloud-arrow-up_64 -> cloud-arrow-up-o_64
+* cloud-badge-globe_16 -> cloud-badge-globe-o_16
+* cloud-badge-globe_24 -> cloud-badge-globe-o_24
+* dashboard_32 -> dashboard-o_32
+* dns-domain_16 -> globe-on-line_16
+* dots_16 -> grid-dots_16
+* file_16 -> file-o_16
+* file_24 -> file-o_24
+* file-archive_16 -> file-archive-o_16
+* file-arrow-left_16 -> file-badge-arrow-left-o_16
+* file-badge-arrow-right_16 -> file-badge-arrow-right-o_16
+* file-badge-arrow-through-line_16 -> file-badge-arrow-through-line-o_16
+* file-badge-ban_16 -> file-badge-ban-o_16
+* file-badge-ban_24 -> file-badge-ban-o_24
+* file-badge-plus_16 -> file-badge-plus-o_16
+* file-code_16 -> file-code-o_16
+* file-cut_16 -> file-cut-o_16
+* file-doc_48 -> file-doc-o_48
+* file-exclamation_16 0-> file-exclamation-o_16
+* file-horizontal_16 -> file-horizontal-o_16
+* file-multiple_16 -> file-multiple-o_16
+* file-pdf_48 -> file-pdf-o_48
+* file-report_alt_16 -> file-badge-arrow-turn-right_16
+* file-shared_16 -> file-shared-o_16
+* file-text_16 -> file-text-o_16
+* folder_32 -> folder-o_32
+* forward-end_16 -> forward-step_16
+* forward-step_16 -> forward_16
+* hamburger-menu_16 -> bars-horizontal_16
+* hamburger-menu_32 -> bars-horizontal_32
+* link-slash_16 -> link-broken_16
+* network-device-dots-o_24 -> network-device-dots_24
+* shield-exclamationmark_16 -> shield-exclamation_16
+* siem-vulner-level-critical_16 -> rectangle-triangle-vertical-thin_16
+* siem-vulner-level-high_16 -> rectangle-vertical-thin_16
+* siem-vulner-level-low_16 -> rectangle-vertical-thin-o_16
+* siem-vulner-level-medium_16 -> rectangle-vertical-thin-half_16
+* siem-vulner-level-not-defined_16 -> rectangle-vertical-thin-lines_16
+* theme-mode_16 -> sun-moon_16
+* tile_16 -> grid-squares_16
+* wire_16 -> cable_16
+
 ## 8.0.2 (2024-09-05)
 
 ### Icons

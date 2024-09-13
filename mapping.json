@@ -291,7 +291,7 @@
         "description": "",
         "tags": ["export", "экспорт"]
     },
-    "file-exclamation_16": {
+    "file-exclamation-o_16": {
         "codepoint": "0xF558",
         "description": "",
         "tags": ["document", "errors", "report", "восклицание", "документ", "отчет", "ошибка"]
@@ -424,13 +424,14 @@
         "codepoint": "0xF57B",
         "tags": ["reverse", "отмена"]
     },
-    "link-slash_16": {
+    "link-broken_16": {
         "codepoint": "0xF57C",
         "description": "",
         "tags": ["disconnect", "unchain", "unlink", "линия", "разъединить", "ссылка"]
     },
-    "cloud-arrow-down_32": {
+    "cloud-arrow-down-o_32": {
         "codepoint": "0xF57D",
+        "description": "",
         "tags": ""
     },
     "circle-half_16": {
@@ -452,7 +453,7 @@
         "codepoint": "0xF585",
         "tags": ""
     },
-    "chart-bar_24": {
+    "chart-bar-horizontal_24": {
         "codepoint": "0xF586",
         "tags": ""
     },
@@ -468,8 +469,9 @@
         "codepoint": "0xF58B",
         "tags": ""
     },
-    "chart-stacked-bar_24": {
+    "chart-stacked-bar-horizontal_24": {
         "codepoint": "0xF58C",
+        "description": "",
         "tags": ""
     },
     "speaker_16": {
@@ -601,12 +603,12 @@
         "description": "",
         "tags": ["presence", "наличие", "существовать"]
     },
-    "file-archive_16": {
+    "file-archive-o_16": {
         "codepoint": "0xF5AA",
         "description": "",
         "tags": ["document", "архив", "документ", "файл"]
     },
-    "file_16": {
+    "file-o_16": {
         "codepoint": "0xF5AB",
         "description": "",
         "tags": ["document", "empty", "orientation", "portrait", "документ", "ориентация", "портретная", "пустой", "файл"]
@@ -624,12 +626,14 @@
         "codepoint": "0xF5AE",
         "tags": [""]
     },
-    "folder_32": {
+    "folder-o_32": {
         "codepoint": "0xF5AF",
+        "description": "",
         "tags": ""
     },
-    "hamburger-menu_32": {
+    "bars-horizontal_32": {
         "codepoint": "0xF5B0",
+        "description": "",
         "tags": ""
     },
     "sliders_32": {
@@ -646,8 +650,9 @@
         "description": "",
         "tags": ["exchange", "swap", "обмен", "стрелки"]
     },
-    "dashboard_32": {
+    "dashboard-o_32": {
         "codepoint": "0xF5B5",
+        "description": "",
         "tags": ""
     },
     "flowchart_16": {
@@ -680,7 +685,7 @@
         "description": "",
         "tags": ["large", "shape", "большой", "круг", "форма"]
     },
-    "file-code_16": {
+    "file-code-o_16": {
         "codepoint": "0xF5C2",
         "description": "",
         "tags": ["document", "документ", "код", "файл"]
@@ -813,15 +818,16 @@
         "description": "",
         "tags": ["collect", "data", "gather", "данные", "сбор", "собирать"]
     },
-    "chevron-right-m_32": {
+    "chevron-right_32": {
         "codepoint": "0xF5E7",
+        "description": "",
         "tags": ""
     },
     "bell_32": {
         "codepoint": "0xF5E8",
         "tags": ""
     },
-    "hamburger-menu_16": {
+    "bars-horizontal_16": {
         "codepoint": "0xF5EA",
         "description": "",
         "tags": ["bars", "гамбургер", "меню"]
@@ -834,7 +840,7 @@
         "codepoint": "0xF5ED",
         "tags": ""
     },
-    "chart-bar_32": {
+    "chart-bar-horizontal_32": {
         "codepoint": "0xF5F0",
         "tags": ""
     },
@@ -896,20 +902,24 @@
         "description": "",
         "tags": ["barrier", "security", "барьер", "безопасность", "забор"]
     },
-    "chevron-down-m_32": {
+    "chevron-down_32": {
         "codepoint": "0xF5FE",
+        "description": "",
         "tags": ""
     },
-    "chevron-left-m_32": {
+    "chevron-left_32": {
         "codepoint": "0xF5FF",
+        "description": "",
         "tags": ""
     },
-    "chevron-up-m_32": {
+    "chevron-up_32": {
         "codepoint": "0xF600",
+        "description": "",
         "tags": ""
     },
-    "bolt_32": {
+    "bolt-o_32": {
         "codepoint": "0xF601",
+        "description": "",
         "tags": ""
     },
     "list_32": {
@@ -965,7 +975,7 @@
         "description": "",
         "tags": ["tool", "гаечный ключ", "инструмент"]
     },
-    "file-cut_16": {
+    "file-cut-o_16": {
         "codepoint": "0xF610",
         "description": "",
         "tags": ["document", "unfinished", "вырезать", "документ", "незакончен", "файл"]
@@ -980,7 +990,7 @@
         "description": "",
         "tags": ["box", "open", "package", "коробка", "открыть", "упаковка"]
     },
-    "file-multiple_16": {
+    "file-multiple-o_16": {
         "codepoint": "0xF613",
         "description": "",
         "tags": ["documents", "empty", "files", "документы", "несколько", "пустой", "файлы"]
@@ -990,11 +1000,11 @@
         "description": "",
         "tags": ["to-do", "дела", "задачи"]
     },
-    "file-pdf_48": {
+    "file-pdf-o_48": {
         "codepoint": "0xF615",
         "tags": ""
     },
-    "file-doc_48": {
+    "file-doc-o_48": {
         "codepoint": "0xF616",
         "tags": ""
     },
@@ -1029,27 +1039,27 @@
         "codepoint": "0xF621",
         "tags": ""
     },
-    "siem-vulner-level-critical_16": {
+    "rectangle-triangle-vertical-thin_16": {
         "codepoint": "0xF629",
         "description": "",
         "tags": ["critical", "security", "vulnerability", "безопасность", "уровень уязвимости критический", "уязвимость"]
     },
-    "siem-vulner-level-high_16": {
+    "rectangle-vertical-thin_16": {
         "codepoint": "0xF62A",
         "description": "",
         "tags": ["high", "security", "vulnerability", "безопасность", "уровень уязвимости высокий", "уязвимость"]
     },
-    "siem-vulner-level-medium_16": {
+    "rectangle-vertical-thin-half_16": {
         "codepoint": "0xF62B",
         "description": "",
         "tags": ["medium", "security", "vulnerability", "безопасность", "уровень уязвимости средний", "уязвимость"]
     },
-    "siem-vulner-level-low_16": {
+    "rectangle-vertical-thin-o_16": {
         "codepoint": "0xF62C",
         "description": "",
         "tags": ["low", "security", "vulnerability", "безопасность", "уровень уязвимости низкий", "уязвимость"]
     },
-    "siem-vulner-level-not-defined_16": {
+    "rectangle-vertical-thin-lines_16": {
         "codepoint": "0xF62D",
         "description": "",
         "tags": ["security", "undefined", "vulnerability", "безопасность", "уровень уязвимости неопределенный", "уязвимость"]
@@ -1352,8 +1362,9 @@
         "codepoint": "0xF687",
         "tags": ["search", "поиск"]
     },
-    "theme-mode_16": {
+    "sun-moon_16": {
         "codepoint": "0xF688",
+        "description": "",
         "tags": ["режим", "тема"]
     },
     "file-lines_16": {
@@ -1394,7 +1405,7 @@
         "codepoint": "0xF693",
         "tags": ""
     },
-    "file_32": {
+    "file-o_32": {
         "codepoint": "0xF697",
         "tags": ""
     },
@@ -1526,7 +1537,7 @@
         "codepoint": "0xF6C5",
         "tags": ""
     },
-    "file-text_16": {
+    "file-text-o_16": {
         "codepoint": "0xF6C6",
         "description": "",
         "tags": ["document", "документ", "файл"]
@@ -1562,7 +1573,7 @@
         "codepoint": "0xF6CE",
         "tags": ""
     },
-    "file-multiple_24": {
+    "file-multiple-o_24": {
         "codepoint": "0xF6CF",
         "tags": ""
     },
@@ -1689,21 +1700,22 @@
         "description": "",
         "tags": ["small", "subtract", "вычесть", "круг", "маленький", "минус"]
     },
-    "file-badge-plus_16": {
+    "file-badge-plus-o_16": {
         "codepoint": "0xF6F1",
         "description": "",
         "tags": ["add", "create", "document", "new", "добавить", "документ", "новый", "создать"]
     },
-    "file-badge-ban_16": {
+    "file-badge-ban-o_16": {
         "codepoint": "0xF6F2",
         "description": "",
         "tags": ["blacklist", "document", "документ", "заблокирован", "запрет", "запрет", "значок", "файл", "черный список"]
     },
-    "file-badge-ban_24": {
+    "file-badge-ban-o_24": {
         "codepoint": "0xF6F3",
+        "description": "",
         "tags": ""
     },
-    "file-badge-arrow-through-line_16": {
+    "file-badge-arrow-through-line-o_16": {
         "codepoint": "0xF6F4",
         "description": "",
         "tags": ["whitelist", "белый список", "файл"]
@@ -1781,7 +1793,7 @@
         "description": "",
         "tags": ["active", "активная", "группа", "сетка", "точка"]
     },
-    "file-horizontal_16": {
+    "file-horizontal-o_16": {
         "codepoint": "0xF70C",
         "description": "",
         "tags": ["document", "landscape orientation", "альбомная ориентация", "горизонтальный", "документ"]
@@ -1800,7 +1812,7 @@
         "description": "",
         "tags": ["menu", "горизонтально", "меню", "многоточие"]
     },
-    "chart-bar_48": {
+    "chart-bar-horizontal_48": {
         "codepoint": "0xF711",
         "tags": ""
     },
@@ -1817,7 +1829,7 @@
         "codepoint": "0xF715",
         "tags": [""]
     },
-    "bars-horizontal_16": {
+    "bars-bold-horizontal_16": {
         "codepoint": "0xF717",
         "description": "",
         "tags": ["event", "pattern", "template", "образец", "событие", "шаблон"]
@@ -1836,12 +1848,12 @@
         "codepoint": "0xF71D",
         "tags": ""
     },
-    "file-arrow-left_16": {
+    "file-badge-arrow-left-o_16": {
         "codepoint": "0xF71E",
         "description": "",
         "tags": ["влево", "стрелка", "файл"]
     },
-    "file-badge-arrow-right_16": {
+    "file-badge-arrow-right-o_16": {
         "codepoint": "0xF71F",
         "description": "",
         "tags": ["вправо", "стрелка", "файл"]
@@ -2259,7 +2271,7 @@
         "description": "",
         "tags": ["expand", "развернуть", "расширить", "увеличить", "шевроны"]
     },
-    "circle-6_16": {
+    "circle-xs_16": {
         "codepoint": "0xF778",
         "description": "",
         "tags": ["number", "shape", "six", "круг", "форма", "шесть"]
@@ -2273,23 +2285,27 @@
         "codepoint": "0xF77A",
         "tags": ""
     },
-    "cloud-arrow-up_24": {
+    "cloud-arrow-up-o_24": {
         "codepoint": "0xF77B",
+        "description": "",
         "tags": ["upload-to-cloud"]
     },
-    "cloud-arrow-up_32": {
+    "cloud-arrow-up-o_32": {
         "codepoint": "0xF77C",
+        "description": "",
         "tags": ""
     },
-    "cloud-arrow-up_64": {
+    "cloud-arrow-up-o_64": {
         "codepoint": "0xF77D",
+        "description": "",
         "tags": ""
     },
-    "cloud-o-badge-globe_16": {
+    "cloud-badge-globe-o_16": {
         "codepoint": "0xF77E",
+        "description": "",
         "tags": ""
     },
-    "cloud-o-badge-globe_24": {
+    "cloud-badge-globe-o_24": {
         "codepoint": "0xF77F",
         "tags": ""
     },
@@ -2345,12 +2361,12 @@
         "description": "",
         "tags": ["hazard", "info", "level", "алмаз", "инфо", "информация", "опасность", "уровень"]
     },
-    "dns-domain_16": {
+    "globe-on-line_16": {
         "codepoint": "0xF78B",
         "description": "",
         "tags": ["dns", "network", "домен", "сеть"]
     },
-    "dots_16": {
+    "grid-dots_16": {
         "codepoint": "0xF78C",
         "description": "",
         "tags": ["markers", "points", "маркеры", "точки"]
@@ -2377,7 +2393,7 @@
         "codepoint": "0xF791",
         "tags": ""
     },
-    "file_24": {
+    "file-o_24": {
         "codepoint": "0xF792",
         "tags": ""
     },
@@ -2390,11 +2406,12 @@
         "description": "",
         "tags": ["data", "event", "raw", "событие", "сырые данные"]
     },
-    "file-report_alt_16": {
+    "file-badge-arrow-turn-right_16": {
         "codepoint": "0xF795",
+        "description": "",
         "tags": ""
     },
-    "file-shared_16": {
+    "file-shared-o_16": {
         "codepoint": "0xF796",
         "description": "",
         "tags": ["document", "share", "делиться", "файл"]
@@ -2413,12 +2430,12 @@
         "description": "",
         "tags": ["add", "directory", "директория", "добавить", "папка"]
     },
-    "forward-end_16": {
+    "forward-step_16": {
         "codepoint": "0xF79A",
         "description": "",
         "tags": ["next", "далее", "дальше", "конец", "следующий"]
     },
-    "forward-step_16": {
+    "forward_16": {
         "codepoint": "0xF79B",
         "description": "",
         "tags": ["next", "вперед", "следующий", "шаг"]
@@ -2564,7 +2581,7 @@
         "description": "",
         "tags": ["dark", "mode", "night", "луна", "мод", "ночь", "режим", "темный"]
     },
-    "network-device-dots-o_24": {
+    "network-device-dots_24": {
         "codepoint": "0xF7B9",
         "tags": [""]
     },
@@ -2639,8 +2656,9 @@
         "description": "",
         "tags": ["protection", "security", "безопасность", "защита", "рабочий стол", "щит"]
     },
-    "shield-exclamationmark_16": {
+    "shield-exclamation_16": {
         "codepoint": "0xF7C9",
+        "description": "",
         "tags": ""
     },
     "shield-o_16": {
@@ -2705,7 +2723,7 @@
         "description": "",
         "tags": ["like", "большой палец наверх", "вверх", "нравится"]
     },
-    "tile_16": {
+    "grid-squares_16": {
         "codepoint": "0xF7D7",
         "tags": ""
     },
@@ -2786,14 +2804,17 @@
     },
     "wifi-tethering_16": {
         "codepoint": "0xF7E8",
+        "description": "",
         "tags": ["тетеринг"]
     },
     "windows-arrow-rotate-left_16": {
         "codepoint": "0xF7E9",
+        "description": "",
         "tags": ""
     },
-    "wire_16": {
+    "cable_16": {
         "codepoint": "0xF7EA",
+        "description": "",
         "tags": ""
     },
     "workflow_16": {
@@ -2803,18 +2824,42 @@
     },
     "wrap-text_16": {
         "codepoint": "0xF7EC",
+        "description": "",
         "tags": ["обернуть", "текст"]
     },
     "wrap-text-slash_16": {
         "codepoint": "0xF7ED",
+        "description": "",
         "tags": ""
     },
     "xmark-circle_24": {
         "codepoint": "0xF7EE",
+        "description": "",
         "tags": ""
     },
     "xmark-circle-s_16": {
         "codepoint": "0xF7EF",
+        "description": "",
+        "tags": ""
+    },
+    "chart-index_16": {
+        "codepoint": "0xF7F0",
+        "description": "",
+        "tags": ["factoid", "number", "индекс", "фактоид", "число"]
+    },
+    "magnifying-glass-badge-sparkles_16": {
+        "codepoint": "0xF7F1",
+        "description": "",
+        "tags": ["ai", "search", "ии", "умный поиск"]
+    },
+    "sparkles_16": {
+        "codepoint": "0xF7F2",
+        "description": "",
+        "tags": ["ai", "star", "ии", "звезда"]
+    },
+     "bucket-s3_16": {
+        "codepoint": "0xF7F3",
+        "description": "",
         "tags": ""
     }
 }
