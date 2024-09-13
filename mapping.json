@@ -1700,7 +1700,7 @@
         "description": "",
         "tags": ["small", "subtract", "вычесть", "круг", "маленький", "минус"]
     },
-    "file-badge-plus-o_16": {
+    "file-plus-o_16": {
         "codepoint": "0xF6F1",
         "description": "",
         "tags": ["add", "create", "document", "new", "добавить", "документ", "новый", "создать"]
