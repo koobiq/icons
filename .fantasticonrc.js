@@ -9,7 +9,7 @@ if (!fs.existsSync('dist/icons/svg')) {
 const codepoints = {};
 
 Object.entries(mapping).forEach(([key, value]) => {
-    codepoints[key] = parseInt(value.code);
+    codepoints[key] = parseInt(value.codepoint);
 });
 
 if (!fs.existsSync('dist/icons/fonts')) {
