@@ -2861,5 +2861,50 @@
         "codepoint": "0xF7F3",
         "description": "",
         "tags": ""
+    },
+    "cloud-badge-key-o_16": {
+        "codepoint": "0xF7F4",
+        "description": "",
+        "tags": ["network", "vpn", "впн", "облако", "сеть"]
+    },
+    "cloud-badge-key-o_24": {
+        "codepoint": "0xF7F5",
+        "description": "",
+        "tags": ["network", "vpn", "впн", "облако", "сеть"]
+    },
+    "arrow-rotate-right_16": {
+        "codepoint": "0xF7F6",
+        "description": "",
+        "tags": ["reload", "перезагрузка"]
+    },
+    "chevrons-up-down-s_16": {
+        "codepoint": "0xF7F7",
+        "description": "",
+        "tags": ["expand", "small", "развернуть", "расширить", "увеличить", "шевроны"]
+    },
+    "chevrons-down-up-s_16": {
+        "codepoint": "0xF7F8",
+        "description": "",
+        "tags": ["collapse", "small", "развернуть", "расширить", "увеличить", "шевроны"]
+    },
+    "chevron-double-down-s_16": {
+        "codepoint": "0xF7F9",
+        "description": "",
+        "tags": ["small", "angle", "шеврон", "двойной", "вниз", "угол"]
+    },
+    "chevron-double-left-s_16": {
+        "codepoint": "0xF7FA",
+        "description": "",
+        "tags": ["small", "angle", "шеврон", "двойной", "влево", "угол"]
+    },
+    "chevron-double-right-s_16": {
+        "codepoint": "0xF7FB",
+        "description": "",
+        "tags": ["small", "angle", "шеврон", "двойной", "вправо", "угол"]
+    },
+    "chevron-double-up-s_16": {
+        "codepoint": "0xF7FC",
+        "description": "",
+        "tags": ["small", "angle", "шеврон", "двойной", "вверх", "угол"]
     }
 }
