@@ -1,3 +1,26 @@
+# 9.1.0 (2024-09-25)
+
+### Icons
+
+ * feature  added new icons 6-23 sept ([#DS-2902](https://github.com/koobiq/icons/issues/issue/DS-2902)) ([#4](https://github.com/koobiq/icons/issues/4)) 7d517b7
+
+**New Icons**
+arrow-rotate-right_16
+chevron-double-down-s_16
+chevron-double-left-s_16
+chevron-double-right-s_16
+chevron-double-up-s_16
+chevrons-down-up-s_16
+chevrons-up-down-s_16
+cloud-badge-key-o_16
+cloud-badge-key-o_24
+
+**Fixed Shape Size**
+chevron-down-s_16
+chevron-left-s_16
+chevron-right-s_16
+chevron-up-s_16
+
 # 9.0.0 (2024-09-13)
 
 ### Icons
