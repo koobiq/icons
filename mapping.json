@@ -2906,5 +2906,10 @@
         "codepoint": "0xF7FC",
         "description": "",
         "tags": ["small", "angle", "шеврон", "двойной", "вверх", "угол"]
+    },
+    "north-east_16": {
+        "codepoint": "0xF7FD",
+        "description": "External links",
+        "tags": ""
     }
 }
