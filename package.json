@@ -1,7 +1,6 @@
 {
     "name": "@koobiq/icons",
     "version": "9.2.0",
-    "fontVersion": "1.0",
     "description": "",
     "license": "MIT",
     "publishConfig": {

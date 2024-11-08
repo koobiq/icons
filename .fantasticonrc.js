@@ -39,7 +39,8 @@ module.exports = {
         ttf: {
             url: packageJSON.url,
             description: packageJSON.description,
-            version: packageJSON.fontVersion
+            // font version must contain only major and minor
+            version: packageJSON.version.slice(0, -2)
         }
     },
     fontHeight: 512,
