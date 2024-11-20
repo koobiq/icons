@@ -9,7 +9,6 @@ if (!fs.existsSync(svgIconsRelativePath)) {
 }
 
 const config = {
-
     dest: './dist/icons/',
 
     svg: {
@@ -19,15 +18,15 @@ const config = {
         dimensionAttributes: false
     },
     mode: {
-        "symbol": {
-            "prefix": ".kbq-%s",
-            "inline": true,
-            "example": {
-                "template": './src/templates/sprite.html'
+        symbol: {
+            prefix: '.kbq-%s',
+            inline: true,
+            example: {
+                template: './src/templates/sprite.html'
             },
             render: {
                 scss: true
-            },
+            }
         }
     }
 };
@@ -49,7 +48,7 @@ mappingEntries.forEach(([mappedName, symbol]) => {
             spriter.add(
                 path.resolve(`${svgIconsRelativePath}/${name}.svg`),
                 name + '.svg',
-                fs.readFileSync(file, 'utf-8'),
+                fs.readFileSync(file, 'utf-8')
             );
         }
     }

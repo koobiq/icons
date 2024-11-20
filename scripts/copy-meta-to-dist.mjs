@@ -33,8 +33,6 @@ Object.entries(mapping).forEach(([key, value]) => {
 });
 
 function createPackageJson() {
-
-
     return {
         name: packageJSON.name,
         version: packageJSON.version,
@@ -45,20 +43,13 @@ function createPackageJson() {
         },
         author: 'Koobiq Team',
         license: 'MIT',
-        keywords: [
-            'design-system',
-            'koobiq',
-            'fonts',
-            'icons',
-            'symbols'
-        ],
+        keywords: ['design-system', 'koobiq', 'fonts', 'icons', 'symbols'],
         exports: {
             './*': {
-                'default': './*'
+                default: './*'
             }
         }
     };
-
 }
 
 fs.writeFileSync('dist/icons/info/kbq-icons-info.json', JSON.stringify(mapping));

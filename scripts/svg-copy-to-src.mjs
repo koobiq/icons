@@ -31,7 +31,6 @@ const copyIcons = async (destPath, svgDir) => {
     }
 };
 
-
 const main = async () => {
     const destDir = join(__dirname, '../src/svg');
     const svgDir = join(__dirname, `../${config.output.tempSvg}/${config.figmaFile.page}`);

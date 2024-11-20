@@ -1,11 +1,14 @@
-import outputComponentsAsSvg from '@figma-export/output-components-as-svg'
+// @ts-check
+
+import outputComponentsAsSvg from '@figma-export/output-components-as-svg';
 import transformSvgWithSvgo from '@figma-export/transform-svg-with-svgo';
 
-import * as dotenv from 'dotenv'
+import * as dotenv from 'dotenv';
 import { config } from './config.mjs';
 
 dotenv.config();
 
+/** @type { import('@figma-export/types').ComponentsCommandOptions } */
 const componentOptions = {
     token: process.env.FIGMA_TOKEN,
     fileId: config.figmaFile.id,
@@ -18,9 +21,9 @@ const componentOptions = {
                     name: 'preset-default',
                     params: {
                         overrides: {
-                            removeViewBox: false,
-                        },
-                    },
+                            removeViewBox: false
+                        }
+                    }
                 },
                 { name: 'removeComments' },
                 { name: 'removeXMLNS' },
@@ -38,7 +41,7 @@ const componentOptions = {
                     fn: () => {
                         return {
                             element: {
-                                enter: node => {
+                                enter: (node) => {
                                     if (node.name === 'svg') {
                                         node.attributes['fill'] = 'currentColor';
                                     } else if (node.attributes['fill']) {
@@ -53,22 +56,20 @@ const componentOptions = {
                                     }
                                 }
                             }
-                        }
+                        };
                     }
                 }
-            ],
-        }),
+            ]
+        })
     ],
     outputters: [
         outputComponentsAsSvg({
             output: config.output.tempSvg
         })
     ]
-}
+};
 
 /** @type { import('@figma-export/types').FigmaExportRC } */
 export default {
-    commands: [
-        ['components', componentOptions]
-    ]
-}
+    commands: [['components', componentOptions]]
+};

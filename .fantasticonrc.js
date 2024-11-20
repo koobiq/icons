@@ -3,7 +3,7 @@ const mapping = require('./mapping.json');
 const fs = require('fs');
 
 if (!fs.existsSync('dist/icons/svg')) {
-    console.error('Build at first package with svg icons')
+    console.error('Build at first package with svg icons');
 }
 
 const codepoints = {};
@@ -17,7 +17,7 @@ if (!fs.existsSync('dist/icons/fonts')) {
 }
 
 const Handlebars = require('handlebars');
-Handlebars.registerHelper('splitFontSize', function(str) {
+Handlebars.registerHelper('splitFontSize', function (str) {
     return str.split('_')[1];
 });
 
@@ -44,5 +44,5 @@ module.exports = {
         }
     },
     fontHeight: 512,
-    descent: 72,
+    descent: 72
 };
