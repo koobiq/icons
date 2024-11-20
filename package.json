@@ -3,6 +3,7 @@
     "version": "9.2.0",
     "description": "",
     "license": "MIT",
+    "packageManager": "yarn@4.1.1",
     "publishConfig": {
         "access": "public"
     },
@@ -22,20 +23,26 @@
         }
     },
     "scripts": {
+        "prepare": "husky",
         "clean": "rimraf temp && rimraf dist",
         "copy:svg-to-src": "node scripts/svg-copy-to-src.mjs",
         "copy:copy-meta-to-dist": "node scripts/copy-meta-to-dist.mjs",
-        "------RELEASE SCRIPTS------": "-------------------------------------------------------",
+        "------RELEASE SCRIPTS------": "------------------------------------------------------------------------------",
         "stage:commit": "koobiq-cli stage-commit -c \"Icons\" --without-references",
         "publish:gitlab": "koobiq-cli publish-ci-gitlab",
         "publish:github": "koobiq-cli publish-ci-github",
-        "------FIGMA SCRIPTS------": "-------------------------------------------------------",
+        "------FIGMA SCRIPTS------": "--------------------------------------------------------------------------------",
         "figma:export-icons": "figma-export use-config .figmaexportrc.mjs",
         "figma:sync": "run-s clean figma:export-icons copy:svg-to-src",
-        "------BUILD SCRIPTS------": "-------------------------------------------------------",
+        "------BUILD SCRIPTS------": "--------------------------------------------------------------------------------",
         "build:fonts": "fantasticon --config .fantasticonrc.js",
         "build:sprite": "node src/svg-sprite.js",
-        "build": "run-s copy:copy-meta-to-dist build:sprite build:fonts"
+        "build": "run-s copy:copy-meta-to-dist build:sprite build:fonts",
+        "-----CI-----": "---------------------------------------------------------------------------------------------",
+        "prettier": "prettier '**/*.{md,yml,json,js,mjs}' --check",
+        "prettier:fix": "yarn run prettier --write",
+        "eslint": "eslint . --ext='.js,.mjs'",
+        "eslint:fix": "yarn run eslint --fix"
     },
     "release": {
         "packages": [
@@ -43,6 +50,8 @@
         ]
     },
     "devDependencies": {
+        "@commitlint/cli": "^19.5.0",
+        "@commitlint/config-conventional": "^19.5.0",
         "@figma-export/cli": "^6.0.2",
         "@figma-export/output-components-as-svg": "^6.0.1",
         "@figma-export/output-components-as-svgr": "^6.0.1",
@@ -51,14 +60,21 @@
         "@svgr/plugin-jsx": "^8.1.0",
         "@svgr/plugin-prettier": "^8.1.0",
         "@svgr/plugin-svgo": "^8.1.0",
+        "@types/eslint": "^8.56.12",
         "@types/fs-extra": "^11.0.4",
-        "@types/node": "18.19.33",
+        "@types/node": "18.13.0",
         "cross-env": "^7.0.3",
         "dotenv": "^16.4.5",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
         "fantasticon": "^3.0.0",
         "fs-extra": "^11.2.0",
+        "husky": "^9.1.6",
         "inquirer": "^10.2.0",
+        "lint-staged": "^15.2.10",
         "npm-run-all": "^4.1.5",
+        "prettier": "^3.3.3",
         "rimraf": "^5.0.10",
         "svg-sprite": "^2.0.4",
         "svgo": "^3.3.2",

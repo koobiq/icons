@@ -242,7 +242,18 @@
     "shield-ribbon_16": {
         "codepoint": "0xF547",
         "description": "",
-        "tags": ["medium", "protection", "security", "significance", "безопасность", "защита", "значение", "лента", "средний", "щит"]
+        "tags": [
+            "medium",
+            "protection",
+            "security",
+            "significance",
+            "безопасность",
+            "защита",
+            "значение",
+            "лента",
+            "средний",
+            "щит"
+        ]
     },
     "table-badge-clock_16": {
         "codepoint": "0xF549",
@@ -477,12 +488,38 @@
     "speaker_16": {
         "codepoint": "0xF58D",
         "description": "",
-        "tags": ["alert", "audio", "disabled", "sound", "volume", "аудио", "громкость", "динамик", "звук", "отключено", "предупреждение"]
+        "tags": [
+            "alert",
+            "audio",
+            "disabled",
+            "sound",
+            "volume",
+            "аудио",
+            "громкость",
+            "динамик",
+            "звук",
+            "отключено",
+            "предупреждение"
+        ]
     },
     "speaker-wave_16": {
         "codepoint": "0xF58E",
         "description": "",
-        "tags": ["alert", "audio", "enabled", "sound", "volume", "wave", "аудио", "включено", "волна", "громкость", "динамик", "звук", "предупреждение"]
+        "tags": [
+            "alert",
+            "audio",
+            "enabled",
+            "sound",
+            "volume",
+            "wave",
+            "аудио",
+            "включено",
+            "волна",
+            "громкость",
+            "динамик",
+            "звук",
+            "предупреждение"
+        ]
     },
     "scissors_16": {
         "codepoint": "0xF58F",
@@ -611,7 +648,17 @@
     "file-o_16": {
         "codepoint": "0xF5AB",
         "description": "",
-        "tags": ["document", "empty", "orientation", "portrait", "документ", "ориентация", "портретная", "пустой", "файл"]
+        "tags": [
+            "document",
+            "empty",
+            "orientation",
+            "portrait",
+            "документ",
+            "ориентация",
+            "портретная",
+            "пустой",
+            "файл"
+        ]
     },
     "pause-circle_16": {
         "codepoint": "0xF5AC",
@@ -953,7 +1000,19 @@
     "envelope-badge-arrow-right_16": {
         "codepoint": "0xF60A",
         "description": "",
-        "tags": ["arrow", "badge", "mail", "right", "send", "sent", "значок", "конверт", "отправить ", "почта", "стрелка"]
+        "tags": [
+            "arrow",
+            "badge",
+            "mail",
+            "right",
+            "send",
+            "sent",
+            "значок",
+            "конверт",
+            "отправить ",
+            "почта",
+            "стрелка"
+        ]
     },
     "backward_16": {
         "codepoint": "0xF60B",
@@ -1042,7 +1101,14 @@
     "rectangle-triangle-vertical-thin_16": {
         "codepoint": "0xF629",
         "description": "",
-        "tags": ["critical", "security", "vulnerability", "безопасность", "уровень уязвимости критический", "уязвимость"]
+        "tags": [
+            "critical",
+            "security",
+            "vulnerability",
+            "безопасность",
+            "уровень уязвимости критический",
+            "уязвимость"
+        ]
     },
     "rectangle-vertical-thin_16": {
         "codepoint": "0xF62A",
@@ -1062,7 +1128,14 @@
     "rectangle-vertical-thin-lines_16": {
         "codepoint": "0xF62D",
         "description": "",
-        "tags": ["security", "undefined", "vulnerability", "безопасность", "уровень уязвимости неопределенный", "уязвимость"]
+        "tags": [
+            "security",
+            "undefined",
+            "vulnerability",
+            "безопасность",
+            "уровень уязвимости неопределенный",
+            "уязвимость"
+        ]
     },
     "question-circle-o_32": {
         "codepoint": "0xF62E",
@@ -1141,7 +1214,17 @@
     "bolt-rectangle-vertical-o_16": {
         "codepoint": "0xF640",
         "description": "",
-        "tags": ["alert", "event", "notification", "outline", "контур", "предупреждение", "событие", "событие", "уведомление"]
+        "tags": [
+            "alert",
+            "event",
+            "notification",
+            "outline",
+            "контур",
+            "предупреждение",
+            "событие",
+            "событие",
+            "уведомление"
+        ]
     },
     "database-badge-arrow-down_16": {
         "codepoint": "0xF641",
@@ -1245,7 +1328,19 @@
     "circle-dot-o_16": {
         "codepoint": "0xF668",
         "description": "",
-        "tags": ["dot", "large", "outline", "partial", "shape", "большой", "контур", "круг", "точка", "форма", "частично"]
+        "tags": [
+            "dot",
+            "large",
+            "outline",
+            "partial",
+            "shape",
+            "большой",
+            "контур",
+            "круг",
+            "точка",
+            "форма",
+            "частично"
+        ]
     },
     "arrow-right-circle-dot-o_16": {
         "codepoint": "0xF66A",
@@ -1678,22 +1773,69 @@
     "gear-badge-arrowtriangle-up-square_16": {
         "codepoint": "0xF6EA",
         "description": "",
-        "tags": ["compliance", "critical", "level", "regulation", "standard", "критический", "регулирование", "соответствие", "стандарт", "уровень"]
+        "tags": [
+            "compliance",
+            "critical",
+            "level",
+            "regulation",
+            "standard",
+            "критический",
+            "регулирование",
+            "соответствие",
+            "стандарт",
+            "уровень"
+        ]
     },
     "gear-badge-square_16": {
         "codepoint": "0xF6EB",
         "description": "",
-        "tags": ["compliance", "high", "level", "regulation", "standard", "высокий", "регулирование", "соответствие", "стандарт", "уровень"]
+        "tags": [
+            "compliance",
+            "high",
+            "level",
+            "regulation",
+            "standard",
+            "высокий",
+            "регулирование",
+            "соответствие",
+            "стандарт",
+            "уровень"
+        ]
     },
     "gear-badge-square-o_16": {
         "codepoint": "0xF6EC",
         "description": "",
-        "tags": ["compliance", "level", "low", "not defined", "regulation", "standard", "undefined", "неопределенный", "низкий", "регулирование", "соответствие", "стандарт", "уровень"]
+        "tags": [
+            "compliance",
+            "level",
+            "low",
+            "not defined",
+            "regulation",
+            "standard",
+            "undefined",
+            "неопределенный",
+            "низкий",
+            "регулирование",
+            "соответствие",
+            "стандарт",
+            "уровень"
+        ]
     },
     "gear-badge-square-s_16": {
         "codepoint": "0xF6ED",
         "description": "",
-        "tags": ["compliance", "level", "medium", "regulation", "standard", "регулирование", "соответствие", "средний", "стандарт", "уровень"]
+        "tags": [
+            "compliance",
+            "level",
+            "medium",
+            "regulation",
+            "standard",
+            "регулирование",
+            "соответствие",
+            "средний",
+            "стандарт",
+            "уровень"
+        ]
     },
     "minus-circle-s_16": {
         "codepoint": "0xF6EF",
@@ -1708,7 +1850,17 @@
     "file-badge-ban-o_16": {
         "codepoint": "0xF6F2",
         "description": "",
-        "tags": ["blacklist", "document", "документ", "заблокирован", "запрет", "запрет", "значок", "файл", "черный список"]
+        "tags": [
+            "blacklist",
+            "document",
+            "документ",
+            "заблокирован",
+            "запрет",
+            "запрет",
+            "значок",
+            "файл",
+            "черный список"
+        ]
     },
     "file-badge-ban-o_24": {
         "codepoint": "0xF6F3",
@@ -1740,7 +1892,19 @@
     "certificate-vertical_16": {
         "codepoint": "0xF6F9",
         "description": "",
-        "tags": ["compliance", "horizontal", "license", "regulation", "standard", "лицензия", "регулирование", "сертификат", "сертификация", "соответствие", "стандарт"]
+        "tags": [
+            "compliance",
+            "horizontal",
+            "license",
+            "regulation",
+            "standard",
+            "лицензия",
+            "регулирование",
+            "сертификат",
+            "сертификация",
+            "соответствие",
+            "стандарт"
+        ]
     },
     "phone_16": {
         "codepoint": "0xF6FA",
@@ -2112,7 +2276,18 @@
     "ban-dot_16": {
         "codepoint": "0xF755",
         "description": "",
-        "tags": ["block", "partial", "prohibit", "unavailable", "блокировать", "запрет", "запретить", "недоступно", "точка", "частично"]
+        "tags": [
+            "block",
+            "partial",
+            "prohibit",
+            "unavailable",
+            "блокировать",
+            "запрет",
+            "запретить",
+            "недоступно",
+            "точка",
+            "частично"
+        ]
     },
     "bars-sort-bottom_16": {
         "codepoint": "0xF756",
@@ -2664,7 +2839,20 @@
     "shield-o_16": {
         "codepoint": "0xF7CA",
         "description": "",
-        "tags": ["low", "na", "outline", "protection", "security", "significance", "безопасность", "защита", "значимость", "контур", "низкий", "щит"]
+        "tags": [
+            "low",
+            "na",
+            "outline",
+            "protection",
+            "security",
+            "significance",
+            "безопасность",
+            "защита",
+            "значимость",
+            "контур",
+            "низкий",
+            "щит"
+        ]
     },
     "shield-user_16": {
         "codepoint": "0xF7CB",
@@ -2771,12 +2959,33 @@
     "user-badge-globe_16": {
         "codepoint": "0xF7E1",
         "description": "",
-        "tags": ["account", "domain", "human", "person", "аккаунт", "глобус", "домен", "значок", "пользователь", "человек"]
+        "tags": [
+            "account",
+            "domain",
+            "human",
+            "person",
+            "аккаунт",
+            "глобус",
+            "домен",
+            "значок",
+            "пользователь",
+            "человек"
+        ]
     },
     "user-badge-location_16": {
         "codepoint": "0xF7E2",
         "description": "",
-        "tags": ["account", "human", "local", "person", "аккаунт", "значок", "местоположение", "пользователь", "человек"]
+        "tags": [
+            "account",
+            "human",
+            "local",
+            "person",
+            "аккаунт",
+            "значок",
+            "местоположение",
+            "пользователь",
+            "человек"
+        ]
     },
     "user-mask_16": {
         "codepoint": "0xF7E3",
@@ -2791,7 +3000,15 @@
     "user-viewfinder_16": {
         "codepoint": "0xF7E5",
         "description": "",
-        "tags": ["accountidsynthetic", "human", "person", "аккаунтсинтетик", "пользователь", "учетная запись", "человек"]
+        "tags": [
+            "accountidsynthetic",
+            "human",
+            "person",
+            "аккаунтсинтетик",
+            "пользователь",
+            "учетная запись",
+            "человек"
+        ]
     },
     "vpn_16": {
         "codepoint": "0xF7E6",
@@ -2857,7 +3074,7 @@
         "description": "",
         "tags": ["ai", "star", "ии", "звезда"]
     },
-     "bucket-s3_16": {
+    "bucket-s3_16": {
         "codepoint": "0xF7F3",
         "description": "",
         "tags": ""

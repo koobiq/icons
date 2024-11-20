@@ -7,5 +7,3 @@ export const config = {
         tempSvg: 'temp/svg'
     }
 };
-
-

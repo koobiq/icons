@@ -9,6 +9,7 @@ npm i @koobiq/icons
 # Publish new version
 
 ## Step 1. Prepare and environment
+
 Install dependencies by running:
 
 ```
@@ -27,6 +28,7 @@ yarn install
 Create a file with name `.env` and add there your Figma access token.
 
 To export your icons (SVG) from Figma run the command:
+
 ```
 yarn run figma:sync
 ```
@@ -34,20 +36,22 @@ yarn run figma:sync
 ## Step 4.
 
 Change `mapping.json`:
-* Add an entry into `mapping.json` with a new codepoint keys.
-* Edit the name of an icon in the `mapping.json` in case of icon rename
+
+-   Add an entry into `mapping.json` with a new codepoint keys.
+-   Edit the name of an icon in the `mapping.json` in case of icon rename
 
 Commit SVG files `mapping.json` and push all changes to git.
 
 ## Step 5.
 
 Run stage commit script to create a new release tag.
+
 ```
 yarn run stage:commit
 ```
 
 Use semver for version naming. So increment major (first) version number if any of these changes were made:
 
-* Any icon name was changed (breaking changes for front-end developers)
-* Any icon codepoint was changed (breaking changes for tech writers)
-* Significant changes in icon metaphor (breaking changes for all)
+-   Any icon name was changed (breaking changes for front-end developers)
+-   Any icon codepoint was changed (breaking changes for tech writers)
+-   Significant changes in icon metaphor (breaking changes for all)
