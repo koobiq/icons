@@ -26,7 +26,6 @@
         "copy:svg-to-src": "node scripts/svg-copy-to-src.mjs",
         "copy:copy-meta-to-dist": "node scripts/copy-meta-to-dist.mjs",
         "convert": "bash scripts/convert.sh",
-        "gen-img-preview": "bash scripts/generate-html.sh",
         "gen-preview": "node scripts/generate-preview.mjs",
         "------RELEASE SCRIPTS------": "-------------------------------------------------------",
         "stage:commit": "koobiq-cli stage-commit -c \"Icons\" --without-references",
