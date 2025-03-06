@@ -3127,6 +3127,81 @@
     "north-east_16": {
         "codepoint": "0xF7FD",
         "description": "External links",
-        "tags": ""
+        "tags": ["arrow"]
+    },
+    "arrow-down-xs_16": {
+        "codepoint": "0xF7FE",
+        "description": "Сортировка по убыванию",
+        "tags": ["sort", "down", "extra small", "стрелка", "вниз"]
+    },
+    "arrow-rotate-right_24": {
+        "codepoint": "0xF7FF",
+        "description": "",
+        "tags": ["refresh", "reload", "обновить", "перезагрузка"]
+    },
+    "arrow-up-xs_16": {
+        "codepoint": "0xF800",
+        "description": "Cортировка по возрастанию",
+        "tags": ["sort", "up", "extra small", "очень маленькая", "стрелка", "вверх"]
+    },
+    "arrows-rotate_16": {
+        "codepoint": "0xF801",
+        "description": "",
+        "tags": ["sync", "spinner", "синхронизация", "спиннер"]
+    },
+    "arrows-rotate_24": {
+        "codepoint": "0xF802",
+        "description": "",
+        "tags": ["sync", "spinner", "синхронизация", "спиннер"]
+    },
+    "arrows-rotate-slash_16": {
+        "codepoint": "0xF803",
+        "description": "",
+        "tags": ["sync", "off", "синхронизация", "отключить"]
+    },
+    "arrows-rotate-slash_24": {
+        "codepoint": "0xF804",
+        "description": "",
+        "tags": ["sync", "off", "синхронизация", "отключить"]
+    },
+    "astra-linux_16": {
+        "codepoint": "0xF805",
+        "description": "Астра Линукс",
+        "tags": ["logo"]
+    },
+    "chart-gauge-o_24": {
+        "codepoint": "0xF806",
+        "description": "",
+        "tags": ["манометр", "датчик", "график"]
+    },
+    "code_24": {
+        "codepoint": "0xF807",
+        "description": "",
+        "tags": []
+    },
+    "opensuse_16": {
+        "codepoint": "0xF808",
+        "description": "",
+        "tags": ["logo"]
+    },
+    "pencil-on-line_16": {
+        "codepoint": "0xF809",
+        "description": "Событие корреляции, правило проверки",
+        "tags": ["edit"]
+    },
+    "puzzle-piece_16": {
+        "codepoint": "0xF80A",
+        "description": "Корреляционное событие",
+        "tags": []
+    },
+    "thumbs-down_16": {
+        "codepoint": "0xF80B",
+        "description": "Большой палец вниз",
+        "tags": ["dislike", "нравится"]
+    },
+    "ubuntu_16": {
+        "codepoint": "0xF80C",
+        "description": "Убунту",
+        "tags": ["logo"]
     }
 }
