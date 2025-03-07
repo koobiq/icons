@@ -1,12 +1,12 @@
-import { readdir } from 'node:fs/promises';
+import { readdir, readFile } from 'node:fs/promises';
 import { parse } from 'path';
-import * as mapping from '../mapping.json' assert { type: 'json' };
 
 async function main() {
+    const mapping = JSON.parse(await readFile('./mapping.json', 'utf-8'));
     const svgFileList = (await readdir('./src/svg')).map((svgPath) => parse(svgPath).name);
-    const svgListInMapping = Object.keys(mapping.default);
+    const svgListInMapping = Object.keys(mapping);
 
-    const missingFromMapping = svgFileList.filter((svg) => !mapping.default[svg]);
+    const missingFromMapping = svgFileList.filter((svg) => !mapping[svg]);
     const missingFromFiles = svgListInMapping.filter((svg) => !svgFileList.includes(svg));
 
     if (missingFromMapping.length || missingFromFiles.length) {
