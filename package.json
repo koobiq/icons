@@ -27,6 +27,7 @@
         "clean": "rimraf temp && rimraf dist",
         "copy:svg-to-src": "node scripts/svg-copy-to-src.mjs",
         "copy:copy-meta-to-dist": "node scripts/copy-meta-to-dist.mjs",
+        "check-mapping": "node scripts/check-mapping.mjs",
         "------RELEASE SCRIPTS------": "------------------------------------------------------------------------------",
         "stage:commit": "koobiq-cli stage-commit -c \"Icons\" --without-references",
         "publish:gitlab": "koobiq-cli publish-ci-gitlab",
