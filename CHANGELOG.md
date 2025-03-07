@@ -1,3 +1,11 @@
+# 9.3.0 "Icons Enhancement" (2025-03-07)
+
+### Icons
+
+ * feature  added auto update fontVersion ([#DS-2164](https://github.com/koobiq/icons/issues/issue/DS-2164)) ([#7](https://github.com/koobiq/icons/issues/7)) 97dce54
+ * feature  new icons ([#DS-2916](https://github.com/koobiq/icons/issues/issue/DS-2916)) ([#11](https://github.com/koobiq/icons/issues/11)) ec8bceb
+ * feature  script for check mapping and svg file list ([#12](https://github.com/koobiq/icons/issues/12)) 3c12653
+
 # 9.2.0 (2024-10-28)
 
  **Added**
