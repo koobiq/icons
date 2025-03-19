@@ -59,32 +59,37 @@ Use semver for version naming. So increment major (first) version number if any 
 # SVG Color Zones Guide
 
 ## Overview
+
 This guide explains how to structure SVGs for dynamic styling via CSS, allowing different parts to be colored separately using `fill` and `color`.
 
 ## How It Works
-- **Primary Zone**: No `fill` attribute.
-- **Secondary Zone(s)**: `fill="currentColor"`.
+
+-   **Primary Zone**: No `fill` attribute.
+-   **Secondary Zone(s)**: `fill="currentColor"`.
 
 CSS styling:
+
 ```css
 svg {
-    fill: #8F99AA;  /* Primary zone */
-    color: #00FF00; /* Secondary zone(s) */
+    fill: #8f99aa; /* Primary zone */
+    color: #00ff00; /* Secondary zone(s) */
 }
 ```
+
 For details, see [CSS-Tricks](https://css-tricks.com/lodge/svg/21-get-two-colors-use/).
 
 ## Figma Conventions
 
 To facilitate automated processing during the build phase, we follow these conventions in Figma:
 
-- **Primary Zone**: `#21222C` (black).
-- **Secondary Zone(s)**: `#E21D03` (red).
+-   **Primary Zone**: `#21222C` (black).
+-   **Secondary Zone(s)**: `#E21D03` (red).
 
 These colors serve as a contract between the Figma design file and the build system.
 The build process recognizes these colors and applies the appropriate transformations to ensure the correct fill behavior in the final SVG output.
 
 ## Implementation
-- Remove `fill` from the primary zone.
-- Set secondary zones to `fill="currentColor"`.
-- Use CSS for styling.
+
+-   Remove `fill` from the primary zone.
+-   Set secondary zones to `fill="currentColor"`.
+-   Use CSS for styling.
