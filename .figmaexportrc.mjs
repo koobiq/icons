@@ -8,6 +8,8 @@ import { config } from './config.mjs';
 
 dotenv.config();
 
+const secondaryZoneColorRegExp = new RegExp('^#E21D03');
+
 /** @type { import('@figma-export/types').ComponentsCommandOptions } */
 const componentOptions = {
     token: process.env.FIGMA_TOKEN,
@@ -45,15 +47,19 @@ const componentOptions = {
                                     if (node.name === 'svg') {
                                         node.attributes['fill'] = 'currentColor';
                                     } else if (node.attributes['fill']) {
-                                        node.attributes['fill'] = 'currentColor';
+                                        // - Remove fill from the primary zone.
+                                        // - Set secondary zones to fill="currentColor".
+                                        if (secondaryZoneColorRegExp.test(node.attributes.fill)) {
+                                            node.attributes.fill = 'currentColor';
+                                        } else {
+                                            delete node.attributes.fill;
+                                        }
                                     }
-                                    if (node.attributes['color']) {
-                                        delete node.attributes['color'];
-                                    }
-
-                                    if (node.attributes['class']) {
-                                        delete node.attributes['class'];
-                                    }
+                                    ['color', 'class'].forEach((attr) => {
+                                        if (node.attributes[attr]) {
+                                            delete node.attributes[attr];
+                                        }
+                                    });
                                 }
                             }
                         };
