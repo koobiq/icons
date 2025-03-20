@@ -1,3 +1,9 @@
+## 9.3.1 (2025-03-20)
+
+### Icons
+
+ * bug fix  returned two-tone icons ([#DS-3446](https://github.com/koobiq/icons/issues/issue/DS-3446)) ([#14](https://github.com/koobiq/icons/issues/14)) 4447513
+
 # 9.3.0 "Icons Enhancement" (2025-03-07)
 
 ### Icons
