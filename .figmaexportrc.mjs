@@ -8,7 +8,7 @@ import { config } from './config.mjs';
 
 dotenv.config();
 
-const secondaryZoneColorRegExp = new RegExp('^#E21D03');
+const secondaryZoneColorHex = '#E21D03';
 
 /** @type { import('@figma-export/types').ComponentsCommandOptions } */
 const componentOptions = {
@@ -50,7 +50,7 @@ const componentOptions = {
                                     } else if (node.attributes['fill']) {
                                         // - Remove fill from the primary zone.
                                         // - Set secondary zones to fill="currentColor".
-                                        if (secondaryZoneColorRegExp.test(node.attributes.fill)) {
+                                        if (secondaryZoneColorHex === node.attributes.fill) {
                                             node.attributes.fill = 'currentColor';
                                         } else {
                                             delete node.attributes.fill;
