@@ -45,7 +45,8 @@ const componentOptions = {
                             element: {
                                 enter: (node) => {
                                     if (node.name === 'svg') {
-                                        node.attributes['fill'] = 'currentColor';
+                                        // - Remove fill from the root, to customize with inner elements
+                                        delete node.attributes.fill;
                                     } else if (node.attributes['fill']) {
                                         // - Remove fill from the primary zone.
                                         // - Set secondary zones to fill="currentColor".
