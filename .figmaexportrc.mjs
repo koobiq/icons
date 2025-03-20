@@ -8,6 +8,8 @@ import { config } from './config.mjs';
 
 dotenv.config();
 
+const secondaryZoneColorHex = '#E21D03';
+
 /** @type { import('@figma-export/types').ComponentsCommandOptions } */
 const componentOptions = {
     token: process.env.FIGMA_TOKEN,
@@ -43,17 +45,22 @@ const componentOptions = {
                             element: {
                                 enter: (node) => {
                                     if (node.name === 'svg') {
-                                        node.attributes['fill'] = 'currentColor';
+                                        // - Remove fill from the root, to customize with inner elements
+                                        delete node.attributes.fill;
                                     } else if (node.attributes['fill']) {
-                                        node.attributes['fill'] = 'currentColor';
+                                        // - Remove fill from the primary zone.
+                                        // - Set secondary zones to fill="currentColor".
+                                        if (secondaryZoneColorHex === node.attributes.fill) {
+                                            node.attributes.fill = 'currentColor';
+                                        } else {
+                                            delete node.attributes.fill;
+                                        }
                                     }
-                                    if (node.attributes['color']) {
-                                        delete node.attributes['color'];
-                                    }
-
-                                    if (node.attributes['class']) {
-                                        delete node.attributes['class'];
-                                    }
+                                    ['color', 'class'].forEach((attr) => {
+                                        if (node.attributes[attr]) {
+                                            delete node.attributes[attr];
+                                        }
+                                    });
                                 }
                             }
                         };
