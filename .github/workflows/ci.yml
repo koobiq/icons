@@ -24,3 +24,6 @@ jobs:
         run: |
           yarn run prettier
           yarn run eslint
+
+      - name: Check Mapping
+        run: yarn run check-mapping
