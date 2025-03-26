@@ -1,3 +1,9 @@
+# 9.4.0 "Late March" (2025-03-26)
+
+### Icons
+
+ * feature  add icons and codepoints ([#DS-3560](https://github.com/koobiq/icons/issues/issue/DS-3560)) ([#15](https://github.com/koobiq/icons/issues/15)) 3094e46
+
 ## 9.3.1 (2025-03-20)
 
 ### Icons
