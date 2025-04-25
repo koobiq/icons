@@ -1,3 +1,9 @@
+## 9.4.1 (2025-04-25)
+
+### Icons
+
+ * bug fix  added xmlns to the root svg ([#DS-3446](https://github.com/koobiq/icons/issues/issue/DS-3446)) ([#16](https://github.com/koobiq/icons/issues/16)) 30d31a2
+
 # 9.4.0 "Late March" (2025-03-26)
 
 ### Icons
