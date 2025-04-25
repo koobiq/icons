@@ -15,7 +15,8 @@ const config = {
         xmlDeclaration: false,
         doctypeDeclaration: false,
         namespaceIDs: false,
-        dimensionAttributes: false
+        dimensionAttributes: true,
+        rootAttributes: { xmlns: 'http://www.w3.org/2000/svg' }
     },
     mode: {
         symbol: {
