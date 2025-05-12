@@ -1,3 +1,12 @@
+# 10.0.0 (2025-05-12)
+
+### Icons
+
+ * bug fix  rename dark images ([#DS-3413](https://github.com/koobiq/icons/issues/issue/DS-3413)) ([#10](https://github.com/koobiq/icons/issues/10)) 0ae39c8
+
+#### BREAKING CHANGES
+*    Removed the extra `dark-` in filenames within `images/dark` directory to make paths cleaner. Update any references to these images in your code.
+
 ## 9.4.1 (2025-04-25)
 
 ### Icons
