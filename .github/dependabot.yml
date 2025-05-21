@@ -1,0 +1,37 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'monthly'
+      day: 'wednesday'
+      time: '13:00'
+      timezone: 'Europe/Moscow'
+    ignore:
+      # Ignores any major updates
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
+    groups:
+      eslint:
+        patterns:
+          - 'eslint*'
+          - '@types/eslint'
+      commitlint:
+        patterns:
+          - '@commitlint/*'
+      prettier:
+        patterns:
+          - 'prettier*'
+      svgr:
+        patterns:
+          - '@svgr/*'
+      figma-export:
+        patterns:
+          - '@figma-export/*'
+      fs-extra:
+        patterns:
+          - 'fs-extra'
+          - '@types/fs-extra'
+      koobiq:
+        patterns:
+          - '@koobiq/*'
