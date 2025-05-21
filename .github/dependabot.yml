@@ -32,3 +32,6 @@ updates:
         patterns:
           - 'fs-extra'
           - '@types/fs-extra'
+      koobiq:
+        patterns:
+          - '@koobiq/*'
