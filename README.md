@@ -37,8 +37,8 @@ yarn run figma:sync
 
 Change `mapping.json`:
 
--   Add an entry into `mapping.json` with a new codepoint keys.
--   Edit the name of an icon in the `mapping.json` in case of icon rename
+- Add an entry into `mapping.json` with a new codepoint keys.
+- Edit the name of an icon in the `mapping.json` in case of icon rename
 
 Commit SVG files `mapping.json` and push all changes to git.
 
@@ -52,9 +52,9 @@ yarn run stage:commit
 
 Use semver for version naming. So increment major (first) version number if any of these changes were made:
 
--   Any icon name was changed (breaking changes for front-end developers)
--   Any icon codepoint was changed (breaking changes for tech writers)
--   Significant changes in icon metaphor (breaking changes for all)
+- Any icon name was changed (breaking changes for front-end developers)
+- Any icon codepoint was changed (breaking changes for tech writers)
+- Significant changes in icon metaphor (breaking changes for all)
 
 # SVG Color Zones Guide
 
@@ -64,8 +64,8 @@ This guide explains how to structure SVGs for dynamic styling via CSS, allowing 
 
 ## How It Works
 
--   **Primary Zone**: No `fill` attribute.
--   **Secondary Zone(s)**: `fill="currentColor"`.
+- **Primary Zone**: No `fill` attribute.
+- **Secondary Zone(s)**: `fill="currentColor"`.
 
 CSS styling:
 
@@ -82,14 +82,14 @@ For details, see [CSS-Tricks](https://css-tricks.com/lodge/svg/21-get-two-colors
 
 To facilitate automated processing during the build phase, we follow these conventions in Figma:
 
--   **Primary Zone**: `#21222C` (black).
--   **Secondary Zone(s)**: `#E21D03` (red).
+- **Primary Zone**: `#21222C` (black).
+- **Secondary Zone(s)**: `#E21D03` (red).
 
 These colors serve as a contract between the Figma design file and the build system.
 The build process recognizes these colors and applies the appropriate transformations to ensure the correct fill behavior in the final SVG output.
 
 ## Implementation
 
--   Remove `fill` from the primary zone.
--   Set secondary zones to `fill="currentColor"`.
--   Use CSS for styling.
+- Remove `fill` from the primary zone.
+- Set secondary zones to `fill="currentColor"`.
+- Use CSS for styling.
