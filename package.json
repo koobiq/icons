@@ -51,8 +51,8 @@
         ]
     },
     "devDependencies": {
-        "@commitlint/cli": "^19.5.0",
-        "@commitlint/config-conventional": "^19.5.0",
+        "@commitlint/cli": "^19.8.1",
+        "@commitlint/config-conventional": "^19.8.1",
         "@figma-export/cli": "^6.0.2",
         "@figma-export/output-components-as-svg": "^6.0.1",
         "@figma-export/output-components-as-svgr": "^6.0.1",
