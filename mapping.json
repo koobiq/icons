@@ -3141,7 +3141,7 @@
     },
     "arrow-up-xs_16": {
         "codepoint": "0xF800",
-        "description": "Cортировка по возрастанию",
+        "description": "Сортировка по возрастанию",
         "tags": ["sort", "up", "extra small", "очень маленькая", "стрелка", "вверх"]
     },
     "arrows-rotate_16": {
