@@ -639,14 +639,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@inquirer/expand@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "@inquirer/expand@npm:2.2.0"
+"@inquirer/expand@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "@inquirer/expand@npm:2.3.0"
   dependencies:
     "@inquirer/core": "npm:^9.1.0"
     "@inquirer/type": "npm:^1.5.3"
     yoctocolors-cjs: "npm:^2.1.2"
-  checksum: 10c0/34076a3d633bef14e0f1c7963410e454ad7811afe4011ac0cf9b6270357aba1793c4dea27d45a44d37657dfa1f986c7c0fdb24a5b5c7e7c0475c91975f8833bd
+  checksum: 10c0/f2030cb482a715e4d5153c19b3f0fd8bf47c16cdc16e1c669e90985386edf4f7b0f3b0e97e2990bb228878b93716228eb067d94fc557c25d3c5ee58747c0a995
   languageName: node
   linkType: hard
 
@@ -688,21 +688,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@inquirer/prompts@npm:^5.4.0":
-  version: 5.4.0
-  resolution: "@inquirer/prompts@npm:5.4.0"
+"@inquirer/prompts@npm:^5.5.0":
+  version: 5.5.0
+  resolution: "@inquirer/prompts@npm:5.5.0"
   dependencies:
     "@inquirer/checkbox": "npm:^2.5.0"
     "@inquirer/confirm": "npm:^3.2.0"
     "@inquirer/editor": "npm:^2.2.0"
-    "@inquirer/expand": "npm:^2.2.0"
+    "@inquirer/expand": "npm:^2.3.0"
     "@inquirer/input": "npm:^2.3.0"
     "@inquirer/number": "npm:^1.1.0"
     "@inquirer/password": "npm:^2.2.0"
     "@inquirer/rawlist": "npm:^2.3.0"
     "@inquirer/search": "npm:^1.1.0"
     "@inquirer/select": "npm:^2.5.0"
-  checksum: 10c0/2a1f4a7db99f0f65cba04cbac082f3ae6e0da66febbc0afb31040e626841a1321e0e17d404be89b2ea5a3d2e8f9b5cd30d68911d363f9c66c8a8b904402a63cd
+  checksum: 10c0/2d62b50ca761b2bd2d5759f48c03758f1af0665ac602c26ae1ae257ac512cf5c27fd82cde108ee0c6371ec39187adc6f45637f31ca79adf5bf96579f23e77143
   languageName: node
   linkType: hard
 
@@ -862,7 +862,7 @@ __metadata:
     fantasticon: "npm:^3.0.0"
     fs-extra: "npm:^11.3.0"
     husky: "npm:^9.1.6"
-    inquirer: "npm:^10.2.0"
+    inquirer: "npm:^10.2.2"
     lint-staged: "npm:^15.2.10"
     npm-run-all: "npm:^4.1.5"
     prettier: "npm:^3.5.3"
@@ -4246,18 +4246,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"inquirer@npm:^10.2.0":
-  version: 10.2.0
-  resolution: "inquirer@npm:10.2.0"
+"inquirer@npm:^10.2.2":
+  version: 10.2.2
+  resolution: "inquirer@npm:10.2.2"
   dependencies:
-    "@inquirer/prompts": "npm:^5.4.0"
+    "@inquirer/core": "npm:^9.1.0"
+    "@inquirer/prompts": "npm:^5.5.0"
     "@inquirer/type": "npm:^1.5.3"
     "@types/mute-stream": "npm:^0.0.4"
     ansi-escapes: "npm:^4.3.2"
     mute-stream: "npm:^1.0.0"
     run-async: "npm:^3.0.0"
     rxjs: "npm:^7.8.1"
-  checksum: 10c0/63b0bd76edb4e63644a29e398e09f1405f459837d2a506ab168de48e1a04e295b367918bd25c76dd1104d13b82e5d961250315c7338763374f93a1326d688b8d
+  checksum: 10c0/09bcff887a968ce29d3a8cba749ef35b6531b7fb7bf5b28aaf3e10aebae07af2494dd3ec67ae6f1dabe76da1064cfe4514098d4c7658fcaf3fd480b2975d7163
   languageName: node
   linkType: hard
 
