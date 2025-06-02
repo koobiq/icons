@@ -1,3 +1,9 @@
+# 10.1.0 (2025-06-02)
+
+### Icons
+
+ * feature  sync-may25-icons ([#DS-3797](https://github.com/koobiq/icons/issues/issue/DS-3797)) ([#33](https://github.com/koobiq/icons/issues/33)) db19f19
+
 # 10.0.0 (2025-05-12)
 
 ### Icons
