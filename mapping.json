@@ -3141,7 +3141,7 @@
     },
     "arrow-up-xs_16": {
         "codepoint": "0xF800",
-        "description": "Cортировка по возрастанию",
+        "description": "Сортировка по возрастанию",
         "tags": ["sort", "up", "extra small", "очень маленькая", "стрелка", "вверх"]
     },
     "arrows-rotate_16": {
@@ -3223,5 +3223,75 @@
         "codepoint": "0xF810",
         "description": "",
         "tags": ["device", "display", "monitor", "компьютер", "монитор"]
+    },
+    "behance_16": {
+        "codepoint": "0xF811",
+        "description": "",
+        "tags": ["logo", "логотип"]
+    },
+    "github_16": {
+        "codepoint": "0xF812",
+        "description": "",
+        "tags": ["logo", "логотип"]
+    },
+    "github-alt_16": {
+        "codepoint": "0xF813",
+        "description": "",
+        "tags": ["logo", "логотип"]
+    },
+    "gitlab_16": {
+        "codepoint": "0xF814",
+        "description": "",
+        "tags": ["logo", "логотип"]
+    },
+    "habr_16": {
+        "codepoint": "0xF815",
+        "description": "Habrahabr",
+        "tags": ["logo", "логотип"]
+    },
+    "habr-alt_16": {
+        "codepoint": "0xF816",
+        "description": "Habrahabr",
+        "tags": ["logo", "логотип"]
+    },
+    "linkedin_16": {
+        "codepoint": "0xF817",
+        "description": "",
+        "tags": ["logo", "логотип"]
+    },
+    "linkedin-alt_16": {
+        "codepoint": "0xF818",
+        "description": "",
+        "tags": ["logo", "логотип"]
+    },
+    "mattermost_16": {
+        "codepoint": "0xF819",
+        "description": "",
+        "tags": ["logo", "логотип"]
+    },
+    "telegram_16": {
+        "codepoint": "0xF81A",
+        "description": "",
+        "tags": ["logo", "логотип"]
+    },
+    "time-messenger_16": {
+        "codepoint": "0xF81B",
+        "description": "",
+        "tags": ["logo", "логотип"]
+    },
+    "time-messenger-alt_16": {
+        "codepoint": "0xF81C",
+        "description": "",
+        "tags": ["logo", "логотип"]
+    },
+    "vk_16": {
+        "codepoint": "0xF81D",
+        "description": "",
+        "tags": ["logo", "логотип"]
+    },
+    "vk-alt_16": {
+        "codepoint": "0xF81E",
+        "description": "",
+        "tags": ["logo", "логотип"]
     }
 }
