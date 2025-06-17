@@ -63,7 +63,7 @@
         "@svgr/plugin-svgo": "^8.1.0",
         "@types/eslint": "^8.56.12",
         "@types/fs-extra": "^11.0.4",
-        "@types/node": "18.13.0",
+        "@types/node": "18.19.112",
         "cross-env": "^7.0.3",
         "dotenv": "^16.5.0",
         "eslint": "^8.57.0",

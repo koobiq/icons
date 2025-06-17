@@ -853,7 +853,7 @@ __metadata:
     "@svgr/plugin-svgo": "npm:^8.1.0"
     "@types/eslint": "npm:^8.56.12"
     "@types/fs-extra": "npm:^11.0.4"
-    "@types/node": "npm:18.13.0"
+    "@types/node": "npm:18.19.112"
     cross-env: "npm:^7.0.3"
     dotenv: "npm:^16.5.0"
     eslint: "npm:^8.57.0"
@@ -1488,10 +1488,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.13.0":
-  version: 18.13.0
-  resolution: "@types/node@npm:18.13.0"
-  checksum: 10c0/985ca4e6e19fb0ee8bf5618f96f0b6d96a434c28a9123c93f25a3dcc202c3fa903cf234fcee649e10977b057ccb3b796e81b094d9c84eadbaa2b7c4b97a8866e
+"@types/node@npm:18.19.112":
+  version: 18.19.112
+  resolution: "@types/node@npm:18.19.112"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 10c0/e3421fb3c755337a0477014b235026d914cac8266b67de5867d778b2d4ce2ed0c8052c922e61810f2364d6b29ee24c6ea18671c5636076371b82b0d3e480fbef
   languageName: node
   linkType: hard
 
@@ -7546,6 +7548,13 @@ __metadata:
     has-symbols: "npm:^1.0.3"
     which-boxed-primitive: "npm:^1.0.2"
   checksum: 10c0/81ca2e81134167cc8f75fa79fbcc8a94379d6c61de67090986a2273850989dd3bae8440c163121b77434b68263e34787a675cbdcb34bb2f764c6b9c843a11b66
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~5.26.4":
+  version: 5.26.5
+  resolution: "undici-types@npm:5.26.5"
+  checksum: 10c0/bb673d7876c2d411b6eb6c560e0c571eef4a01c1c19925175d16e3a30c4c428181fb8d7ae802a261f283e4166a0ac435e2f505743aa9e45d893f9a3df017b501
   languageName: node
   linkType: hard
 
