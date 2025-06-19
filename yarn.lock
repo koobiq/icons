@@ -465,69 +465,69 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@figma-export/cli@npm:^6.2.0":
-  version: 6.2.0
-  resolution: "@figma-export/cli@npm:6.2.0"
+"@figma-export/cli@npm:^6.2.2":
+  version: 6.2.2
+  resolution: "@figma-export/cli@npm:6.2.2"
   dependencies:
-    "@figma-export/core": "npm:^6.2.0"
-    "@figma-export/types": "npm:^6.2.0"
+    "@figma-export/core": "npm:^6.2.2"
+    "@figma-export/types": "npm:^6.2.2"
     ora: "npm:~8.2.0"
     sade: "npm:~1.8.1"
   bin:
     figma-export: ./bin/run.js
-  checksum: 10c0/1025a192ddb7fceee02f7b8e0073aec240498b96b5f9fb8dafbc712280b54f207bbfc2773d5365279638e3e9eb2014a2d3bc444b436b4b8d749b6677695f3937
+  checksum: 10c0/4a71243765ad2daae792e0b001e5cb847087a0fa2ee4c14cc6dd012b8d79bd0e3412c427b72b2fcfa4bbb50e63c9b9a5abcbb4418e397e3f7c32f18be35c96b3
   languageName: node
   linkType: hard
 
-"@figma-export/core@npm:^6.2.0":
-  version: 6.2.0
-  resolution: "@figma-export/core@npm:6.2.0"
+"@figma-export/core@npm:^6.2.2":
+  version: 6.2.2
+  resolution: "@figma-export/core@npm:6.2.2"
   dependencies:
-    "@figma-export/types": "npm:^6.2.0"
-    "@figma/rest-api-spec": "npm:^0.24.0"
+    "@figma-export/types": "npm:^6.2.2"
+    "@figma/rest-api-spec": "npm:^0.31.0"
     p-limit: "npm:^6.2.0"
     p-retry: "npm:^6.2.1"
     undici: "npm:^6.21.2"
-  checksum: 10c0/c20578ea675078b4f5d33380b89adcfb8d7cfc30f1a51f72fad0b27f52f698e99746a8c207c809c80c2f1f9eefba8cb7fc082c22e4ab0208cace977abc6e124c
+  checksum: 10c0/d20ea88261228da0d2728bf8344523f8311e9b0677f1552480913315e184b19c798ba48c55b604570d2374e7f981c1305abfef13cca920b1d05cc6f257548b58
   languageName: node
   linkType: hard
 
-"@figma-export/output-components-as-svg@npm:^6.2.0":
-  version: 6.2.0
-  resolution: "@figma-export/output-components-as-svg@npm:6.2.0"
+"@figma-export/output-components-as-svg@npm:^6.2.2":
+  version: 6.2.2
+  resolution: "@figma-export/output-components-as-svg@npm:6.2.2"
   dependencies:
-    "@figma-export/types": "npm:^6.2.0"
-  checksum: 10c0/481e5c3affab2346f3e3502f7ceac92512e1372e16660623d9ee0dc24a7270a3c46f318686244ca165095fcd0fa534591c1e5ed8575d8d993f54807e60833dae
+    "@figma-export/types": "npm:^6.2.2"
+  checksum: 10c0/20734c56cfc67e5338271a9ba30bfd98c96ff3684212f24406ed4dc84aa9bf6217aff8e9a25c5512b2d05aeb9bae0ab4ad9af02ce44a49fed00678b409cb77cc
   languageName: node
   linkType: hard
 
-"@figma-export/output-components-as-svgr@npm:^6.2.0":
-  version: 6.2.0
-  resolution: "@figma-export/output-components-as-svgr@npm:6.2.0"
+"@figma-export/output-components-as-svgr@npm:^6.2.2":
+  version: 6.2.2
+  resolution: "@figma-export/output-components-as-svgr@npm:6.2.2"
   dependencies:
-    "@figma-export/types": "npm:^6.2.0"
+    "@figma-export/types": "npm:^6.2.2"
     "@figma-export/utils": "npm:^6.1.0"
     "@svgr/core": "npm:~8.1.0"
-  checksum: 10c0/01c016ac7a1a98633e158813a784adef245d5d344e1f99ba14d4c066a82534d5cd72af0d8f6739e9187375b26c154d1893c8453eea134434a0e3197e2d0c1325
+  checksum: 10c0/ceb6c02a6ae8186aa67e2d212ce6f9cad88f2ee2c8df7370f7699a2a67e00aed560eec0b62612cc496535061ad5929af8556372c09a0505f12928a004f28bbff
   languageName: node
   linkType: hard
 
-"@figma-export/transform-svg-with-svgo@npm:^6.2.1":
-  version: 6.2.1
-  resolution: "@figma-export/transform-svg-with-svgo@npm:6.2.1"
+"@figma-export/transform-svg-with-svgo@npm:^6.2.2":
+  version: 6.2.2
+  resolution: "@figma-export/transform-svg-with-svgo@npm:6.2.2"
   dependencies:
-    "@figma-export/types": "npm:^6.2.0"
+    "@figma-export/types": "npm:^6.2.2"
     svgo: "npm:~3.3.2"
-  checksum: 10c0/e50df24a3a1c3d81e3033fbfcbedec9aa6f723a663331fa8896cd0c894a7f1120cdbcf4d0c9a712b5d9586ac5ba99e250d768a572c10cdecb2742bf629223dc5
+  checksum: 10c0/31e55fa86e31866af9f1fae612ad8ada207ca049fa8d801ff476a6f0d6e640887c34b6d9dc38cae6e8c1185cdcad75fe02d73c2556f7fbfd711a45b3e70b6e19
   languageName: node
   linkType: hard
 
-"@figma-export/types@npm:^6.2.0":
-  version: 6.2.0
-  resolution: "@figma-export/types@npm:6.2.0"
+"@figma-export/types@npm:^6.2.2":
+  version: 6.2.2
+  resolution: "@figma-export/types@npm:6.2.2"
   dependencies:
-    "@figma/rest-api-spec": "npm:^0.24.0"
-  checksum: 10c0/f7318698c606571ea276dfebc3110e54bccd201f551d0514d3a6383c2c32c14f86b7294c2f3696834d7aaa141aa13835e5d977fd2110990a43959d32d967ca11
+    "@figma/rest-api-spec": "npm:^0.31.0"
+  checksum: 10c0/e0113eb561a5af9a65828cfd61e4e73c16f8e34f36db006e12c8459afe74f12b877f8aca90af522fed5ef5be1374e141eb446782def45b6ad3a03cef4fee9890
   languageName: node
   linkType: hard
 
@@ -538,10 +538,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@figma/rest-api-spec@npm:^0.24.0":
-  version: 0.24.0
-  resolution: "@figma/rest-api-spec@npm:0.24.0"
-  checksum: 10c0/1f72d2e6aae1e38dc8005dd27f2126ab4f309a0109482ce01f89c9b85e30571099606e8ec1467212d429512be54360d76f6e59806c19777942b5b2adb3999cfc
+"@figma/rest-api-spec@npm:^0.31.0":
+  version: 0.31.0
+  resolution: "@figma/rest-api-spec@npm:0.31.0"
+  checksum: 10c0/c11b6a2bde7611dff69a3dd435b6bcdcb584724901678c42365a9d75635f79547691110821f5dcec51062ed9ad3df66c35cf16f5444f84d262095bb3bfbbc0c0
   languageName: node
   linkType: hard
 
@@ -843,10 +843,10 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
-    "@figma-export/cli": "npm:^6.2.0"
-    "@figma-export/output-components-as-svg": "npm:^6.2.0"
-    "@figma-export/output-components-as-svgr": "npm:^6.2.0"
-    "@figma-export/transform-svg-with-svgo": "npm:^6.2.1"
+    "@figma-export/cli": "npm:^6.2.2"
+    "@figma-export/output-components-as-svg": "npm:^6.2.2"
+    "@figma-export/output-components-as-svgr": "npm:^6.2.2"
+    "@figma-export/transform-svg-with-svgo": "npm:^6.2.2"
     "@koobiq/cli": "npm:^18.29.0"
     "@svgr/plugin-jsx": "npm:^8.1.0"
     "@svgr/plugin-prettier": "npm:^8.1.0"
