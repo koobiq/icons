@@ -20,6 +20,10 @@ jobs:
       - name: Build packages
         run: yarn run build
 
+      - name: Commitlint
+        if: ${{ github.event_name == 'pull_request' }}
+        run: echo "${{ github.event.pull_request.title }}" | yarn commitlint
+
       - name: Linters
         run: |
           yarn run prettier
