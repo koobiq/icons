@@ -3293,5 +3293,15 @@
         "codepoint": "0xF81E",
         "description": "",
         "tags": ["logo", "логотип"]
+    },
+    "scan_16": {
+        "codepoint": "0xF81F",
+        "description": "",
+        "tags": ["сканировать"]
+    },
+    "highlighter_16": {
+        "codepoint": "0xF820",
+        "description": "",
+        "tags": ["marker", "выделитель", "маркер"]
     }
 }
