@@ -1,3 +1,9 @@
+# 10.2.0 (2025-06-23)
+
+### Icons
+
+ * feature  added scan_16 highlighter_16 ([#DS-3872](https://github.com/koobiq/icons/issues/issue/DS-3872)) ([#41](https://github.com/koobiq/icons/issues/41)) 7cd8ee4
+
 # 10.1.0 (2025-06-02)
 
 ### Icons
