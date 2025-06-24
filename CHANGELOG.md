@@ -1,3 +1,9 @@
+# 10.3.0 (2025-06-24)
+
+### Icons
+
+ * feature  added aurora OS icon ([#DS-3857](https://github.com/koobiq/icons/issues/issue/DS-3857)) ([#43](https://github.com/koobiq/icons/issues/43)) 6c78d0b
+
 # 10.2.0 (2025-06-23)
 
 ### Icons
