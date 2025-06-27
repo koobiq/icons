@@ -3308,5 +3308,10 @@
         "codepoint": "0xF821",
         "description": "Аврора",
         "tags": ["logo", "логотип"]
+    },
+    "replace_24": {
+        "codepoint": "0xF822",
+        "description": "",
+        "tags": ["substitute", "заменить"]
     }
 }
