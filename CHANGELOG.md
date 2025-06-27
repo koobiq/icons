@@ -1,3 +1,9 @@
+# 10.4.0 (2025-06-27)
+
+### Icons
+
+ * feature  add replace_24 ([#DS-3900](https://github.com/koobiq/icons/issues/issue/DS-3900)) ([#44](https://github.com/koobiq/icons/issues/44)) dbc6d25
+
 # 10.3.0 (2025-06-24)
 
 ### Icons
