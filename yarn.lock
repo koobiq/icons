@@ -817,9 +817,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@koobiq/cli@npm:^18.29.0":
-  version: 18.29.0
-  resolution: "@koobiq/cli@npm:18.29.0"
+"@koobiq/cli@npm:^18.31.0":
+  version: 18.31.0
+  resolution: "@koobiq/cli@npm:18.31.0"
   dependencies:
     "@octokit/rest": "npm:^18.9.1"
     chalk: "npm:^4.0.0"
@@ -833,7 +833,7 @@ __metadata:
     merge2: "npm:^1.4.1"
   bin:
     koobiq-cli: bin/cli
-  checksum: 10c0/7d0bd8ccc54aede5452a1bd204a94cbe315d11df02f5144c41c66bb1b67e5d949391b37fd411da538cc1019394ec75a60f4f68a1350e9576155dba1fdc00ae94
+  checksum: 10c0/8feebf9797a8a6ac1e2002a6e90540febf09be37d19143c15eefa73255b79626b6f5b35e116c2f625cec522d5e89871682c83ff5f58103bab4e9ebee70c5bb6a
   languageName: node
   linkType: hard
 
@@ -847,7 +847,7 @@ __metadata:
     "@figma-export/output-components-as-svg": "npm:^6.2.2"
     "@figma-export/output-components-as-svgr": "npm:^6.2.2"
     "@figma-export/transform-svg-with-svgo": "npm:^6.2.2"
-    "@koobiq/cli": "npm:^18.29.0"
+    "@koobiq/cli": "npm:^18.31.0"
     "@svgr/plugin-jsx": "npm:^8.1.0"
     "@svgr/plugin-prettier": "npm:^8.1.0"
     "@svgr/plugin-svgo": "npm:^8.1.0"
