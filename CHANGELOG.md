@@ -1,3 +1,9 @@
+# 10.5.0 (2025-07-21)
+
+### Icons
+
+ * feature  added anomaly-square_16 ([#DS-4005](https://github.com/koobiq/icons/issues/issue/DS-4005)) ([#49](https://github.com/koobiq/icons/issues/49)) 3ca0c3f
+
 # 10.4.0 (2025-06-27)
 
 ### Icons
