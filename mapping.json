@@ -3313,5 +3313,10 @@
         "codepoint": "0xF822",
         "description": "",
         "tags": ["substitute", "заменить"]
+    },
+    "anomaly-square_16": {
+        "codepoint": "0xF823",
+        "description": "",
+        "tags": ["аномалия"]
     }
 }
