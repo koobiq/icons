@@ -1,3 +1,9 @@
+## 10.5.1 (2025-07-22)
+
+### Icons
+
+ * bug fix  anomaly icon reExport ([#DS-4004](https://github.com/koobiq/icons/issues/issue/DS-4004)) ([#50](https://github.com/koobiq/icons/issues/50)) fa4b691
+
 # 10.5.0 (2025-07-21)
 
 ### Icons
