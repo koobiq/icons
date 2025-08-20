@@ -22,8 +22,8 @@ const getFiles = async (dirPath, arrayOfFiles = []) => {
     return arrayOfFiles;
 };
 
-const copyIcons = async (destPath, svgDir) => {
-    const iconsList = await getFiles(svgDir);
+const copyIcons = async (destPath, svgRootDir) => {
+    const iconsList = await getFiles(svgRootDir);
 
     for (const item of iconsList) {
         const destFilePath = join(destPath, item.fileName);
@@ -33,15 +33,15 @@ const copyIcons = async (destPath, svgDir) => {
 
 const main = async () => {
     const destDir = join(__dirname, '../src/svg');
-    const svgDir = join(__dirname, `../${config.output.tempSvg}/${config.figmaFile.page}`);
+    const svgRootDir = join(__dirname, `../${config.output.tempSvg}`);
 
     try {
         // Remove and create the destination directory
         await fs.remove(destDir);
         await fs.ensureDir(destDir);
 
-        // Copy icons and info file
-        await copyIcons(destDir, svgDir);
+        // Copy icons from all subfolders inside temp svg directory
+        await copyIcons(destDir, svgRootDir);
 
         console.log('Files successfully copied.');
     } catch (error) {
