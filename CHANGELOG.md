@@ -1,3 +1,9 @@
+# 10.6.0 (2025-08-20)
+
+### Icons
+
+ * fincert_16 ([#DS-4124](https://github.com/koobiq/icons/issues/issue/DS-4124)) 9e03e20
+
 ## 10.5.1 (2025-07-22)
 
 ### Icons
