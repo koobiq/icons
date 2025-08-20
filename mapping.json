@@ -3318,5 +3318,10 @@
         "codepoint": "0xF823",
         "description": "",
         "tags": ["аномалия"]
+    },
+    "fincert_16": {
+        "codepoint": "0xF824",
+        "description": "ФинЦЕРТ",
+        "tags": ["logo", "логотип"]
     }
 }
