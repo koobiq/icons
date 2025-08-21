@@ -12,10 +12,13 @@ const secondaryZoneColorHex = '#E21D03';
 
 /** @type { import('@figma-export/types').ComponentsCommandOptions } */
 const componentOptions = {
-    token: process.env.FIGMA_TOKEN,
     fileId: config.figmaFile.id,
     concurrency: 5,
-    onlyFromPages: [config.figmaFile.page],
+    onlyFromPages: config.figmaFile.pages,
+    filterComponent: (component) => {
+        const name = (component.name || '').trim();
+        return !/^[._]/.test(name);
+    },
     transformers: [
         transformSvgWithSvgo({
             plugins: [
@@ -38,7 +41,6 @@ const componentOptions = {
                     }
                 },
                 {
-                    type: 'visitor',
                     name: 'replace-values',
                     fn: () => {
                         return {
@@ -71,7 +73,8 @@ const componentOptions = {
     ],
     outputters: [
         outputComponentsAsSvg({
-            output: config.output.tempSvg
+            output: config.output.tempSvg,
+            getDirname: ({ pageName }) => pageName
         })
     ]
 };
