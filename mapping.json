@@ -3667,7 +3667,14 @@
     "bolt-circle_24": {
         "codepoint": "0xF869",
         "description": "",
-        "tags": ["critical","security","vulnerability","безопасность","уровень уязвимости критический","уязвимость"]
+        "tags": [
+            "critical",
+            "security",
+            "vulnerability",
+            "безопасность",
+            "уровень уязвимости критический",
+            "уязвимость"
+        ]
     },
     "bolt-rectangle-vertical-o_24": {
         "codepoint": "0xF86A",
@@ -4080,7 +4087,19 @@
     "envelope-badge-arrow-right_24": {
         "codepoint": "0xF8BC",
         "description": "",
-        "tags": ["arrow","badge","mail","right","send","sent","значок","конверт","отправить ","почта","стрелка"]
+        "tags": [
+            "arrow",
+            "badge",
+            "mail",
+            "right",
+            "send",
+            "sent",
+            "значок",
+            "конверт",
+            "отправить ",
+            "почта",
+            "стрелка"
+        ]
     },
     "exception_24": {
         "codepoint": "0xF8BD",
@@ -4120,12 +4139,42 @@
     "file-badge-arrow-left-o_24": {
         "codepoint": "0xF8C4",
         "description": "",
-        "tags": ["arrow", "back", "file", "left", "move", "previous", "file", "arrow", "left", "move", "previous", "файл", "стрелка", "влево", "переместить", "предыдущий"]
+        "tags": [
+            "arrow",
+            "back",
+            "file",
+            "left",
+            "move",
+            "previous",
+            "file",
+            "arrow",
+            "left",
+            "move",
+            "previous",
+            "файл",
+            "стрелка",
+            "влево",
+            "переместить",
+            "предыдущий"
+        ]
     },
     "file-badge-arrow-right-o_24": {
         "codepoint": "0xF8C5",
         "description": "",
-        "tags": ["arrow", "file", "forward", "next", "right", "move", "файл", "стрелка", "вперед", "следующий", "вправо", "переместить"]
+        "tags": [
+            "arrow",
+            "file",
+            "forward",
+            "next",
+            "right",
+            "move",
+            "файл",
+            "стрелка",
+            "вперед",
+            "следующий",
+            "вправо",
+            "переместить"
+        ]
     },
     "file-badge-arrow-through-line-o_24": {
         "codepoint": "0xF8C6",
@@ -4762,27 +4811,41 @@
     "rectangle-triangle-vertical-thin_24": {
         "codepoint": "0xF945",
         "description": "",
-        "tags": ["critical","security","vulnerability","безопасность","уровень уязвимости критический","уязвимость"]
+        "tags": [
+            "critical",
+            "security",
+            "vulnerability",
+            "безопасность",
+            "уровень уязвимости критический",
+            "уязвимость"
+        ]
     },
     "rectangle-vertical-thin-half_24": {
         "codepoint": "0xF946",
         "description": "",
-        "tags": ["security","medium","vulnerability","безопасность","уровень уязвимости средний","уязвимость"]
+        "tags": ["security", "medium", "vulnerability", "безопасность", "уровень уязвимости средний", "уязвимость"]
     },
     "rectangle-vertical-thin-lines_24": {
         "codepoint": "0xF947",
         "description": "",
-        "tags": ["security","high","vulnerability","безопасность","уровень уязвимости высокий","уязвимость"]
+        "tags": ["security", "high", "vulnerability", "безопасность", "уровень уязвимости высокий", "уязвимость"]
     },
     "rectangle-vertical-thin-o_24": {
         "codepoint": "0xF948",
         "description": "",
-        "tags": ["security","low","vulnerability","безопасность","уровень уязвимости низкий","уязвимость"]
+        "tags": ["security", "low", "vulnerability", "безопасность", "уровень уязвимости низкий", "уязвимость"]
     },
     "rectangle-vertical-thin_24": {
         "codepoint": "0xF949",
         "description": "",
-        "tags": ["security","undefined","vulnerability","безопасность","уровень уязвимости неопределенный","уязвимость"]
+        "tags": [
+            "security",
+            "undefined",
+            "vulnerability",
+            "безопасность",
+            "уровень уязвимости неопределенный",
+            "уязвимость"
+        ]
     },
     "rectangles-o_24": {
         "codepoint": "0xF94A",
@@ -4859,12 +4922,36 @@
     "shield-o_24": {
         "codepoint": "0xF959",
         "description": "",
-        "tags": ["low","na","outline","protection","security","significance","безопасность","защита","значение","контур","низкий","щит"]
+        "tags": [
+            "low",
+            "na",
+            "outline",
+            "protection",
+            "security",
+            "significance",
+            "безопасность",
+            "защита",
+            "значение",
+            "контур",
+            "низкий",
+            "щит"
+        ]
     },
     "shield-ribbon_24": {
         "codepoint": "0xF95A",
         "description": "",
-        "tags": ["medium","protection","security","significance","безопасность","защита","значение","лента","средний","щит"]
+        "tags": [
+            "medium",
+            "protection",
+            "security",
+            "significance",
+            "безопасность",
+            "защита",
+            "значение",
+            "лента",
+            "средний",
+            "щит"
+        ]
     },
     "shield-slash_24": {
         "codepoint": "0xF95B",
@@ -4914,12 +5001,38 @@
     "speaker-wave_24": {
         "codepoint": "0xF964",
         "description": "",
-        "tags": ["alert","audio","enabled","sound","volume","wave","аудио","включено","волна","громкость","динамик","звук","предупреждение"]
+        "tags": [
+            "alert",
+            "audio",
+            "enabled",
+            "sound",
+            "volume",
+            "wave",
+            "аудио",
+            "включено",
+            "волна",
+            "громкость",
+            "динамик",
+            "звук",
+            "предупреждение"
+        ]
     },
     "speaker_24": {
         "codepoint": "0xF965",
         "description": "",
-        "tags": ["alert","audio","disabled","sound","volume","аудио","громкость","динамик","звук","отключено","предупреждение"]
+        "tags": [
+            "alert",
+            "audio",
+            "disabled",
+            "sound",
+            "volume",
+            "аудио",
+            "громкость",
+            "динамик",
+            "звук",
+            "отключено",
+            "предупреждение"
+        ]
     },
     "spinner_24": {
         "codepoint": "0xF966",
@@ -5159,7 +5272,15 @@
     "user-viewfinder_24": {
         "codepoint": "0xF997",
         "description": "",
-        "tags": ["accountidsynthetic","human","person","аккаунтсинтетик","пользователь","учетная запись","человек"]
+        "tags": [
+            "accountidsynthetic",
+            "human",
+            "person",
+            "аккаунтсинтетик",
+            "пользователь",
+            "учетная запись",
+            "человек"
+        ]
     },
     "vk-alt_24": {
         "codepoint": "0xF998",
