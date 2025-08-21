@@ -3323,5 +3323,1911 @@
         "codepoint": "0xF824",
         "description": "ФинЦЕРТ",
         "tags": ["logo", "логотип"]
+    },
+    "align-center_24": {
+        "codepoint": "0xF825",
+        "description": "",
+        "tags": ["alignment", "middle", "выравнивание", "середина", "центр"]
+    },
+    "align-left_24": {
+        "codepoint": "0xF826",
+        "description": "",
+        "tags": ["alignment", "start", "влево", "выравнивание", "начало"]
+    },
+    "align-right_24": {
+        "codepoint": "0xF827",
+        "description": "",
+        "tags": ["alignment", "end", "вправо", "выравнивание", "конец"]
+    },
+    "anomaly-square_24": {
+        "codepoint": "0xF828",
+        "description": "",
+        "tags": ["аномалия"]
+    },
+    "anomaly_24": {
+        "codepoint": "0xF829",
+        "description": "",
+        "tags": ["alert", "anomaly", "error", "warning", "аномалия", "ошибка", "предупреждение"]
+    },
+    "arrow-circle-down_24": {
+        "codepoint": "0xF82A",
+        "description": "",
+        "tags": ["вниз", "круг", "стрелка"]
+    },
+    "arrow-circle-left_24": {
+        "codepoint": "0xF82B",
+        "description": "",
+        "tags": ["влево", "круг", "стрелка"]
+    },
+    "arrow-circle-right_24": {
+        "codepoint": "0xF82C",
+        "description": "",
+        "tags": ["вправо", "круг", "стрелка"]
+    },
+    "arrow-circle-up_24": {
+        "codepoint": "0xF82D",
+        "description": "",
+        "tags": ["вверх", "круг", "стрелка"]
+    },
+    "arrow-down-left_24": {
+        "codepoint": "0xF82E",
+        "description": "",
+        "tags": ["trend", "вверх", "влево", "подъем", "рост", "стрелка", "тренд"]
+    },
+    "arrow-down-on-rectangles_24": {
+        "codepoint": "0xF82F",
+        "description": "",
+        "tags": ["distinct", "unique", "уникальный"]
+    },
+    "arrow-down-right_24": {
+        "codepoint": "0xF830",
+        "description": "",
+        "tags": ["trend", "вниз", "вправо", "падение", "снижение", "спад", "стрелка", "тренд"]
+    },
+    "arrow-down-s_24": {
+        "codepoint": "0xF831",
+        "description": "",
+        "tags": ["angle", "small", "вниз", "маленький", "шеврон"]
+    },
+    "arrow-down-to-bracket_24": {
+        "codepoint": "0xF832",
+        "description": "",
+        "tags": ["download", "вниз", "скобка", "стрелка"]
+    },
+    "arrow-down-to-line_24": {
+        "codepoint": "0xF833",
+        "description": "",
+        "tags": ["вниз", "линия", "стрелка"]
+    },
+    "arrow-down-xs_24": {
+        "codepoint": "0xF834",
+        "description": "",
+        "tags": ["sort", "down", "extra small", "очень маленькая", "стрелка", "вниз"]
+    },
+    "arrow-down_24": {
+        "codepoint": "0xF835",
+        "description": "",
+        "tags": ["down", "вниз"]
+    },
+    "arrow-left-s_24": {
+        "codepoint": "0xF836",
+        "description": "",
+        "tags": ["angle", "small", "влево", "маленький", "шеврон"]
+    },
+    "arrow-left-to-line_24": {
+        "codepoint": "0xF837",
+        "description": "",
+        "tags": ["terminal", "влево", "стрелка", "терминал"]
+    },
+    "arrow-left_24": {
+        "codepoint": "0xF838",
+        "description": "",
+        "tags": ["back", "previous", "влево", "назад", "стрелка"]
+    },
+    "arrow-pointer_24": {
+        "codepoint": "0xF839",
+        "description": "",
+        "tags": ["arrow", "pointer", "cursor", "стрелка", "указатель", "курсор"]
+    },
+    "arrow-right-arrow-left_24": {
+        "codepoint": "0xF83A",
+        "description": "",
+        "tags": ["switch", "exchange", "change", "стрелки", "переключить", "обмен"]
+    },
+    "arrow-right-circle-dot-o_24": {
+        "codepoint": "0xF83B",
+        "description": "",
+        "tags": ["circle", "dot", "outline", "right", "стрелка", "круг", "точка", "контур", "вправо"]
+    },
+    "arrow-right-from-bracket_24": {
+        "codepoint": "0xF83C",
+        "description": "",
+        "tags": ["exit", "logout", "выйти", "выход", "стрелка"]
+    },
+    "arrow-right-from-rectangle_24": {
+        "codepoint": "0xF83D",
+        "description": "",
+        "tags": ["exit", "out", "выйти", "наружу", "стрелка"]
+    },
+    "arrow-right-s_24": {
+        "codepoint": "0xF83E",
+        "description": "",
+        "tags": ["angle", "small", "вправо", "маленький", "шеврон"]
+    },
+    "arrow-right-through-line_24": {
+        "codepoint": "0xF83F",
+        "description": "",
+        "tags": ["cross", "line", "through", "вправо", "линия", "сквозь", "стрелка"]
+    },
+    "arrow-right-to-bracket_24": {
+        "codepoint": "0xF840",
+        "description": "",
+        "tags": ["upload", "вправо", "скобка", "стрелка"]
+    },
+    "arrow-right-to-line_24": {
+        "codepoint": "0xF841",
+        "description": "",
+        "tags": ["terminal", "вправо", "стрелка", "терминал"]
+    },
+    "arrow-right_24": {
+        "codepoint": "0xF842",
+        "description": "",
+        "tags": ["forward", "вперед", "вправо", "стрелка"]
+    },
+    "arrow-rotate-left-badge-linux_24": {
+        "codepoint": "0xF843",
+        "description": "",
+        "tags": ["reload", "linux", "refresh", "перезагрузка", "линукс"]
+    },
+    "arrow-rotate-right-dot_24": {
+        "codepoint": "0xF844",
+        "description": "",
+        "tags": ["reload", "dot", "refresh", "перезагрузка", "точка"]
+    },
+    "arrow-turn-down-left_24": {
+        "codepoint": "0xF845",
+        "description": "",
+        "tags": ["enter", "ввод"]
+    },
+    "arrow-turn-down-right_24": {
+        "codepoint": "0xF846",
+        "description": "",
+        "tags": ["enter", "ввод"]
+    },
+    "arrow-up-arrow-down-dot_24": {
+        "codepoint": "0xF847",
+        "description": "",
+        "tags": ["sort", "both", "directions", "sorting", "сортировка", "оба", "направления"]
+    },
+    "arrow-up-arrow-down_24": {
+        "codepoint": "0xF848",
+        "description": "",
+        "tags": ["sort", "both", "directions", "sorting", "сортировка", "оба", "направления"]
+    },
+    "arrow-up-from-bracket_24": {
+        "codepoint": "0xF849",
+        "description": "",
+        "tags": ["upload", "вверх", "скобка", "стрелка"]
+    },
+    "arrow-up-from-rectangle_24": {
+        "codepoint": "0xF84A",
+        "description": "",
+        "tags": ["upload", "вверх", "прямоугольник", "стрелка"]
+    },
+    "arrow-up-left_24": {
+        "codepoint": "0xF84B",
+        "description": "",
+        "tags": ["trend", "вверх", "влево", "подъем", "рост", "стрелка", "тренд"]
+    },
+    "arrow-up-right-from-square_24": {
+        "codepoint": "0xF84C",
+        "description": "",
+        "tags": ["external", "link", "open", "внешний", "ссылка", "открыть"]
+    },
+    "arrow-up-right_24": {
+        "codepoint": "0xF84D",
+        "description": "",
+        "tags": ["trend", "вверх", "вправо", "подъем", "рост", "стрелка", "тренд"]
+    },
+    "arrow-up-s_24": {
+        "codepoint": "0xF84E",
+        "description": "",
+        "tags": ["angle", "small", "вверх", "маленький", "шеврон"]
+    },
+    "arrow-up-xs_24": {
+        "codepoint": "0xF84F",
+        "description": "Сортировка по возрастанию",
+        "tags": ["sort", "up", "extra small", "очень маленькая", "стрелка", "вверх"]
+    },
+    "arrow-up_24": {
+        "codepoint": "0xF850",
+        "description": "",
+        "tags": ["up", "вверх"]
+    },
+    "arrows-collapse-diagonal_24": {
+        "codepoint": "0xF851",
+        "description": "",
+        "tags": ["diagonal", "collapse", "shrink", "диагонально", "свернуть", "уменьшить"]
+    },
+    "arrows-down-up_24": {
+        "codepoint": "0xF852",
+        "description": "",
+        "tags": ["collapse", "свернуть", "стрелки"]
+    },
+    "arrows-expand-diagonal_24": {
+        "codepoint": "0xF853",
+        "description": "",
+        "tags": ["диагонально", "развернуть", "расширить", "стрелки", "увеличить"]
+    },
+    "arrows-left-right-to-line_24": {
+        "codepoint": "0xF854",
+        "description": "",
+        "tags": ["terminal", "стрелки", "терминал"]
+    },
+    "arrows-left_24": {
+        "codepoint": "0xF855",
+        "description": "",
+        "tags": ["steps", "влево", "стрелки", "шаги"]
+    },
+    "arrows-retweet_24": {
+        "codepoint": "0xF856",
+        "description": "",
+        "tags": ["repeat", "retweet", "повтор", "ретвит"]
+    },
+    "arrows-right_24": {
+        "codepoint": "0xF857",
+        "description": "",
+        "tags": ["steps", "вправо", "стрелки", "шаги"]
+    },
+    "arrows-rotate-bolt_24": {
+        "codepoint": "0xF858",
+        "description": "",
+        "tags": ["sync", "alert", "spinner", "синхронизация", "предупреждение", "спиннер"]
+    },
+    "arrows-up-down_24": {
+        "codepoint": "0xF859",
+        "description": "",
+        "tags": ["sort", "sorting", "сортировка"]
+    },
+    "arrows-up_24": {
+        "codepoint": "0xF85A",
+        "description": "",
+        "tags": ["steps", "вверх", "стрелки", "шаги"]
+    },
+    "asterisk_24": {
+        "codepoint": "0xF85B",
+        "description": "",
+        "tags": ["star", "звезда"]
+    },
+    "astra-linux_24": {
+        "codepoint": "0xF85C",
+        "description": "Астра Линукс",
+        "tags": ["logo"]
+    },
+    "aurora-os_24": {
+        "codepoint": "0xF85D",
+        "description": "Аврора",
+        "tags": ["logo", "логотип"]
+    },
+    "backward-step_24": {
+        "codepoint": "0xF85E",
+        "description": "",
+        "tags": ["previous", "rewind", "назад", "перемотка", "предыдущий"]
+    },
+    "backward_24": {
+        "codepoint": "0xF85F",
+        "description": "",
+        "tags": ["previous", "rewind", "назад", "перемотка", "предыдущий"]
+    },
+    "ban-dot_24": {
+        "codepoint": "0xF860",
+        "description": "",
+        "tags": ["block", "prohibit", "unavailable", "блок", "запрет", "недоступно"]
+    },
+    "band-aid_24": {
+        "codepoint": "0xF861",
+        "description": "",
+        "tags": ["bandage", "bandaid", "fix", "heal", "plaster", "repair", "пластырь", "помощь", "ремонт"]
+    },
+    "bars-bold-horizontal_24": {
+        "codepoint": "0xF862",
+        "description": "",
+        "tags": ["project", "проект"]
+    },
+    "bars-horizontal_24": {
+        "codepoint": "0xF863",
+        "description": "",
+        "tags": ["project", "проект"]
+    },
+    "bars-sort-bottom_24": {
+        "codepoint": "0xF864",
+        "description": "",
+        "tags": ["внизу", "полосы", "сортировка"]
+    },
+    "bars-sort-center_24": {
+        "codepoint": "0xF865",
+        "description": "",
+        "tags": ["полосы", "сортировка", "центр"]
+    },
+    "bars-sort-top_24": {
+        "codepoint": "0xF866",
+        "description": "",
+        "tags": ["вверху", "полосы", "сортировка"]
+    },
+    "behance_24": {
+        "codepoint": "0xF867",
+        "description": "",
+        "tags": ["logo"]
+    },
+    "binoculars_24": {
+        "codepoint": "0xF868",
+        "description": "",
+        "tags": ["search", "смотреть", "поиск"]
+    },
+    "bolt-circle_24": {
+        "codepoint": "0xF869",
+        "description": "",
+        "tags": ["critical","security","vulnerability","безопасность","уровень уязвимости критический","уязвимость"]
+    },
+    "bolt-rectangle-vertical-o_24": {
+        "codepoint": "0xF86A",
+        "description": "",
+        "tags": ["alert", "event", "notification", "предупреждение", "событие", "событие", "уведомление"]
+    },
+    "bolt-rectangle-vertical_24": {
+        "codepoint": "0xF86B",
+        "description": "",
+        "tags": ["alert", "event", "notification", "предупреждение", "событие", "событие", "уведомление"]
+    },
+    "bolt_24": {
+        "codepoint": "0xF86C",
+        "description": "",
+        "tags": ["alert", "event", "notification", "предупреждение", "событие", "событие", "уведомление"]
+    },
+    "box-archive-arrow-down_24": {
+        "codepoint": "0xF86D",
+        "description": "",
+        "tags": ["action", "download", "storage", "архив", "коробка", "скачать", "хранилище"]
+    },
+    "box-archive_24": {
+        "codepoint": "0xF86E",
+        "description": "",
+        "tags": ["storage", "архив", "коробка", "хранилище"]
+    },
+    "box-open_24": {
+        "codepoint": "0xF86F",
+        "description": "",
+        "tags": ["open", "открытый", "ящик"]
+    },
+    "box_24": {
+        "codepoint": "0xF870",
+        "description": "",
+        "tags": ["container", "ящик", "контейнер"]
+    },
+    "break-block_24": {
+        "codepoint": "0xF871",
+        "description": "",
+        "tags": ["block", "break", "stop", "блок", "ломать", "остановка"]
+    },
+    "briefcase_24": {
+        "codepoint": "0xF872",
+        "description": "",
+        "tags": ["office", "structure", "здание", "офис", "структура"]
+    },
+    "bucket-s3_24": {
+        "codepoint": "0xF873",
+        "description": "",
+        "tags": []
+    },
+    "bug_24": {
+        "codepoint": "0xF874",
+        "description": "",
+        "tags": ["bug", "error", "issue", "баг", "ошибка", "проблема"]
+    },
+    "build-set_24": {
+        "codepoint": "0xF875",
+        "description": "",
+        "tags": ["collection", "коллекция", "набор", "сборка"]
+    },
+    "building_24": {
+        "codepoint": "0xF876",
+        "description": "",
+        "tags": ["office", "structure", "здание", "офис", "структура"]
+    },
+    "burst_24": {
+        "codepoint": "0xF877",
+        "description": "",
+        "tags": ["explode", "explosion", "vulner-exploitable", "взрыв", "уязвимость"]
+    },
+    "cable_24": {
+        "codepoint": "0xF878",
+        "description": "",
+        "tags": ["connect", "connection", "кабель", "подключение"]
+    },
+    "calendar-days-o_24": {
+        "codepoint": "0xF879",
+        "description": "",
+        "tags": ["date", "outline", "дата", "календарь", "контур"]
+    },
+    "calendar-o_24": {
+        "codepoint": "0xF87A",
+        "description": "",
+        "tags": ["date", "outline", "дата", "календарь", "контур"]
+    },
+    "calendar-xmark-o_24": {
+        "codepoint": "0xF87B",
+        "description": "",
+        "tags": ["date", "outline", "дата", "календарь", "контур", "крестик"]
+    },
+    "capsule_24": {
+        "codepoint": "0xF87C",
+        "description": "",
+        "tags": ["medicine", "patch", "vulner", "капсула", "лекарство", "патч", "уязвимость"]
+    },
+    "certificate-vertical_24": {
+        "codepoint": "0xF87D",
+        "description": "",
+        "tags": ["document", "документ", "сертификат"]
+    },
+    "channel_24": {
+        "codepoint": "0xF87E",
+        "description": "",
+        "tags": ["stream", "канал", "поток"]
+    },
+    "chart-network_24": {
+        "codepoint": "0xF87F",
+        "description": "",
+        "tags": ["vulner", "vulnerability", "граф", "график", "диаграмма связей", "сеть", "уязвимость"]
+    },
+    "check-badge-auto_24": {
+        "codepoint": "0xF880",
+        "description": "",
+        "tags": ["verify", "автоматически", "верифицировать", "проверить"]
+    },
+    "check-double_24": {
+        "codepoint": "0xF881",
+        "description": "",
+        "tags": ["confirm", "verified", "подтверждение", "проверено"]
+    },
+    "check-s_24": {
+        "codepoint": "0xF882",
+        "tags": []
+    },
+    "check_24": {
+        "codepoint": "0xF883",
+        "description": "",
+        "tags": ["confirm", "подтверждение"]
+    },
+    "checkbox-multiple_24": {
+        "codepoint": "0xF884",
+        "description": "",
+        "tags": ["options", "несколько", "опции", "чекбокс"]
+    },
+    "chevron-circle-down_24": {
+        "codepoint": "0xF885",
+        "description": "",
+        "tags": ["angle", "вниз", "круг", "угол", "шеврон"]
+    },
+    "chevron-circle-left_24": {
+        "codepoint": "0xF886",
+        "description": "",
+        "tags": ["angle", "влево", "круг", "угол", "шеврон"]
+    },
+    "chevron-circle-right_24": {
+        "codepoint": "0xF887",
+        "description": "",
+        "tags": ["angle", "вправо", "круг", "угол", "шеврон"]
+    },
+    "chevron-circle-up_24": {
+        "codepoint": "0xF888",
+        "description": "",
+        "tags": ["angle", "вверх", "круг", "угол", "шеврон"]
+    },
+    "chevron-double-down-s_24": {
+        "codepoint": "0xF889",
+        "description": "",
+        "tags": ["small", "angle", "шеврон", "двойной", "вниз", "угол"]
+    },
+    "chevron-double-down_24": {
+        "codepoint": "0xF88A",
+        "description": "",
+        "tags": ["angle", "large", "шеврон", "двойной", "вниз", "угол"]
+    },
+    "chevron-double-left-s_24": {
+        "codepoint": "0xF88B",
+        "description": "",
+        "tags": ["angle", "small", "влево", "маленький", "шеврон", "двойной"]
+    },
+    "chevron-double-left_24": {
+        "codepoint": "0xF88C",
+        "description": "",
+        "tags": ["angle", "large", "влево", "большой", "шеврон", "двойной"]
+    },
+    "chevron-double-right-s_24": {
+        "codepoint": "0xF88D",
+        "description": "",
+        "tags": ["angle", "small", "вправо", "маленький", "шеврон", "двойной"]
+    },
+    "chevron-double-right_24": {
+        "codepoint": "0xF88E",
+        "description": "",
+        "tags": ["angle", "large", "вправо", "большой", "шеврон", "двойной"]
+    },
+    "chevron-double-up-s_24": {
+        "codepoint": "0xF88F",
+        "description": "",
+        "tags": ["small", "angle", "шеврон", "двойной", "вверх", "угол"]
+    },
+    "chevron-double-up_24": {
+        "codepoint": "0xF890",
+        "description": "",
+        "tags": ["angle", "large", "шеврон", "двойной", "вверх", "угол"]
+    },
+    "chevrons-down-up-s_24": {
+        "codepoint": "0xF891",
+        "description": "",
+        "tags": ["collapse", "small", "развернуть", "расширить", "увеличить", "шевроны"]
+    },
+    "chevrons-down-up_24": {
+        "codepoint": "0xF892",
+        "description": "",
+        "tags": ["collapse", "развернуть", "расширить", "увеличить", "шевроны"]
+    },
+    "chevrons-expand_24": {
+        "codepoint": "0xF893",
+        "description": "",
+        "tags": ["expand", "развернуть", "расширить", "увеличить", "шевроны"]
+    },
+    "chevrons-up-down-s_24": {
+        "codepoint": "0xF894",
+        "description": "",
+        "tags": ["expand", "small", "развернуть", "расширить", "увеличить", "шевроны"]
+    },
+    "chevrons-up-down_24": {
+        "codepoint": "0xF895",
+        "description": "",
+        "tags": ["expand", "развернуть", "расширить", "увеличить", "шевроны"]
+    },
+    "circle-dot-o_24": {
+        "codepoint": "0xF896",
+        "description": "",
+        "tags": ["partial", "shape", "круг", "точка", "форма"]
+    },
+    "circle-dot_24": {
+        "codepoint": "0xF897",
+        "description": "",
+        "tags": ["partial", "shape", "круг", "точка", "форма"]
+    },
+    "circle-half_24": {
+        "codepoint": "0xF898",
+        "description": "",
+        "tags": ["number", "shape", "six", "круг", "форма", "шесть"]
+    },
+    "circle-xs_24": {
+        "codepoint": "0xF899",
+        "description": "",
+        "tags": ["number", "shape", "six", "круг", "форма", "шесть"]
+    },
+    "circle_24": {
+        "codepoint": "0xF89A",
+        "description": "",
+        "tags": ["shape", "круг", "форма"]
+    },
+    "clock-badge-linux_24": {
+        "codepoint": "0xF89B",
+        "description": "",
+        "tags": ["session", "бейдж", "линукс", "сессия", "часы"]
+    },
+    "clock-badge-pause_24": {
+        "codepoint": "0xF89C",
+        "description": "",
+        "tags": ["pause on time", "значок", "на время", "пауза", "часы"]
+    },
+    "clock-badge-play_24": {
+        "codepoint": "0xF89D",
+        "description": "",
+        "tags": ["build", "config", "setup", "конфигурация", "настройка", "сборка"]
+    },
+    "clock-badge-stop_24": {
+        "codepoint": "0xF89E",
+        "description": "",
+        "tags": ["stop", "stopwatch", "стоп", "секундомер"]
+    },
+    "clock-badge-windows_24": {
+        "codepoint": "0xF89F",
+        "tags": []
+    },
+    "clock-rotate-left_24": {
+        "codepoint": "0xF8A0",
+        "description": "",
+        "tags": ["history", "история"]
+    },
+    "clock_24": {
+        "codepoint": "0xF8A1",
+        "description": "",
+        "tags": ["time", "время"]
+    },
+    "compass_24": {
+        "codepoint": "0xF8A2",
+        "description": "",
+        "tags": ["navigation", "навигация"]
+    },
+    "compress_24": {
+        "codepoint": "0xF8A3",
+        "description": "",
+        "tags": ["collapse", "minimize", "свернуть", "уменьшить"]
+    },
+    "connection_24": {
+        "codepoint": "0xF8A4",
+        "description": "",
+        "tags": ["connect", "вилка", "подключить"]
+    },
+    "connections-line_24": {
+        "codepoint": "0xF8A5",
+        "description": "",
+        "tags": ["connect", "line", "вилка", "линия", "подключить"]
+    },
+    "connections-star_24": {
+        "codepoint": "0xF8A6",
+        "description": "",
+        "tags": ["connect", "star", "вилка", "звезда", "подключить"]
+    },
+    "cpu_24": {
+        "codepoint": "0xF8A7",
+        "description": "",
+        "tags": ["processor", "процессор"]
+    },
+    "credit-card_24": {
+        "codepoint": "0xF8A8",
+        "description": "",
+        "tags": ["payment", "оплата"]
+    },
+    "crosshairs_24": {
+        "codepoint": "0xF8A9",
+        "description": "",
+        "tags": ["target", "мишень"]
+    },
+    "crown_24": {
+        "codepoint": "0xF8AA",
+        "description": "",
+        "tags": ["premium", "премиум"]
+    },
+    "dashboard_24": {
+        "codepoint": "0xF8AB",
+        "description": "",
+        "tags": ["metrics", "метрики"]
+    },
+    "database-badge-arrow-down_24": {
+        "codepoint": "0xF8AC",
+        "description": "",
+        "tags": ["import", "экспорт"]
+    },
+    "database-normal_24": {
+        "codepoint": "0xF8AD",
+        "description": "",
+        "tags": ["data", "event", "normalized", "standard", "нормализовано", "событие", "стандарт"]
+    },
+    "database-raw_24": {
+        "codepoint": "0xF8AE",
+        "description": "",
+        "tags": ["data", "event", "raw", "событие", "сырые данные"]
+    },
+    "database_24": {
+        "codepoint": "0xF8AF",
+        "description": "",
+        "tags": ["data", "данные"]
+    },
+    "dataflow_24": {
+        "codepoint": "0xF8B0",
+        "description": "",
+        "tags": ["flow", "поток"]
+    },
+    "desktop-plus-o_24": {
+        "codepoint": "0xF8B1",
+        "description": "",
+        "tags": ["add", "computer", "компьютер", "рабочий стол"]
+    },
+    "desktop-plus_24": {
+        "codepoint": "0xF8B2",
+        "description": "",
+        "tags": ["add", "computer", "компьютер", "рабочий стол"]
+    },
+    "diamond-half_24": {
+        "codepoint": "0xF8B3",
+        "description": "",
+        "tags": ["hazard", "info", "level", "алмаз", "инфо", "информация", "опасность", "уровень"]
+    },
+    "diamond-info_24": {
+        "codepoint": "0xF8B4",
+        "description": "",
+        "tags": ["hazard", "info", "level", "алмаз", "инфо", "информация", "опасность", "уровень"]
+    },
+    "diamond-o_24": {
+        "codepoint": "0xF8B5",
+        "description": "",
+        "tags": ["hazard", "info", "level", "алмаз", "инфо", "информация", "опасность", "уровень"]
+    },
+    "diamond_24": {
+        "codepoint": "0xF8B6",
+        "description": "",
+        "tags": ["hazard", "info", "level", "алмаз", "инфо", "информация", "опасность", "уровень"]
+    },
+    "drop_24": {
+        "codepoint": "0xF8B7",
+        "description": "",
+        "tags": ["droplet", "liquid", "жидкость", "капля"]
+    },
+    "eject-down_24": {
+        "codepoint": "0xF8B8",
+        "description": "",
+        "tags": ["below", "level", "medium", "vulner", "ниже среднего", "уровень", "уязвимости", "уязвимость"]
+    },
+    "eject_24": {
+        "codepoint": "0xF8B9",
+        "description": "",
+        "tags": ["above", "level", "medium", "vulner", "выше среднего", "уровень", "уязвимости", "уязвимость"]
+    },
+    "ellipsis-horizontal-circle-o_24": {
+        "codepoint": "0xF8BA",
+        "description": "",
+        "tags": ["dots", "more", "точки", "еще"]
+    },
+    "ellipsis-horizontal_24": {
+        "codepoint": "0xF8BB",
+        "description": "",
+        "tags": ["dots", "more", "точки", "еще"]
+    },
+    "envelope-badge-arrow-right_24": {
+        "codepoint": "0xF8BC",
+        "description": "",
+        "tags": ["arrow","badge","mail","right","send","sent","значок","конверт","отправить ","почта","стрелка"]
+    },
+    "exception_24": {
+        "codepoint": "0xF8BD",
+        "description": "",
+        "tags": ["исключение"]
+    },
+    "exclamation-triangle_24": {
+        "codepoint": "0xF8BE",
+        "description": "",
+        "tags": ["alert", "attention", "warning", "внимание", "восклицательный", "треугольник", "предупреждение"]
+    },
+    "exists_24": {
+        "codepoint": "0xF8BF",
+        "description": "",
+        "tags": ["check", "existence", "проверка", "существование"]
+    },
+    "eye-slash_24": {
+        "codepoint": "0xF8C0",
+        "description": "",
+        "tags": ["hide", "глаз", "линия", "скрыть"]
+    },
+    "eye_24": {
+        "codepoint": "0xF8C1",
+        "description": "",
+        "tags": ["see", "view", "видеть", "глаз", "смотреть"]
+    },
+    "fence_24": {
+        "codepoint": "0xF8C2",
+        "description": "",
+        "tags": ["barrier", "ограждение"]
+    },
+    "file-archive-o_24": {
+        "codepoint": "0xF8C3",
+        "description": "",
+        "tags": ["zip", "архив"]
+    },
+    "file-badge-arrow-left-o_24": {
+        "codepoint": "0xF8C4",
+        "description": "",
+        "tags": ["arrow", "back", "file", "left", "move", "previous", "file", "arrow", "left", "move", "previous", "файл", "стрелка", "влево", "переместить", "предыдущий"]
+    },
+    "file-badge-arrow-right-o_24": {
+        "codepoint": "0xF8C5",
+        "description": "",
+        "tags": ["arrow", "file", "forward", "next", "right", "move", "файл", "стрелка", "вперед", "следующий", "вправо", "переместить"]
+    },
+    "file-badge-arrow-through-line-o_24": {
+        "codepoint": "0xF8C6",
+        "description": "",
+        "tags": ["arrow", "cross", "file", "line", "move", "файл", "стрелка", "линия", "переместить", "скрещивание"]
+    },
+    "file-badge-arrow-turn-right_24": {
+        "codepoint": "0xF8C7",
+        "description": "",
+        "tags": ["arrow", "file", "move", "right", "turn", "файл", "стрелка", "переместить", "вправо", "повернуть"]
+    },
+    "file-code-o_24": {
+        "codepoint": "0xF8C8",
+        "description": "",
+        "tags": ["code", "programming", "код", "программирование"]
+    },
+    "file-cut-o_24": {
+        "codepoint": "0xF8C9",
+        "description": "",
+        "tags": ["cut", "scissors", "вырезать", "ножницы"]
+    },
+    "file-exclamation-o_24": {
+        "codepoint": "0xF8CA",
+        "description": "",
+        "tags": ["alert", "error", "warning", "ошибка", "предупреждение"]
+    },
+    "file-horizontal-o_24": {
+        "codepoint": "0xF8CB",
+        "description": "",
+        "tags": ["document", "документ"]
+    },
+    "file-lines-short_24": {
+        "codepoint": "0xF8CC",
+        "description": "",
+        "tags": ["data", "event", "raw", "событие", "сырые данные"]
+    },
+    "file-lines_24": {
+        "codepoint": "0xF8CD",
+        "description": "",
+        "tags": ["event", "normalized", "standard", "нормализовано", "событие", "стандарт"]
+    },
+    "file-plus-o_24": {
+        "codepoint": "0xF8CE",
+        "description": "",
+        "tags": ["add", "new", "новый", "добавить"]
+    },
+    "file-shared-o_24": {
+        "codepoint": "0xF8CF",
+        "description": "",
+        "tags": ["share", "shared", "общий", "поделиться"]
+    },
+    "file-text-o_24": {
+        "codepoint": "0xF8D0",
+        "description": "",
+        "tags": ["document", "text", "документ", "текст"]
+    },
+    "filter-dot_24": {
+        "codepoint": "0xF8D1",
+        "description": "",
+        "tags": ["funnel", "фильтр", "воронка"]
+    },
+    "filter_24": {
+        "codepoint": "0xF8D2",
+        "description": "",
+        "tags": ["funnel", "фильтр", "воронка"]
+    },
+    "fire-flame_24": {
+        "codepoint": "0xF8D3",
+        "description": "",
+        "tags": ["burn", "огонь", "горение"]
+    },
+    "floppy-disk_24": {
+        "codepoint": "0xF8D4",
+        "description": "",
+        "tags": ["save", "дискета", "сохранить"]
+    },
+    "flowchart-dot_24": {
+        "codepoint": "0xF8D5",
+        "description": "",
+        "tags": ["graph", "process", "workflow", "граф", "процесс", "рабочий процесс"]
+    },
+    "flowchart-xmark_24": {
+        "codepoint": "0xF8D6",
+        "description": "",
+        "tags": ["graph", "process", "workflow", "graph", "process", "workflow", "граф", "процесс", "рабочий процесс"]
+    },
+    "flowchart_24": {
+        "codepoint": "0xF8D7",
+        "description": "",
+        "tags": ["graph", "process", "workflow", "граф", "процесс", "рабочий процесс"]
+    },
+    "folder-badge-arrow-right_24": {
+        "codepoint": "0xF8D8",
+        "description": "",
+        "tags": ["directory", "move", "вправо", "директория", "значок", "папка", "переместить", "стрелка"]
+    },
+    "folder-badge-magnifying-glass_24": {
+        "codepoint": "0xF8D9",
+        "description": "",
+        "tags": ["search", "find", "поиск", "найти"]
+    },
+    "folder-badge-plus_24": {
+        "codepoint": "0xF8DA",
+        "description": "",
+        "tags": ["add", "new", "новый", "добавить"]
+    },
+    "folder-dot_24": {
+        "codepoint": "0xF8DB",
+        "description": "",
+        "tags": ["directory", "opened", "директория", "открытая", "папка", "точка"]
+    },
+    "folder-multiple_24": {
+        "codepoint": "0xF8DC",
+        "description": "",
+        "tags": ["collection", "folders", "коллекция", "папки"]
+    },
+    "folder-open-badge-magnifying-glass_24": {
+        "codepoint": "0xF8DD",
+        "description": "",
+        "tags": ["search", "find", "поиск", "найти"]
+    },
+    "folder-open-dot_24": {
+        "codepoint": "0xF8DE",
+        "description": "",
+        "tags": ["directory", "opened", "директория", "открытая", "папка", "точка"]
+    },
+    "formula_24": {
+        "codepoint": "0xF8DF",
+        "description": "",
+        "tags": ["equation", "уравнение"]
+    },
+    "forward-step_24": {
+        "codepoint": "0xF8E0",
+        "description": "",
+        "tags": ["next", "вперед", "следующий"]
+    },
+    "forward_24": {
+        "codepoint": "0xF8E1",
+        "description": "",
+        "tags": ["next", "вперед", "следующий"]
+    },
+    "gear-badge-arrowtriangle-up-square_24": {
+        "codepoint": "0xF8E2",
+        "description": "",
+        "tags": ["build", "config", "setup", "конфигурация", "настройка", "сборка"]
+    },
+    "gear-badge-square-o_24": {
+        "codepoint": "0xF8E3",
+        "description": "",
+        "tags": ["build", "config", "setup", "конфигурация", "настройка", "сборка"]
+    },
+    "gear-badge-square-s_24": {
+        "codepoint": "0xF8E4",
+        "description": "",
+        "tags": ["build", "config", "setup", "конфигурация", "настройка", "сборка"]
+    },
+    "gear-badge-square_24": {
+        "codepoint": "0xF8E5",
+        "description": "",
+        "tags": ["build", "config", "setup", "конфигурация", "настройка", "сборка"]
+    },
+    "github-alt_24": {
+        "codepoint": "0xF8E6",
+        "description": "",
+        "tags": ["logo"]
+    },
+    "github_24": {
+        "codepoint": "0xF8E7",
+        "description": "",
+        "tags": ["logo"]
+    },
+    "gitlab_24": {
+        "codepoint": "0xF8E8",
+        "description": "",
+        "tags": ["logo"]
+    },
+    "globe-dot_24": {
+        "codepoint": "0xF8E9",
+        "description": "",
+        "tags": ["map", "partial", "website", "world", "глобус", "карта", "мир", "частичный"]
+    },
+    "globe-on-line_24": {
+        "codepoint": "0xF8EA",
+        "description": "",
+        "tags": ["dns", "network", "домен", "сеть"]
+    },
+    "gossopka_24": {
+        "codepoint": "0xF8EB",
+        "tags": []
+    },
+    "grid-dots_24": {
+        "codepoint": "0xF8EC",
+        "description": "",
+        "tags": ["markers", "points", "маркеры", "точки"]
+    },
+    "grid-group-dot_24": {
+        "codepoint": "0xF8ED",
+        "description": "",
+        "tags": ["collection", "group", "dots", "коллекция", "группа", "точки"]
+    },
+    "grid-group_24": {
+        "codepoint": "0xF8EE",
+        "description": "",
+        "tags": ["collection", "group", "коллекция", "группа"]
+    },
+    "grid-squares_24": {
+        "codepoint": "0xF8EF",
+        "description": "",
+        "tags": ["layout", "макет"]
+    },
+    "grip-vertical-s_24": {
+        "codepoint": "0xF8F0",
+        "description": "",
+        "tags": ["handle", "draggable", "ручка", "перетаскивание"]
+    },
+    "grip-vertical_24": {
+        "codepoint": "0xF8F1",
+        "description": "",
+        "tags": ["handle", "draggable", "ручка", "перетаскивание"]
+    },
+    "habr-alt_24": {
+        "codepoint": "0xF8F2",
+        "description": "",
+        "tags": ["logo"]
+    },
+    "habr_24": {
+        "codepoint": "0xF8F3",
+        "description": "",
+        "tags": ["logo"]
+    },
+    "handcuffs_24": {
+        "codepoint": "0xF8F4",
+        "description": "",
+        "tags": ["arrest", "арест"]
+    },
+    "hard-drive_24": {
+        "codepoint": "0xF8F5",
+        "description": "",
+        "tags": ["storage", "хранилище"]
+    },
+    "hashtag_24": {
+        "codepoint": "0xF8F6",
+        "tags": ["tag", "метка", "хэштег"]
+    },
+    "highlighter_24": {
+        "codepoint": "0xF8F7",
+        "description": "",
+        "tags": ["marker", "mark", "маркер", "выделить"]
+    },
+    "hourglass-end_24": {
+        "codepoint": "0xF8F8",
+        "description": "",
+        "tags": ["time", "end", "время", "конец"]
+    },
+    "hourglass-half_24": {
+        "codepoint": "0xF8F9",
+        "description": "",
+        "tags": ["time", "middle", "время", "середина"]
+    },
+    "hourglass-start_24": {
+        "codepoint": "0xF8FA",
+        "description": "",
+        "tags": ["time", "start", "время", "начало"]
+    },
+    "house-o_24": {
+        "codepoint": "0xF8FB",
+        "description": "",
+        "tags": ["home", "дом", "главная"]
+    },
+    "house_24": {
+        "codepoint": "0xF8FC",
+        "description": "",
+        "tags": ["home", "дом", "главная"]
+    },
+    "image_24": {
+        "codepoint": "0xF8FD",
+        "description": "",
+        "tags": ["picture", "изображение", "фотография"]
+    },
+    "inbox_24": {
+        "codepoint": "0xF8FE",
+        "description": "",
+        "tags": ["mail", "почта"]
+    },
+    "infinity_24": {
+        "codepoint": "0xF8FF",
+        "description": "",
+        "tags": ["endless", "бесконечность"]
+    },
+    "ip-multiple_24": {
+        "codepoint": "0xF900",
+        "description": "",
+        "tags": ["address", "ip", "адрес", "айпи"]
+    },
+    "ip4-rectangle_24": {
+        "codepoint": "0xF901",
+        "description": "",
+        "tags": ["address", "ip", "ipv4", "адрес", "айпи", "айпи вей"]
+    },
+    "ip6-rectangle_24": {
+        "codepoint": "0xF902",
+        "description": "",
+        "tags": ["address", "ip", "ipv6", "адрес", "айпи", "айпи шесть"]
+    },
+    "ip_24": {
+        "codepoint": "0xF903",
+        "description": "",
+        "tags": ["address", "ip", "адрес", "айпи"]
+    },
+    "join_24": {
+        "codepoint": "0xF904",
+        "description": "",
+        "tags": ["merge", "соединить"]
+    },
+    "keyboard_24": {
+        "codepoint": "0xF905",
+        "description": "",
+        "tags": ["typing", "ввод", "клавиатура"]
+    },
+    "layer-group_24": {
+        "codepoint": "0xF906",
+        "description": "",
+        "tags": ["stack", "слои"]
+    },
+    "link-broken_24": {
+        "codepoint": "0xF907",
+        "description": "",
+        "tags": ["disconnect", "unchain", "unlink", "линия", "разъединить", "ссылка"]
+    },
+    "link-dot_24": {
+        "codepoint": "0xF908",
+        "description": "",
+        "tags": ["chain", "partial", "ссылка", "точка", "частично"]
+    },
+    "link_24": {
+        "codepoint": "0xF909",
+        "description": "",
+        "tags": ["link", "ссылка"]
+    },
+    "linkedin-alt_24": {
+        "codepoint": "0xF90A",
+        "description": "",
+        "tags": ["logo"]
+    },
+    "linkedin_24": {
+        "codepoint": "0xF90B",
+        "description": "",
+        "tags": ["logo"]
+    },
+    "list-badge-plus_24": {
+        "codepoint": "0xF90C",
+        "description": "",
+        "tags": ["add", "new", "новый", "добавить"]
+    },
+    "list-badge-xmark_24": {
+        "codepoint": "0xF90D",
+        "description": "",
+        "tags": ["remove", "remove from list", "значок", "крестик", "список", "удалить", "удалить из списка"]
+    },
+    "list-collapse_24": {
+        "codepoint": "0xF90E",
+        "description": "",
+        "tags": ["collapse", "свернуть"]
+    },
+    "list-expand_24": {
+        "codepoint": "0xF90F",
+        "description": "",
+        "tags": ["expand", "развернуть"]
+    },
+    "list-ol_24": {
+        "codepoint": "0xF910",
+        "description": "",
+        "tags": ["items", "ordered", "список", "упорядоченный"]
+    },
+    "list-ul_24": {
+        "codepoint": "0xF911",
+        "description": "",
+        "tags": ["items", "unordered", "неупорядоченный", "список"]
+    },
+    "location-arrow-circle-o_24": {
+        "codepoint": "0xF912",
+        "description": "",
+        "tags": ["triangle", "вниз", "местонахождение", "расположение", "треугольный", "шеврон"]
+    },
+    "location-arrow-right_24": {
+        "codepoint": "0xF913",
+        "description": "",
+        "tags": ["triangle", "вправо", "местонахождение", "расположение", "треугольный", "шеврон"]
+    },
+    "location-arrow-up_24": {
+        "codepoint": "0xF914",
+        "description": "",
+        "tags": ["triangle", "вверх", "местонахождение", "расположение", "треугольный", "шеврон"]
+    },
+    "location-chevron-down_24": {
+        "codepoint": "0xF915",
+        "description": "",
+        "tags": ["triangle", "вниз", "местонахождение", "расположение", "треугольный", "шеврон"]
+    },
+    "location-chevron-left_24": {
+        "codepoint": "0xF916",
+        "description": "",
+        "tags": ["triangle", "влево", "местонахождение", "расположение", "треугольный", "шеврон"]
+    },
+    "lock-256_24": {
+        "codepoint": "0xF917",
+        "description": "",
+        "tags": ["256", "256", "crypt", "security", "безопасность", "замок"]
+    },
+    "lock-md5_24": {
+        "codepoint": "0xF918",
+        "description": "",
+        "tags": ["crypt", "md5", "md5", "security", "безопасность", "замок"]
+    },
+    "lock-open_24": {
+        "codepoint": "0xF919",
+        "description": "",
+        "tags": ["lock", "opened", "security", "замок", "открытый", "открыть"]
+    },
+    "lock-sha1_24": {
+        "codepoint": "0xF91A",
+        "description": "",
+        "tags": ["crypt", "sha1", "sha1", "security", "безопасность", "замок"]
+    },
+    "magnifying-glass-badge-sparkles_24": {
+        "codepoint": "0xF91B",
+        "description": "",
+        "tags": ["ai", "search", "ии", "умный поиск"]
+    },
+    "magnifying-glass-minus_24": {
+        "codepoint": "0xF91C",
+        "description": "",
+        "tags": ["zoom", "уменьшить", "масштаб"]
+    },
+    "magnifying-glass-plus_24": {
+        "codepoint": "0xF91D",
+        "description": "",
+        "tags": ["zoom", "увеличить", "масштаб"]
+    },
+    "mattermost_24": {
+        "codepoint": "0xF91E",
+        "description": "",
+        "tags": ["logo"]
+    },
+    "message-faq_24": {
+        "codepoint": "0xF91F",
+        "description": "",
+        "tags": ["help", "bubble", "chat", "comment", "справка", "сообщение", "чат"]
+    },
+    "minus-circle-s_24": {
+        "codepoint": "0xF920",
+        "description": "",
+        "tags": ["subtract", "small", "вычесть", "маленький", "круг", "минус"]
+    },
+    "minus-octagon_24": {
+        "codepoint": "0xF921",
+        "description": "",
+        "tags": ["subtract", "вычесть", "восьмиугольник"]
+    },
+    "minus-s_24": {
+        "codepoint": "0xF922",
+        "description": "",
+        "tags": ["subtract", "small", "вычесть", "маленький", "минус"]
+    },
+    "minus-square_24": {
+        "codepoint": "0xF923",
+        "description": "",
+        "tags": ["subtract", "вычесть", "квадрат", "минус"]
+    },
+    "minus_24": {
+        "codepoint": "0xF924",
+        "description": "",
+        "tags": ["subtract", "вычесть", "минус"]
+    },
+    "moon_24": {
+        "codepoint": "0xF925",
+        "description": "",
+        "tags": ["night", "ночь"]
+    },
+    "network-device-multiple_24": {
+        "codepoint": "0xF926",
+        "description": "",
+        "tags": ["router", "switch", "роутер", "свитч"]
+    },
+    "network-device_24": {
+        "codepoint": "0xF927",
+        "description": "",
+        "tags": ["router", "switch", "роутер", "свитч"]
+    },
+    "north-east_24": {
+        "codepoint": "0xF928",
+        "description": "",
+        "tags": ["direction", "northeast", "направление", "северо-восток"]
+    },
+    "north-star_24": {
+        "codepoint": "0xF929",
+        "description": "",
+        "tags": ["navigation", "навигация"]
+    },
+    "notebook-user_24": {
+        "codepoint": "0xF92A",
+        "description": "",
+        "tags": ["account", "user", "аккаунт", "пользователь"]
+    },
+    "opensuse_24": {
+        "codepoint": "0xF92B",
+        "description": "",
+        "tags": ["logo"]
+    },
+    "palette_24": {
+        "codepoint": "0xF92C",
+        "description": "",
+        "tags": ["colors", "paint", "краски", "палитра", "цвета"]
+    },
+    "paper-plane_24": {
+        "codepoint": "0xF92D",
+        "description": "",
+        "tags": ["send", "бумажный", "отправить", "самолет"]
+    },
+    "paragraph-sign_24": {
+        "codepoint": "0xF92E",
+        "description": "",
+        "tags": ["pilcrow", "параграф"]
+    },
+    "pause-circle_24": {
+        "codepoint": "0xF92F",
+        "description": "",
+        "tags": ["pause", "пауза"]
+    },
+    "pause_24": {
+        "codepoint": "0xF930",
+        "tags": ["пауза"]
+    },
+    "pencil-on-line_24": {
+        "codepoint": "0xF931",
+        "description": "",
+        "tags": ["edit", "редактировать"]
+    },
+    "phone_24": {
+        "codepoint": "0xF932",
+        "description": "",
+        "tags": ["mobile", "phone", "мобильный", "телефон"]
+    },
+    "pin-slash_24": {
+        "codepoint": "0xF933",
+        "description": "",
+        "tags": ["detach", "unpin", "булавка", "линия", "отсоединить"]
+    },
+    "pin_24": {
+        "codepoint": "0xF934",
+        "description": "",
+        "tags": ["attach", "булавка", "прикрепить"]
+    },
+    "play-circle_24": {
+        "codepoint": "0xF935",
+        "description": "",
+        "tags": ["start", "воспроизвести", "начать"]
+    },
+    "play-rewind_24": {
+        "codepoint": "0xF936",
+        "description": "",
+        "tags": ["воспроизведение", "воспроизвести", "перемотка"]
+    },
+    "play_24": {
+        "codepoint": "0xF937",
+        "description": "",
+        "tags": ["start", "воспроизвести", "начать"]
+    },
+    "plus-circle-s_24": {
+        "codepoint": "0xF938",
+        "description": "",
+        "tags": ["add", "small", "добавить", "круг", "маленький", "плюс"]
+    },
+    "plus-circle_24": {
+        "codepoint": "0xF939",
+        "description": "",
+        "tags": ["add", "large", "большой", "добавить", "круг", "плюс"]
+    },
+    "plus-s_24": {
+        "codepoint": "0xF93A",
+        "description": "",
+        "tags": ["add", "small", "добавить", "маленький", "плюс"]
+    },
+    "plus-square_24": {
+        "codepoint": "0xF93B",
+        "description": "",
+        "tags": ["add", "добавить", "квадрат", "плюс"]
+    },
+    "plus_24": {
+        "codepoint": "0xF93C",
+        "description": "",
+        "tags": ["add", "добавить", "плюс"]
+    },
+    "pulse_24": {
+        "codepoint": "0xF93D",
+        "description": "",
+        "tags": ["heartbeat", "пульс", "сердцебиение"]
+    },
+    "puzzle-piece_24": {
+        "codepoint": "0xF93E",
+        "description": "Корреляционное событие",
+        "tags": []
+    },
+    "ql_24": {
+        "codepoint": "0xF93F",
+        "description": "",
+        "tags": ["query", "language", "запрос", "язык"]
+    },
+    "question_24": {
+        "codepoint": "0xF940",
+        "description": "",
+        "tags": ["help", "вопрос", "помощь"]
+    },
+    "reachability-from_24": {
+        "codepoint": "0xF941",
+        "description": "",
+        "tags": ["connectivity", "reach", "доступность", "связь"]
+    },
+    "reachability-to_24": {
+        "codepoint": "0xF942",
+        "description": "",
+        "tags": ["connectivity", "reach", "доступность", "связь"]
+    },
+    "reachability_24": {
+        "codepoint": "0xF943",
+        "description": "",
+        "tags": ["connectivity", "reach", "доступность", "связь"]
+    },
+    "rectangle-checkered_24": {
+        "codepoint": "0xF944",
+        "description": "",
+        "tags": ["pattern", "шаблон"]
+    },
+    "rectangle-triangle-vertical-thin_24": {
+        "codepoint": "0xF945",
+        "description": "",
+        "tags": ["critical","security","vulnerability","безопасность","уровень уязвимости критический","уязвимость"]
+    },
+    "rectangle-vertical-thin-half_24": {
+        "codepoint": "0xF946",
+        "description": "",
+        "tags": ["security","medium","vulnerability","безопасность","уровень уязвимости средний","уязвимость"]
+    },
+    "rectangle-vertical-thin-lines_24": {
+        "codepoint": "0xF947",
+        "description": "",
+        "tags": ["security","high","vulnerability","безопасность","уровень уязвимости высокий","уязвимость"]
+    },
+    "rectangle-vertical-thin-o_24": {
+        "codepoint": "0xF948",
+        "description": "",
+        "tags": ["security","low","vulnerability","безопасность","уровень уязвимости низкий","уязвимость"]
+    },
+    "rectangle-vertical-thin_24": {
+        "codepoint": "0xF949",
+        "description": "",
+        "tags": ["security","undefined","vulnerability","безопасность","уровень уязвимости неопределенный","уязвимость"]
+    },
+    "rectangles-o_24": {
+        "codepoint": "0xF94A",
+        "tags": []
+    },
+    "redo_24": {
+        "codepoint": "0xF94B",
+        "tags": ["repeat", "повторить"]
+    },
+    "regex_24": {
+        "codepoint": "0xF94C",
+        "tags": ["pattern", "шаблон"]
+    },
+    "registry-multiple_24": {
+        "codepoint": "0xF94D",
+        "description": "",
+        "tags": ["register", "реестр"]
+    },
+    "registry_24": {
+        "codepoint": "0xF94E",
+        "description": "",
+        "tags": ["register", "реестр"]
+    },
+    "robot_24": {
+        "codepoint": "0xF94F",
+        "description": "",
+        "tags": ["automation", "автоматизация"]
+    },
+    "ruler_24": {
+        "codepoint": "0xF950",
+        "description": "",
+        "tags": ["measure", "измерение", "измерить", "линейка"]
+    },
+    "satellite-dish_24": {
+        "codepoint": "0xF951",
+        "description": "",
+        "tags": ["signal", "сигнал"]
+    },
+    "scale_24": {
+        "codepoint": "0xF952",
+        "description": "",
+        "tags": ["balance", "compare", "measure", "баланс", "весы", "измерение", "сравнить"]
+    },
+    "scan_24": {
+        "codepoint": "0xF953",
+        "description": "",
+        "tags": ["scan", "сканирование"]
+    },
+    "scissors_24": {
+        "codepoint": "0xF954",
+        "description": "",
+        "tags": ["cut", "trim", "ножницы", "обрезать", "резать"]
+    },
+    "shield-check_24": {
+        "codepoint": "0xF955",
+        "description": "",
+        "tags": ["security", "безопасность", "проверка", "щит"]
+    },
+    "shield-desktop_24": {
+        "codepoint": "0xF956",
+        "description": "",
+        "tags": ["protection", "security", "безопасность", "защита", "рабочий стол", "щит"]
+    },
+    "shield-exclamation_24": {
+        "codepoint": "0xF957",
+        "description": "",
+        "tags": []
+    },
+    "shield-half_24": {
+        "codepoint": "0xF958",
+        "description": "",
+        "tags": ["protection", "security", "безопасность", "защита", "щит"]
+    },
+    "shield-o_24": {
+        "codepoint": "0xF959",
+        "description": "",
+        "tags": ["low","na","outline","protection","security","significance","безопасность","защита","значение","контур","низкий","щит"]
+    },
+    "shield-ribbon_24": {
+        "codepoint": "0xF95A",
+        "description": "",
+        "tags": ["medium","protection","security","significance","безопасность","защита","значение","лента","средний","щит"]
+    },
+    "shield-slash_24": {
+        "codepoint": "0xF95B",
+        "description": "",
+        "tags": ["security", "безопасность", "линия", "щит"]
+    },
+    "shield-star_24": {
+        "codepoint": "0xF95C",
+        "description": "",
+        "tags": ["security", "безопасность", "звезда", "щит"]
+    },
+    "shield-user_24": {
+        "codepoint": "0xF95D",
+        "description": "",
+        "tags": ["protection", "security", "user", "безопасность", "защита", "пользователь", "щит"]
+    },
+    "shield-wrench_24": {
+        "codepoint": "0xF95E",
+        "description": "",
+        "tags": ["protection", "security", "tools", "безопасность", "защита", "инструменты", "щит"]
+    },
+    "shield-xmark_24": {
+        "codepoint": "0xF95F",
+        "description": "",
+        "tags": ["security", "безопасность", "крестик", "щит"]
+    },
+    "shield_24": {
+        "codepoint": "0xF960",
+        "description": "",
+        "tags": ["protection", "security", "безопасность", "защита", "щит"]
+    },
+    "sigma_24": {
+        "codepoint": "0xF961",
+        "description": "",
+        "tags": ["sum", "сумма"]
+    },
+    "sliders-dot_24": {
+        "codepoint": "0xF962",
+        "description": "",
+        "tags": ["active", "settings", "активно", "настройки", "ползунки", "слайдер", "точка"]
+    },
+    "sparkles_24": {
+        "codepoint": "0xF963",
+        "description": "",
+        "tags": ["ai", "star", "ии", "звезда"]
+    },
+    "speaker-wave_24": {
+        "codepoint": "0xF964",
+        "description": "",
+        "tags": ["alert","audio","enabled","sound","volume","wave","аудио","включено","волна","громкость","динамик","звук","предупреждение"]
+    },
+    "speaker_24": {
+        "codepoint": "0xF965",
+        "description": "",
+        "tags": ["alert","audio","disabled","sound","volume","аудио","громкость","динамик","звук","отключено","предупреждение"]
+    },
+    "spinner_24": {
+        "codepoint": "0xF966",
+        "description": "",
+        "tags": ["loading", "загрузка"]
+    },
+    "split-screen-bottom_24": {
+        "codepoint": "0xF967",
+        "description": "",
+        "tags": ["layout", "макет"]
+    },
+    "split-screen-left_24": {
+        "codepoint": "0xF968",
+        "description": "",
+        "tags": ["layout", "макет"]
+    },
+    "split-screen-no-split_24": {
+        "codepoint": "0xF969",
+        "description": "",
+        "tags": ["layout", "макет"]
+    },
+    "split-screen-right_24": {
+        "codepoint": "0xF96A",
+        "description": "",
+        "tags": ["layout", "макет"]
+    },
+    "split-screen-top_24": {
+        "codepoint": "0xF96B",
+        "description": "",
+        "tags": ["layout", "макет"]
+    },
+    "square-dot_24": {
+        "codepoint": "0xF96C",
+        "tags": ["квадрат", "точка"]
+    },
+    "square-multiple-o_24": {
+        "codepoint": "0xF96D",
+        "description": "",
+        "tags": ["shape", "квадрат", "форма"]
+    },
+    "square_24": {
+        "codepoint": "0xF96E",
+        "tags": ["shape", "квадрат", "форма"]
+    },
+    "star-o_24": {
+        "codepoint": "0xF96F",
+        "description": "",
+        "tags": ["favorite", "звезда", "избранное"]
+    },
+    "star_24": {
+        "codepoint": "0xF970",
+        "description": "",
+        "tags": ["favorite", "звезда", "избранное"]
+    },
+    "stop-circle_24": {
+        "codepoint": "0xF971",
+        "tags": ["круг", "остановить"]
+    },
+    "stop_24": {
+        "codepoint": "0xF972",
+        "tags": ["stop", "стоп"]
+    },
+    "sun-moon_24": {
+        "codepoint": "0xF973",
+        "description": "",
+        "tags": ["theme", "режим"]
+    },
+    "sun_24": {
+        "codepoint": "0xF974",
+        "description": "",
+        "tags": ["day", "день"]
+    },
+    "swords_24": {
+        "codepoint": "0xF975",
+        "description": "",
+        "tags": ["conflict", "конфликт"]
+    },
+    "table-line_24": {
+        "codepoint": "0xF976",
+        "description": "",
+        "tags": ["data", "information", "данные", "информация"]
+    },
+    "tag-multiple_24": {
+        "codepoint": "0xF977",
+        "description": "",
+        "tags": ["labels", "tags", "метки", "ярлыки"]
+    },
+    "tag_24": {
+        "codepoint": "0xF978",
+        "description": "",
+        "tags": ["label", "метка"]
+    },
+    "telegram-circle_24": {
+        "codepoint": "0xF979",
+        "description": "",
+        "tags": ["messenger", "мессенджер"]
+    },
+    "telegram_24": {
+        "codepoint": "0xF97A",
+        "description": "",
+        "tags": ["messenger", "мессенджер"]
+    },
+    "text-bold_24": {
+        "codepoint": "0xF97B",
+        "tags": ["жирный", "текст"]
+    },
+    "text-font_24": {
+        "codepoint": "0xF97C",
+        "tags": ["текст", "шрифт"]
+    },
+    "text-italic_24": {
+        "codepoint": "0xF97D",
+        "tags": ["курсив"]
+    },
+    "text-magnifying-glass_24": {
+        "codepoint": "0xF97E",
+        "description": "",
+        "tags": ["search", "find", "поиск", "найти"]
+    },
+    "text-underline_24": {
+        "codepoint": "0xF97F",
+        "tags": ["подчеркивание"]
+    },
+    "text_24": {
+        "codepoint": "0xF980",
+        "description": "",
+        "tags": ["text", "текст"]
+    },
+    "thumbs-down_24": {
+        "codepoint": "0xF981",
+        "description": "Большой палец вниз",
+        "tags": ["dislike", "нравится"]
+    },
+    "thumbs-up_24": {
+        "codepoint": "0xF982",
+        "description": "Большой палец вверх",
+        "tags": ["like", "нравится"]
+    },
+    "time-messenger-alt_24": {
+        "codepoint": "0xF983",
+        "description": "",
+        "tags": ["clock", "time", "время", "часы"]
+    },
+    "time-messenger_24": {
+        "codepoint": "0xF984",
+        "description": "",
+        "tags": ["clock", "time", "время", "часы"]
+    },
+    "topology-lines_24": {
+        "codepoint": "0xF985",
+        "description": "",
+        "tags": ["graph", "network", "граф", "сеть"]
+    },
+    "topology-star_24": {
+        "codepoint": "0xF986",
+        "description": "",
+        "tags": ["graph", "network", "граф", "сеть"]
+    },
+    "tower-broadcast_24": {
+        "codepoint": "0xF987",
+        "description": "",
+        "tags": ["signal", "сигнал"]
+    },
+    "traffic_24": {
+        "codepoint": "0xF988",
+        "description": "",
+        "tags": ["flow", "movement", "поток", "движение"]
+    },
+    "trash_24": {
+        "codepoint": "0xF989",
+        "description": "",
+        "tags": ["delete", "удалить"]
+    },
+    "triangle-o_24": {
+        "codepoint": "0xF98A",
+        "description": "",
+        "tags": ["shape", "форма"]
+    },
+    "ubuntu_24": {
+        "codepoint": "0xF98B",
+        "description": "Убунту",
+        "tags": ["logo"]
+    },
+    "undo_24": {
+        "codepoint": "0xF98C",
+        "tags": ["reverse", "отмена"]
+    },
+    "unit_24": {
+        "codepoint": "0xF98D",
+        "description": "",
+        "tags": ["block", "unit", "блок", "юнит"]
+    },
+    "url_24": {
+        "codepoint": "0xF98E",
+        "tags": ["link", "ссылка"]
+    },
+    "usb-flash_24": {
+        "codepoint": "0xF98F",
+        "description": "",
+        "tags": ["drive", "flash", "usb", "диск", "флешка"]
+    },
+    "user-arrow-triangle-up_24": {
+        "codepoint": "0xF990",
+        "description": "",
+        "tags": ["up", "vulner lpe", "вверх", "пользователь", "стрелка", "треугольник", "уязвимость лпе"]
+    },
+    "user-badge-file-text_24": {
+        "codepoint": "0xF991",
+        "description": "",
+        "tags": ["account", "user", "аккаунт", "пользователь"]
+    },
+    "user-badge-gear_24": {
+        "codepoint": "0xF992",
+        "description": "",
+        "tags": ["account", "user", "аккаунт", "пользователь"]
+    },
+    "user-badge-globe_24": {
+        "codepoint": "0xF993",
+        "description": "",
+        "tags": ["account", "user", "аккаунт", "пользователь"]
+    },
+    "user-badge-location_24": {
+        "codepoint": "0xF994",
+        "description": "",
+        "tags": ["account", "user", "аккаунт", "пользователь"]
+    },
+    "user-mask_24": {
+        "codepoint": "0xF995",
+        "description": "",
+        "tags": ["anonym", "anonymous", "аноним"]
+    },
+    "user-secret_24": {
+        "codepoint": "0xF996",
+        "description": "",
+        "tags": ["spy", "agent", "шпион", "агент"]
+    },
+    "user-viewfinder_24": {
+        "codepoint": "0xF997",
+        "description": "",
+        "tags": ["accountidsynthetic","human","person","аккаунтсинтетик","пользователь","учетная запись","человек"]
+    },
+    "vk-alt_24": {
+        "codepoint": "0xF998",
+        "description": "",
+        "tags": ["logo"]
+    },
+    "vk_24": {
+        "codepoint": "0xF999",
+        "description": "",
+        "tags": ["logo"]
+    },
+    "vpn_24": {
+        "codepoint": "0xF99A",
+        "tags": ["network", "сеть"]
+    },
+    "widget-plus_24": {
+        "codepoint": "0xF99B",
+        "description": "",
+        "tags": ["add", "badge", "бейдж", "виджет", "добавить", "плюс"]
+    },
+    "wifi-tethering_24": {
+        "codepoint": "0xF99C",
+        "description": "",
+        "tags": ["тетеринг"]
+    },
+    "windows-arrow-rotate-left_24": {
+        "codepoint": "0xF99D",
+        "description": "",
+        "tags": ["refresh", "update", "обновить", "обновление"]
+    },
+    "workflow_24": {
+        "codepoint": "0xF99E",
+        "description": "",
+        "tags": ["process", "процесс"]
+    },
+    "wrap-text-slash_24": {
+        "codepoint": "0xF99F",
+        "description": "",
+        "tags": ["text", "wrap", "текст", "перенос"]
+    },
+    "wrap-text_24": {
+        "codepoint": "0xF9A0",
+        "description": "",
+        "tags": ["text", "wrap", "текст", "перенос"]
+    },
+    "wrench-badge-play_24": {
+        "codepoint": "0xF9A1",
+        "description": "",
+        "tags": ["build", "config", "setup", "конфигурация", "настройка", "сборка"]
+    },
+    "wrench_24": {
+        "codepoint": "0xF9A2",
+        "description": "",
+        "tags": ["tools", "инструменты"]
+    },
+    "xmark-circle-s_24": {
+        "codepoint": "0xF9A3",
+        "description": "",
+        "tags": ["remove", "small", "удалить", "маленький", "круг", "крестик"]
+    },
+    "xmark-s_24": {
+        "codepoint": "0xF9A4",
+        "description": "",
+        "tags": ["remove", "small", "удалить", "маленький", "крестик"]
+    },
+    "xmark_24": {
+        "codepoint": "0xF9A5",
+        "description": "",
+        "tags": ["remove", "удалить", "крестик"]
     }
 }
