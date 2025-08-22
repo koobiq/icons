@@ -1,3 +1,10 @@
+# 10.7.0 (2025-08-22)
+
+### Icons
+
+ * feature  add 24px icons ([#DS-4128](https://github.com/koobiq/icons/issues/issue/DS-4128)) ([#55](https://github.com/koobiq/icons/issues/55)) 9b79461
+ * feature  multiple page icon export ([#DS-4126](https://github.com/koobiq/icons/issues/issue/DS-4126)) ([#54](https://github.com/koobiq/icons/issues/54)) 5e6a22f
+
 # 10.6.0 (2025-08-20)
 
 ### Icons
