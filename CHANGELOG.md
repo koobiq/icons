@@ -1,3 +1,9 @@
+## 10.7.1 (2025-09-12)
+
+### Icons
+
+ * bug fix  new pin shape ([#DS-4183](https://github.com/koobiq/icons/issues/issue/DS-4183)) ([#59](https://github.com/koobiq/icons/issues/59)) b5e78d9
+
 # 10.7.0 (2025-08-22)
 
 ### Icons
