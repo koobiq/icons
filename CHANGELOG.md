@@ -1,3 +1,9 @@
+# 10.8.0 (2025-09-22)
+
+### Icons
+
+ * feature  24px icons: desktop-o, desktop-multiple, fincert ([#DS-4130](https://github.com/koobiq/icons/issues/issue/DS-4130)) ([#60](https://github.com/koobiq/icons/issues/60)) 6489bab
+
 ## 10.7.1 (2025-09-12)
 
 ### Icons
