@@ -1,7 +1,7 @@
 # 10.8.0 (2025-09-22)
 
 ### Added
-* deskstop-o_24
+* desktop-o_24
 * desktop-multiple_24
 * fincert_24
 
