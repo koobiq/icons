@@ -1,27 +1,35 @@
 # 10.8.0 (2025-09-22)
 
-### Icons
+### Added
+* deskstop-o_24
+* desktop-multiple_24
+* fincert_24
 
- * feature  24px icons: desktop-o, desktop-multiple, fincert ([#DS-4130](https://github.com/koobiq/icons/issues/issue/DS-4130)) ([#60](https://github.com/koobiq/icons/issues/60)) 6489bab
+#DS-4130 ([#60](https://github.com/koobiq/icons/issues/60)) 6489bab
 
-## 10.7.1 (2025-09-12)
+# 10.7.1 (2025-09-12)
 
-### Icons
-
- * bug fix  new pin shape ([#DS-4183](https://github.com/koobiq/icons/issues/issue/DS-4183)) ([#59](https://github.com/koobiq/icons/issues/59)) b5e78d9
+### Changed
+ * pin_16
+ * pin_24
+ * pin-slash_16
+ * pin-slash_24
+ 
+ #DS-4183 ([#59](https://github.com/koobiq/icons/issues/59)) b5e78d9
 
 # 10.7.0 (2025-08-22)
 
-### Icons
+Figma multipage icon export #DS-4126 ([#54](https://github.com/koobiq/icons/issues/54)) 5e6a22f
 
- * feature  add 24px icons ([#DS-4128](https://github.com/koobiq/icons/issues/issue/DS-4128)) ([#55](https://github.com/koobiq/icons/issues/55)) 9b79461
- * feature  multiple page icon export ([#DS-4126](https://github.com/koobiq/icons/issues/issue/DS-4126)) ([#54](https://github.com/koobiq/icons/issues/54)) 5e6a22f
+ ### Added
+
+ * 385 × 24px icons #DS-4128 ([#55](https://github.com/koobiq/icons/issues/55)) 9b79461
 
 # 10.6.0 (2025-08-20)
 
-### Icons
+### Added
 
- * feature  fincert icon ([#DS-4124](https://github.com/koobiq/icons/issues/issue/DS-4124)) ([#53](https://github.com/koobiq/icons/issues/53)) 12de638
+ * fincert_16 - #DS-4124 ([#53](https://github.com/koobiq/icons/issues/53)) 12de638
 
 ## 10.5.1 (2025-07-22)
 
@@ -31,21 +39,21 @@
 
 # 10.5.0 (2025-07-21)
 
-### Icons
+### Added
 
- * feature  added anomaly-square_16 ([#DS-4005](https://github.com/koobiq/icons/issues/issue/DS-4005)) ([#49](https://github.com/koobiq/icons/issues/49)) 3ca0c3f
+ * anomaly-square_16 - #DS-4005 ([#49](https://github.com/koobiq/icons/issues/49)) 3ca0c3f
 
 # 10.4.0 (2025-06-27)
 
-### Icons
+### Added
 
- * feature  add replace_24 ([#DS-3900](https://github.com/koobiq/icons/issues/issue/DS-3900)) ([#44](https://github.com/koobiq/icons/issues/44)) dbc6d25
+ * replace_24 - #DS-3900 ([#44](https://github.com/koobiq/icons/issues/44)) dbc6d25
 
 # 10.3.0 (2025-06-24)
 
-### Icons
+### Added
 
- * feature  added aurora OS icon ([#DS-3857](https://github.com/koobiq/icons/issues/issue/DS-3857)) ([#43](https://github.com/koobiq/icons/issues/43)) 6c78d0b
+ * aurora-os_16 - #DS-3857 ([#43](https://github.com/koobiq/icons/issues/43)) 6c78d0b
 
 # 10.2.0 (2025-06-23)
 
