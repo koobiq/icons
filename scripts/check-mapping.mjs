@@ -24,7 +24,7 @@ async function main() {
             console.error('❌ These mappings refer to non-existent SVG files:\n' + missingFromFiles.join('\n'));
         }
 
-        return;
+        process.exit(1);
     }
 
     console.log('✅ Everything is OK');
