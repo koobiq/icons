@@ -1,3 +1,17 @@
+# 10.9.0 (2025-10-15)
+
+### Added
+* bars-arrow-left_16 
+* bars-arrow-left_24 
+* bars-arrow-right_16 
+* bars-arrow-right_24 
+* envelope-mta_16 
+* envelope-mta_24 
+* gateway-envelope_16 
+* gateway-envelope_24 
+
+([#64](https://github.com/koobiq/icons/issues/64)) 90b7c8d
+
 # 10.8.0 (2025-09-22)
 
 ### Added
