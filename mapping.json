@@ -5365,5 +5365,45 @@
         "codepoint": "0xF9A8",
         "description": "ФинЦЕРТ",
         "tags": ["logo", "логотип"]
+    },
+    "bars-arrow-left_16": {
+        "codepoint": "0xF9A9",
+        "description": "Сернуть боковую панель влево",
+        "tags": ["collapse", "navigation", "свернуть", "стрелка", "влево", "навигация"]
+    },
+    "bars-arrow-right_16": {
+        "codepoint": "0xF9AA",
+        "description": "Развернуть боковую панель вправо",
+        "tags": ["expand", "navigation", "развернуть", "стрелка", "вправо", "навигация"]
+    },
+    "bars-arrow-left_24": {
+        "codepoint": "0xF9AB",
+        "description": "Сернуть боковую панель влево",
+        "tags": ["collapse", "navigation", "свернуть", "стрелка", "влево", "навигация"]
+    },
+    "bars-arrow-right_24": {
+        "codepoint": "0xF9AC",
+        "description": "Развернуть боковую панель вправо",
+        "tags": ["expand", "navigation", "развернуть", "стрелка", "вправо", "навигация"]
+    },
+    "gateway-envelope_16": {
+        "codepoint": "0xF9AD",
+        "description": "Почтовый шлюз",
+        "tags": ["mail", "server", "почта", "сервер"]
+    },
+    "gateway-envelope_24": {
+        "codepoint": "0xF9AE",
+        "description": "Почтовый шлюз",
+        "tags": ["mail", "server", "почта", "сервер"]
+    },
+    "envelope-mta_16": {
+        "codepoint": "0xF9AF",
+        "description": "Почтовый источник, Mail Transfer Agent (сервер передачи почты)",
+        "tags": ["mail", "почта"]
+    },
+    "envelope-mta_24": {
+        "codepoint": "0xF9B0",
+        "description": "Почтовый источник, Mail Transfer Agent (сервер передачи почты)",
+        "tags": ["mail", "почта"]
     }
 }
