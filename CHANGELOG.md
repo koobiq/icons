@@ -1,3 +1,21 @@
+# 10.10.0 (2025-10-23)
+
+### Added
+* 3-columns_16
+* 3-columns_24
+* desktop-badge-linux_16
+* desktop-badge-linux_24
+* desktop-badge-windows_16
+* desktop-badge-windows_24
+* diamond-exclamation_16
+* diamond-exclamation_24
+* server-badge-linux_16
+* server-badge-linux_24
+* server-badge-windows_16
+* server-badge-windows_24
+
+#DS-4130 ([#65](https://github.com/koobiq/icons/issues/65)) a9af67d
+
 # 10.9.0 (2025-10-15)
 
 ### Added
