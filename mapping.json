@@ -5405,5 +5405,65 @@
         "codepoint": "0xF9B0",
         "description": "Почтовый источник, Mail Transfer Agent (сервер передачи почты)",
         "tags": ["mail", "почта"]
+    },
+    "3-columns_16": {
+        "codepoint": "0xF9B1",
+        "description": "Три колонки",
+        "tags": ["колонки"]
+    },
+    "3-columns_24": {
+        "codepoint": "0xF9B2",
+        "description": "Три колонки",
+        "tags": ["колонки"]
+    },
+    "desktop-badge-linux_16": {
+        "codepoint": "0xF9B3",
+        "description": "Компьютер Linux",
+        "tags": ["computer", "display", "линукс", "монитор", "monitor", "компьютер"]
+    },
+    "desktop-badge-linux_24": {
+        "codepoint": "0xF9B4",
+        "description": "Компьютер Linux",
+        "tags": ["computer", "display", "линукс", "монитор", "monitor", "компьютер"]
+    },
+    "desktop-badge-windows_16": {
+        "codepoint": "0xF9B5",
+        "description": "Компьютер Windows",
+        "tags": ["computer", "display", "монитор", "monitor", "компьютер"]
+    },
+    "desktop-badge-windows_24": {
+        "codepoint": "0xF9B6",
+        "description": "Компьютер Windows",
+        "tags": ["computer", "display", "монитор", "monitor", "компьютер"]
+    },
+    "diamond-exclamation_16": {
+        "codepoint": "0xF9B7",
+        "description": "Критический уровень опасности",
+        "tags": ["diamond", "алмаз"]
+    },
+    "diamond-exclamation_24": {
+        "codepoint": "0xF9B8",
+        "description": "Критический уровень опасности",
+        "tags": ["diamond", "алмаз"]
+    },
+    "server-badge-linux_16": {
+        "codepoint": "0xF9B9",
+        "description": "Сервер Linux",
+        "tags": ["сервер", "линукс", "бейдж"]
+    },
+    "server-badge-linux_24": {
+        "codepoint": "0xF9BA",
+        "description": "Сервер Linux",
+        "tags": ["сервер", "линукс", "бейдж"]
+    },
+    "server-badge-windows_16": {
+        "codepoint": "0xF9BB",
+        "description": "Сервер Windows",
+        "tags": ["сервер", "виндоус", "бейдж"]
+    },
+    "server-badge-windows_24": {
+        "codepoint": "0xF9BC",
+        "description": "Сервер Windows",
+        "tags": ["сервер", "виндоус", "бейдж"]
     }
 }
