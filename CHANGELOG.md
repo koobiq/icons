@@ -1,3 +1,97 @@
+# 11.0.0 (2025-11-12)
+
+### Icons
+
+ * feature  rename icons ([#DS-4333](https://github.com/koobiq/icons/issues/issue/DS-4333)) ([#68](https://github.com/koobiq/icons/issues/68)) a6b60fb
+
+#### Added
+
+ * node-tree_24
+
+#### Renamed
+
+🚨 Warning: breaking changes!
+ * anomaly-square_16 → square-a_16
+ * anomaly-square_24 → square-a_24
+ * arrow-circle-down_16 → circle-arrow-down_16
+ * arrow-circle-down_24 → circle-arrow-down_24
+ * arrow-circle-left_16 → circle-arrow-left_16
+ * arrow-circle-left_24 → circle-arrow-left_24
+ * arrow-circle-right_16 → circle-arrow-right_16
+ * arrow-circle-right_24 → circle-arrow-right_24
+ * arrow-circle-up_16 → circle-arrow-up_16
+ * arrow-circle-up_24 → circle-arrow-up_24
+ * arrow-right-circle-dot-o_16 → circle-arrow-right-dot-o_16
+ * arrow-right-circle-dot-o_24 → circle-arrow-right-dot-o_24
+ * bolt-circle_16 → circle-bolt_16
+ * bolt-circle_24 → circle-bolt_24
+ * bolt-rectangle-vertical_16 → rectangle-vertical-bolt_16
+ * bolt-rectangle-vertical_24 → rectangle-vertical-bolt_24
+ * bolt-rectangle-vertical-o_16 → rectangle-vertical-bolt-o_16
+ * bolt-rectangle-vertical-o_24 → rectangle-vertical-bolt-o_24
+ * check-circle_16 → circle-check_16
+ * check-circle_24 → circle-check_24
+ * chevron-circle-down_16 → circle-chevron-down_16
+ * chevron-circle-down_24 → circle-chevron-down_24
+ * chevron-circle-left_16 → circle-chevron-left_16
+ * chevron-circle-left_24 → circle-chevron-left_24
+ * chevron-circle-right_16 → circle-chevron-right_16
+ * chevron-circle-right_24 → circle-chevron-right_24
+ * chevron-circle-up_16 → circle-chevron-up_16
+ * chevron-circle-up_24 → circle-chevron-up_24
+ * compress_16 → chevrons-compress_16
+ * compress_24 → chevrons-compress_24
+ * ellipsis-horizontal-circle-o_16 → circle-ellipsis-horizontal-o_16
+ * ellipsis-horizontal-circle-o_24 → circle-ellipsis-horizontal-o_24
+ * exclamation-circle_16 → circle-exclamation_16
+ * exclamation-circle_24 → circle-exclamation_24
+ * exclamation-triangle_16 → triangle-exclamation_16
+ * exclamation-triangle_24 → triangle-exclamation_24
+ * info-circle_16 → circle-info_16
+ * info-circle_24 → circle-info_24
+ * ip4-rectangle_16 → rectangle-ip4_16
+ * ip4-rectangle_24 → rectangle-ip4_24
+ * ip6-rectangle_16 → rectangle-ip6_16
+ * ip6-rectangle_24 → rectangle-ip6_24
+ * location-arrow-circle-o_16 → circle-location-arrow-o_16
+ * location-arrow-circle-o_24 → circle-location-arrow-o_24
+ * minus-circle_16 → circle-minus_16
+ * minus-circle_24 → circle-minus_24
+ * minus-circle-o_16 → circle-minus-o_16
+ * minus-circle-o_24 → circle-minus-o_24
+ * minus-circle-s_16 → circle-minus-s_16
+ * minus-circle-s_24 → circle-minus-s_24
+ * minus-octagon_16 → octagon-minus_16
+ * minus-octagon_24 → octagon-minus_24
+ * minus-square_16 → square-minus_16
+ * minus-square_24 → square-minus_24
+ * node-tree -> node-tree_16
+ * pause-circle_16 → circle-pause_16
+ * pause-circle_24 → circle-pause_24
+ * play-circle_16 → circle-play_16
+ * play-circle_24 → circle-play_24
+ * plus-circle_16 → circle-plus_16
+ * plus-circle_24 → circle-plus_24
+ * plus-circle-s_16 → circle-plus-s_16
+ * plus-circle-s_24 → circle-plus-s_24
+ * plus-square_16 → square-plus_16
+ * plus-square_24 → square-plus_24
+ * question-circle_16 → circle-question_16
+ * question-circle_24 → circle-question_24
+ * stop-circle_16 → circle-stop_16
+ * stop-circle_24 → circle-stop_24
+ * telegram-circle_16 → circle-telegram_16
+ * telegram-circle_24 → circle-telegram_24
+ * user-arrow-triangle-up_16 → user-badge-triangle-up_16
+ * user-arrow-triangle-up_24 → user-badge-triangle-up_24
+ * windows-arrow-rotate-left_16 → arrow-rotate-left-badge-windows_16
+ * wrap-text_16 → text-wrap_16
+ * wrap-text_24 → text-wrap_24
+ * wrap-text-slash_16 → text-overflow_16
+ * wrap-text-slash_24 → text-overflow_24
+ * xmark-circle_16 → circle-xmark_16
+ * xmark-circle_24 → circle-xmark_24
+
 # 10.10.0 (2025-10-23)
 
 ### Added
