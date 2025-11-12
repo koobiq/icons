@@ -164,12 +164,12 @@
         "codepoint": "0xF532",
         "tags": ""
     },
-    "check-circle_16": {
+    "circle-check_16": {
         "codepoint": "0xF533",
         "description": "",
         "tags": ["verify", "верифицировать", "круг", "проверить"]
     },
-    "check-circle_24": {
+    "circle-check_24": {
         "codepoint": "0xF534",
         "tags": ""
     },
@@ -409,7 +409,7 @@
         "description": "",
         "tags": ["large", "minus", "subtract", "большой", "вычесть", "минус"]
     },
-    "play-circle_16": {
+    "circle-play_16": {
         "codepoint": "0xF575",
         "description": "",
         "tags": ["start", "воспроизвести", "круг", "начать"]
@@ -427,7 +427,7 @@
         "description": "",
         "tags": ["save", "дискета", "сохранить"]
     },
-    "stop-circle_16": {
+    "circle-stop_16": {
         "codepoint": "0xF57A",
         "tags": ["круг", "остановить"]
     },
@@ -660,7 +660,7 @@
             "файл"
         ]
     },
-    "pause-circle_16": {
+    "circle-pause_16": {
         "codepoint": "0xF5AC",
         "tags": ["круг", "пауза"]
     },
@@ -737,7 +737,7 @@
         "description": "",
         "tags": ["document", "документ", "код", "файл"]
     },
-    "info-circle_16": {
+    "circle-info_16": {
         "codepoint": "0xF5C3",
         "description": "",
         "tags": ["information", "информация", "круг"]
@@ -756,12 +756,12 @@
         "description": "",
         "tags": ["lock", "opened", "security", "замок", "открытый", "открыть"]
     },
-    "minus-circle_16": {
+    "circle-minus_16": {
         "codepoint": "0xF5C7",
         "description": "",
         "tags": ["large", "subtract", "большой", "вычесть", "круг", "минус"]
     },
-    "question-circle_16": {
+    "circle-question_16": {
         "codepoint": "0xF5C8",
         "description": "",
         "tags": ["help", "вопрос", "круг", "помощь"]
@@ -909,12 +909,12 @@
         "codepoint": "0xF5F4",
         "tags": ["pattern", "шаблон"]
     },
-    "plus-circle_16": {
+    "circle-plus_16": {
         "codepoint": "0xF5F5",
         "description": "",
         "tags": ["add", "large", "большой", "добавить", "круг", "плюс"]
     },
-    "plus-circle-s_16": {
+    "circle-plus-s_16": {
         "codepoint": "0xF5F6",
         "description": "",
         "tags": ["add", "small", "добавить", "круг", "маленький", "плюс"]
@@ -1211,7 +1211,7 @@
         "codepoint": "0xF63E",
         "tags": ""
     },
-    "bolt-rectangle-vertical-o_16": {
+    "rectangle-vertical-bolt-o_16": {
         "codepoint": "0xF640",
         "description": "",
         "tags": [
@@ -1320,7 +1320,7 @@
         "description": "",
         "tags": ["close", "cross", "small", "закрыть", "крестик", "маленький"]
     },
-    "xmark-circle_16": {
+    "circle-xmark_16": {
         "codepoint": "0xF667",
         "description": "",
         "tags": ["clear", "close", "cross", "large", "большой", "закрыть", "крестик", "круг", "очистить"]
@@ -1342,7 +1342,7 @@
             "частично"
         ]
     },
-    "arrow-right-circle-dot-o_16": {
+    "circle-arrow-right-dot-o_16": {
         "codepoint": "0xF66A",
         "description": "",
         "tags": ["file", "outline", "partial", "passed", "контур", "пройден", "стрелка", "точка", "файл", "частично"]
@@ -1423,7 +1423,7 @@
         "description": "",
         "tags": ["menu", "вертикально", "меню", "многоточие"]
     },
-    "exclamation-triangle_16": {
+    "triangle-exclamation_16": {
         "codepoint": "0xF67F",
         "description": "",
         "tags": ["alert", "error", "warning", "восклицание", "ошибка", "предупреждение", "треугольник"]
@@ -1467,7 +1467,7 @@
         "description": "",
         "tags": ["event", "normalized", "standard", "нормализовано", "событие", "стандарт"]
     },
-    "bolt-rectangle-vertical_16": {
+    "rectangle-vertical-bolt_16": {
         "codepoint": "0xF68A",
         "description": "",
         "tags": ["alert", "event", "notification", "предупреждение", "событие", "событие", "уведомление"]
@@ -1509,7 +1509,7 @@
         "description": "",
         "tags": ["send", "бумажный", "отправить", "самолет"]
     },
-    "ellipsis-horizontal-circle-o_16": {
+    "circle-ellipsis-horizontal-o_16": {
         "codepoint": "0xF69A",
         "description": "",
         "tags": ["menu", "outline", "горизонтально", "контур", "круг", "меню", "многоточие"]
@@ -1597,11 +1597,11 @@
         "codepoint": "0xF6BC",
         "tags": ""
     },
-    "minus-circle-o_24": {
+    "circle-minus-o_24": {
         "codepoint": "0xF6BD",
         "tags": ""
     },
-    "minus-circle_24": {
+    "circle-minus_24": {
         "codepoint": "0xF6BE",
         "description": "",
         "tags": ["ignore", "large", "большой", "игнорировать", "круг", "минус"]
@@ -1672,7 +1672,7 @@
         "codepoint": "0xF6CF",
         "tags": ""
     },
-    "user-arrow-triangle-up_16": {
+    "user-badge-triangle-up_16": {
         "codepoint": "0xF6D0",
         "description": "",
         "tags": ["up", "vulner lpe", "вверх", "пользователь", "стрелка", "треугольник", "уязвимость лпе"]
@@ -1691,7 +1691,7 @@
         "codepoint": "0xF6D3",
         "tags": ""
     },
-    "compress_16": {
+    "chevrons-compress_16": {
         "codepoint": "0xF6D6",
         "description": "",
         "tags": ["collapse", "minimize", "коллапс", "минимизировать", "сжать", "уменьшить"]
@@ -1837,7 +1837,7 @@
             "уровень"
         ]
     },
-    "minus-circle-s_16": {
+    "circle-minus-s_16": {
         "codepoint": "0xF6EF",
         "description": "",
         "tags": ["small", "subtract", "вычесть", "круг", "маленький", "минус"]
@@ -1927,7 +1927,7 @@
         "codepoint": "0xF701",
         "tags": ""
     },
-    "info-circle_24": {
+    "circle-info_24": {
         "codepoint": "0xF703",
         "tags": ""
     },
@@ -1984,7 +1984,7 @@
         "codepoint": "0xF712",
         "tags": ""
     },
-    "minus-circle-o_16": {
+    "circle-minus-o_16": {
         "codepoint": "0xF713",
         "description": "",
         "tags": ["ignore", "outline", "игнорировать", "контур", "круг", "минус"]
@@ -2089,22 +2089,22 @@
         "description": "",
         "tags": ["mobile", "phone", "андроид", "мобильный", "телефон"]
     },
-    "arrow-circle-down_16": {
+    "circle-arrow-down_16": {
         "codepoint": "0xF72F",
         "description": "",
         "tags": ["вниз", "круг", "стрелка"]
     },
-    "arrow-circle-left_16": {
+    "circle-arrow-left_16": {
         "codepoint": "0xF730",
         "description": "",
         "tags": ["влево", "круг", "стрелка"]
     },
-    "arrow-circle-right_16": {
+    "circle-arrow-right_16": {
         "codepoint": "0xF731",
         "description": "",
         "tags": ["вправо", "круг", "стрелка"]
     },
-    "arrow-circle-up_16": {
+    "circle-arrow-up_16": {
         "codepoint": "0xF732",
         "description": "",
         "tags": ["вверх", "круг", "стрелка"]
@@ -2312,7 +2312,7 @@
         "codepoint": "0xF75A",
         "tags": ""
     },
-    "bolt-circle_16": {
+    "circle-bolt_16": {
         "codepoint": "0xF75B",
         "description": "",
         "tags": ["lightning", "power", "круг", "молния", "энергия"]
@@ -2395,22 +2395,22 @@
         "codepoint": "0xF76C",
         "tags": ""
     },
-    "chevron-circle-down_16": {
+    "circle-chevron-down_16": {
         "codepoint": "0xF76D",
         "description": "",
         "tags": ["angle", "вниз", "круг", "угол", "шеврон"]
     },
-    "chevron-circle-left_16": {
+    "circle-chevron-left_16": {
         "codepoint": "0xF76E",
         "description": "",
         "tags": ["angle", "влево", "круг", "угол", "шеврон"]
     },
-    "chevron-circle-right_16": {
+    "circle-chevron-right_16": {
         "codepoint": "0xF76F",
         "description": "",
         "tags": ["angle", "вправо", "круг", "угол", "шеврон"]
     },
-    "chevron-circle-up_16": {
+    "circle-chevron-up_16": {
         "codepoint": "0xF770",
         "description": "",
         "tags": ["angle", "вверх", "круг", "угол", "шеврон"]
@@ -2559,12 +2559,12 @@
         "codepoint": "0xF78F",
         "tags": ["исключение"]
     },
-    "exclamation-circle_16": {
+    "circle-exclamation_16": {
         "codepoint": "0xF790",
         "description": "",
         "tags": ["alert", "attention", "warning", "внимание", "восклицательный", "круг", "предупреждение"]
     },
-    "exclamation-circle_24": {
+    "circle-exclamation_24": {
         "codepoint": "0xF791",
         "tags": ""
     },
@@ -2649,12 +2649,12 @@
         "description": "",
         "tags": ["endless", "бесконечность", "бесконечный"]
     },
-    "ip4-rectangle_16": {
+    "rectangle-ip4_16": {
         "codepoint": "0xF7A3",
         "description": "",
         "tags": ["attacker", "ip", "ipv4", "адрес", "злоумышленник", "прямоугольник"]
     },
-    "ip6-rectangle_16": {
+    "rectangle-ip6_16": {
         "codepoint": "0xF7A4",
         "description": "",
         "tags": ["attacker", "ip", "ipv6", "адрес", "злоумышленник", "прямоугольник"]
@@ -2679,7 +2679,7 @@
         "description": "",
         "tags": ["items", "развернуть", "список"]
     },
-    "location-arrow-circle-o_16": {
+    "circle-location-arrow-o_16": {
         "codepoint": "0xF7A9",
         "description": "",
         "tags": ["geodata", "геоданные", "локация"]
@@ -2732,7 +2732,7 @@
         "codepoint": "0xF7B3",
         "tags": ["сообщение", "чаво"]
     },
-    "minus-octagon_16": {
+    "octagon-minus_16": {
         "codepoint": "0xF7B4",
         "description": "",
         "tags": ["violation", "восьмиугольник", "минус", "нарушение"]
@@ -2742,7 +2742,7 @@
         "description": "",
         "tags": ["minus", "small", "subtract", "вычесть", "маленький", "минус"]
     },
-    "minus-square_16": {
+    "square-minus_16": {
         "codepoint": "0xF7B6",
         "description": "",
         "tags": ["subtract", "вычесть", "квадрат", "минус"]
@@ -2765,8 +2765,9 @@
         "description": "",
         "tags": ["несколько", "сеть", "устройства"]
     },
-    "node-tree": {
+    "node-tree_16": {
         "codepoint": "0xF7BB",
+        "description": "Дерево узлов",
         "tags": ""
     },
     "north-star_16": {
@@ -2789,12 +2790,12 @@
         "description": "",
         "tags": ["add", "plus", "small", "добавить", "маленький", "плюс"]
     },
-    "plus-square_16": {
+    "square-plus_16": {
         "codepoint": "0xF7C0",
         "description": "",
         "tags": ["add", "добавить", "квадрат", "плюс"]
     },
-    "question-circle_24": {
+    "circle-question_24": {
         "codepoint": "0xF7C1",
         "tags": ""
     },
@@ -2892,7 +2893,7 @@
         "codepoint": "0xF7D2",
         "tags": ["линия", "таблица"]
     },
-    "telegram-circle_16": {
+    "circle-telegram_16": {
         "codepoint": "0xF7D3",
         "description": "",
         "tags": ["message", "в круге", "сообщение", "телеграмм"]
@@ -3024,7 +3025,7 @@
         "description": "",
         "tags": ["тетеринг"]
     },
-    "windows-arrow-rotate-left_16": {
+    "arrow-rotate-left-badge-windows_16": {
         "codepoint": "0xF7E9",
         "description": "",
         "tags": ""
@@ -3039,17 +3040,17 @@
         "description": "",
         "tags": ["process", "процесс", "рабочий процесс"]
     },
-    "wrap-text_16": {
+    "text-wrap_16": {
         "codepoint": "0xF7EC",
         "description": "",
         "tags": ["обернуть", "текст"]
     },
-    "wrap-text-slash_16": {
+    "text-overflow_16": {
         "codepoint": "0xF7ED",
         "description": "",
         "tags": ""
     },
-    "xmark-circle_24": {
+    "circle-xmark_24": {
         "codepoint": "0xF7EE",
         "description": "",
         "tags": ""
@@ -3314,7 +3315,7 @@
         "description": "",
         "tags": ["substitute", "заменить"]
     },
-    "anomaly-square_16": {
+    "square-a_16": {
         "codepoint": "0xF823",
         "description": "",
         "tags": ["аномалия"]
@@ -3339,7 +3340,7 @@
         "description": "",
         "tags": ["alignment", "end", "вправо", "выравнивание", "конец"]
     },
-    "anomaly-square_24": {
+    "square-a_24": {
         "codepoint": "0xF828",
         "description": "",
         "tags": ["аномалия"]
@@ -3349,22 +3350,22 @@
         "description": "",
         "tags": ["alert", "anomaly", "error", "warning", "аномалия", "ошибка", "предупреждение"]
     },
-    "arrow-circle-down_24": {
+    "circle-arrow-down_24": {
         "codepoint": "0xF82A",
         "description": "",
         "tags": ["вниз", "круг", "стрелка"]
     },
-    "arrow-circle-left_24": {
+    "circle-arrow-left_24": {
         "codepoint": "0xF82B",
         "description": "",
         "tags": ["влево", "круг", "стрелка"]
     },
-    "arrow-circle-right_24": {
+    "circle-arrow-right_24": {
         "codepoint": "0xF82C",
         "description": "",
         "tags": ["вправо", "круг", "стрелка"]
     },
-    "arrow-circle-up_24": {
+    "circle-arrow-up_24": {
         "codepoint": "0xF82D",
         "description": "",
         "tags": ["вверх", "круг", "стрелка"]
@@ -3434,7 +3435,7 @@
         "description": "",
         "tags": ["switch", "exchange", "change", "стрелки", "переключить", "обмен"]
     },
-    "arrow-right-circle-dot-o_24": {
+    "circle-arrow-right-dot-o_24": {
         "codepoint": "0xF83B",
         "description": "",
         "tags": ["circle", "dot", "outline", "right", "стрелка", "круг", "точка", "контур", "вправо"]
@@ -3664,7 +3665,7 @@
         "description": "",
         "tags": ["search", "смотреть", "поиск"]
     },
-    "bolt-circle_24": {
+    "circle-bolt_24": {
         "codepoint": "0xF869",
         "description": "",
         "tags": [
@@ -3676,12 +3677,12 @@
             "уязвимость"
         ]
     },
-    "bolt-rectangle-vertical-o_24": {
+    "rectangle-vertical-bolt-o_24": {
         "codepoint": "0xF86A",
         "description": "",
         "tags": ["alert", "event", "notification", "предупреждение", "событие", "событие", "уведомление"]
     },
-    "bolt-rectangle-vertical_24": {
+    "rectangle-vertical-bolt_24": {
         "codepoint": "0xF86B",
         "description": "",
         "tags": ["alert", "event", "notification", "предупреждение", "событие", "событие", "уведомление"]
@@ -3810,22 +3811,22 @@
         "description": "",
         "tags": ["options", "несколько", "опции", "чекбокс"]
     },
-    "chevron-circle-down_24": {
+    "circle-chevron-down_24": {
         "codepoint": "0xF885",
         "description": "",
         "tags": ["angle", "вниз", "круг", "угол", "шеврон"]
     },
-    "chevron-circle-left_24": {
+    "circle-chevron-left_24": {
         "codepoint": "0xF886",
         "description": "",
         "tags": ["angle", "влево", "круг", "угол", "шеврон"]
     },
-    "chevron-circle-right_24": {
+    "circle-chevron-right_24": {
         "codepoint": "0xF887",
         "description": "",
         "tags": ["angle", "вправо", "круг", "угол", "шеврон"]
     },
-    "chevron-circle-up_24": {
+    "circle-chevron-up_24": {
         "codepoint": "0xF888",
         "description": "",
         "tags": ["angle", "вверх", "круг", "угол", "шеврон"]
@@ -3959,7 +3960,7 @@
         "description": "",
         "tags": ["navigation", "навигация"]
     },
-    "compress_24": {
+    "chevrons-compress_24": {
         "codepoint": "0xF8A3",
         "description": "",
         "tags": ["collapse", "minimize", "свернуть", "уменьшить"]
@@ -4074,7 +4075,7 @@
         "description": "",
         "tags": ["above", "level", "medium", "vulner", "выше среднего", "уровень", "уязвимости", "уязвимость"]
     },
-    "ellipsis-horizontal-circle-o_24": {
+    "circle-ellipsis-horizontal-o_24": {
         "codepoint": "0xF8BA",
         "description": "",
         "tags": ["dots", "more", "точки", "еще"]
@@ -4106,7 +4107,7 @@
         "description": "",
         "tags": ["исключение"]
     },
-    "exclamation-triangle_24": {
+    "triangle-exclamation_24": {
         "codepoint": "0xF8BE",
         "description": "",
         "tags": ["alert", "attention", "warning", "внимание", "восклицательный", "треугольник", "предупреждение"]
@@ -4469,12 +4470,12 @@
         "description": "",
         "tags": ["address", "ip", "адрес", "айпи"]
     },
-    "ip4-rectangle_24": {
+    "rectangle-ip4_24": {
         "codepoint": "0xF901",
         "description": "",
         "tags": ["address", "ip", "ipv4", "адрес", "айпи", "айпи вей"]
     },
-    "ip6-rectangle_24": {
+    "rectangle-ip6_24": {
         "codepoint": "0xF902",
         "description": "",
         "tags": ["address", "ip", "ipv6", "адрес", "айпи", "айпи шесть"]
@@ -4554,7 +4555,7 @@
         "description": "",
         "tags": ["items", "unordered", "неупорядоченный", "список"]
     },
-    "location-arrow-circle-o_24": {
+    "circle-location-arrow-o_24": {
         "codepoint": "0xF912",
         "description": "",
         "tags": ["triangle", "вниз", "местонахождение", "расположение", "треугольный", "шеврон"]
@@ -4624,12 +4625,12 @@
         "description": "",
         "tags": ["help", "bubble", "chat", "comment", "справка", "сообщение", "чат"]
     },
-    "minus-circle-s_24": {
+    "circle-minus-s_24": {
         "codepoint": "0xF920",
         "description": "",
         "tags": ["subtract", "small", "вычесть", "маленький", "круг", "минус"]
     },
-    "minus-octagon_24": {
+    "octagon-minus_24": {
         "codepoint": "0xF921",
         "description": "",
         "tags": ["subtract", "вычесть", "восьмиугольник"]
@@ -4639,7 +4640,7 @@
         "description": "",
         "tags": ["subtract", "small", "вычесть", "маленький", "минус"]
     },
-    "minus-square_24": {
+    "square-minus_24": {
         "codepoint": "0xF923",
         "description": "",
         "tags": ["subtract", "вычесть", "квадрат", "минус"]
@@ -4699,7 +4700,7 @@
         "description": "",
         "tags": ["pilcrow", "параграф"]
     },
-    "pause-circle_24": {
+    "circle-pause_24": {
         "codepoint": "0xF92F",
         "description": "",
         "tags": ["pause", "пауза"]
@@ -4728,7 +4729,7 @@
         "description": "",
         "tags": ["attach", "булавка", "прикрепить"]
     },
-    "play-circle_24": {
+    "circle-play_24": {
         "codepoint": "0xF935",
         "description": "",
         "tags": ["start", "воспроизвести", "начать"]
@@ -4743,12 +4744,12 @@
         "description": "",
         "tags": ["start", "воспроизвести", "начать"]
     },
-    "plus-circle-s_24": {
+    "circle-plus-s_24": {
         "codepoint": "0xF938",
         "description": "",
         "tags": ["add", "small", "добавить", "круг", "маленький", "плюс"]
     },
-    "plus-circle_24": {
+    "circle-plus_24": {
         "codepoint": "0xF939",
         "description": "",
         "tags": ["add", "large", "большой", "добавить", "круг", "плюс"]
@@ -4758,7 +4759,7 @@
         "description": "",
         "tags": ["add", "small", "добавить", "маленький", "плюс"]
     },
-    "plus-square_24": {
+    "square-plus_24": {
         "codepoint": "0xF93B",
         "description": "",
         "tags": ["add", "добавить", "квадрат", "плюс"]
@@ -5087,7 +5088,7 @@
         "description": "",
         "tags": ["favorite", "звезда", "избранное"]
     },
-    "stop-circle_24": {
+    "circle-stop_24": {
         "codepoint": "0xF971",
         "tags": ["круг", "остановить"]
     },
@@ -5125,7 +5126,7 @@
         "description": "",
         "tags": ["label", "метка"]
     },
-    "telegram-circle_24": {
+    "circle-telegram_24": {
         "codepoint": "0xF979",
         "description": "",
         "tags": ["messenger", "мессенджер"]
@@ -5234,7 +5235,7 @@
         "description": "",
         "tags": ["drive", "flash", "usb", "диск", "флешка"]
     },
-    "user-arrow-triangle-up_24": {
+    "user-badge-triangle-up_24": {
         "codepoint": "0xF990",
         "description": "",
         "tags": ["up", "vulner lpe", "вверх", "пользователь", "стрелка", "треугольник", "уязвимость лпе"]
@@ -5316,12 +5317,12 @@
         "description": "",
         "tags": ["process", "процесс"]
     },
-    "wrap-text-slash_24": {
+    "text-overflow_24": {
         "codepoint": "0xF99F",
         "description": "",
         "tags": ["text", "wrap", "текст", "перенос"]
     },
-    "wrap-text_24": {
+    "text-wrap_24": {
         "codepoint": "0xF9A0",
         "description": "",
         "tags": ["text", "wrap", "текст", "перенос"]
@@ -5465,5 +5466,10 @@
         "codepoint": "0xF9BC",
         "description": "Сервер Windows",
         "tags": ["сервер", "виндоус", "бейдж"]
+    },
+    "node-tree_24": {
+        "codepoint": "0xF9BD",
+        "description": "Дерево узлов",
+        "tags": ""
     }
 }
