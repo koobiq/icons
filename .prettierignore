@@ -1,4 +1,4 @@
-node_modules
-.yarn
-dist
-CHANGELOG.md
+**/CHANGELOG.md
+
+# ignore Handlebars templates
+src/templates

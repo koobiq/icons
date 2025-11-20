@@ -40,7 +40,7 @@
         "build:sprite": "node src/svg-sprite.js",
         "build": "run-s copy:copy-meta-to-dist build:sprite build:fonts",
         "-----CI-----": "---------------------------------------------------------------------------------------------",
-        "prettier": "prettier '**/*.{md,yml,json,js,mjs}' --check",
+        "prettier": "prettier --check . --ignore-unknown",
         "prettier:fix": "yarn run prettier --write",
         "eslint": "eslint . --ext='.js,.mjs'",
         "eslint:fix": "yarn run eslint --fix"
