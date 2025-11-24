@@ -1137,7 +1137,7 @@
             "уязвимость"
         ]
     },
-    "question-circle-o_32": {
+    "circle-question-o_32": {
         "codepoint": "0xF62E",
         "description": "",
         "tags": ["help", "вопрос", "контур", "помощь"]
@@ -1628,7 +1628,7 @@
         "description": "",
         "tags": ["payment", "карта", "кредит", "платеж"]
     },
-    "exclamation-triangle_32": {
+    "triangle-exclamation_32": {
         "codepoint": "0xF6C5",
         "tags": ""
     },
@@ -1770,7 +1770,7 @@
         "codepoint": "0xF6E8",
         "tags": ""
     },
-    "gear-badge-arrowtriangle-up-square_16": {
+    "gear-badge-square-arrowtriangle-up_16": {
         "codepoint": "0xF6EA",
         "description": "",
         "tags": [
@@ -1998,7 +1998,7 @@
         "description": "",
         "tags": ["event", "pattern", "template", "образец", "событие", "шаблон"]
     },
-    "table-badge-arrow-down-circle_32": {
+    "table-badge-circle-arrow-down_32": {
         "codepoint": "0xF71A",
         "description": "",
         "tags": ""
@@ -3055,7 +3055,7 @@
         "description": "",
         "tags": ""
     },
-    "xmark-circle-s_16": {
+    "circle-xmark-s_16": {
         "codepoint": "0xF7EF",
         "description": "",
         "tags": ""
@@ -4317,7 +4317,7 @@
         "description": "",
         "tags": ["next", "вперед", "следующий"]
     },
-    "gear-badge-arrowtriangle-up-square_24": {
+    "gear-badge-square-arrowtriangle-up_24": {
         "codepoint": "0xF8E2",
         "description": "",
         "tags": ["build", "config", "setup", "конфигурация", "настройка", "сборка"]
@@ -5337,7 +5337,7 @@
         "description": "",
         "tags": ["tools", "инструменты"]
     },
-    "xmark-circle-s_24": {
+    "circle-xmark-s_24": {
         "codepoint": "0xF9A3",
         "description": "",
         "tags": ["remove", "small", "удалить", "маленький", "круг", "крестик"]
