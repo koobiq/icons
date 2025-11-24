@@ -1,3 +1,21 @@
+# 11.1.0 (2025-11-24)
+
+### Icons
+
+ * feature  rename icons ([#73](https://github.com/koobiq/icons/issues/73)) f64985d
+
+#### Renamed
+
+🚨 Warning: breaking changes!
+
+ * exclamation-triangle_32 → triangle-exclamation_32
+ * gear-badge-arrowtriangle-up-square_16 → gear-badge-square-arrowtriangle-up_16
+ * gear-badge-arrowtriangle-up-square_24 → gear-badge-square-arrowtriangle-up_24
+ * question-circle-o_32 → circle-question-o_32
+ * table-badge-arrow-down-circle_32 → table-badge-circle-arrow-down_32
+ * xmark-circle-s_16 → circle-xmark-s_16
+ * xmark-circle-s_24 → circle-xmark-s_24
+
 # 11.0.0 (2025-11-12)
 
 ### Icons
