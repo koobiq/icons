@@ -1,3 +1,9 @@
+## 11.1.1 (2025-11-24)
+
+### Icons
+
+ * revert  Revert "chore: update setup-node action to version 6 (#DS-4342) (#69)" e9ef7ee
+
 # 11.1.0 (2025-11-24)
 
 ### Icons
