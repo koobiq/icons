@@ -1,3 +1,7 @@
+## 11.1.2 (2025-11-24)
+
+* chore  fixed setup-yarn action
+
 ## 11.1.1 (2025-11-24)
 
 ### Icons
