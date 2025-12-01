@@ -465,69 +465,69 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@figma-export/cli@npm:^6.2.3":
-  version: 6.2.3
-  resolution: "@figma-export/cli@npm:6.2.3"
+"@figma-export/cli@npm:^6.2.4":
+  version: 6.2.4
+  resolution: "@figma-export/cli@npm:6.2.4"
   dependencies:
-    "@figma-export/core": "npm:^6.2.3"
-    "@figma-export/types": "npm:^6.2.3"
+    "@figma-export/core": "npm:^6.2.4"
+    "@figma-export/types": "npm:^6.2.4"
     ora: "npm:~8.2.0"
     sade: "npm:~1.8.1"
   bin:
-    figma-export: ./bin/run.js
-  checksum: 10c0/f800b88fa1590d29cee9b9459bbc96bad93f6058bc94ca9829c6636cf1cec123613f0f93740862dc018ab45abbb1ba8831d5434858912edd74d4e018b58ff007
+    figma-export: bin/run.js
+  checksum: 10c0/adc3390704c32be3dd2e88342dfe2c1e1cae48f095a0f1008e84861a9c675e868f5f3904adb42c670475350dbe8fcbf6b13a66c9c260aec085b7b0991b874efd
   languageName: node
   linkType: hard
 
-"@figma-export/core@npm:^6.2.3":
-  version: 6.2.3
-  resolution: "@figma-export/core@npm:6.2.3"
+"@figma-export/core@npm:^6.2.4":
+  version: 6.2.4
+  resolution: "@figma-export/core@npm:6.2.4"
   dependencies:
-    "@figma-export/types": "npm:^6.2.3"
-    "@figma/rest-api-spec": "npm:^0.33.0"
-    p-limit: "npm:^6.2.0"
-    p-retry: "npm:^6.2.1"
-    undici: "npm:^6.21.3"
-  checksum: 10c0/939c29311f550f7b1687b9510cfaa3f4a72d27d565a14ee9ce5e890168fd215a9a3bee4e6b8b8a66518d6e2fac0e555ef760a302b09b234839cbe05090c4791d
+    "@figma-export/types": "npm:^6.2.4"
+    "@figma/rest-api-spec": "npm:^0.34.0"
+    p-limit: "npm:^7.2.0"
+    p-retry: "npm:^7.1.0"
+    undici: "npm:^6.22.0"
+  checksum: 10c0/b4501a31e14f2d09c0cd8a2e43e823f531063f3acac2efb7f46ea84bf6d2416559d76530872bd21de26072668855ca91e620a335050ea73771ab23da65f51371
   languageName: node
   linkType: hard
 
-"@figma-export/output-components-as-svg@npm:^6.2.3":
-  version: 6.2.3
-  resolution: "@figma-export/output-components-as-svg@npm:6.2.3"
+"@figma-export/output-components-as-svg@npm:^6.2.4":
+  version: 6.2.4
+  resolution: "@figma-export/output-components-as-svg@npm:6.2.4"
   dependencies:
-    "@figma-export/types": "npm:^6.2.3"
-  checksum: 10c0/88b4eb8a8c157b758ec6503a0a9033a1d7f2103475d4c746bd7c14aab0588a92c126bff23671aa7bdbcfee5741dc54faab139a98e12138d0e1ed755ac5f6cfc4
+    "@figma-export/types": "npm:^6.2.4"
+  checksum: 10c0/96fb3a8b503bec878507c5dfba78513373d72df39583f3f62a47a4aff9cc7d895873ee30ab0fe69a1f6f8b62594961416c6b3d819105d0eb54f63b4b44eef160
   languageName: node
   linkType: hard
 
-"@figma-export/output-components-as-svgr@npm:^6.2.3":
-  version: 6.2.3
-  resolution: "@figma-export/output-components-as-svgr@npm:6.2.3"
+"@figma-export/output-components-as-svgr@npm:^6.2.4":
+  version: 6.2.4
+  resolution: "@figma-export/output-components-as-svgr@npm:6.2.4"
   dependencies:
-    "@figma-export/types": "npm:^6.2.3"
+    "@figma-export/types": "npm:^6.2.4"
     "@figma-export/utils": "npm:^6.1.0"
     "@svgr/core": "npm:~8.1.0"
-  checksum: 10c0/7f4992566df8494a797f3ac19f54c04d0317692cba39296839927261b867e4c896035476f8511b1dd178093f0ab529f5a5c5cc6329751bf50f7d07b1c98aaf4a
+  checksum: 10c0/24754fa390ceb2be4dd48300faa06aee93b0fd4800949e793ba53ad92b720b027c02ce103b0a29ef30161073f20c678f46dbee1112240b34eb857684e7b6edf0
   languageName: node
   linkType: hard
 
-"@figma-export/transform-svg-with-svgo@npm:^6.2.3":
-  version: 6.2.3
-  resolution: "@figma-export/transform-svg-with-svgo@npm:6.2.3"
+"@figma-export/transform-svg-with-svgo@npm:^6.2.4":
+  version: 6.2.4
+  resolution: "@figma-export/transform-svg-with-svgo@npm:6.2.4"
   dependencies:
-    "@figma-export/types": "npm:^6.2.3"
+    "@figma-export/types": "npm:^6.2.4"
     svgo: "npm:~3.3.2"
-  checksum: 10c0/d717aff413147faa083c24e3cdf795f785e3bed28b9b97e35d190b7c97074bc9bf88d26cbc9025b442a7d96e0e82ffa640cb68575fdf0cd5d6562d69ee7a26fa
+  checksum: 10c0/32636d5785cdb2edd821f519f579ab5fc45e4e81aaebbc3a9f1846719e24aa547455753b2c72391c78fc8efcfad9535432802aa39dca0956996729db1384d08d
   languageName: node
   linkType: hard
 
-"@figma-export/types@npm:^6.2.3":
-  version: 6.2.3
-  resolution: "@figma-export/types@npm:6.2.3"
+"@figma-export/types@npm:^6.2.4":
+  version: 6.2.4
+  resolution: "@figma-export/types@npm:6.2.4"
   dependencies:
-    "@figma/rest-api-spec": "npm:^0.33.0"
-  checksum: 10c0/44e55d32d8c3087fe28facbe04a31c4c0f6912dd2744c1302257112829169243532a27ed5002ce5d661f57ad05aa7115388630ba8abb328bad669b5ea2b67279
+    "@figma/rest-api-spec": "npm:^0.34.0"
+  checksum: 10c0/20dcc696a65648491bd86bb6e3fe9d2731a46540daadb656e467cc37fa52332d2c7162dde98d1b32ee7bd9d7e1e8a04ccd535ac10a8fe5858ebf547f1257e0d9
   languageName: node
   linkType: hard
 
@@ -538,10 +538,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@figma/rest-api-spec@npm:^0.33.0":
-  version: 0.33.0
-  resolution: "@figma/rest-api-spec@npm:0.33.0"
-  checksum: 10c0/a7225bf7723b44cac918157c75ff448d063e48acb7f4ae10aabb56d393754051fe6b79a1c36c9fcdf6fdee10a851f673c6d99fd2a0267de64ce1d95012bb700b
+"@figma/rest-api-spec@npm:^0.34.0":
+  version: 0.34.0
+  resolution: "@figma/rest-api-spec@npm:0.34.0"
+  checksum: 10c0/0492739dc569417528ebc3dccd739824db9bd8428797f543c1fecfd4fbe582a90e7807c9c3e70708a491fcae87f3d83015b6885619eac8bd8ba3324cc0051056
   languageName: node
   linkType: hard
 
@@ -843,10 +843,10 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
-    "@figma-export/cli": "npm:^6.2.3"
-    "@figma-export/output-components-as-svg": "npm:^6.2.3"
-    "@figma-export/output-components-as-svgr": "npm:^6.2.3"
-    "@figma-export/transform-svg-with-svgo": "npm:^6.2.3"
+    "@figma-export/cli": "npm:^6.2.4"
+    "@figma-export/output-components-as-svg": "npm:^6.2.4"
+    "@figma-export/output-components-as-svgr": "npm:^6.2.4"
+    "@figma-export/transform-svg-with-svgo": "npm:^6.2.4"
     "@koobiq/cli": "npm:^18.36.0"
     "@svgr/plugin-jsx": "npm:^8.1.0"
     "@svgr/plugin-prettier": "npm:^8.1.0"
@@ -1499,13 +1499,6 @@ __metadata:
   version: 2.4.4
   resolution: "@types/normalize-package-data@npm:2.4.4"
   checksum: 10c0/aef7bb9b015883d6f4119c423dd28c4bdc17b0e8a0ccf112c78b4fe0e91fbc4af7c6204b04bba0e199a57d2f3fbbd5b4a14bf8739bf9d2a39b2a0aad545e0f86
-  languageName: node
-  linkType: hard
-
-"@types/retry@npm:0.12.2":
-  version: 0.12.2
-  resolution: "@types/retry@npm:0.12.2"
-  checksum: 10c0/07481551a988cc90b423351919928b9ddcd14e3f5591cac3ab950851bb20646e55a10e89141b38bc3093d2056d4df73700b22ff2612976ac86a6367862381884
   languageName: node
   linkType: hard
 
@@ -4474,10 +4467,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-network-error@npm:^1.0.0":
-  version: 1.1.0
-  resolution: "is-network-error@npm:1.1.0"
-  checksum: 10c0/89eef83c2a4cf43d853145ce175d1cf43183b7a58d48c7a03e7eed4eb395d0934c1f6d101255cdd8c8c2980ab529bfbe5dd9edb24e1c3c28d2b3c814469b5b7d
+"is-network-error@npm:^1.1.0":
+  version: 1.3.0
+  resolution: "is-network-error@npm:1.3.0"
+  checksum: 10c0/3e85a69e957988db66d5af5412efdd531a5a63e150d1bdd5647cfd4dc54fd89b1dbdd472621f8915233c3176ba1e6922afa8a51a9e363ba4693edf96a294f898
   languageName: node
   linkType: hard
 
@@ -5861,12 +5854,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"p-limit@npm:^6.2.0":
-  version: 6.2.0
-  resolution: "p-limit@npm:6.2.0"
+"p-limit@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "p-limit@npm:7.2.0"
   dependencies:
-    yocto-queue: "npm:^1.1.1"
-  checksum: 10c0/448bf55a1776ca1444594d53b3c731e68cdca00d44a6c8df06a2f6e506d5bbd540ebb57b05280f8c8bff992a630ed782a69612473f769a7473495d19e2270166
+    yocto-queue: "npm:^1.2.1"
+  checksum: 10c0/18e5ea305c31fdc0cf5260da7b63adfd46748cd72d4b40a31a13bd23eeece729c9308047fb5d848d7fa006d1b2fc2f36bb0d9dd173a300c38cd6dc1ed3355382
   languageName: node
   linkType: hard
 
@@ -5915,14 +5908,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"p-retry@npm:^6.2.1":
-  version: 6.2.1
-  resolution: "p-retry@npm:6.2.1"
+"p-retry@npm:^7.1.0":
+  version: 7.1.0
+  resolution: "p-retry@npm:7.1.0"
   dependencies:
-    "@types/retry": "npm:0.12.2"
-    is-network-error: "npm:^1.0.0"
-    retry: "npm:^0.13.1"
-  checksum: 10c0/10d014900107da2c7071ad60fffe4951675f09930b7a91681643ea224ae05649c05001d9e78436d902fe8b116d520dd1f60e72e091de097e2640979d56f3fb60
+    is-network-error: "npm:^1.1.0"
+  checksum: 10c0/fe756dac411bd104901b383f6b95214f453a5f5aa4e289d3642b937c62cf4fcfc77f6276b570388a686b2923af6d43e71b29c3b2abe062cb7070176d00627081
   languageName: node
   linkType: hard
 
@@ -6404,13 +6395,6 @@ __metadata:
   version: 0.12.0
   resolution: "retry@npm:0.12.0"
   checksum: 10c0/59933e8501727ba13ad73ef4a04d5280b3717fd650408460c987392efe9d7be2040778ed8ebe933c5cbd63da3dcc37919c141ef8af0a54a6e4fca5a2af177bfe
-  languageName: node
-  linkType: hard
-
-"retry@npm:^0.13.1":
-  version: 0.13.1
-  resolution: "retry@npm:0.13.1"
-  checksum: 10c0/9ae822ee19db2163497e074ea919780b1efa00431d197c7afdb950e42bf109196774b92a49fc9821f0b8b328a98eea6017410bfc5e8a0fc19c85c6d11adb3772
   languageName: node
   linkType: hard
 
@@ -7556,10 +7540,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:^6.21.3":
-  version: 6.21.3
-  resolution: "undici@npm:6.21.3"
-  checksum: 10c0/294da109853fad7a6ef5a172ad0ca3fb3f1f60cf34703d062a5ec967daf69ad8c03b52e6d536c5cba3bb65615769bf08e5b30798915cbccdddaca01045173dda
+"undici@npm:^6.22.0":
+  version: 6.22.0
+  resolution: "undici@npm:6.22.0"
+  checksum: 10c0/47903c489d73e26bd47960cf2f04d63282ed050818b672cb05f8dfb6403381b850cf1b1751832654fd3af22aacd9d780e5e61aff563cd97943f5c4f10d5b3e23
   languageName: node
   linkType: hard
 
@@ -7963,10 +7947,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yocto-queue@npm:^1.0.0, yocto-queue@npm:^1.1.1":
+"yocto-queue@npm:^1.0.0":
   version: 1.1.1
   resolution: "yocto-queue@npm:1.1.1"
   checksum: 10c0/cb287fe5e6acfa82690acb43c283de34e945c571a78a939774f6eaba7c285bacdf6c90fbc16ce530060863984c906d2b4c6ceb069c94d1e0a06d5f2b458e2a92
+  languageName: node
+  linkType: hard
+
+"yocto-queue@npm:^1.2.1":
+  version: 1.2.2
+  resolution: "yocto-queue@npm:1.2.2"
+  checksum: 10c0/36d4793e9cf7060f9da543baf67c55e354f4862c8d3d34de1a1b1d7c382d44171315cc54abf84d8900b8113d742b830108a1434f4898fb244f9b7e8426d4b8f5
   languageName: node
   linkType: hard
 
