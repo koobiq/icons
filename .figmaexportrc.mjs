@@ -31,7 +31,6 @@ const componentOptions = {
                     }
                 },
                 { name: 'removeComments' },
-                { name: 'removeXMLNS' },
                 { name: 'cleanupIds' },
                 { name: 'removeEmptyContainers' },
                 {
