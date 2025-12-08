@@ -1,3 +1,9 @@
+## 11.1.3 (2025-12-08)
+
+### Icons
+
+ * bug fix  returned missing xmlns attribute for each icon ([#DS-4524](https://github.com/koobiq/icons/issues/issue/DS-4524)) ([#76](https://github.com/koobiq/icons/issues/76)) b03d1e5
+
 ## 11.1.2 (2025-11-24)
 
 * chore  fixed setup-yarn action
