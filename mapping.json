@@ -5471,5 +5471,23 @@
         "codepoint": "0xF9BD",
         "description": "Дерево узлов",
         "tags": ""
+    },
+    "grafana_16": {
+        "codepoint": "0xF9BE",
+        "description": "Графана",
+        "tags": ["logo"]
+    },
+    "grafana_24": {
+        "codepoint": "0xF9BF",
+        "description": "Графана",
+        "tags": ["logo"]
+    },
+    "plug-slash_16": {
+        "codepoint": "0xF9C0",
+        "tags": ["disconnect", "отключить", "вилка"]
+    },
+    "plug-slash_24": {
+        "codepoint": "0xF9C1",
+        "tags": ["disconnect", "отключить", "вилка"]
     }
 }
