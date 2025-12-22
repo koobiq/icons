@@ -1,3 +1,23 @@
+# 11.2.0 (2025-12-22)
+
+### Icons
+
+#### Added
+ * grafana_16
+ * grafana_24
+ * plug-slash_16
+ * plug-slash_24
+
+---
+
+#### Tags Edited
+ * paperclip_16: added “src”
+ * paperclip_24: added “src”
+ * bell_16: added “notification”
+ * bell_24: added “notification”
+
+ * feature  grafana, plug-slash, mapping ([#DS-4547](https://github.com/koobiq/icons/issues/issue/DS-4547)) ([#77](https://github.com/koobiq/icons/issues/77)) 7df92df
+
 ## 11.1.3 (2025-12-08)
 
 ### Icons
