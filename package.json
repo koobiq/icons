@@ -7,9 +7,6 @@
     "publishConfig": {
         "access": "public"
     },
-    "engines": {
-        "node": ">=18"
-    },
     "keywords": [
         "design-system",
         "koobiq",
@@ -63,7 +60,7 @@
         "@svgr/plugin-svgo": "^8.1.0",
         "@types/eslint": "^8.56.12",
         "@types/fs-extra": "^11.0.4",
-        "@types/node": "18.13.0",
+        "@types/node": "^24.10.4",
         "cross-env": "^7.0.3",
         "dotenv": "^16.6.1",
         "eslint": "^8.57.0",
