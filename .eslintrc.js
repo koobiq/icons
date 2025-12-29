@@ -3,11 +3,11 @@
 /** @type {import('eslint').Linter.Config} */
 const config = {
     env: {
-        es2022: true,
         node: true
     },
     parserOptions: {
-        sourceType: 'module'
+        sourceType: 'module',
+        ecmaVersion: 2024
     },
     extends: [
         'eslint:recommended',

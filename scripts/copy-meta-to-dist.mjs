@@ -25,10 +25,10 @@ if (!fs.existsSync('dist/icons/images')) {
 fsExtra.copySync('./src/svg', 'dist/icons/svg');
 fsExtra.copySync('./src/images', 'dist/icons/images');
 
-import mapping from '../mapping.json' assert { type: 'json' };
-import packageJSON from '../package.json' assert { type: 'json' };
+const mapping = JSON.parse(fsExtra.readFileSync(new URL('../mapping.json', import.meta.url)));
+const packageJSON = JSON.parse(fsExtra.readFileSync(new URL('../package.json', import.meta.url)));
 
-Object.entries(mapping).forEach(([key, value]) => {
+Object.entries(mapping).forEach(([_, value]) => {
     value.code = parseInt(value.code);
 });
 
