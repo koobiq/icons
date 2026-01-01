@@ -465,30 +465,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@figma-export/cli@npm:^6.2.4":
-  version: 6.2.4
-  resolution: "@figma-export/cli@npm:6.2.4"
+"@figma-export/cli@npm:^6.3.0":
+  version: 6.3.0
+  resolution: "@figma-export/cli@npm:6.3.0"
   dependencies:
-    "@figma-export/core": "npm:^6.2.4"
+    "@figma-export/core": "npm:^6.3.0"
     "@figma-export/types": "npm:^6.2.4"
     ora: "npm:~8.2.0"
     sade: "npm:~1.8.1"
   bin:
     figma-export: bin/run.js
-  checksum: 10c0/adc3390704c32be3dd2e88342dfe2c1e1cae48f095a0f1008e84861a9c675e868f5f3904adb42c670475350dbe8fcbf6b13a66c9c260aec085b7b0991b874efd
+  checksum: 10c0/a6f7bbb3d971d8b2024e82b2f42280bde729bb1dfca03276910663fdfbea3942a8aa28dfe37789f4de1bdeeb72e773ad45560d6d567fcbcb9e6e15753688839e
   languageName: node
   linkType: hard
 
-"@figma-export/core@npm:^6.2.4":
-  version: 6.2.4
-  resolution: "@figma-export/core@npm:6.2.4"
+"@figma-export/core@npm:^6.3.0":
+  version: 6.3.0
+  resolution: "@figma-export/core@npm:6.3.0"
   dependencies:
     "@figma-export/types": "npm:^6.2.4"
     "@figma/rest-api-spec": "npm:^0.34.0"
     p-limit: "npm:^7.2.0"
     p-retry: "npm:^7.1.0"
     undici: "npm:^6.22.0"
-  checksum: 10c0/b4501a31e14f2d09c0cd8a2e43e823f531063f3acac2efb7f46ea84bf6d2416559d76530872bd21de26072668855ca91e620a335050ea73771ab23da65f51371
+  checksum: 10c0/32803e82cb5ac54d946e39ac91aaf019b74765b28c448a888010154d1d62e2987972e467c15cb6dd864de8140d33282cbc09c2b97bc94e22894f5e694970bff2
   languageName: node
   linkType: hard
 
@@ -843,7 +843,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
-    "@figma-export/cli": "npm:^6.2.4"
+    "@figma-export/cli": "npm:^6.3.0"
     "@figma-export/output-components-as-svg": "npm:^6.2.4"
     "@figma-export/output-components-as-svgr": "npm:^6.2.4"
     "@figma-export/transform-svg-with-svgo": "npm:^6.2.4"
