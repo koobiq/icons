@@ -1,5 +1,6 @@
 const packageJSON = require('./package.json');
 const mapping = require('./mapping.json');
+const mappingInterop = require('./mapping-interop.json');
 const fs = require('fs');
 
 if (!fs.existsSync('dist/icons/svg')) {
@@ -9,7 +10,14 @@ if (!fs.existsSync('dist/icons/svg')) {
 const codepoints = {};
 
 Object.entries(mapping).forEach(([key, value]) => {
-    codepoints[key] = parseInt(value.codepoint);
+    const parsedCodePoint = parseInt(value.codepoint);
+    const interopIconName = mappingInterop[key];
+
+    codepoints[key] = parsedCodePoint;
+
+    if (interopIconName) {
+        codepoints[mappingInterop[key]] = parsedCodePoint;
+    }
 });
 
 if (!fs.existsSync('dist/icons/fonts')) {
