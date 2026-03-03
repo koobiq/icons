@@ -1,0 +1,16 @@
+{{> fontFace }}
+
+{{> selector }}
+
+/*---------------------
+*  Icons
+*-------------------*/
+
+{{# each codepoints }}
+    .{{ ../prefix }}-{{ @key }} {
+        font-size: {{ splitFontSize @key }}px;
+        &:before {
+            content: "\\{{ codepoint this }}";
+        }
+    }
+{{/ each }}

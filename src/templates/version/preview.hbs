@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}</title>
+    <style>
+        html {
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #f2f5f9;
+        }
+
+        h1 {
+            font-weight: bold;
+            margin: 24px;
+        }
+
+        .icon {
+            width: 100px;
+            display: inline-block;
+            margin: 8px;
+        }
+
+        .icon:hover {
+            cursor: pointer;
+        }
+
+        .icon:hover .inner {
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.24);
+        }
+
+        .icon .inner {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            background-color: white;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
+            border-radius: 4px;
+            transition: all .3s ease-in-out;
+        }
+
+        .icon .inner {{ tag }} {
+            padding: 16px 0;
+            font-size: 28px;
+            color: #8C99A2;
+            overflow: hidden;
+        }
+
+        .icon .inner::before {
+            overflow: hidden;
+        }
+
+        .label {
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 4px;
+            font-size: 12px;
+            color: #666;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="{{ name }}.css" />
+</head>
+<body>
+    <h1>{{ name }}</h1>
+
+    <div id="icons">
+        {{# each assets }}
+            <div class="icon" data-name="{{ @key }}" title="{{ @key }}">
+                <span class="inner">
+                    <{{ ../tag }} class="kbq {{ ../prefix }}-{{ @key }}" aria-hidden="true"></{{ ../tag }}>
+                    <span class='label'>{{ @key }}</span>
+                </span>
+            </div>
+        {{/ each }}
+    </div>
+</body>
+</html>
