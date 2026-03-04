@@ -20,6 +20,38 @@ const Handlebars = require('handlebars');
 Handlebars.registerHelper('splitFontSize', function (str) {
     return str.split('_')[1];
 });
+Handlebars.registerPartial(
+    'fontFace',
+    `
+@font-face {
+   font-family: "Koobiq Icons";
+   font-weight: normal;
+   font-style: normal;
+   src: {{{ fontSrc }}};
+}
+  `
+);
+
+Handlebars.registerPartial(
+    'selector',
+    `
+.kbq {
+font-family: "Koobiq Icons";
+display:inline-block;
+vertical-align:middle;
+line-height:1;
+font-weight:normal;
+font-style:normal;
+speak:none;
+text-decoration:inherit;
+text-transform:none;
+text-rendering:auto;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+transform:rotate(0.001deg);
+}
+  `
+);
 
 module.exports = {
     name: 'kbq-icons',

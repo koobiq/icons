@@ -35,7 +35,7 @@ Handlebars.registerPartial(
 Handlebars.registerPartial(
     'selector',
     `
-.kbq {
+.kbq.kbq-${packageJSON.version.replace(/\./g, '\\.')} {
 font-family: "Koobiq Icons ${packageJSON.version}";
 display:inline-block;
 vertical-align:middle;
@@ -63,9 +63,9 @@ module.exports = {
     normalize: true,
     assetTypes: ['css', 'scss', 'html'],
     templates: {
-        html: 'src/templates/version/preview.hbs',
-        css: 'src/templates/version/css.hbs',
-        scss: 'src/templates/version/scss.hbs'
+        html: 'src/templates/preview.hbs',
+        css: 'src/templates/css.hbs',
+        scss: 'src/templates/scss.hbs'
     },
     formatOptions: {
         ttf: {
