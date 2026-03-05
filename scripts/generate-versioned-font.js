@@ -26,30 +26,6 @@ if (!fs.existsSync('dist/icons/fonts')) {
     fs.mkdirSync('dist/icons/fonts');
 }
 
-if (!fs.existsSync('dist/icons/fonts/versioned-selector')) {
-    fs.mkdirSync('dist/icons/fonts/versioned-selector');
-}
-
-const selectorName = (selectorName) => {
-    return `
-${selectorName} {
-font-family: "Koobiq Icons ${packageJSON.version}";
-display:inline-block;
-vertical-align:middle;
-line-height:1;
-font-weight:normal;
-font-style:normal;
-speak:none;
-text-decoration:inherit;
-text-transform:none;
-text-rendering:auto;
--webkit-font-smoothing:antialiased;
--moz-osx-font-smoothing:grayscale;
-transform:rotate(0.001deg);
-}
-  `;
-};
-
 Handlebars.registerHelper('splitFontSize', function (str) {
     return str.split('_')[1];
 });
@@ -64,8 +40,26 @@ Handlebars.registerPartial(
 }
   `
 );
-Handlebars.registerPartial('selector', selectorName('.kbq'));
-Handlebars.registerPartial('previewClassName', `kbq-${packageJSON.version}`);
+Handlebars.registerPartial(
+    'selector',
+    `
+.kbq {
+font-family: "Koobiq Icons ${packageJSON.version}";
+display:inline-block;
+vertical-align:middle;
+line-height:1;
+font-weight:normal;
+font-style:normal;
+speak:none;
+text-decoration:inherit;
+text-transform:none;
+text-rendering:auto;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+transform:rotate(0.001deg);
+}
+  `
+);
 
 const baseConfig = {
     name: `kbq-icons-${packageJSON.version}`,
@@ -95,15 +89,4 @@ const baseConfig = {
 generateFonts({
     ...baseConfig,
     outputDir: 'dist/icons/fonts'
-}).then(() => {
-    Handlebars.registerPartial('selector', selectorName(`.kbq-${packageJSON.version.replace(/\./g, '\\.')}`));
-
-    return generateFonts({
-        ...baseConfig,
-        templates: {
-            ...baseConfig.templates,
-            html: 'src/templates/preview-versioned.hbs'
-        },
-        outputDir: 'dist/icons/fonts/versioned-selector'
-    });
 });
