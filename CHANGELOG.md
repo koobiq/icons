@@ -1,3 +1,7 @@
+## 10.10.2 (2026-03-05)
+
+Version bump with no changes in source code.
+
 ## 10.10.1 (2026-03-05)
 
 ### Icons
