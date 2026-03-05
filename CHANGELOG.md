@@ -1,3 +1,9 @@
+## 10.7.2 (2026-03-05)
+
+### Icons
+
+ * bug fix  mapping-interop & added versioned icons ([#DS-4751](https://github.com/koobiq/icons/issues/issue/DS-4751)) ([#96](https://github.com/koobiq/icons/issues/96)) cd7f13d
+
 ## 10.7.1 (2025-09-12)
 
 ### Icons
