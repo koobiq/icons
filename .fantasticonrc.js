@@ -1,33 +1,15 @@
 const packageJSON = require('./package.json');
-const mapping = require('./mapping.json');
-const mappingInterop = require('./mapping-interop.json');
 const fs = require('fs');
+const { Handlebars, codepoints } = require('./scripts/fantasticicon-utils');
 
 if (!fs.existsSync('dist/icons/svg')) {
     console.error('Build at first package with svg icons');
 }
 
-const codepoints = {};
-
-Object.entries(mapping).forEach(([key, value]) => {
-    const parsedCodePoint = parseInt(value.codepoint);
-    const interopIconName = mappingInterop[key];
-
-    codepoints[key] = parsedCodePoint;
-
-    if (interopIconName) {
-        codepoints[mappingInterop[key]] = parsedCodePoint;
-    }
-});
-
 if (!fs.existsSync('dist/icons/fonts')) {
     fs.mkdirSync('dist/icons/fonts');
 }
 
-const Handlebars = require('handlebars');
-Handlebars.registerHelper('splitFontSize', function (str) {
-    return str.split('_')[1];
-});
 Handlebars.registerPartial(
     'fontFace',
     `
