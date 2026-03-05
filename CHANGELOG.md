@@ -1,3 +1,10 @@
+# 11.3.0 (2026-03-05)
+
+### Icons
+
+ * feature  clipboard-check, cloud-half ([#101](https://github.com/koobiq/icons/issues/101)) b7eed24
+ * bug fix  mapping-interop & added versioned icons ([#DS-4751](https://github.com/koobiq/icons/issues/issue/DS-4751)) ([#100](https://github.com/koobiq/icons/issues/100)) 3792418
+
 # 11.2.0 (2025-12-22)
 
 ### Icons
