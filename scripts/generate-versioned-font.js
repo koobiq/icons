@@ -1,7 +1,9 @@
-const packageJSON = require('./package.json');
-const mapping = require('./mapping.json');
-const mappingInterop = require('./mapping-interop.json');
+const packageJSON = require('../package.json');
+const mapping = require('../mapping.json');
+const mappingInterop = require('../mapping-interop.json');
 const fs = require('fs');
+const Handlebars = require('handlebars');
+const { generateFonts, FontAssetType, OtherAssetType } = require('fantasticon');
 
 if (!fs.existsSync('dist/icons/svg')) {
     console.error('Build at first package with svg icons');
@@ -24,7 +26,6 @@ if (!fs.existsSync('dist/icons/fonts')) {
     fs.mkdirSync('dist/icons/fonts');
 }
 
-const Handlebars = require('handlebars');
 Handlebars.registerHelper('splitFontSize', function (str) {
     return str.split('_')[1];
 });
@@ -32,19 +33,18 @@ Handlebars.registerPartial(
     'fontFace',
     `
 @font-face {
-   font-family: "Koobiq Icons";
+   font-family: "Koobiq Icons ${packageJSON.version}";
    font-weight: normal;
    font-style: normal;
    src: {{{ fontSrc }}};
 }
   `
 );
-
 Handlebars.registerPartial(
     'selector',
     `
 .kbq {
-font-family: "Koobiq Icons";
+font-family: "Koobiq Icons ${packageJSON.version}";
 display:inline-block;
 vertical-align:middle;
 line-height:1;
@@ -61,15 +61,15 @@ transform:rotate(0.001deg);
   `
 );
 
-module.exports = {
-    name: 'kbq-icons',
+generateFonts({
+    name: `kbq-icons-${packageJSON.version}`,
     prefix: 'kbq',
     codepoints: codepoints,
     inputDir: 'dist/icons/svg',
     outputDir: 'dist/icons/fonts',
-    fontTypes: ['ttf', 'woff'],
+    fontTypes: [FontAssetType.TTF, FontAssetType.WOFF],
     normalize: true,
-    assetTypes: ['css', 'scss', 'html'],
+    assetTypes: [OtherAssetType.CSS, OtherAssetType.SCSS, OtherAssetType.HTML],
     templates: {
         html: 'src/templates/preview.hbs',
         css: 'src/templates/css.hbs',
@@ -85,4 +85,4 @@ module.exports = {
     },
     fontHeight: 512,
     descent: 72
-};
+});
