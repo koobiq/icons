@@ -61,11 +61,12 @@ transform:rotate(0.001deg);
   `
 );
 
-const baseConfig = {
+generateFonts({
     name: `kbq-icons-${packageJSON.version}`,
     prefix: 'kbq',
     codepoints: codepoints,
     inputDir: 'dist/icons/svg',
+    outputDir: 'dist/icons/fonts',
     fontTypes: [FontAssetType.TTF, FontAssetType.WOFF],
     normalize: true,
     assetTypes: [OtherAssetType.CSS, OtherAssetType.SCSS, OtherAssetType.HTML],
@@ -84,9 +85,4 @@ const baseConfig = {
     },
     fontHeight: 512,
     descent: 72
-};
-
-generateFonts({
-    ...baseConfig,
-    outputDir: 'dist/icons/fonts'
 });
