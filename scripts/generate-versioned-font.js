@@ -1,6 +1,6 @@
-const packageJSON = require('./package.json');
-const mapping = require('./mapping.json');
-const mappingInterop = require('./mapping-interop.json');
+const packageJSON = require('../package.json');
+const mapping = require('../mapping.json');
+const mappingInterop = require('../mapping-interop.json');
 const fs = require('fs');
 const Handlebars = require('handlebars');
 const { generateFonts, FontAssetType, OtherAssetType } = require('fantasticon');
