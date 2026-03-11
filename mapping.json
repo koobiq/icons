@@ -285,12 +285,12 @@
     "arrow-down-to-line_16": {
         "codepoint": "0xF554",
         "description": "",
-        "tags": ["download", "загрузить", "скачать"]
+        "tags": []
     },
     "arrow-up-from-line_16": {
         "codepoint": "0xF555",
         "description": "",
-        "tags": ["to cloud", "upload", "в облако", "загрузить"]
+        "tags": []
     },
     "arrow-right-to-bracket_16": {
         "codepoint": "0xF556",
@@ -300,7 +300,7 @@
     "arrow-right-from-bracket_16": {
         "codepoint": "0xF557",
         "description": "",
-        "tags": ["export", "экспорт"]
+        "tags": []
     },
     "file-exclamation-o_16": {
         "codepoint": "0xF558",
@@ -2218,7 +2218,7 @@
     "arrow-up-from-bracket_16": {
         "codepoint": "0xF744",
         "description": "",
-        "tags": ["alt", "upload", "загрузить"]
+        "tags": []
     },
     "arrow-up-s_16": {
         "codepoint": "0xF745",
@@ -3532,7 +3532,7 @@
     "arrow-up-from-bracket_24": {
         "codepoint": "0xF849",
         "description": "",
-        "tags": ["upload", "вверх", "скобка", "стрелка"]
+        "tags": []
     },
     "arrow-up-from-rectangle_24": {
         "codepoint": "0xF84A",
@@ -5537,5 +5537,13 @@
     "cloud-half_24": {
         "codepoint": "0xF9C4",
         "tags": ["network", "облако", "половина", "сеть"]
+    },
+    "arrow-up-to-bracket_16": {
+        "codepoint": "0xF9C4",
+        "tags": ["share", "поделиться"]
+    },
+    "arrow-up-to-bracket_24": {
+        "codepoint": "0xF9C5",
+        "tags": ["share", "поделиться"]
     }
 }
