@@ -6,7 +6,7 @@
     },
     "aix_24": {
         "codepoint": "0xF502",
-        "tags": ""
+        "tags": []
     },
     "bsd_16": {
         "codepoint": "0xF503",
@@ -15,7 +15,7 @@
     },
     "bsd_24": {
         "codepoint": "0xF504",
-        "tags": ""
+        "tags": []
     },
     "hpux_16": {
         "codepoint": "0xF505",
@@ -24,7 +24,7 @@
     },
     "hpux_24": {
         "codepoint": "0xF506",
-        "tags": ""
+        "tags": []
     },
     "sap_16": {
         "codepoint": "0xF507",
@@ -33,7 +33,7 @@
     },
     "sap_24": {
         "codepoint": "0xF508",
-        "tags": ""
+        "tags": []
     },
     "signal-stream_16": {
         "codepoint": "0xF509",
@@ -42,7 +42,7 @@
     },
     "signal-stream_24": {
         "codepoint": "0xF50A",
-        "tags": ""
+        "tags": []
     },
     "active-directory_16": {
         "codepoint": "0xF50B",
@@ -51,11 +51,11 @@
     },
     "active-directory_24": {
         "codepoint": "0xF50C",
-        "tags": ""
+        "tags": []
     },
     "cloud_24": {
         "codepoint": "0xF50D",
-        "tags": ""
+        "tags": []
     },
     "desktop_16": {
         "codepoint": "0xF50E",
@@ -64,7 +64,7 @@
     },
     "desktop_24": {
         "codepoint": "0xF50F",
-        "tags": ""
+        "tags": []
     },
     "block-brick_16": {
         "codepoint": "0xF510",
@@ -73,7 +73,7 @@
     },
     "block-brick_24": {
         "codepoint": "0xF511",
-        "tags": ""
+        "tags": []
     },
     "linux_16": {
         "codepoint": "0xF513",
@@ -82,7 +82,7 @@
     },
     "linux_24": {
         "codepoint": "0xF514",
-        "tags": ""
+        "tags": []
     },
     "desktop-multiple_16": {
         "codepoint": "0xF515",
@@ -110,7 +110,7 @@
     },
     "printer_24": {
         "codepoint": "0xF520",
-        "tags": ""
+        "tags": []
     },
     "router_16": {
         "codepoint": "0xF521",
@@ -119,7 +119,7 @@
     },
     "router_24": {
         "codepoint": "0xF522",
-        "tags": ""
+        "tags": []
     },
     "server_16": {
         "codepoint": "0xF523",
@@ -133,7 +133,7 @@
     },
     "windows_24": {
         "codepoint": "0xF52A",
-        "tags": ""
+        "tags": []
     },
     "chart-bubble_16": {
         "codepoint": "0xF52C",
@@ -162,7 +162,7 @@
     },
     "circle-o_24": {
         "codepoint": "0xF532",
-        "tags": ""
+        "tags": []
     },
     "circle-check_16": {
         "codepoint": "0xF533",
@@ -171,7 +171,7 @@
     },
     "circle-check_24": {
         "codepoint": "0xF534",
-        "tags": ""
+        "tags": []
     },
     "ban_16": {
         "codepoint": "0xF535",
@@ -180,7 +180,7 @@
     },
     "ban_24": {
         "codepoint": "0xF536",
-        "tags": ""
+        "tags": []
     },
     "arrow-right-through-line_16": {
         "codepoint": "0xF539",
@@ -208,7 +208,7 @@
     },
     "arrow-right-to-arc_24": {
         "codepoint": "0xF53E",
-        "tags": ""
+        "tags": []
     },
     "spinner_16": {
         "codepoint": "0xF540",
@@ -232,7 +232,7 @@
     },
     "radar-o_32": {
         "codepoint": "0xF544",
-        "tags": ""
+        "tags": []
     },
     "shield-star_16": {
         "codepoint": "0xF545",
@@ -262,7 +262,7 @@
     },
     "table-badge-clock_24": {
         "codepoint": "0xF54A",
-        "tags": ""
+        "tags": []
     },
     "table_16": {
         "codepoint": "0xF54B",
@@ -270,7 +270,7 @@
     },
     "table_24": {
         "codepoint": "0xF54C",
-        "tags": ""
+        "tags": []
     },
     "arrow-right-to-arc_16": {
         "codepoint": "0xF551",
@@ -285,12 +285,12 @@
     "arrow-down-to-line_16": {
         "codepoint": "0xF554",
         "description": "",
-        "tags": ["download", "загрузить", "скачать"]
+        "tags": []
     },
     "arrow-up-from-line_16": {
         "codepoint": "0xF555",
         "description": "",
-        "tags": ["to cloud", "upload", "в облако", "загрузить"]
+        "tags": []
     },
     "arrow-right-to-bracket_16": {
         "codepoint": "0xF556",
@@ -300,7 +300,7 @@
     "arrow-right-from-bracket_16": {
         "codepoint": "0xF557",
         "description": "",
-        "tags": ["export", "экспорт"]
+        "tags": []
     },
     "file-exclamation-o_16": {
         "codepoint": "0xF558",
@@ -354,7 +354,7 @@
     },
     "location-arrow-right_16": {
         "codepoint": "0xF568",
-        "tags": ""
+        "tags": []
     },
     "trash_16": {
         "codepoint": "0xF56A",
@@ -443,7 +443,7 @@
     "cloud-arrow-down-o_32": {
         "codepoint": "0xF57D",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "circle-half_16": {
         "codepoint": "0xF580",
@@ -462,15 +462,15 @@
     },
     "chart-bar-vertical_24": {
         "codepoint": "0xF585",
-        "tags": ""
+        "tags": []
     },
     "chart-bar-horizontal_24": {
         "codepoint": "0xF586",
-        "tags": ""
+        "tags": []
     },
     "chart-donut_24": {
         "codepoint": "0xF587",
-        "tags": ""
+        "tags": []
     },
     "map_24": {
         "codepoint": "0xF58A",
@@ -478,12 +478,12 @@
     },
     "chart-stacked-bar-vertical_24": {
         "codepoint": "0xF58B",
-        "tags": ""
+        "tags": []
     },
     "chart-stacked-bar-horizontal_24": {
         "codepoint": "0xF58C",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "speaker_16": {
         "codepoint": "0xF58D",
@@ -676,16 +676,16 @@
     "folder-o_32": {
         "codepoint": "0xF5AF",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "bars-horizontal_32": {
         "codepoint": "0xF5B0",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "sliders_32": {
         "codepoint": "0xF5B2",
-        "tags": ""
+        "tags": []
     },
     "clock-rotate-left_16": {
         "codepoint": "0xF5B3",
@@ -700,7 +700,7 @@
     "dashboard-o_32": {
         "codepoint": "0xF5B5",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "flowchart_16": {
         "codepoint": "0xF5B6",
@@ -868,7 +868,7 @@
     "chevron-right_32": {
         "codepoint": "0xF5E7",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "bell_32": {
         "codepoint": "0xF5E8",
@@ -881,19 +881,19 @@
     },
     "location-arrow-up_16": {
         "codepoint": "0xF5EB",
-        "tags": ""
+        "tags": []
     },
     "arrow-up-from-line_24": {
         "codepoint": "0xF5ED",
-        "tags": ""
+        "tags": []
     },
     "chart-bar-horizontal_32": {
         "codepoint": "0xF5F0",
-        "tags": ""
+        "tags": []
     },
     "chart-line-multiple_32": {
         "codepoint": "0xF5F1",
-        "tags": ""
+        "tags": []
     },
     "api_16": {
         "codepoint": "0xF5F2",
@@ -952,26 +952,26 @@
     "chevron-down_32": {
         "codepoint": "0xF5FE",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "chevron-left_32": {
         "codepoint": "0xF5FF",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "chevron-up_32": {
         "codepoint": "0xF600",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "bolt-o_32": {
         "codepoint": "0xF601",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "list_32": {
         "codepoint": "0xF603",
-        "tags": ""
+        "tags": []
     },
     "arrow-up-from-rectangle_16": {
         "codepoint": "0xF604",
@@ -1061,11 +1061,11 @@
     },
     "file-pdf-o_48": {
         "codepoint": "0xF615",
-        "tags": ""
+        "tags": []
     },
     "file-doc-o_48": {
         "codepoint": "0xF616",
-        "tags": ""
+        "tags": []
     },
     "usb-flash_16": {
         "codepoint": "0xF618",
@@ -1084,19 +1084,19 @@
     },
     "key_24": {
         "codepoint": "0xF61C",
-        "tags": ""
+        "tags": []
     },
     "lock_24": {
         "codepoint": "0xF61D",
-        "tags": ""
+        "tags": []
     },
     "plug_24": {
         "codepoint": "0xF61F",
-        "tags": ""
+        "tags": []
     },
     "arrows-rotate-reverse_24": {
         "codepoint": "0xF621",
-        "tags": ""
+        "tags": []
     },
     "rectangle-triangle-vertical-thin_16": {
         "codepoint": "0xF629",
@@ -1173,43 +1173,43 @@
     },
     "chart-area_24": {
         "codepoint": "0xF635",
-        "tags": ""
+        "tags": []
     },
     "chart-heatmap_24": {
         "codepoint": "0xF636",
-        "tags": ""
+        "tags": []
     },
     "chart-line-multiple_24": {
         "codepoint": "0xF637",
-        "tags": ""
+        "tags": []
     },
     "chart-line_24": {
         "codepoint": "0xF638",
-        "tags": ""
+        "tags": []
     },
     "play_48": {
         "codepoint": "0xF639",
-        "tags": ""
+        "tags": []
     },
     "play_64": {
         "codepoint": "0xF63A",
-        "tags": ""
+        "tags": []
     },
     "pause_48": {
         "codepoint": "0xF63B",
-        "tags": ""
+        "tags": []
     },
     "pause_64": {
         "codepoint": "0xF63C",
-        "tags": ""
+        "tags": []
     },
     "stop_48": {
         "codepoint": "0xF63D",
-        "tags": ""
+        "tags": []
     },
     "stop_64": {
         "codepoint": "0xF63E",
-        "tags": ""
+        "tags": []
     },
     "rectangle-vertical-bolt-o_16": {
         "codepoint": "0xF640",
@@ -1243,7 +1243,7 @@
     },
     "plus_64": {
         "codepoint": "0xF646",
-        "tags": ""
+        "tags": []
     },
     "certificate-horizontal_16": {
         "codepoint": "0xF647",
@@ -1252,7 +1252,7 @@
     },
     "certificate-horizontal_24": {
         "codepoint": "0xF648",
-        "tags": ""
+        "tags": []
     },
     "wrench-badge-play_16": {
         "codepoint": "0xF64D",
@@ -1266,15 +1266,15 @@
     },
     "pause_32": {
         "codepoint": "0xF64F",
-        "tags": ""
+        "tags": []
     },
     "play_32": {
         "codepoint": "0xF650",
-        "tags": ""
+        "tags": []
     },
     "stop_32": {
         "codepoint": "0xF651",
-        "tags": ""
+        "tags": []
     },
     "pulse_16": {
         "codepoint": "0xF655",
@@ -1283,7 +1283,7 @@
     },
     "scroll-o_24": {
         "codepoint": "0xF65A",
-        "tags": ""
+        "tags": []
     },
     "burst_16": {
         "codepoint": "0xF65B",
@@ -1368,7 +1368,7 @@
     },
     "check_48": {
         "codepoint": "0xF66F",
-        "tags": ""
+        "tags": []
     },
     "play-rewind_16": {
         "codepoint": "0xF670",
@@ -1387,11 +1387,11 @@
     },
     "branch_24": {
         "codepoint": "0xF674",
-        "tags": ""
+        "tags": []
     },
     "folder-open_24": {
         "codepoint": "0xF676",
-        "tags": ""
+        "tags": []
     },
     "bento-menu_32": {
         "codepoint": "0xF678",
@@ -1479,7 +1479,7 @@
     },
     "arrow-right-to-rectangle_24": {
         "codepoint": "0xF68D",
-        "tags": ""
+        "tags": []
     },
     "plug_16": {
         "codepoint": "0xF68F",
@@ -1498,11 +1498,11 @@
     },
     "desktop-multiple_24": {
         "codepoint": "0xF693",
-        "tags": ""
+        "tags": []
     },
     "file-o_32": {
         "codepoint": "0xF697",
-        "tags": ""
+        "tags": []
     },
     "paper-plane_16": {
         "codepoint": "0xF698",
@@ -1536,27 +1536,27 @@
     },
     "chevron-left_24": {
         "codepoint": "0xF6A3",
-        "tags": ""
+        "tags": []
     },
     "chevron-right_24": {
         "codepoint": "0xF6A5",
-        "tags": ""
+        "tags": []
     },
     "bell-slash_24": {
         "codepoint": "0xF6A8",
-        "tags": ""
+        "tags": []
     },
     "list_24": {
         "codepoint": "0xF6AA",
-        "tags": ""
+        "tags": []
     },
     "sliders_24": {
         "codepoint": "0xF6AB",
-        "tags": ""
+        "tags": []
     },
     "user_24": {
         "codepoint": "0xF6AC",
-        "tags": ""
+        "tags": []
     },
     "formula_16": {
         "codepoint": "0xF6AE",
@@ -1565,19 +1565,19 @@
     },
     "plus_32": {
         "codepoint": "0xF6AF",
-        "tags": ""
+        "tags": []
     },
     "chevron-up_24": {
         "codepoint": "0xF6B0",
-        "tags": ""
+        "tags": []
     },
     "chevron-down_24": {
         "codepoint": "0xF6B2",
-        "tags": ""
+        "tags": []
     },
     "bento-menu_24": {
         "codepoint": "0xF6B4",
-        "tags": ""
+        "tags": []
     },
     "branch_16": {
         "codepoint": "0xF6B8",
@@ -1591,15 +1591,15 @@
     },
     "ellipsis-vertical_24": {
         "codepoint": "0xF6BA",
-        "tags": ""
+        "tags": []
     },
     "gear_24": {
         "codepoint": "0xF6BC",
-        "tags": ""
+        "tags": []
     },
     "circle-minus-o_24": {
         "codepoint": "0xF6BD",
-        "tags": ""
+        "tags": []
     },
     "circle-minus_24": {
         "codepoint": "0xF6BE",
@@ -1641,11 +1641,11 @@
     },
     "magnifying-glass_24": {
         "codepoint": "0xF6C1",
-        "tags": ""
+        "tags": []
     },
     "user-multiple_24": {
         "codepoint": "0xF6C3",
-        "tags": ""
+        "tags": []
     },
     "credit-card_16": {
         "codepoint": "0xF6C4",
@@ -1654,7 +1654,7 @@
     },
     "triangle-exclamation_32": {
         "codepoint": "0xF6C5",
-        "tags": ""
+        "tags": []
     },
     "file-text-o_16": {
         "codepoint": "0xF6C6",
@@ -1686,15 +1686,15 @@
     },
     "hypervisor_24": {
         "codepoint": "0xF6CD",
-        "tags": ""
+        "tags": []
     },
     "bars-progress_24": {
         "codepoint": "0xF6CE",
-        "tags": ""
+        "tags": []
     },
     "file-multiple-o_24": {
         "codepoint": "0xF6CF",
-        "tags": ""
+        "tags": []
     },
     "user-badge-triangle-up_16": {
         "codepoint": "0xF6D0",
@@ -1713,7 +1713,7 @@
     },
     "book-open_24": {
         "codepoint": "0xF6D3",
-        "tags": ""
+        "tags": []
     },
     "chevrons-compress_16": {
         "codepoint": "0xF6D6",
@@ -1770,7 +1770,7 @@
     },
     "disk-drive_24": {
         "codepoint": "0xF6E2",
-        "tags": ""
+        "tags": []
     },
     "hashtag_16": {
         "codepoint": "0xF6E3",
@@ -1792,7 +1792,7 @@
     },
     "idrac_24": {
         "codepoint": "0xF6E8",
-        "tags": ""
+        "tags": []
     },
     "gear-badge-square-arrowtriangle-up_16": {
         "codepoint": "0xF6EA",
@@ -1889,7 +1889,7 @@
     "file-badge-ban-o_24": {
         "codepoint": "0xF6F3",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "file-badge-arrow-through-line-o_16": {
         "codepoint": "0xF6F4",
@@ -1898,15 +1898,15 @@
     },
     "api_24": {
         "codepoint": "0xF6F5",
-        "tags": ""
+        "tags": []
     },
     "envelope_24": {
         "codepoint": "0xF6F6",
-        "tags": ""
+        "tags": []
     },
     "folder_24": {
         "codepoint": "0xF6F7",
-        "tags": ""
+        "tags": []
     },
     "arrow-rotate-right-dot_16": {
         "codepoint": "0xF6F8",
@@ -1945,19 +1945,19 @@
     },
     "message-dot_24": {
         "codepoint": "0xF6FF",
-        "tags": ""
+        "tags": []
     },
     "message_24": {
         "codepoint": "0xF701",
-        "tags": ""
+        "tags": []
     },
     "circle-info_24": {
         "codepoint": "0xF703",
-        "tags": ""
+        "tags": []
     },
     "link-multiple_24": {
         "codepoint": "0xF704",
-        "tags": ""
+        "tags": []
     },
     "paperclip_24": {
         "codepoint": "0xF705",
@@ -1965,7 +1965,7 @@
     },
     "apple_24": {
         "codepoint": "0xF707",
-        "tags": ""
+        "tags": []
     },
     "message-arrow-right_16": {
         "codepoint": "0xF708",
@@ -1974,7 +1974,7 @@
     },
     "message-arrow-right_24": {
         "codepoint": "0xF709",
-        "tags": ""
+        "tags": []
     },
     "grid-group-dot_16": {
         "codepoint": "0xF70A",
@@ -2002,11 +2002,11 @@
     },
     "chart-bar-horizontal_48": {
         "codepoint": "0xF711",
-        "tags": ""
+        "tags": []
     },
     "chart-line-multiple_48": {
         "codepoint": "0xF712",
-        "tags": ""
+        "tags": []
     },
     "circle-minus-o_16": {
         "codepoint": "0xF713",
@@ -2025,7 +2025,7 @@
     "table-badge-circle-arrow-down_32": {
         "codepoint": "0xF71A",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "diamond-o_16": {
         "codepoint": "0xF71B",
@@ -2034,7 +2034,7 @@
     },
     "pencil_24": {
         "codepoint": "0xF71D",
-        "tags": ""
+        "tags": []
     },
     "file-badge-arrow-left-o_16": {
         "codepoint": "0xF71E",
@@ -2097,7 +2097,7 @@
     },
     "android_24": {
         "codepoint": "0xF72B",
-        "tags": ""
+        "tags": []
     },
     "checkbox-multiple_16": {
         "codepoint": "0xF72C",
@@ -2106,7 +2106,7 @@
     },
     "gossopka_16": {
         "codepoint": "0xF72D",
-        "tags": ""
+        "tags": []
     },
     "android_16": {
         "codepoint": "0xF72E",
@@ -2175,7 +2175,7 @@
     },
     "arrow-right-from-arc_24": {
         "codepoint": "0xF73B",
-        "tags": ""
+        "tags": []
     },
     "arrow-right-from-rectangle_16": {
         "codepoint": "0xF73C",
@@ -2194,12 +2194,12 @@
     },
     "arrow-rotate-left_24": {
         "codepoint": "0xF73F",
-        "tags": ""
+        "tags": []
     },
     "arrow-rotate-left-badge-linux_16": {
         "codepoint": "0xF740",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "arrow-up_16": {
         "codepoint": "0xF741",
@@ -2218,7 +2218,7 @@
     "arrow-up-from-bracket_16": {
         "codepoint": "0xF744",
         "description": "",
-        "tags": ["alt", "upload", "загрузить"]
+        "tags": []
     },
     "arrow-up-s_16": {
         "codepoint": "0xF745",
@@ -2256,7 +2256,7 @@
     },
     "arrows-rotate_48": {
         "codepoint": "0xF74C",
-        "tags": ""
+        "tags": []
     },
     "arrows-rotate-bolt_16": {
         "codepoint": "0xF74D",
@@ -2275,7 +2275,7 @@
     },
     "arrows-rotate-reverse-slash_24": {
         "codepoint": "0xF750",
-        "tags": ""
+        "tags": []
     },
     "arrows-up_16": {
         "codepoint": "0xF751",
@@ -2330,7 +2330,7 @@
     },
     "bars-vertical_24": {
         "codepoint": "0xF759",
-        "tags": ""
+        "tags": []
     },
     "bell_24": {
         "codepoint": "0xF75A",
@@ -2367,11 +2367,11 @@
     },
     "calendar-days-o_16": {
         "codepoint": "0xF761",
-        "tags": ""
+        "tags": []
     },
     "calendar-o_16": {
         "codepoint": "0xF762",
-        "tags": ""
+        "tags": []
     },
     "chart-bar-horizontal_16": {
         "codepoint": "0xF763",
@@ -2380,7 +2380,7 @@
     },
     "chart-bubble_24": {
         "codepoint": "0xF764",
-        "tags": ""
+        "tags": []
     },
     "chart-gauge-o_16": {
         "codepoint": "0xF765",
@@ -2399,16 +2399,16 @@
     },
     "chart-index-line_24": {
         "codepoint": "0xF768",
-        "tags": ""
+        "tags": []
     },
     "chart-pie_24": {
         "codepoint": "0xF769",
-        "tags": ""
+        "tags": []
     },
     "chart-stacked-bar-horizontal_16": {
         "codepoint": "0xF76A",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "chart-stacked-bar-vertical_16": {
         "codepoint": "0xF76B",
@@ -2417,7 +2417,7 @@
     },
     "check-s_16": {
         "codepoint": "0xF76C",
-        "tags": ""
+        "tags": []
     },
     "circle-chevron-down_16": {
         "codepoint": "0xF76D",
@@ -2441,19 +2441,19 @@
     },
     "chevron-down-s_24": {
         "codepoint": "0xF771",
-        "tags": ""
+        "tags": []
     },
     "chevron-left-s_24": {
         "codepoint": "0xF772",
-        "tags": ""
+        "tags": []
     },
     "chevron-right-s_24": {
         "codepoint": "0xF773",
-        "tags": ""
+        "tags": []
     },
     "chevron-up-s_24": {
         "codepoint": "0xF774",
-        "tags": ""
+        "tags": []
     },
     "chevrons-down-up_16": {
         "codepoint": "0xF775",
@@ -2482,7 +2482,7 @@
     },
     "clock-badge-windows_16": {
         "codepoint": "0xF77A",
-        "tags": ""
+        "tags": []
     },
     "cloud-arrow-up-o_24": {
         "codepoint": "0xF77B",
@@ -2492,21 +2492,21 @@
     "cloud-arrow-up-o_32": {
         "codepoint": "0xF77C",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "cloud-arrow-up-o_64": {
         "codepoint": "0xF77D",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "cloud-badge-globe-o_16": {
         "codepoint": "0xF77E",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "cloud-badge-globe-o_24": {
         "codepoint": "0xF77F",
-        "tags": ""
+        "tags": []
     },
     "compass_16": {
         "codepoint": "0xF780",
@@ -2549,11 +2549,11 @@
     },
     "diamond_16": {
         "codepoint": "0xF788",
-        "tags": ""
+        "tags": []
     },
     "diamond-half_16": {
         "codepoint": "0xF789",
-        "tags": ""
+        "tags": []
     },
     "diamond-info_16": {
         "codepoint": "0xF78A",
@@ -2577,7 +2577,7 @@
     },
     "envelope-dot_24": {
         "codepoint": "0xF78E",
-        "tags": ""
+        "tags": []
     },
     "exception_16": {
         "codepoint": "0xF78F",
@@ -2590,15 +2590,15 @@
     },
     "circle-exclamation_24": {
         "codepoint": "0xF791",
-        "tags": ""
+        "tags": []
     },
     "file-o_24": {
         "codepoint": "0xF792",
-        "tags": ""
+        "tags": []
     },
     "file-lines-o_32": {
         "codepoint": "0xF793",
-        "tags": ""
+        "tags": []
     },
     "file-lines-short_16": {
         "codepoint": "0xF794",
@@ -2608,7 +2608,7 @@
     "file-badge-arrow-turn-right_16": {
         "codepoint": "0xF795",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "file-shared-o_16": {
         "codepoint": "0xF796",
@@ -2646,7 +2646,7 @@
     },
     "globe-multiple_24": {
         "codepoint": "0xF79D",
-        "tags": ""
+        "tags": []
     },
     "grip-vertical-s_16": {
         "codepoint": "0xF79E",
@@ -2745,7 +2745,7 @@
     },
     "map-slash_24": {
         "codepoint": "0xF7B1",
-        "tags": ""
+        "tags": []
     },
     "message-dot_16": {
         "codepoint": "0xF7B2",
@@ -2773,7 +2773,7 @@
     },
     "mobile_24": {
         "codepoint": "0xF7B7",
-        "tags": ""
+        "tags": []
     },
     "moon_16": {
         "codepoint": "0xF7B8",
@@ -2792,7 +2792,7 @@
     "node-tree_16": {
         "codepoint": "0xF7BB",
         "description": "Дерево узлов",
-        "tags": ""
+        "tags": []
     },
     "north-star_16": {
         "codepoint": "0xF7BC",
@@ -2821,11 +2821,11 @@
     },
     "circle-question_24": {
         "codepoint": "0xF7C1",
-        "tags": ""
+        "tags": []
     },
     "rectangles-o_16": {
         "codepoint": "0xF7C2",
-        "tags": ""
+        "tags": []
     },
     "replace_16": {
         "codepoint": "0xF7C3",
@@ -2859,7 +2859,7 @@
     "shield-exclamation_16": {
         "codepoint": "0xF7C9",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "shield-o_16": {
         "codepoint": "0xF7CA",
@@ -2938,11 +2938,11 @@
     },
     "grid-squares_16": {
         "codepoint": "0xF7D7",
-        "tags": ""
+        "tags": []
     },
     "topology_24": {
         "codepoint": "0xF7D8",
-        "tags": ""
+        "tags": []
     },
     "topology-lines_16": {
         "codepoint": "0xF7D9",
@@ -2979,7 +2979,7 @@
     },
     "user-badge-gear_16": {
         "codepoint": "0xF7E0",
-        "tags": ""
+        "tags": []
     },
     "user-badge-globe_16": {
         "codepoint": "0xF7E1",
@@ -3052,12 +3052,12 @@
     "arrow-rotate-left-badge-windows_16": {
         "codepoint": "0xF7E9",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "cable_16": {
         "codepoint": "0xF7EA",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "workflow_16": {
         "codepoint": "0xF7EB",
@@ -3072,17 +3072,17 @@
     "text-overflow_16": {
         "codepoint": "0xF7ED",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "circle-xmark_24": {
         "codepoint": "0xF7EE",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "circle-xmark-s_16": {
         "codepoint": "0xF7EF",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "chart-index_16": {
         "codepoint": "0xF7F0",
@@ -3102,7 +3102,7 @@
     "bucket-s3_16": {
         "codepoint": "0xF7F3",
         "description": "",
-        "tags": ""
+        "tags": []
     },
     "cloud-badge-key-o_16": {
         "codepoint": "0xF7F4",
@@ -3532,7 +3532,7 @@
     "arrow-up-from-bracket_24": {
         "codepoint": "0xF849",
         "description": "",
-        "tags": ["upload", "вверх", "скобка", "стрелка"]
+        "tags": []
     },
     "arrow-up-from-rectangle_24": {
         "codepoint": "0xF84A",
@@ -5494,7 +5494,7 @@
     "node-tree_24": {
         "codepoint": "0xF9BD",
         "description": "Дерево узлов",
-        "tags": ""
+        "tags": []
     },
     "grafana_16": {
         "codepoint": "0xF9BE",
@@ -5537,5 +5537,13 @@
     "cloud-half_24": {
         "codepoint": "0xF9C4",
         "tags": ["network", "облако", "половина", "сеть"]
+    },
+    "arrow-up-to-bracket_16": {
+        "codepoint": "0xF9C5",
+        "tags": ["share", "поделиться"]
+    },
+    "arrow-up-to-bracket_24": {
+        "codepoint": "0xF9C6",
+        "tags": ["share", "поделиться"]
     }
 }
