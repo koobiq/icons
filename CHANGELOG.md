@@ -1,3 +1,9 @@
+# 11.4.0 (2026-03-19)
+
+### Icons
+
+ * feature  arrow up to bracket ([#DS-4785](https://github.com/koobiq/icons/issues/issue/DS-4785)) ([#102](https://github.com/koobiq/icons/issues/102)) c71c8ae
+
 # 11.3.0 (2026-03-05)
 
 ### Icons
