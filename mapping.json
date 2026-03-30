@@ -5545,5 +5545,13 @@
     "arrow-up-to-bracket_24": {
         "codepoint": "0xF9C6",
         "tags": ["share", "поделиться"]
+    },
+    "list-circle-xmark_16": {
+        "codepoint": "0xF9C7",
+        "tags": ["список", "круг", "крестик"]
+    },
+    "list-circle-xmark_24": {
+        "codepoint": "0xF9C8",
+        "tags": ["список", "круг", "крестик"]
     }
 }
