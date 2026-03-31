@@ -1,0 +1,34 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "KbqIconsMetadata",
+    "type": "object",
+    "additionalProperties": {
+        "$ref": "#/$defs/KbqIconMeta"
+    },
+    "$defs": {
+        "KbqIconMeta": {
+            "description": "An icon entry keyed by its name (e.g. 'aix_16')",
+            "type": "object",
+            "properties": {
+                "codepoint": {
+                    "description": "Unicode codepoint assigned to the icon in the font (e.g. '0xF501')",
+                    "type": "string",
+                    "pattern": "^0x[0-9A-Fa-f]+$"
+                },
+                "description": {
+                    "description": "Human-readable description of the icon",
+                    "type": "string"
+                },
+                "tags": {
+                    "description": "Search keywords associated with the icon",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["codepoint"],
+            "additionalProperties": false
+        }
+    }
+}

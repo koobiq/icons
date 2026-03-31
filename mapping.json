@@ -1,4 +1,5 @@
 {
+    "$schema": "./schema.json",
     "aix_16": {
         "codepoint": "0xF501",
         "description": "",
