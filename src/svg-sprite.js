@@ -33,7 +33,10 @@ const config = {
 };
 
 const spriter = new SVGSpriter(config);
-const mapping = require('../mapping.json');
+const mappingJSON = require('../mapping.json');
+
+// eslint-disable-next-line no-unused-vars
+const { $schema, ...mapping } = mappingJSON;
 
 const mappingEntries = Object.entries(mapping);
 

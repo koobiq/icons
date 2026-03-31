@@ -25,8 +25,11 @@ if (!fs.existsSync('dist/icons/images')) {
 fsExtra.copySync('./src/svg', 'dist/icons/svg');
 fsExtra.copySync('./src/images', 'dist/icons/images');
 
-const mapping = JSON.parse(fsExtra.readFileSync(new URL('../mapping.json', import.meta.url)));
+const mappingJSON = JSON.parse(fsExtra.readFileSync(new URL('../mapping.json', import.meta.url)));
 const packageJSON = JSON.parse(fsExtra.readFileSync(new URL('../package.json', import.meta.url)));
+
+// eslint-disable-next-line no-unused-vars
+const { $schema, ...mapping } = mappingJSON;
 
 Object.entries(mapping).forEach(([_, value]) => {
     value.code = parseInt(value.code);
