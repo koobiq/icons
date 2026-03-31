@@ -1,6 +1,9 @@
 const Handlebars = require('handlebars');
 const mappingInterop = require('../mapping-interop.json');
-const mapping = require('../mapping.json');
+const mappingJSON = require('../mapping.json');
+
+// eslint-disable-next-line no-unused-vars
+const { $schema, ...mapping } = mappingJSON;
 
 Handlebars.registerHelper('splitFontSize', function (str) {
     return str.split('_')[1];

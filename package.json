@@ -38,7 +38,7 @@
         "build:fonts:all": "yarn run build:fonts && yarn run build:fonts-versioned",
         "build:sprite": "node src/svg-sprite.js",
         "build:types": "json2ts schema.json dist/icons/types/icons.d.ts",
-        "build": "run-s copy:copy-meta-to-dist build:sprite build:fonts:all && build:types",
+        "build": "run-s copy:copy-meta-to-dist build:sprite build:fonts:all build:types",
         "-----CI-----": "---------------------------------------------------------------------------------------------",
         "prettier": "prettier --check . --ignore-unknown",
         "prettier:fix": "yarn run prettier --write",
