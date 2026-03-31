@@ -1,3 +1,10 @@
+# 11.5.0 (2026-03-31)
+
+### Icons
+
+ * feature  list circle xmark ([#DS-4862](https://github.com/koobiq/icons/issues/issue/DS-4862)) ([#103](https://github.com/koobiq/icons/issues/103)) 376d1af
+ * feature  added schema for mapping.json ([#DS-4516](https://github.com/koobiq/icons/issues/issue/DS-4516)) ([#104](https://github.com/koobiq/icons/issues/104)) 5fa9f927
+
 # 11.4.0 (2026-03-19)
 
 ### Icons
