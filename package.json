@@ -70,7 +70,7 @@
         "eslint-config-prettier": "^9.1.2",
         "eslint-plugin-prettier": "^5.5.5",
         "fantasticon": "^3.0.0",
-        "fs-extra": "^11.3.3",
+        "fs-extra": "^11.3.4",
         "husky": "^9.1.7",
         "inquirer": "^10.2.2",
         "json-schema-to-typescript": "^15.0.4",
