@@ -3,7 +3,7 @@
     "defaultBase": "main",
     "namedInputs": {
         "default": ["{projectRoot}/**/*", "sharedGlobals"],
-        "sharedGlobals": ["{workspaceRoot}/mapping.json"]
+        "sharedGlobals": ["{workspaceRoot}/mapping.json", "{workspaceRoot}/mapping-interop.json"]
     },
     "targetDefaults": {
         "build": { "cache": true },

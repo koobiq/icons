@@ -2,9 +2,18 @@ import { execSync } from 'child_process';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const SVG_SOURCE_DIR = 'node_modules/@koobiq/icons/svg';
+const SVG_SOURCE_DIR = path.join(path.dirname(require.resolve('@koobiq/icons/package.json')), 'svg');
 const OUTPUT_DIR = path.resolve(__dirname, '../icons');
 const PUBLIC_API_PATH = path.resolve(__dirname, '../public-api.ts');
+
+type IconAttrs = {
+    attrSelector: string;
+    escapedInner: string;
+    className: string;
+    viewBox: string;
+    width: string;
+    height: string;
+};
 
 const componentTemplate = ({
     attrSelector,
@@ -13,7 +22,7 @@ const componentTemplate = ({
     viewBox,
     width,
     height
-}) => `import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+}: IconAttrs): string => `import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { KbqSvgIcon } from '../svg-icon';
 
 @Component({
@@ -27,9 +36,10 @@ import { KbqSvgIcon } from '../svg-icon';
         viewBox: '${viewBox}',
         width: '${width}',
         height: '${height}'
-    }
+    },
+    hostDirectives: [KbqSvgIcon]
 })
-export class ${className} extends KbqSvgIcon {}
+export class ${className} {}
 `;
 
 /** plus_16 → plus-16 */
@@ -107,13 +117,6 @@ function run(): void {
     const publicApi = `export * from './svg-icon';\n${iconExports.join('\n')}\n`;
 
     fs.writeFileSync(PUBLIC_API_PATH, publicApi, 'utf-8');
-
-    const eslintBin = path.resolve(__dirname, '../../../node_modules/.bin/eslint');
-
-    execSync(`"${eslintBin}" --fix "${OUTPUT_DIR}/**/*.ts" "${PUBLIC_API_PATH}"`, {
-        cwd: path.resolve(__dirname, '../../..'),
-        stdio: 'inherit'
-    });
 }
 
 run();

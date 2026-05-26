@@ -4,24 +4,19 @@
     "targets": {
         "generate": {
             "executor": "nx:run-commands",
-            "dependsOn": [
-                {
-                    "projects": ["@koobiq/icons"],
-                    "target": "figma:sync"
-                }
-            ],
             "options": {
                 "command": "npx ts-node scripts/generate.ts",
-                "cwd": "{projectRoot}"
+                "cwd": "{projectRoot}",
+                "assets": ["{workspaceRoot}/packages/icons/svg/**/*.svg"]
             },
             "inputs": ["{workspaceRoot}/packages/icons/svg/**/*.svg"],
             "outputs": ["{projectRoot}/icons", "{projectRoot}/public-api.ts"]
         },
         "build": {
-            "executor": "@nx/angular:library",
+            "executor": "@nx/angular:package",
             "dependsOn": ["generate"],
             "options": {
-                "project": "packages/angular-icons/ng-package.json"
+                "project": "{projectRoot}/ng-package.json"
             },
             "outputs": ["{projectRoot}/dist"]
         }
