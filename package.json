@@ -1,12 +1,13 @@
 {
-    "name": "@koobiq/icons",
+    "name": "@koobiq/icons-workspace",
     "version": "11.5.0",
     "description": "",
+    "private": true,
     "license": "MIT",
     "packageManager": "yarn@4.1.1",
-    "publishConfig": {
-        "access": "public"
-    },
+    "workspaces": [
+        "packages/*"
+    ],
     "keywords": [
         "design-system",
         "koobiq",
@@ -14,11 +15,6 @@
         "icons",
         "symbols"
     ],
-    "exports": {
-        "./*": {
-            "default": "./*"
-        }
-    },
     "scripts": {
         "prepare": "husky",
         "clean": "rimraf temp && rimraf dist",
@@ -31,14 +27,14 @@
         "publish:github": "koobiq-cli publish-ci-github",
         "------FIGMA SCRIPTS------": "--------------------------------------------------------------------------------",
         "figma:export-icons": "figma-export use-config .figmaexportrc.mjs",
-        "figma:sync": "run-s clean figma:export-icons copy:svg-to-src",
+        "figma:sync": "nx run @koobiq/icons:figma:sync",
         "------BUILD SCRIPTS------": "--------------------------------------------------------------------------------",
         "build:fonts": "fantasticon --config .fantasticonrc.js",
         "build:fonts-versioned": "node scripts/generate-versioned-font.js",
         "build:fonts:all": "yarn run build:fonts && yarn run build:fonts-versioned",
-        "build:sprite": "node src/svg-sprite.js",
-        "build:types": "json2ts schema.json dist/icons/types/icons.d.ts",
-        "build": "run-s copy:copy-meta-to-dist build:sprite build:fonts:all build:types",
+        "build:sprite": "nx run @koobiq/icons:build:sprite",
+        "build:types": "json2ts schema.json packages/icons/dist/types/icons.d.ts",
+        "build": "nx run-many -t build",
         "-----CI-----": "---------------------------------------------------------------------------------------------",
         "prettier": "prettier --check . --ignore-unknown",
         "prettier:fix": "yarn run prettier --write",
@@ -58,6 +54,8 @@
         "@figma-export/output-components-as-svgr": "^6.4.0",
         "@figma-export/transform-svg-with-svgo": "^6.4.0",
         "@koobiq/cli": "^18.39.2",
+        "@nx/angular": "^20.8.4",
+        "@nx/react": "^20.8.4",
         "@svgr/plugin-jsx": "^8.1.0",
         "@svgr/plugin-prettier": "^8.1.0",
         "@svgr/plugin-svgo": "^8.1.0",
@@ -76,6 +74,7 @@
         "json-schema-to-typescript": "^15.0.4",
         "lint-staged": "^15.5.2",
         "npm-run-all": "^4.1.5",
+        "nx": "^20.8.4",
         "prettier": "^3.8.3",
         "rimraf": "^5.0.10",
         "svg-sprite": "^2.0.4",

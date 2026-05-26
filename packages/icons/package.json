@@ -1,0 +1,23 @@
+{
+    "name": "@koobiq/icons",
+    "version": "12.0.0",
+    "fontVersion": "1.0",
+    "description": "Koobiq icons",
+    "publishConfig": {
+        "access": "public"
+    },
+    "author": "Koobiq Team",
+    "license": "MIT",
+    "keywords": [
+        "design-system",
+        "koobiq",
+        "fonts",
+        "icons",
+        "symbols"
+    ],
+    "exports": {
+        "./*": {
+            "default": "./*"
+        }
+    }
+}

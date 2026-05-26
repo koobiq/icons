@@ -47,15 +47,15 @@ module.exports = {
     name: 'kbq-icons',
     prefix: 'kbq',
     codepoints: codepoints,
-    inputDir: 'dist/icons/svg',
-    outputDir: 'dist/icons/fonts',
+    inputDir: 'packages/icons/svg',
+    outputDir: 'packages/icons/dist/fonts',
     fontTypes: ['ttf', 'woff'],
     normalize: true,
     assetTypes: ['css', 'scss', 'html'],
     templates: {
-        html: 'src/templates/preview.hbs',
-        css: 'src/templates/css.hbs',
-        scss: 'src/templates/scss.hbs'
+        html: 'packages/icons/templates/preview.hbs',
+        css: 'packages/icons/templates/css.hbs',
+        scss: 'packages/icons/templates/scss.hbs'
     },
     formatOptions: {
         ttf: {

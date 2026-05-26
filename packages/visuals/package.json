@@ -1,0 +1,20 @@
+{
+    "name": "@koobiq/visuals",
+    "version": "12.0.0",
+    "description": "Koobiq Visuals",
+    "publishConfig": {
+        "access": "public"
+    },
+    "author": "Koobiq Team",
+    "license": "MIT",
+    "keywords": [
+        "design-system",
+        "koobiq",
+        "visuals"
+    ],
+    "exports": {
+        "./*": {
+            "default": "./*"
+        }
+    }
+}

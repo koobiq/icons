@@ -1,0 +1,14 @@
+{
+    "$schema": "./node_modules/nx/schemas/nx-schema.json",
+    "defaultBase": "main",
+    "namedInputs": {
+        "default": ["{projectRoot}/**/*", "sharedGlobals"],
+        "sharedGlobals": ["{workspaceRoot}/mapping.json"]
+    },
+    "targetDefaults": {
+        "build": { "cache": true },
+        "generate": { "cache": true },
+        "figma:sync": { "cache": false },
+        "figma:export-icons": { "cache": false }
+    }
+}

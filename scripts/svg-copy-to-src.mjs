@@ -32,7 +32,7 @@ const copyIcons = async (destPath, svgRootDir) => {
 };
 
 const main = async () => {
-    const destDir = join(__dirname, '../src/svg');
+    const destDir = join(__dirname, '../packages/icons/svg');
     const svgRootDir = join(__dirname, `../${config.output.tempSvg}`);
 
     try {

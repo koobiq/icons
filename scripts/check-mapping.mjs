@@ -5,7 +5,7 @@ async function main() {
     const mappingJSON = JSON.parse(await readFile('./mapping.json', { encoding: 'utf-8' }));
     // eslint-disable-next-line no-unused-vars
     const { $schema, ...mapping } = mappingJSON;
-    const svgFileList = (await readdir('./src/svg')).map((svgPath) => parse(svgPath).name);
+    const svgFileList = (await readdir('./packages/icons/svg')).map((svgPath) => parse(svgPath).name);
     const svgListInMapping = Object.keys(mapping).sort();
 
     if (process.argv.includes('--list')) {

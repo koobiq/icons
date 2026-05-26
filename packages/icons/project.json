@@ -1,0 +1,51 @@
+{
+    "name": "@koobiq/icons",
+    "$schema": "../../node_modules/nx/schemas/project.schema.json",
+    "targets": {
+        "figma:export-icons": {
+            "executor": "nx:run-commands",
+            "cache": false,
+            "options": {
+                "command": "yarn figma:export-icons",
+                "cwd": "{workspaceRoot}"
+            },
+            "outputs": ["{workspaceRoot}/temp/svg"]
+        },
+        "figma:sync": {
+            "executor": "nx:run-commands",
+            "cache": false,
+            "dependsOn": ["figma:export-icons"],
+            "options": {
+                "command": "yarn copy:svg-to-src",
+                "cwd": "{workspaceRoot}"
+            },
+            "outputs": ["{projectRoot}/svg"]
+        },
+        "build:sprite": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "node svg-sprite.js",
+                "cwd": "{projectRoot}"
+            },
+            "inputs": ["{projectRoot}/svg/**/*.svg", "{workspaceRoot}/mapping.json"],
+            "outputs": ["{projectRoot}/dist/symbol"]
+        },
+        "build:fonts": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "yarn build:fonts:all",
+                "cwd": "{workspaceRoot}"
+            },
+            "inputs": ["{projectRoot}/svg/**/*.svg", "{workspaceRoot}/mapping.json"],
+            "outputs": ["{projectRoot}/dist/fonts"]
+        },
+        "build": {
+            "executor": "nx:run-commands",
+            "dependsOn": ["build:sprite", "build:fonts"],
+            "options": {
+                "command": "echo '@koobiq/icons build complete'",
+                "cwd": "{projectRoot}"
+            }
+        }
+    }
+}

@@ -2,14 +2,16 @@ const SVGSpriter = require('svg-sprite');
 const path = require('path');
 const fs = require('fs');
 
-const svgIconsRelativePath = 'dist/icons/svg';
+// SVGs live directly in this package's svg/ directory
+const svgIconsRelativePath = 'svg';
 
 if (!fs.existsSync(svgIconsRelativePath)) {
-    console.error('Build at first package with svg icons');
+    console.error('SVG source directory not found. Run figma:sync first.');
+    process.exit(1);
 }
 
 const config = {
-    dest: './dist/icons/',
+    dest: './dist/',
 
     svg: {
         xmlDeclaration: false,
@@ -23,7 +25,7 @@ const config = {
             prefix: '.kbq-%s',
             inline: true,
             example: {
-                template: './src/templates/sprite.html'
+                template: './templates/sprite.html'
             },
             render: {
                 scss: true
@@ -33,7 +35,7 @@ const config = {
 };
 
 const spriter = new SVGSpriter(config);
-const mappingJSON = require('../mapping.json');
+const mappingJSON = require('../../mapping.json');
 
 // eslint-disable-next-line no-unused-vars
 const { $schema, ...mapping } = mappingJSON;

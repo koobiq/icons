@@ -1,29 +1,19 @@
 import * as fs from 'fs';
 import fsExtra from 'fs-extra';
 
-if (!fs.existsSync('dist')) {
-    fs.mkdirSync('dist');
-    fs.mkdirSync('dist/icons');
+const distDir = 'packages/icons/dist';
+
+if (!fs.existsSync(distDir)) {
+    fs.mkdirSync(distDir, { recursive: true });
 }
 
-fs.copyFileSync('LICENSE', 'dist/icons/LICENSE');
-fs.copyFileSync('README.md', 'dist/icons/README.md');
-fs.copyFileSync('CHANGELOG.md', 'dist/icons/CHANGELOG.md');
+fs.copyFileSync('LICENSE', `${distDir}/LICENSE`);
+fs.copyFileSync('README.md', `${distDir}/README.md`);
+fs.copyFileSync('CHANGELOG.md', `${distDir}/CHANGELOG.md`);
 
-if (!fs.existsSync('dist/icons/info')) {
-    fs.mkdirSync('dist/icons/info');
+if (!fs.existsSync(`${distDir}/info`)) {
+    fs.mkdirSync(`${distDir}/info`);
 }
-
-if (!fs.existsSync('dist/icons/svg')) {
-    fs.mkdirSync('dist/icons/svg');
-}
-
-if (!fs.existsSync('dist/icons/images')) {
-    fs.mkdirSync('dist/icons/images');
-}
-
-fsExtra.copySync('./src/svg', 'dist/icons/svg');
-fsExtra.copySync('./src/images', 'dist/icons/images');
 
 const mappingJSON = JSON.parse(fsExtra.readFileSync(new URL('../mapping.json', import.meta.url)));
 const packageJSON = JSON.parse(fsExtra.readFileSync(new URL('../package.json', import.meta.url)));
@@ -55,5 +45,5 @@ function createPackageJson() {
     };
 }
 
-fs.writeFileSync('dist/icons/info/kbq-icons-info.json', JSON.stringify(mapping));
-fs.writeFileSync('dist/icons/package.json', JSON.stringify(createPackageJson(), null, 4));
+fs.writeFileSync(`${distDir}/info/kbq-icons-info.json`, JSON.stringify(mapping));
+fs.writeFileSync(`${distDir}/package.json`, JSON.stringify(createPackageJson(), null, 4));

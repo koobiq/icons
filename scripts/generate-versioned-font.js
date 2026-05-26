@@ -3,12 +3,12 @@ const fs = require('fs');
 const { Handlebars, codepoints } = require('./fantasticicon-utils');
 const { generateFonts, FontAssetType, OtherAssetType } = require('fantasticon');
 
-if (!fs.existsSync('dist/icons/svg')) {
-    console.error('Build at first package with svg icons');
+if (!fs.existsSync('packages/icons/svg')) {
+    console.error('SVG source directory not found at packages/icons/svg');
 }
 
-if (!fs.existsSync('dist/icons/fonts')) {
-    fs.mkdirSync('dist/icons/fonts');
+if (!fs.existsSync('packages/icons/dist/fonts')) {
+    fs.mkdirSync('packages/icons/dist/fonts', { recursive: true });
 }
 
 Handlebars.registerPartial(
@@ -47,15 +47,15 @@ generateFonts({
     name: `kbq-icons-${packageJSON.version}`,
     prefix: 'kbq',
     codepoints: codepoints,
-    inputDir: 'dist/icons/svg',
-    outputDir: 'dist/icons/fonts',
+    inputDir: 'packages/icons/svg',
+    outputDir: 'packages/icons/dist/fonts',
     fontTypes: [FontAssetType.TTF, FontAssetType.WOFF],
     normalize: true,
     assetTypes: [OtherAssetType.CSS, OtherAssetType.SCSS, OtherAssetType.HTML],
     templates: {
-        html: 'src/templates/preview.hbs',
-        css: 'src/templates/css.hbs',
-        scss: 'src/templates/scss.hbs'
+        html: 'packages/icons/templates/preview.hbs',
+        css: 'packages/icons/templates/css.hbs',
+        scss: 'packages/icons/templates/scss.hbs'
     },
     formatOptions: {
         ttf: {

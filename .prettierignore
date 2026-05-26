@@ -1,4 +1,4 @@
 **/CHANGELOG.md
 
 # ignore Handlebars templates
-src/templates
+packages/icons/templates

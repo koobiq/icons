@@ -1,0 +1,30 @@
+{
+    "name": "@koobiq/react-icons",
+    "$schema": "../../node_modules/nx/schemas/project.schema.json",
+    "targets": {
+        "generate": {
+            "executor": "nx:run-commands",
+            "dependsOn": [
+                {
+                    "projects": ["@koobiq/icons"],
+                    "target": "figma:sync"
+                }
+            ],
+            "options": {
+                "command": "npx ts-node scripts/generate.ts",
+                "cwd": "{projectRoot}"
+            },
+            "inputs": ["{workspaceRoot}/packages/icons/svg/**/*.svg"],
+            "outputs": ["{projectRoot}/src", "{projectRoot}/index.ts"]
+        },
+        "build": {
+            "executor": "@nx/react:library",
+            "dependsOn": ["generate"],
+            "options": {
+                "entry": "index.ts",
+                "outputPath": "{projectRoot}/dist"
+            },
+            "outputs": ["{projectRoot}/dist"]
+        }
+    }
+}

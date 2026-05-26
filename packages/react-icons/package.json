@@ -1,0 +1,20 @@
+{
+    "name": "@koobiq/react-icons",
+    "version": "12.0.0",
+    "description": "Koobiq React Icons",
+    "publishConfig": {
+        "access": "public"
+    },
+    "author": "Koobiq Team",
+    "license": "MIT",
+    "keywords": [
+        "design-system",
+        "koobiq",
+        "icons"
+    ],
+    "exports": {
+        "./*": {
+            "default": "./*"
+        }
+    }
+}
