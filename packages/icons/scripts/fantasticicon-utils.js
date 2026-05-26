@@ -1,6 +1,6 @@
 const Handlebars = require('handlebars');
-const mappingInterop = require('../mapping-interop.json');
-const mappingJSON = require('../mapping.json');
+const mappingInterop = require('../../../mapping-interop.json');
+const mappingJSON = require('../../../mapping.json');
 
 // eslint-disable-next-line no-unused-vars
 const { $schema, ...mapping } = mappingJSON;

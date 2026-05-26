@@ -6,7 +6,7 @@
             "executor": "nx:run-commands",
             "cache": false,
             "options": {
-                "command": "yarn figma:export-icons",
+                "command": "figma-export use-config .figmaexportrc.mjs",
                 "cwd": "{workspaceRoot}"
             },
             "outputs": ["{workspaceRoot}/temp/svg"]
@@ -16,8 +16,8 @@
             "cache": false,
             "dependsOn": ["figma:export-icons"],
             "options": {
-                "command": "yarn copy:svg-to-src",
-                "cwd": "{workspaceRoot}"
+                "command": "node scripts/svg-copy-to-src.mjs",
+                "cwd": "{projectRoot}"
             },
             "outputs": ["{projectRoot}/svg"]
         },
@@ -32,18 +32,32 @@
         },
         "build:fonts": {
             "executor": "nx:run-commands",
+            "cache": false,
             "options": {
-                "command": "yarn build:fonts:all",
-                "cwd": "{workspaceRoot}"
+                "command": "fantasticon --config .fantasticonrc.js && node scripts/generate-versioned-font.js",
+                "cwd": "{projectRoot}"
             },
-            "inputs": ["{projectRoot}/svg/**/*.svg", "{workspaceRoot}/mapping.json"],
+            "inputs": [
+                "{projectRoot}/svg/**/*.svg",
+                "{workspaceRoot}/mapping.json",
+                "{workspaceRoot}/mapping-interop.json"
+            ],
             "outputs": ["{projectRoot}/dist/fonts"]
+        },
+        "build:types": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "json2ts ../../schema.json dist/types/icons.d.ts",
+                "cwd": "{projectRoot}"
+            },
+            "inputs": ["{workspaceRoot}/schema.json", "{workspaceRoot}/mapping.json"],
+            "outputs": ["{projectRoot}/dist/types/icons.d.ts"]
         },
         "build": {
             "executor": "nx:run-commands",
-            "dependsOn": ["build:sprite", "build:fonts"],
+            "dependsOn": ["build:sprite", "build:fonts", "build:types"],
             "options": {
-                "command": "echo '@koobiq/icons build complete'",
+                "command": "node scripts/copy-meta-to-dist.mjs",
                 "cwd": "{projectRoot}"
             }
         }

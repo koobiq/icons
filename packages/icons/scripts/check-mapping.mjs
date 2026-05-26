@@ -1,11 +1,19 @@
 import { readdir, readFile } from 'node:fs/promises';
+import { dirname, join } from 'path';
 import { parse } from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const MAPPING_PATH = './mapping.json';
+const SVG_DIR = join(__dirname, '../svg');
 
 async function main() {
-    const mappingJSON = JSON.parse(await readFile('./mapping.json', { encoding: 'utf-8' }));
+    const mappingJSON = JSON.parse(await readFile(MAPPING_PATH, { encoding: 'utf-8' }));
     // eslint-disable-next-line no-unused-vars
     const { $schema, ...mapping } = mappingJSON;
-    const svgFileList = (await readdir('./packages/icons/svg')).map((svgPath) => parse(svgPath).name);
+    const svgFileList = (await readdir(SVG_DIR)).map((svgPath) => parse(svgPath).name);
     const svgListInMapping = Object.keys(mapping).sort();
 
     if (process.argv.includes('--list')) {

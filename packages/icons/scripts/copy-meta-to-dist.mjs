@@ -1,21 +1,33 @@
 import * as fs from 'fs';
 import fsExtra from 'fs-extra';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
 
-const distDir = 'packages/icons/dist';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const distDir = 'dist';
+const workspaceRoot = join(__dirname, '../../..');
 
 if (!fs.existsSync(distDir)) {
     fs.mkdirSync(distDir, { recursive: true });
 }
 
-fs.copyFileSync('LICENSE', `${distDir}/LICENSE`);
-fs.copyFileSync('README.md', `${distDir}/README.md`);
-fs.copyFileSync('CHANGELOG.md', `${distDir}/CHANGELOG.md`);
+fs.copyFileSync(join(workspaceRoot, 'LICENSE'), `${distDir}/LICENSE`);
+fs.copyFileSync(join(workspaceRoot, 'README.md'), `${distDir}/README.md`);
+fs.copyFileSync(join(workspaceRoot, 'CHANGELOG.md'), `${distDir}/CHANGELOG.md`);
 
 if (!fs.existsSync(`${distDir}/info`)) {
     fs.mkdirSync(`${distDir}/info`);
 }
 
-const mappingJSON = JSON.parse(fsExtra.readFileSync(new URL('../mapping.json', import.meta.url)));
+if (!fs.existsSync(`${distDir}/svg`)) {
+    fs.mkdirSync(`${distDir}/svg`);
+}
+
+fsExtra.copySync('./svg', `${distDir}/svg`);
+
+const mappingJSON = JSON.parse(fsExtra.readFileSync(new URL('../../../mapping.json', import.meta.url)));
 const packageJSON = JSON.parse(fsExtra.readFileSync(new URL('../package.json', import.meta.url)));
 
 // eslint-disable-next-line no-unused-vars
@@ -29,14 +41,14 @@ function createPackageJson() {
     return {
         name: packageJSON.name,
         version: packageJSON.version,
-        fontVersion: '1.0',
-        description: 'Koobiq icons',
+        fontVersion: packageJSON.fontVersion,
+        description: packageJSON.description,
         publishConfig: {
             access: 'public'
         },
-        author: 'Koobiq Team',
-        license: 'MIT',
-        keywords: ['design-system', 'koobiq', 'fonts', 'icons', 'symbols'],
+        author: packageJSON.author,
+        license: packageJSON.license,
+        keywords: packageJSON.keywords,
         exports: {
             './*': {
                 default: './*'

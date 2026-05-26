@@ -1,7 +1,7 @@
 import fs from 'fs-extra';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { config } from '../config.mjs';
+import { config } from '../../../config.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -32,15 +32,13 @@ const copyIcons = async (destPath, svgRootDir) => {
 };
 
 const main = async () => {
-    const destDir = join(__dirname, '../packages/icons/svg');
-    const svgRootDir = join(__dirname, `../${config.output.tempSvg}`);
+    const destDir = join(__dirname, '../svg');
+    const svgRootDir = join(__dirname, `../../../${config.output.tempSvg}`);
 
     try {
-        // Remove and create the destination directory
         await fs.remove(destDir);
         await fs.ensureDir(destDir);
 
-        // Copy icons from all subfolders inside temp svg directory
         await copyIcons(destDir, svgRootDir);
 
         console.log('Files successfully copied.');
