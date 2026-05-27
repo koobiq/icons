@@ -4,26 +4,20 @@
     "targets": {
         "generate": {
             "executor": "nx:run-commands",
-            "dependsOn": [
-                {
-                    "projects": ["@koobiq/icons"],
-                    "target": "figma:sync"
-                }
-            ],
             "options": {
-                "command": "npx ts-node scripts/generate.ts",
+                "command": "npx tsx scripts/generate.ts",
                 "cwd": "{projectRoot}"
             },
             "inputs": ["{workspaceRoot}/packages/icons/svg/**/*.svg"],
-            "outputs": ["{projectRoot}/src", "{projectRoot}/index.ts"]
+            "outputs": ["{projectRoot}/src/**/*.tsx", "{projectRoot}/src/index.ts"]
         },
         "build": {
-            "executor": "@nx/react:library",
-            "dependsOn": ["generate"],
+            "executor": "nx:run-commands",
             "options": {
-                "entry": "index.ts",
-                "outputPath": "{projectRoot}/dist"
+                "command": "vite build && tsc -p tsconfig.build.json",
+                "cwd": "{projectRoot}"
             },
+            "inputs": ["{projectRoot}/src/**/*.tsx", "{projectRoot}/src/index.ts", "{projectRoot}/manifest.json"],
             "outputs": ["{projectRoot}/dist"]
         }
     }
