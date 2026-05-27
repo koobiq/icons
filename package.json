@@ -17,7 +17,7 @@
     ],
     "scripts": {
         "prepare": "husky",
-        "clean": "rimraf temp && rimraf packages/icons/dist",
+        "clean": "rimraf temp && rimraf packages/icons/dist && rimraf packages/angular-icons/dist",
         "check-mapping": "node packages/icons/scripts/check-mapping.mjs",
         "------RELEASE SCRIPTS------": "------------------------------------------------------------------------------",
         "stage:commit": "koobiq-cli stage-commit -c \"Icons\" --without-references",
@@ -41,6 +41,8 @@
         ]
     },
     "devDependencies": {
+        "@angular/compiler": "^19.0.0",
+        "@angular/compiler-cli": "^19.0.0",
         "@angular/core": "^19.0.0",
         "@commitlint/cli": "^19.8.1",
         "@commitlint/config-conventional": "^19.8.1",

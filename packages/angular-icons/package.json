@@ -11,11 +11,10 @@
         "design-system",
         "koobiq",
         "icons",
-        "svg",
-        "symbols"
+        "svg"
     ],
     "peerDependencies": {
-        "@angular/core": "^19.0.0"
+        "@angular/core": "^15.0.0"
     },
     "exports": {
         "./*": {
