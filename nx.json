@@ -13,7 +13,6 @@
         "figma:export-icons": { "cache": false }
     },
     "release": {
-        "projectsRelationship": "independent",
         "projects": ["packages/*"],
         "releaseTagPattern": "{version}",
         "git": {

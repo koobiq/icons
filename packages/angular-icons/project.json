@@ -25,7 +25,7 @@
             "options": {
                 "eslintConfig": "{projectRoot}/.eslintrc.js",
                 "lintFilePatterns": ["{projectRoot}/**/*.ts"],
-                "ignorePath": "{projectRoot}/.eslintignore",
+                "ignorePath": "{workspaceRoot}/.eslintignore",
                 "hasTypeAwareRules": true
             }
         },

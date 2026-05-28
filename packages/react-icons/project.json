@@ -32,7 +32,7 @@
             "options": {
                 "eslintConfig": "{projectRoot}/.eslintrc.cjs",
                 "lintFilePatterns": ["{projectRoot}/**/*.{ts,tsx}"],
-                "ignorePath": "{projectRoot}/.eslintignore",
+                "ignorePath": "{workspaceRoot}/.eslintignore",
                 "hasTypeAwareRules": true
             },
             "inputs": [

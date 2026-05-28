@@ -64,9 +64,9 @@
         "lint": {
             "executor": "@nx/eslint:lint",
             "options": {
-                "eslintConfig": "{projectRoot}/.eslintrc.js",
+                "eslintConfig": "{workspaceRoot}/.eslintrc.js",
                 "lintFilePatterns": ["{projectRoot}/**/*.{js,mjs}"],
-                "ignorePath": "{projectRoot}/.eslintignore"
+                "ignorePath": "{workspaceRoot}/.eslintignore"
             }
         },
         "nx-release-publish": {

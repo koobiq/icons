@@ -12,11 +12,29 @@ const config = {
                 project: ['tsconfig.json'],
                 tsconfigRootDir: __dirname
             },
-            plugins: ['@typescript-eslint'],
-            extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+            plugins: ['@typescript-eslint', '@angular-eslint'],
+            extends: [
+                'plugin:@typescript-eslint/recommended',
+                'plugin:@angular-eslint/recommended',
+                // should be last
+                'plugin:prettier/recommended'
+            ],
             rules: {
                 '@typescript-eslint/no-unused-vars': [1, { argsIgnorePattern: '^_' }],
-                'no-unused-vars': 'off'
+                '@typescript-eslint/consistent-type-imports': [
+                    'error',
+                    { prefer: 'type-imports', fixStyle: 'separate-type-imports' }
+                ],
+                // enforce kbq prefix on all selectors
+                '@angular-eslint/component-selector': [
+                    'error',
+                    { type: 'attribute', prefix: 'kbq', style: 'camelCase' }
+                ],
+                '@angular-eslint/directive-selector': [
+                    'error',
+                    { type: 'attribute', prefix: 'kbq', style: 'camelCase' }
+                ],
+                '@angular-eslint/component-class-suffix': ['off']
             }
         }
     ]
