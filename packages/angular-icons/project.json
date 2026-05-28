@@ -5,7 +5,7 @@
         "generate": {
             "executor": "nx:run-commands",
             "options": {
-                "command": "npx tsx scripts/generate.ts",
+                "command": "npx tsx scripts/generate.ts && nx run @koobiq/icons:lint -- --fix",
                 "cwd": "{projectRoot}",
                 "assets": ["{workspaceRoot}/packages/icons/svg/**/*.svg"]
             },

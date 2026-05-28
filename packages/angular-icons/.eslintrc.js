@@ -3,7 +3,7 @@
 /** @type {import('eslint').Linter.Config} */
 const config = {
     extends: ['../../.eslintrc.js'],
-    ignorePatterns: ['dist/', 'icons/'],
+    ignorePatterns: ['dist/'],
     overrides: [
         {
             files: ['**/*.ts'],

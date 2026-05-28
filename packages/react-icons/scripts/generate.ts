@@ -205,7 +205,7 @@ async function run() {
     const names = metas.map((meta) => `'${meta.name}'`);
 
     const finalManifest = await buildManifest();
-    await fsp.writeFile(path.resolve('../manifest.json'), JSON.stringify(finalManifest, null, 2));
+    await fsp.writeFile(path.resolve('./manifest.json'), JSON.stringify(finalManifest, null, 2));
 
     const indexPath = path.join(OUTPUT_DIR, 'index.ts');
 
