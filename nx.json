@@ -11,5 +11,21 @@
         "lint": { "cache": true },
         "figma:sync": { "cache": false },
         "figma:export-icons": { "cache": false }
+    },
+    "release": {
+        "projectsRelationship": "independent",
+        "projects": ["packages/*"],
+        "releaseTagPattern": "{version}",
+        "git": {
+            "commitMessage": "chore(release): bump version to {version} w/ changelog"
+        },
+        "changelog": {
+            "projectChangelogs": {
+                "createRelease": "github"
+            }
+        },
+        "version": {
+            "conventionalCommits": true
+        }
     }
 }

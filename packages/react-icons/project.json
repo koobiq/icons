@@ -6,7 +6,7 @@
             "executor": "nx:run-commands",
             "dependsOn": [
                 {
-                    "projects": ["icons"],
+                    "projects": ["@koobiq/icons"],
                     "target": "build"
                 }
             ],
@@ -19,6 +19,7 @@
         },
         "build": {
             "executor": "nx:run-commands",
+            "dependsOn": ["generate"],
             "options": {
                 "command": "vite build && tsc -p tsconfig.build.json",
                 "cwd": "{projectRoot}"
@@ -40,6 +41,12 @@
                 "{projectRoot}/.eslintrc.cjs"
             ],
             "outputs": ["{projectRoot}/dist"]
+        },
+        "nx-release-publish": {
+            "dependsOn": ["build"],
+            "options": {
+                "packageRoot": "{projectRoot}/dist"
+            }
         }
     }
 }

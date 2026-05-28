@@ -5,7 +5,7 @@
         "generate": {
             "executor": "nx:run-commands",
             "options": {
-                "command": "npx ts-node scripts/generate.ts",
+                "command": "npx tsx scripts/generate.ts",
                 "cwd": "{projectRoot}",
                 "assets": ["{workspaceRoot}/packages/icons/svg/**/*.svg"]
             },
@@ -27,6 +27,12 @@
                 "lintFilePatterns": ["{projectRoot}/**/*.ts"],
                 "ignorePath": "{projectRoot}/.eslintignore",
                 "hasTypeAwareRules": true
+            }
+        },
+        "nx-release-publish": {
+            "dependsOn": ["build"],
+            "options": {
+                "packageRoot": "{projectRoot}/dist"
             }
         }
     }

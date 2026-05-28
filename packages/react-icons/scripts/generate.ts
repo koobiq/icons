@@ -1,13 +1,13 @@
 import { promises as fsp } from 'fs';
 import { mkdir, rm } from 'node:fs/promises';
 import path from 'node:path';
-import { KbqIconMeta, KbqIconsMetadata } from '@koobiq/icons/dist/types/icons';
+import type { KbqIconMeta, KbqIconsMetadata } from '@koobiq/icons/dist/types/icons';
 
 import { transform } from '@svgr/core';
 
 const INPUT_DIR = path.resolve('../icons/svg');
 const MANIFEST_FILE = path.resolve('../../mapping.json');
-const OUTPUT_DIR = path.resolve('../src');
+const OUTPUT_DIR = path.resolve('./src');
 
 const SIZES = ['16', '24', '32', '48', '64'] as const;
 

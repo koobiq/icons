@@ -68,6 +68,12 @@
                 "lintFilePatterns": ["{projectRoot}/**/*.{js,mjs}"],
                 "ignorePath": "{projectRoot}/.eslintignore"
             }
+        },
+        "nx-release-publish": {
+            "dependsOn": ["build"],
+            "options": {
+                "packageRoot": "{projectRoot}/dist"
+            }
         }
     }
 }

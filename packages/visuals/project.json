@@ -5,11 +5,18 @@
         "build": {
             "executor": "nx:run-commands",
             "options": {
-                "command": "mkdir -p dist && cp -r dark dist/dark && cp -r light dist/light",
+                "command": "mkdir -p dist && cp -r dark dist/dark && cp -r light dist/light && cp package.json dist/package.json",
                 "cwd": "{projectRoot}"
             },
             "inputs": ["{projectRoot}/dark/**/*.(png|webp)", "{projectRoot}/light/**/*.(png|webp)"],
             "outputs": ["{projectRoot}/dist"]
+        },
+        "nx-release-publish": {
+            "executor": "@nx/js:release-publish",
+            "dependsOn": ["build"],
+            "options": {
+                "packageRoot": "{projectRoot}/dist"
+            }
         }
     }
 }
