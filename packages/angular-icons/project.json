@@ -19,6 +19,15 @@
                 "project": "{projectRoot}/ng-package.json"
             },
             "outputs": ["{projectRoot}/dist"]
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint",
+            "options": {
+                "eslintConfig": "{projectRoot}/.eslintrc.js",
+                "lintFilePatterns": ["{projectRoot}/**/*.ts"],
+                "ignorePath": "{projectRoot}/.eslintignore",
+                "hasTypeAwareRules": true
+            }
         }
     }
 }

@@ -1,5 +1,15 @@
 {
     "name": "@koobiq/visuals",
     "$schema": "../../node_modules/nx/schemas/project.schema.json",
-    "targets": {}
+    "targets": {
+        "build": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "mkdir -p dist && cp -r dark dist/dark && cp -r light dist/light",
+                "cwd": "{projectRoot}"
+            },
+            "inputs": ["{projectRoot}/dark/**/*.(png|webp)", "{projectRoot}/light/**/*.(png|webp)"],
+            "outputs": ["{projectRoot}/dist"]
+        }
+    }
 }

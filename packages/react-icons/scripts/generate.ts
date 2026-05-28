@@ -1,6 +1,7 @@
 import { promises as fsp } from 'fs';
 import { mkdir, rm } from 'node:fs/promises';
 import path from 'node:path';
+import type { KbqIconMeta, KbqIconsMetadata } from '@koobiq/icons/dist/types/icons';
 
 import { transform } from '@svgr/core';
 
@@ -75,11 +76,11 @@ export type IconsManifest = {
 
 async function buildManifest(): Promise<IconsManifest> {
     try {
-        const iconsInfo = JSON.parse(await fsp.readFile(MANIFEST_FILE, 'utf8'));
+        const iconsInfo: KbqIconsMetadata = JSON.parse(await fsp.readFile(MANIFEST_FILE, 'utf8'));
 
         const icons = Object.entries(iconsInfo)
             .filter(([key]) => key !== '$schema')
-            .map(([key, data]: [string, any]) => {
+            .map(([key, data]: [string, KbqIconMeta]) => {
                 const { size, name } = parseIconKey(key);
                 const { description, tags } = data ?? {};
 

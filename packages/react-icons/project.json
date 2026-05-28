@@ -4,6 +4,12 @@
     "targets": {
         "generate": {
             "executor": "nx:run-commands",
+            "dependsOn": [
+                {
+                    "projects": ["icons"],
+                    "target": "build"
+                }
+            ],
             "options": {
                 "command": "npx tsx scripts/generate.ts",
                 "cwd": "{projectRoot}"
@@ -19,6 +25,15 @@
             },
             "inputs": ["{projectRoot}/src/**/*.tsx", "{projectRoot}/src/index.ts", "{projectRoot}/manifest.json"],
             "outputs": ["{projectRoot}/dist"]
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint",
+            "options": {
+                "eslintConfig": "{projectRoot}/.eslintrc.cjs",
+                "lintFilePatterns": ["{projectRoot}/**/*.{ts,tsx}"],
+                "ignorePath": "{projectRoot}/.eslintignore",
+                "hasTypeAwareRules": true
+            }
         }
     }
 }

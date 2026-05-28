@@ -8,6 +8,7 @@
     "targetDefaults": {
         "build": { "cache": true },
         "generate": { "cache": true },
+        "lint": { "cache": true },
         "figma:sync": { "cache": false },
         "figma:export-icons": { "cache": false }
     }

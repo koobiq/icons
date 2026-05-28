@@ -17,7 +17,7 @@
     ],
     "scripts": {
         "prepare": "husky",
-        "clean": "rimraf temp && rimraf packages/icons/dist && rimraf packages/angular-icons/dist",
+        "clean": "rimraf temp && rimraf -g packages/**/{dist,node_modules}",
         "check-mapping": "node packages/icons/scripts/check-mapping.mjs",
         "------RELEASE SCRIPTS------": "------------------------------------------------------------------------------",
         "stage:commit": "koobiq-cli stage-commit -c \"Icons\" --without-references",
@@ -33,7 +33,9 @@
         "prettier": "prettier --check . --ignore-unknown",
         "prettier:fix": "yarn run prettier --write",
         "eslint": "eslint . --ext='.js,.mjs'",
-        "eslint:fix": "yarn run eslint --fix"
+        "eslint:fix": "yarn run eslint --fix",
+        "lint": "nx run-many -t lint",
+        "lint:fix": "nx run-many -t lint -- --fix"
     },
     "release": {
         "packages": [
@@ -60,6 +62,8 @@
         "@types/eslint": "^8.56.12",
         "@types/fs-extra": "^11.0.4",
         "@types/node": "^24.10.4",
+        "@typescript-eslint/eslint-plugin": "^7",
+        "@typescript-eslint/parser": "^7",
         "@vitejs/plugin-react": "^5.0.0",
         "cross-env": "^7.0.3",
         "dotenv": "^16.6.1",

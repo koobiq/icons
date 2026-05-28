@@ -60,6 +60,14 @@
                 "command": "node scripts/copy-meta-to-dist.mjs",
                 "cwd": "{projectRoot}"
             }
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint",
+            "options": {
+                "eslintConfig": "{projectRoot}/.eslintrc.js",
+                "lintFilePatterns": ["{projectRoot}/**/*.{js,mjs}"],
+                "ignorePath": "{projectRoot}/.eslintignore"
+            }
         }
     }
 }

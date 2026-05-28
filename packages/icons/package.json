@@ -17,6 +17,7 @@
     ],
     "exports": {
         "./*": {
+            "types": "./*.d.ts",
             "default": "./*"
         }
     }
