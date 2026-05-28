@@ -29,8 +29,18 @@
                 "hasTypeAwareRules": true
             }
         },
-        "nx-release-publish": {
+        "prepublish": {
+            "executor": "nx:run-commands",
             "dependsOn": ["build"],
+            "options": {
+                "command": "npx tsx scripts/copy-meta-to-dist.ts",
+                "cwd": "{projectRoot}"
+            },
+            "inputs": ["{workspaceRoot}/LICENSE", "{projectRoot}/README.md"],
+            "outputs": ["{projectRoot}/dist/LICENSE", "{projectRoot}/dist/README.md"]
+        },
+        "nx-release-publish": {
+            "dependsOn": ["prepublish"],
             "options": {
                 "packageRoot": "{projectRoot}/dist"
             }

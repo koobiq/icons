@@ -57,7 +57,7 @@
             "executor": "nx:run-commands",
             "dependsOn": ["build:sprite", "build:fonts", "build:types"],
             "options": {
-                "command": "node scripts/copy-meta-to-dist.mjs",
+                "command": "echo 'build complete'",
                 "cwd": "{projectRoot}"
             }
         },
@@ -69,8 +69,16 @@
                 "ignorePath": "{workspaceRoot}/.eslintignore"
             }
         },
-        "nx-release-publish": {
+        "prepublish": {
+            "executor": "nx:run-commands",
             "dependsOn": ["build"],
+            "options": {
+                "command": "node scripts/copy-meta-to-dist.mjs",
+                "cwd": "{projectRoot}"
+            }
+        },
+        "nx-release-publish": {
+            "dependsOn": ["prepublish"],
             "options": {
                 "packageRoot": "{projectRoot}/dist"
             }

@@ -17,6 +17,16 @@
             "inputs": ["{workspaceRoot}/packages/icons/svg/**/*.svg"],
             "outputs": ["{projectRoot}/src/**/*.tsx", "{projectRoot}/src/index.ts"]
         },
+        "prepublish": {
+            "executor": "nx:run-commands",
+            "dependsOn": ["build"],
+            "options": {
+                "command": "npx tsx scripts/copy-meta-to-dist.ts",
+                "cwd": "{projectRoot}"
+            },
+            "inputs": ["{workspaceRoot}/LICENSE", "{projectRoot}/README.md", "{projectRoot}/package.json"],
+            "outputs": ["{projectRoot}/dist/LICENSE", "{projectRoot}/dist/README.md", "{projectRoot}/dist/package.json"]
+        },
         "build": {
             "executor": "nx:run-commands",
             "dependsOn": ["generate"],
@@ -43,7 +53,7 @@
             "outputs": ["{projectRoot}/dist"]
         },
         "nx-release-publish": {
-            "dependsOn": ["build"],
+            "dependsOn": ["prepublish"],
             "options": {
                 "packageRoot": "{projectRoot}/dist"
             }

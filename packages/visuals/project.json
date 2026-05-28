@@ -5,15 +5,25 @@
         "build": {
             "executor": "nx:run-commands",
             "options": {
-                "command": "mkdir -p dist && cp -r dark dist/dark && cp -r light dist/light && cp package.json dist/package.json",
+                "command": "mkdir -p dist && cp -r light dist/light && cp -r dark dist/dark",
                 "cwd": "{projectRoot}"
             },
             "inputs": ["{projectRoot}/dark/**/*.(png|webp)", "{projectRoot}/light/**/*.(png|webp)"],
             "outputs": ["{projectRoot}/dist"]
         },
+        "prepublish": {
+            "executor": "nx:run-commands",
+            "dependsOn": ["build"],
+            "options": {
+                "command": "npx tsx scripts/copy-meta-to-dist.ts",
+                "cwd": "{projectRoot}"
+            },
+            "inputs": ["{workspaceRoot}/LICENSE", "{projectRoot}/package.json"],
+            "outputs": ["{projectRoot}/dist/LICENSE", "{projectRoot}/dist/package.json"]
+        },
         "nx-release-publish": {
             "executor": "@nx/js:release-publish",
-            "dependsOn": ["build"],
+            "dependsOn": ["prepublish"],
             "options": {
                 "packageRoot": "{projectRoot}/dist"
             }
