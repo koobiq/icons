@@ -1,7 +1,7 @@
 import { promises as fsp } from 'fs';
 import { mkdir, rm } from 'node:fs/promises';
 import path from 'node:path';
-import type { KbqIconMeta, KbqIconsMetadata } from '@koobiq/icons/dist/types/icons';
+import { KbqIconMeta, KbqIconsMetadata } from '@koobiq/icons/dist/types/icons';
 
 import { transform } from '@svgr/core';
 
@@ -105,6 +105,7 @@ async function buildManifest(): Promise<IconsManifest> {
     }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function template(variables: any, { tpl }: any) {
     return tpl`
     import { forwardRef } from 'react';

@@ -33,7 +33,13 @@
                 "lintFilePatterns": ["{projectRoot}/**/*.{ts,tsx}"],
                 "ignorePath": "{projectRoot}/.eslintignore",
                 "hasTypeAwareRules": true
-            }
+            },
+            "inputs": [
+                "{projectRoot}/src/**/*.tsx",
+                "{projectRoot}/scripts/generate.ts",
+                "{projectRoot}/.eslintrc.cjs"
+            ],
+            "outputs": ["{projectRoot}/dist"]
         }
     }
 }

@@ -15,8 +15,7 @@ const config = {
             plugins: ['@typescript-eslint'],
             extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
             rules: {
-                '@typescript-eslint/no-unused-vars': [1, { argsIgnorePattern: '^_' }],
-                '@typescript-eslint/no-explicit-any': 1
+                '@typescript-eslint/no-unused-vars': [1, { argsIgnorePattern: '^_' }]
             }
         }
     ]
