@@ -1,7 +1,7 @@
 import { promises as fsp } from 'fs';
 import { mkdir, rm } from 'node:fs/promises';
 import path from 'node:path';
-import { KbqIconMeta, KbqIconsMetadata } from '@koobiq/icons/dist/types/icons';
+import type { KbqIconMeta, KbqIconsMetadata } from '@koobiq/icons/dist/types/icons';
 
 import { transform } from '@svgr/core';
 
