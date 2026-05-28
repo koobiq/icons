@@ -13,10 +13,6 @@ if (!fs.existsSync(distDir)) {
     fs.mkdirSync(distDir, { recursive: true });
 }
 
-console.log(join(workspaceRoot, 'LICENSE'));
-
 for (const src of [join(workspaceRoot, 'LICENSE'), join(projectRoot, 'README.md')]) {
-    console.log(join(distDir, basename(src)));
-
     fs.copyFileSync(src, join(distDir, basename(src)));
 }
