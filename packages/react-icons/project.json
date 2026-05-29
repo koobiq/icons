@@ -31,10 +31,10 @@
                 "{projectRoot}/package.json"
             ],
             "outputs": [
-                "{projectRoot}/dist/LICENSE",
-                "{projectRoot}/dist/README.md",
-                "{projectRoot}/dist/manifest.json",
-                "{projectRoot}/dist/package.json"
+                "{workspaceRoot}/dist/packages/{projectName}/LICENSE",
+                "{workspaceRoot}/dist/packages/{projectName}/README.md",
+                "{workspaceRoot}/dist/packages/{projectName}/manifest.json",
+                "{workspaceRoot}/dist/packages/{projectName}/package.json"
             ]
         },
         "build": {
@@ -45,7 +45,7 @@
                 "cwd": "{projectRoot}"
             },
             "inputs": ["{projectRoot}/src/**/*.tsx", "{projectRoot}/src/index.ts", "{projectRoot}/manifest.json"],
-            "outputs": ["{projectRoot}/dist"]
+            "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]
         },
         "lint": {
             "executor": "@nx/eslint:lint",
@@ -60,12 +60,12 @@
                 "{projectRoot}/scripts/generate.ts",
                 "{projectRoot}/.eslintrc.cjs"
             ],
-            "outputs": ["{projectRoot}/dist"]
+            "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]
         },
         "nx-release-publish": {
             "dependsOn": ["prepublish"],
             "options": {
-                "packageRoot": "{projectRoot}/dist"
+                "packageRoot": "{workspaceRoot}/dist/packages/{projectName}"
             }
         }
     }

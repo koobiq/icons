@@ -28,7 +28,7 @@
                 "cwd": "{projectRoot}"
             },
             "inputs": ["{projectRoot}/svg/**/*.svg", "{workspaceRoot}/mapping.json"],
-            "outputs": ["{projectRoot}/dist/symbol"]
+            "outputs": ["{workspaceRoot}/dist/packages/{projectName}/symbol"]
         },
         "build:fonts": {
             "executor": "nx:run-commands",
@@ -42,16 +42,16 @@
                 "{workspaceRoot}/mapping.json",
                 "{workspaceRoot}/mapping-interop.json"
             ],
-            "outputs": ["{projectRoot}/dist/fonts"]
+            "outputs": ["{workspaceRoot}/dist/packages/{projectName}/fonts"]
         },
         "build:types": {
             "executor": "nx:run-commands",
             "options": {
-                "command": "json2ts ../../schema.json dist/types/icons.d.ts",
+                "command": "json2ts ../../schema.json ../../dist/packages/icons/types/icons.d.ts",
                 "cwd": "{projectRoot}"
             },
             "inputs": ["{workspaceRoot}/schema.json", "{workspaceRoot}/mapping.json"],
-            "outputs": ["{projectRoot}/dist/types/icons.d.ts"]
+            "outputs": ["{workspaceRoot}/dist/packages/{projectName}/types/icons.d.ts"]
         },
         "build": {
             "executor": "nx:run-commands",
@@ -75,12 +75,13 @@
             "options": {
                 "command": "node scripts/copy-meta-to-dist.mjs",
                 "cwd": "{projectRoot}"
-            }
+            },
+            "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]
         },
         "nx-release-publish": {
             "dependsOn": ["prepublish"],
             "options": {
-                "packageRoot": "{projectRoot}/dist"
+                "packageRoot": "{workspaceRoot}/dist/packages/{projectName}"
             }
         }
     }

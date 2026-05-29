@@ -7,8 +7,8 @@ if (!fs.existsSync('./svg')) {
     console.error('SVG source directory not found at ./svg');
 }
 
-if (!fs.existsSync('./dist/fonts')) {
-    fs.mkdirSync('./dist/fonts', { recursive: true });
+if (!fs.existsSync('../../dist/packages/icons/fonts')) {
+    fs.mkdirSync('../../dist/packages/icons/fonts', { recursive: true });
 }
 
 Handlebars.registerPartial(
@@ -48,7 +48,7 @@ generateFonts({
     prefix: 'kbq',
     codepoints: codepoints,
     inputDir: './svg',
-    outputDir: './dist/fonts',
+    outputDir: '../../dist/packages/icons/fonts',
     fontTypes: [FontAssetType.TTF, FontAssetType.WOFF],
     normalize: true,
     assetTypes: [OtherAssetType.CSS, OtherAssetType.SCSS, OtherAssetType.HTML],

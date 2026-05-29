@@ -18,7 +18,7 @@
             "options": {
                 "project": "{projectRoot}/ng-package.json"
             },
-            "outputs": ["{projectRoot}/dist"]
+            "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]
         },
         "lint": {
             "executor": "@nx/eslint:lint",
@@ -37,12 +37,15 @@
                 "cwd": "{projectRoot}"
             },
             "inputs": ["{workspaceRoot}/LICENSE", "{projectRoot}/README.md"],
-            "outputs": ["{projectRoot}/dist/LICENSE", "{projectRoot}/dist/README.md"]
+            "outputs": [
+                "{workspaceRoot}/dist/packages/{projectName}/LICENSE",
+                "{workspaceRoot}/dist/packages/{projectName}/README.md"
+            ]
         },
         "nx-release-publish": {
             "dependsOn": ["prepublish"],
             "options": {
-                "packageRoot": "{projectRoot}/dist"
+                "packageRoot": "{workspaceRoot}/dist/packages/{projectName}"
             }
         }
     }

@@ -17,7 +17,7 @@
     ],
     "scripts": {
         "prepare": "husky",
-        "clean": "yarn cache clean && nx reset && rimraf temp && rimraf -g packages/**/dist",
+        "clean": "yarn cache clean && nx reset && rimraf temp && rimraf dist",
         "check-mapping": "node packages/icons/scripts/check-mapping.mjs",
         "------RELEASE SCRIPTS------": "------------------------------------------------------------------------------",
         "release": "nx release --skip-publish",

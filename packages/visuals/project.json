@@ -5,11 +5,11 @@
         "build": {
             "executor": "nx:run-commands",
             "options": {
-                "command": "mkdir -p dist && cp -r light dist/light && cp -r dark dist/dark",
+                "command": "mkdir -p ../../dist/packages/visuals && cp -r light ../../dist/packages/visuals/light && cp -r dark ../../dist/packages/visuals/dark",
                 "cwd": "{projectRoot}"
             },
             "inputs": ["{projectRoot}/dark/**/*.(png|webp)", "{projectRoot}/light/**/*.(png|webp)"],
-            "outputs": ["{projectRoot}/dist"]
+            "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]
         },
         "prepublish": {
             "executor": "nx:run-commands",
@@ -19,13 +19,16 @@
                 "cwd": "{projectRoot}"
             },
             "inputs": ["{workspaceRoot}/LICENSE", "{projectRoot}/package.json"],
-            "outputs": ["{projectRoot}/dist/LICENSE", "{projectRoot}/dist/package.json"]
+            "outputs": [
+                "{workspaceRoot}/dist/packages/{projectName}/LICENSE",
+                "{workspaceRoot}/dist/packages/{projectName}/package.json"
+            ]
         },
         "nx-release-publish": {
             "executor": "@nx/js:release-publish",
             "dependsOn": ["prepublish"],
             "options": {
-                "packageRoot": "{projectRoot}/dist"
+                "packageRoot": "{workspaceRoot}/dist/packages/{projectName}"
             }
         }
     }

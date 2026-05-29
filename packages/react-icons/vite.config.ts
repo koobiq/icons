@@ -9,7 +9,7 @@ const isExternal = (id: string) => !id.startsWith('.') && !path.isAbsolute(id);
 export default defineConfig({
     plugins: [tsconfigPaths(), react()],
     build: {
-        outDir: path.resolve(__dirname, 'dist/dist'),
+        outDir: path.resolve(__dirname, '../../dist/packages/react-icons/dist'),
         lib: {
             entry: path.resolve(__dirname, 'src/index.ts'),
             formats: ['es'],

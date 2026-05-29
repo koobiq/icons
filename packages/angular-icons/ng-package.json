@@ -3,5 +3,5 @@
     "lib": {
         "entryFile": "index.ts"
     },
-    "dest": "dist"
+    "dest": "../../dist/packages/angular-icons"
 }

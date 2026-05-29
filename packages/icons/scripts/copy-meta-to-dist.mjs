@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const distDir = 'dist';
+const distDir = join(__dirname, '../../../dist/packages/icons');
 const workspaceRoot = join(__dirname, '../../..');
 
 if (!fs.existsSync(distDir)) {

@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const distDir = join(__dirname, '../dist');
+const distDir = join(__dirname, '../../../dist/packages/angular-icons');
 const projectRoot = join(__dirname, '..');
 const workspaceRoot = join(__dirname, '../../..');
 

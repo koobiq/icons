@@ -11,7 +11,7 @@ if (!fs.existsSync(svgIconsRelativePath)) {
 }
 
 const config = {
-    dest: './dist/',
+    dest: '../../dist/packages/icons/',
 
     svg: {
         xmlDeclaration: false,

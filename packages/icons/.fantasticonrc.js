@@ -6,8 +6,8 @@ if (!fs.existsSync('./svg')) {
     console.error('SVG source directory not found. Run figma:sync first.');
 }
 
-if (!fs.existsSync('./dist/fonts')) {
-    fs.mkdirSync('./dist/fonts', { recursive: true });
+if (!fs.existsSync('../../dist/packages/icons/fonts')) {
+    fs.mkdirSync('../../dist/packages/icons/fonts', { recursive: true });
 }
 
 Handlebars.registerPartial(
@@ -48,7 +48,7 @@ module.exports = {
     prefix: 'kbq',
     codepoints: codepoints,
     inputDir: 'svg',
-    outputDir: 'dist/fonts',
+    outputDir: '../../dist/packages/icons/fonts',
     fontTypes: ['ttf', 'woff'],
     normalize: true,
     assetTypes: ['css', 'scss', 'html'],
