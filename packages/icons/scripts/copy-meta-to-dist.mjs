@@ -7,6 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const distDir = join(__dirname, '../../../dist/packages/icons');
+const projectRoot = join(__dirname, '..');
 const workspaceRoot = join(__dirname, '../../..');
 
 if (!fs.existsSync(distDir)) {
@@ -14,8 +15,8 @@ if (!fs.existsSync(distDir)) {
 }
 
 fs.copyFileSync(join(workspaceRoot, 'LICENSE'), `${distDir}/LICENSE`);
-fs.copyFileSync(join(workspaceRoot, 'README.md'), `${distDir}/README.md`);
-fs.copyFileSync(join(workspaceRoot, 'CHANGELOG.md'), `${distDir}/CHANGELOG.md`);
+fs.copyFileSync(join(projectRoot, 'README.md'), `${distDir}/README.md`);
+fs.copyFileSync(join(projectRoot, 'CHANGELOG.md'), `${distDir}/CHANGELOG.md`);
 
 if (!fs.existsSync(`${distDir}/info`)) {
     fs.mkdirSync(`${distDir}/info`);

@@ -2,7 +2,7 @@
 
 # How to use package
 
-```
+```sh
 npm i @koobiq/icons
 ```
 
@@ -12,7 +12,7 @@ npm i @koobiq/icons
 
 Install dependencies by running:
 
-```
+```sh
 yarn install
 ```
 
@@ -29,7 +29,7 @@ Create a file with name `.env` and add there your Figma access token.
 
 To export your icons (SVG) from Figma run the command:
 
-```
+```sh
 yarn run figma:sync
 ```
 
@@ -46,7 +46,7 @@ Commit SVG files `mapping.json` and push all changes to git.
 
 Run stage commit script to create a new release tag.
 
-```
+```sh
 yarn run stage:commit
 ```
 
