@@ -13,19 +13,24 @@
         "figma:export-icons": { "cache": false }
     },
     "release": {
-        "projects": ["packages/*"],
-        "projectsRelationship": "fixed",
-        "releaseTagPattern": "{version}",
         "git": {
             "commitMessage": "chore(release): bump version to {version} w/ changelog"
         },
-        "changelog": {
-            "projectChangelogs": {
-                "createRelease": "github"
+        "groups": {
+            "icons": {
+                "projects": ["@koobiq/icons", "@koobiq/angular-icons", "@koobiq/react-icons"],
+                "projectsRelationship": "fixed",
+                "releaseTagPattern": "{version}",
+                "version": { "conventionalCommits": true },
+                "changelog": { "createRelease": "github" }
+            },
+            "visuals": {
+                "projects": ["@koobiq/visuals"],
+                "projectsRelationship": "independent",
+                "releaseTagPattern": "{projectName}@{version}",
+                "version": { "conventionalCommits": true },
+                "changelog": { "createRelease": "github" }
             }
-        },
-        "version": {
-            "conventionalCommits": true
         }
     }
 }
