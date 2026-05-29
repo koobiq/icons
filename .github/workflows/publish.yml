@@ -19,18 +19,18 @@ jobs:
     if: ${{ github.repository_owner == 'koobiq' }}
     steps:
       - uses: actions/checkout@v6
-
+        with:
+          fetch-depth: 0
       - name: Setup Yarn
         uses: ./.github/workflows/actions/setup-yarn
 
-      - name: Build packages
-        run: yarn run build
-
-      - name: Publish package
-        run: |
-          rm -rf .npmrc && echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN_KOOBIQ" > ~/.npmrc
-          npm run publish:github
+      - run: yarn nx release publish --registry=https://registry.npmjs.org/
         env:
-          NPM_TOKEN_KOOBIQ: ${{ secrets.NPM_PUBLISH_TOKEN }}
-          MATTERMOST_ENDPOINT_URL: ${{ secrets.MM_WEBHOOK_URL }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_KOOBIQ }}
+          NPM_CONFIG_PROVENANCE: true
+      - uses: mattermost/action-mattermost-notify@2.0.0
+        with:
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.MM_WEBHOOK_URL }}
           MATTERMOST_CHANNEL: ${{ secrets.MM_CHANNEL_NAME }}
+          MATTERMOST_USERNAME: ${{ secrets.MM_BOT_NAME }}
+          TEXT: ${{ github.event.release.body }}
