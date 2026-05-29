@@ -5,7 +5,12 @@ updates:
     schedule:
       interval: 'monthly'
   - package-ecosystem: 'npm'
-    directory: '/'
+    directories:
+      - '/'
+      - '/packages/icons'
+      - '/packages/angular-icons'
+      - '/packages/react-icons'
+      - '/packages/visuals'
     versioning-strategy: 'increase'
     schedule:
       interval: 'monthly'
