@@ -14,6 +14,7 @@
     },
     "release": {
         "projects": ["packages/*"],
+        "projectsRelationship": "fixed",
         "releaseTagPattern": "{version}",
         "git": {
             "commitMessage": "chore(release): bump version to {version} w/ changelog"

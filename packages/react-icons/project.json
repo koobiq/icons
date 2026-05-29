@@ -24,8 +24,18 @@
                 "command": "npx tsx scripts/copy-meta-to-dist.ts",
                 "cwd": "{projectRoot}"
             },
-            "inputs": ["{workspaceRoot}/LICENSE", "{projectRoot}/README.md", "{projectRoot}/package.json"],
-            "outputs": ["{projectRoot}/dist/LICENSE", "{projectRoot}/dist/README.md", "{projectRoot}/dist/package.json"]
+            "inputs": [
+                "{workspaceRoot}/LICENSE",
+                "{projectRoot}/README.md",
+                "{projectRoot}/manifest.json",
+                "{projectRoot}/package.json"
+            ],
+            "outputs": [
+                "{projectRoot}/dist/LICENSE",
+                "{projectRoot}/dist/README.md",
+                "{projectRoot}/dist/manifest.json",
+                "{projectRoot}/dist/package.json"
+            ]
         },
         "build": {
             "executor": "nx:run-commands",
