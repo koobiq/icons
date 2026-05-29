@@ -13,6 +13,11 @@ if (!fs.existsSync(distDir)) {
     fs.mkdirSync(distDir, { recursive: true });
 }
 
-for (const src of [join(workspaceRoot, 'LICENSE'), join(projectRoot, 'README.md'), join(projectRoot, 'package.json')]) {
+for (const src of [
+    join(workspaceRoot, 'LICENSE'),
+    join(projectRoot, 'README.md'),
+    join(projectRoot, 'package.json'),
+    join(projectRoot, 'manifest.json')
+]) {
     fs.copyFileSync(src, join(distDir, basename(src)));
 }
