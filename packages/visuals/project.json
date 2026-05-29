@@ -8,7 +8,6 @@
                 "command": "mkdir -p ../../dist/packages/visuals && cp -r light ../../dist/packages/visuals/light && cp -r dark ../../dist/packages/visuals/dark",
                 "cwd": "{projectRoot}"
             },
-            "inputs": ["{projectRoot}/dark/**/*.(png|webp)", "{projectRoot}/light/**/*.(png|webp)"],
             "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]
         },
         "prepublish": {
@@ -17,12 +16,7 @@
             "options": {
                 "command": "npx tsx scripts/copy-meta-to-dist.ts",
                 "cwd": "{projectRoot}"
-            },
-            "inputs": ["{workspaceRoot}/LICENSE", "{projectRoot}/package.json"],
-            "outputs": [
-                "{workspaceRoot}/dist/packages/{projectName}/LICENSE",
-                "{workspaceRoot}/dist/packages/{projectName}/package.json"
-            ]
+            }
         },
         "nx-release-publish": {
             "executor": "@nx/js:release-publish",

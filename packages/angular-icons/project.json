@@ -8,9 +8,7 @@
                 "command": "npx tsx scripts/generate.ts && eslint . --fix",
                 "cwd": "{projectRoot}",
                 "assets": ["{workspaceRoot}/packages/icons/svg/**/*.svg"]
-            },
-            "inputs": ["{workspaceRoot}/packages/icons/svg/**/*.svg"],
-            "outputs": ["{projectRoot}/icons", "{projectRoot}/public-api.ts"]
+            }
         },
         "build": {
             "executor": "@nx/angular:package",
@@ -35,12 +33,7 @@
             "options": {
                 "command": "npx tsx scripts/copy-meta-to-dist.ts",
                 "cwd": "{projectRoot}"
-            },
-            "inputs": ["{workspaceRoot}/LICENSE", "{projectRoot}/README.md"],
-            "outputs": [
-                "{workspaceRoot}/dist/packages/{projectName}/LICENSE",
-                "{workspaceRoot}/dist/packages/{projectName}/README.md"
-            ]
+            }
         },
         "nx-release-publish": {
             "dependsOn": ["prepublish"],

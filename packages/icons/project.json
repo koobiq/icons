@@ -8,8 +8,7 @@
             "options": {
                 "command": "figma-export use-config .figmaexportrc.mjs",
                 "cwd": "{workspaceRoot}"
-            },
-            "outputs": ["{workspaceRoot}/temp/svg"]
+            }
         },
         "figma:sync": {
             "executor": "nx:run-commands",
@@ -18,17 +17,14 @@
             "options": {
                 "command": "node scripts/svg-copy-to-src.mjs",
                 "cwd": "{projectRoot}"
-            },
-            "outputs": ["{projectRoot}/svg"]
+            }
         },
         "build:sprite": {
             "executor": "nx:run-commands",
             "options": {
                 "command": "node svg-sprite.js",
                 "cwd": "{projectRoot}"
-            },
-            "inputs": ["{projectRoot}/svg/**/*.svg", "{workspaceRoot}/mapping.json"],
-            "outputs": ["{workspaceRoot}/dist/packages/{projectName}/symbol"]
+            }
         },
         "build:fonts": {
             "executor": "nx:run-commands",
@@ -36,22 +32,14 @@
             "options": {
                 "command": "fantasticon --config .fantasticonrc.js && node scripts/generate-versioned-font.js",
                 "cwd": "{projectRoot}"
-            },
-            "inputs": [
-                "{projectRoot}/svg/**/*.svg",
-                "{workspaceRoot}/mapping.json",
-                "{workspaceRoot}/mapping-interop.json"
-            ],
-            "outputs": ["{workspaceRoot}/dist/packages/{projectName}/fonts"]
+            }
         },
         "build:types": {
             "executor": "nx:run-commands",
             "options": {
                 "command": "json2ts ../../schema.json ../../dist/packages/icons/types/icons.d.ts",
                 "cwd": "{projectRoot}"
-            },
-            "inputs": ["{workspaceRoot}/schema.json", "{workspaceRoot}/mapping.json"],
-            "outputs": ["{workspaceRoot}/dist/packages/{projectName}/types/icons.d.ts"]
+            }
         },
         "build": {
             "executor": "nx:run-commands",
