@@ -2482,7 +2482,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@figma-export/cli@npm:^6.3.0, @figma-export/cli@npm:^6.4.0":
+"@figma-export/cli@npm:^6.4.0":
   version: 6.4.0
   resolution: "@figma-export/cli@npm:6.4.0"
   dependencies:
@@ -2509,7 +2509,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@figma-export/output-components-as-svg@npm:^6.2.4, @figma-export/output-components-as-svg@npm:^6.4.0":
+"@figma-export/output-components-as-svg@npm:^6.4.0":
   version: 6.4.0
   resolution: "@figma-export/output-components-as-svg@npm:6.4.0"
   dependencies:
@@ -2518,7 +2518,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@figma-export/output-components-as-svgr@npm:^6.2.4, @figma-export/output-components-as-svgr@npm:^6.4.0":
+"@figma-export/output-components-as-svgr@npm:^6.4.0":
   version: 6.4.0
   resolution: "@figma-export/output-components-as-svgr@npm:6.4.0"
   dependencies:
@@ -2529,7 +2529,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@figma-export/transform-svg-with-svgo@npm:^6.2.4, @figma-export/transform-svg-with-svgo@npm:^6.4.0":
+"@figma-export/transform-svg-with-svgo@npm:^6.4.0":
   version: 6.4.0
   resolution: "@figma-export/transform-svg-with-svgo@npm:6.4.0"
   dependencies:
@@ -2998,6 +2998,7 @@ __metadata:
     "@svgr/plugin-prettier": "npm:^8.1.0"
     "@svgr/plugin-svgo": "npm:^8.1.0"
     "@types/eslint": "npm:^8.56.12"
+    "@types/fs-extra": "npm:^11.0.4"
     "@types/node": "npm:^24.10.4"
     "@types/react": "npm:^19.2.7"
     "@typescript-eslint/eslint-plugin": "npm:^7"
@@ -3010,12 +3011,20 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.5.6"
     fantasticon: "npm:^3.0.0"
     fs-extra: "npm:^11.3.4"
+    eslint-plugin-prettier: "npm:^5.5.5"
+    eslint-plugin-react: "npm:^7.37.0"
+    eslint-plugin-react-hooks: "npm:^5.0.0"
+    fantasticon: "npm:^3.0.0"
+    handlebars: "npm:^4.7.8"
     husky: "npm:^9.1.7"
+    json-schema-to-typescript: "npm:^15.0.4"
     lint-staged: "npm:^15.5.2"
     ng-packagr: "npm:^19"
     nx: "npm:^20.8.4"
     prettier: "npm:^3.8.1"
     rimraf: "npm:^5.0.10"
+    svg-sprite: "npm:^2.0.4"
+    svgo: "npm:^3.3.2"
     tsx: "npm:^4.0.0"
     typescript: "npm:~5.5.4"
     vite: "npm:^7.1.0"
@@ -3026,21 +3035,6 @@ __metadata:
 "@koobiq/icons@workspace:packages/icons":
   version: 0.0.0-use.local
   resolution: "@koobiq/icons@workspace:packages/icons"
-  dependencies:
-    "@figma-export/cli": "npm:^6.3.0"
-    "@figma-export/output-components-as-svg": "npm:^6.2.4"
-    "@figma-export/output-components-as-svgr": "npm:^6.2.4"
-    "@figma-export/transform-svg-with-svgo": "npm:^6.2.4"
-    "@svgr/plugin-jsx": "npm:^8.1.0"
-    "@svgr/plugin-prettier": "npm:^8.1.0"
-    "@svgr/plugin-svgo": "npm:^8.1.0"
-    "@types/fs-extra": "npm:^11.0.4"
-    fantasticon: "npm:^3.0.0"
-    fs-extra: "npm:^11.3.3"
-    handlebars: "npm:^4.7.8"
-    json-schema-to-typescript: "npm:^15.0.4"
-    svg-sprite: "npm:^2.0.4"
-    svgo: "npm:^3.3.2"
   languageName: unknown
   linkType: soft
 
