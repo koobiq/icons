@@ -46,7 +46,6 @@
         "@figma-export/output-components-as-svg": "^6.4.0",
         "@figma-export/output-components-as-svgr": "^6.4.0",
         "@figma-export/transform-svg-with-svgo": "^6.4.0",
-        "@koobiq/cli": "^18.39.2",
         "@nx/angular": "^20.8.4",
         "@nx/eslint": "^20.8.4",
         "@nx/react": "^20.8.4",
