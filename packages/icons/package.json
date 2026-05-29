@@ -20,21 +20,5 @@
             "types": "./*.d.ts",
             "default": "./*"
         }
-    },
-    "devDependencies": {
-        "@figma-export/cli": "^6.3.0",
-        "@figma-export/output-components-as-svg": "^6.2.4",
-        "@figma-export/output-components-as-svgr": "^6.2.4",
-        "@figma-export/transform-svg-with-svgo": "^6.2.4",
-        "@svgr/plugin-jsx": "^8.1.0",
-        "@svgr/plugin-prettier": "^8.1.0",
-        "@svgr/plugin-svgo": "^8.1.0",
-        "@types/fs-extra": "^11.0.4",
-        "fantasticon": "^3.0.0",
-        "fs-extra": "^11.3.3",
-        "handlebars": "^4.7.8",
-        "json-schema-to-typescript": "^15.0.4",
-        "svg-sprite": "^2.0.4",
-        "svgo": "^3.3.2"
     }
 }
