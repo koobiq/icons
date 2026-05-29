@@ -22,7 +22,6 @@ const componentTemplate = ({
     width,
     height
 }: IconAttrs): string => `import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { KbqSvgIcon } from '../svg-icon';
 
 @Component({
     standalone: true,
@@ -32,11 +31,12 @@ import { KbqSvgIcon } from '../svg-icon';
     changeDetection: ChangeDetectionStrategy.OnPush,
     host: {
         xmlns: 'http://www.w3.org/2000/svg',
+        class: 'kbq-svg-icon',
+        'aria-hidden': 'true',
         viewBox: '${viewBox}',
         width: '${width}',
         height: '${height}'
-    },
-    hostDirectives: [KbqSvgIcon]
+    }
 })
 export class ${className} {}
 `;
@@ -113,7 +113,7 @@ function run(): void {
         iconExports.push(`export * from './icons/${kebab}';`);
     }
 
-    const publicApi = `export * from './svg-icon';\n${iconExports.join('\n')}\n`;
+    const publicApi = `${iconExports.join('\n')}\n`;
 
     fs.writeFileSync(PUBLIC_API_PATH, publicApi, 'utf-8');
 }

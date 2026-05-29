@@ -16,25 +16,8 @@ if (!fs.existsSync(distDir)) {
 for (const src of [
     join(workspaceRoot, 'LICENSE'),
     join(projectRoot, 'README.md'),
-    join(projectRoot, 'manifest.json')
+    join(projectRoot, 'manifest.json'),
+    join(projectRoot, 'package.json')
 ]) {
     fs.copyFileSync(src, join(distDir, basename(src)));
 }
-
-const pkg = JSON.parse(fs.readFileSync(join(projectRoot, 'package.json'), 'utf-8'));
-
-const distPkg = {
-    name: pkg.name,
-    version: pkg.version,
-    description: pkg.description,
-    author: pkg.author,
-    license: pkg.license,
-    keywords: pkg.keywords,
-    publishConfig: pkg.publishConfig,
-    type: pkg.type,
-    exports: pkg.exports,
-    sideEffects: pkg.sideEffects,
-    peerDependencies: pkg.peerDependencies
-};
-
-fs.writeFileSync(join(distDir, 'package.json'), JSON.stringify(distPkg, null, 4));

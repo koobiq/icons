@@ -14,15 +14,7 @@
         "svg"
     ],
     "peerDependencies": {
-        "@angular/core": "^15.0.0"
-    },
-    "devDependencies": {
-        "@angular-eslint/eslint-plugin": "^19.0.0",
-        "@angular/compiler": "^19.0.0",
-        "@angular/compiler-cli": "^19.0.0",
-        "@angular/core": "^19.0.0",
-        "ng-packagr": "^19",
-        "tsx": "^4.0.0"
+        "@angular/core": "^19.0.0"
     },
     "exports": {
         "./*": {
