@@ -105,9 +105,32 @@ yarn nx release --dry-run
 Two release groups in `nx.json`:
 
 - **`icons`** — `@koobiq/icons`, `@koobiq/angular-icons`, `@koobiq/react-icons` — fixed versioning, tag pattern: `{version}` (e.g. `11.6.0`)
-- **`visuals`** — `@koobiq/visuals` — independent versioning, tag pattern: `{projectName}@{version}` (e.g. `@koobiq/visuals@2.1.0`)
+- **`visuals`** — `@koobiq/visuals` — independent versioning, tag pattern: `{projectName}@{version}` (e.g. `@koobiq/visuals@1.0.0`)
 
 Version bumps follow conventional commits: `feat` → minor, `fix` → patch, `BREAKING CHANGE` → major.
+
+### Releasing
+
+Groups are released independently. `nx release changelog` creates a GitHub Release which triggers the `publish.yml` CI workflow automatically — do not run `nx release publish` manually.
+
+**Icons group** (`@koobiq/icons`, `@koobiq/angular-icons`, `@koobiq/react-icons`):
+
+```sh
+# NX infers the version bump from conventional commits since the last tag.
+# Use --specifier to force an exact version (e.g. for a planned major bump).
+nx release version --group icons [--specifier 12.0.0]
+nx release changelog --group icons
+```
+
+**Visuals** (`@koobiq/visuals`):
+
+```sh
+# Add --first-release if no prior @koobiq/visuals@* tag exists yet.
+nx release version --group visuals [--specifier 1.0.0] [--first-release]
+nx release changelog --group visuals [--first-release]
+```
+
+Always dry-run first: add `--dry-run` to the version command to preview what would change without touching git.
 
 ## Key conventions
 
