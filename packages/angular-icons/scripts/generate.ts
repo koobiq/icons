@@ -21,7 +21,8 @@ const componentTemplate = ({
     viewBox,
     width,
     height
-}: IconAttrs): string => `import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+}: IconAttrs): string => `// This file is auto-generated. Do not edit it manually!
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
     standalone: true,

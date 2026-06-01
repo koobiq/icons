@@ -6,13 +6,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const distDir = join(__dirname, '../../../dist/packages/angular-icons');
-const projectRoot = join(__dirname, '..');
 const workspaceRoot = join(__dirname, '../../..');
+const licenseSrc = join(workspaceRoot, 'LICENSE');
 
 if (!fs.existsSync(distDir)) {
     fs.mkdirSync(distDir, { recursive: true });
 }
 
-for (const src of [join(workspaceRoot, 'LICENSE'), join(projectRoot, 'README.md')]) {
-    fs.copyFileSync(src, join(distDir, basename(src)));
-}
+fs.copyFileSync(licenseSrc, join(distDir, basename(licenseSrc)));

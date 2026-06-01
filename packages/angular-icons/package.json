@@ -14,7 +14,7 @@
         "svg"
     ],
     "peerDependencies": {
-        "@angular/core": "^19.0.0"
+        "@angular/core": ">=19.0.0"
     },
     "exports": {
         "./*": {

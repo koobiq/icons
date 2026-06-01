@@ -25,7 +25,9 @@ jobs:
         run: echo "${{ github.event.pull_request.title }}" | yarn commitlint
 
       - name: Linters
-        run: yarn run lint
+        run: |
+          yarn run prettier
+          yarn run lint
 
       - name: Check Mapping
         run: yarn run check-mapping
