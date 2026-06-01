@@ -5,22 +5,18 @@
         "build": {
             "executor": "nx:run-commands",
             "options": {
-                "command": "mkdir -p ../../dist/packages/visuals && cp -r light ../../dist/packages/visuals/light && cp -r dark ../../dist/packages/visuals/dark",
+                "commands": [
+                    "npx tsx scripts/copy-meta-to-dist.ts",
+                    "cp -r light ../../dist/packages/visuals/light",
+                    "cp -r dark ../../dist/packages/visuals/dark"
+                ],
                 "cwd": "{projectRoot}"
             },
             "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]
         },
-        "prepublish": {
-            "executor": "nx:run-commands",
-            "dependsOn": ["build"],
-            "options": {
-                "command": "npx tsx scripts/copy-meta-to-dist.ts",
-                "cwd": "{projectRoot}"
-            }
-        },
         "nx-release-publish": {
             "executor": "@nx/js:release-publish",
-            "dependsOn": ["prepublish"],
+            "dependsOn": ["build"],
             "options": {
                 "packageRoot": "{workspaceRoot}/dist/packages/{projectName}"
             }

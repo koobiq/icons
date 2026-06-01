@@ -26,23 +26,19 @@
         },
         "build": {
             "executor": "nx:run-commands",
-            "dependsOn": ["generate"],
             "options": {
-                "command": "vite build && tsc -p tsconfig.build.json",
+                "commands": [
+                    "nx run {projectName}:generate",
+                    "vite build && tsc -p tsconfig.build.json",
+                    "npx tsx scripts/copy-meta-to-dist.ts"
+                ],
+                "parallel": false,
                 "cwd": "{projectRoot}"
             },
             "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]
         },
-        "prepublish": {
-            "executor": "nx:run-commands",
-            "dependsOn": ["build"],
-            "options": {
-                "command": "npx tsx scripts/copy-meta-to-dist.ts",
-                "cwd": "{projectRoot}"
-            }
-        },
         "nx-release-publish": {
-            "dependsOn": ["prepublish"],
+            "dependsOn": ["build"],
             "options": {
                 "packageRoot": "{workspaceRoot}/dist/packages/{projectName}"
             }

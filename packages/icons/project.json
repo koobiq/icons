@@ -43,9 +43,14 @@
         },
         "build": {
             "executor": "nx:run-commands",
-            "dependsOn": ["build:sprite", "build:fonts", "build:types"],
             "options": {
-                "command": "echo 'build complete'",
+                "commands": [
+                    "nx run {projectName}:build:sprite",
+                    "nx run {projectName}:build:fonts",
+                    "nx run {projectName}:build:types",
+                    "node scripts/copy-meta-to-dist.mjs"
+                ],
+                "parallel": false,
                 "cwd": "{projectRoot}"
             }
         },
@@ -57,17 +62,8 @@
                 "ignorePath": "{workspaceRoot}/.eslintignore"
             }
         },
-        "prepublish": {
-            "executor": "nx:run-commands",
-            "dependsOn": ["build"],
-            "options": {
-                "command": "node scripts/copy-meta-to-dist.mjs",
-                "cwd": "{projectRoot}"
-            },
-            "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]
-        },
         "nx-release-publish": {
-            "dependsOn": ["prepublish"],
+            "dependsOn": ["build"],
             "options": {
                 "packageRoot": "{workspaceRoot}/dist/packages/{projectName}"
             }

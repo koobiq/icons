@@ -10,9 +10,16 @@
                 "assets": ["{workspaceRoot}/packages/icons/svg/**/*.svg"]
             }
         },
+        "copy-meta": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "npx tsx scripts/copy-meta-to-dist.ts",
+                "cwd": "{projectRoot}"
+            }
+        },
         "build": {
             "executor": "@nx/angular:package",
-            "dependsOn": ["generate"],
+            "dependsOn": ["generate", "copy-meta"],
             "options": {
                 "project": "{projectRoot}/ng-package.json"
             },
@@ -27,16 +34,8 @@
                 "hasTypeAwareRules": true
             }
         },
-        "prepublish": {
-            "executor": "nx:run-commands",
-            "dependsOn": ["build"],
-            "options": {
-                "command": "npx tsx scripts/copy-meta-to-dist.ts",
-                "cwd": "{projectRoot}"
-            }
-        },
         "nx-release-publish": {
-            "dependsOn": ["prepublish"],
+            "dependsOn": ["build"],
             "options": {
                 "packageRoot": "{workspaceRoot}/dist/packages/{projectName}"
             }
