@@ -33,7 +33,7 @@
         "prettier:fix": "yarn run prettier --write",
         "lint": "nx run-many -t lint",
         "lint:fix": "nx run-many -t lint -- --fix",
-        "convert": "bash packages/visuals/scripts/convert.sh",
+        "convert": "npx tsx packages/visuals/scripts/convert.ts",
         "gen-preview": "npx tsx packages/visuals/scripts/generate-preview.ts"
     },
     "release": {
