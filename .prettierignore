@@ -2,3 +2,6 @@
 
 # ignore Handlebars templates
 packages/icons/templates
+
+# ignore generated Angular icons
+packages/angular-icons/icons
