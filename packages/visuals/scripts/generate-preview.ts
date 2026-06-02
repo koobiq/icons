@@ -56,7 +56,7 @@ const HTML_HEADER = `
 </head>
 <body>
     <header>
-        <h1>Empty States Images: PNG, WEbP</h1>
+        <h1>Empty States Images: PNG, WebP</h1>
     </header>
     <main>
     <table>
@@ -86,11 +86,10 @@ async function findImages(dir: string) {
 }
 
 // Function to get file size in KB
-async function getFileSize(filePath: string) {
+async function getFileSize(filePath: string): Promise<string> {
     try {
         const stats = await fs.stat(filePath);
         return (stats.size / 1024).toFixed(1);
-        return stats.size;
     } catch (err) {
         console.error(`Error getting size for ${filePath}:`, err);
         return 'N/A';
