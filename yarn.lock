@@ -2971,7 +2971,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@koobiq/angular-icons@workspace:packages/angular-icons"
   peerDependencies:
-    "@angular/core": ^19.0.0
+    "@angular/core": ">=19.0.0"
   languageName: unknown
   linkType: soft
 

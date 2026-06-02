@@ -10,7 +10,8 @@ const projectRoot = join(__dirname, '..');
 const workspaceRoot = join(__dirname, '../../..');
 
 if (!fs.existsSync(distDir)) {
-    fs.mkdirSync(distDir, { recursive: true });
+    fs.cpSync(join(projectRoot, 'dark'), join(distDir, 'dark'), { recursive: true });
+    fs.cpSync(join(projectRoot, 'light'), join(distDir, 'light'), { recursive: true });
 }
 
 for (const src of [join(workspaceRoot, 'LICENSE'), join(projectRoot, 'package.json'), join(projectRoot, 'README.md')]) {
