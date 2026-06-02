@@ -6,9 +6,9 @@ import { promisify } from 'util';
 const execAsync = promisify(exec);
 
 // Directories and output file
-const DEST_DIR = 'dist/packages/visuals/light';
+const DEST_DIR = './dist/packages/visuals/light';
 const URL_PREFIX = '../light';
-const OUTPUT_HTML = 'dist/packages/visuals/preview/index.html';
+const OUTPUT_HTML = './dist/packages/visuals/preview/index.html';
 
 // HTML table styles and header
 const HTML_HEADER = `
@@ -81,8 +81,14 @@ const HTML_FOOTER = `
 
 // Function to find all PNG files in the destination directory
 async function findImages(dir: string) {
-    const files = await execAsync(`find ${dir} -type f -name "*.png"`);
-    return files.stdout.trim().split('\n');
+    const results: string[] = [];
+    const entries = await fs.readdir(dir, { withFileTypes: true, recursive: true });
+    for (const entry of entries) {
+        if (entry.isFile() && entry.name.endsWith('.png')) {
+            results.push(path.join(entry.parentPath, entry.name));
+        }
+    }
+    return results;
 }
 
 // Function to get file size in KB

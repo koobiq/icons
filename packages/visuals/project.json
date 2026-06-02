@@ -5,8 +5,11 @@
         "build": {
             "executor": "nx:run-commands",
             "options": {
-                "command": "npx tsx scripts/copy-meta-to-dist.ts",
-                "cwd": "{projectRoot}"
+                "commands": [
+                    "npx tsx {projectRoot}/scripts/copy-meta-to-dist.ts",
+                    "npx tsx {projectRoot}/scripts/generate-preview.ts"
+                ],
+                "cwd": "{workspaceRoot}"
             },
             "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]
         },
