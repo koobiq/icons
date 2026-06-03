@@ -47,7 +47,6 @@ packages/icons/svg/          ← source SVGs (populated by figma:sync)
   angular-icons:build        → dist/packages/angular-icons/
   react-icons:build          → dist/packages/react-icons/
         ↓
-  *:prepublish               → copies LICENSE, README, package.json into dist
   *:nx-release-publish       → npm publish from dist/packages/{name}/
 ```
 
@@ -63,8 +62,7 @@ packages/icons/svg/          ← source SVGs (populated by figma:sync)
 | `build:fonts`        | Generates icon font (TTF/WOFF) + CSS/SCSS → `dist/packages/icons/fonts/` (no cache — font timestamps are non-deterministic) |
 | `build:types`        | Generates TS type definitions from `schema.json` → `dist/packages/icons/types/`                                             |
 | `generate`           | Generates Angular/React components from SVGs in `packages/icons/svg/`                                                       |
-| `build`              | Compiles/bundles the package (ng-packagr for Angular, Vite+tsc for React)                                                   |
-| `prepublish`         | Copies LICENSE, README, package.json (trimmed — no devDeps) into dist                                                       |
+| `build`              | Compiles/bundles the package (ng-packagr for Angular, Vite+tsc for React); copies LICENSE, README, package.json into dist   |
 | `lint`               | ESLint with package-specific config                                                                                         |
 | `nx-release-publish` | Publishes from `dist/packages/{name}/` to npm                                                                               |
 
