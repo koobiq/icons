@@ -14,7 +14,7 @@
             "executor": "@nx/js:release-publish",
             "dependsOn": ["build"],
             "options": {
-                "packageRoot": "{workspaceRoot}/dist/packages/{projectName}"
+                "packageRoot": "{workspaceRoot}/dist/packages/visuals"
             }
         }
     }

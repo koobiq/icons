@@ -40,7 +40,7 @@
         "nx-release-publish": {
             "dependsOn": ["build"],
             "options": {
-                "packageRoot": "{workspaceRoot}/dist/packages/{projectName}"
+                "packageRoot": "{workspaceRoot}/dist/packages/react-icons"
             }
         }
     }

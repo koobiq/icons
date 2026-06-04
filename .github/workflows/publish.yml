@@ -6,6 +6,15 @@ on:
       - created
   # Allows you to run this workflow manually
   workflow_dispatch:
+    inputs:
+      group:
+        description: 'Release group to publish'
+        required: true
+        default: 'icons'
+        type: choice
+        options:
+          - icons
+          - visuals
 
 permissions:
   contents: read
@@ -26,10 +35,22 @@ jobs:
       - name: Setup Yarn
         uses: ./.github/workflows/actions/setup-yarn
 
-      - run: yarn nx release publish --registry=https://registry.npmjs.org/
+      - name: Release Group
+        id: group
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "name=${{ inputs.group }}" >> "$GITHUB_OUTPUT"
+          elif echo "${{ github.event.release.tag_name }}" | grep -q "^@koobiq/visuals@"; then
+            echo "name=visuals" >> "$GITHUB_OUTPUT"
+          else
+            echo "name=icons" >> "$GITHUB_OUTPUT"
+          fi
+
+      - run: nx release publish --group ${{ steps.group.outputs.name }} --registry=https://registry.npmjs.org/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_KOOBIQ }}
           NPM_CONFIG_PROVENANCE: true
+
       - uses: mattermost/action-mattermost-notify@2.0.0
         with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MM_WEBHOOK_URL }}
