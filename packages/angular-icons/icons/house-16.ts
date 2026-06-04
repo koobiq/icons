@@ -1,0 +1,19 @@
+// This file is auto-generated. Do not edit it manually!
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+
+@Component({
+    standalone: true,
+    selector: 'svg[kbqHouse16]',
+    template: `<svg:path d="M1.419 6.64A1.2 1.2 0 0 0 1 7.553V14.8c0 .11.09.2.2.2h4.1a.2.2 0 0 0 .2-.2v-4.1c0-.11.09-.2.2-.2h4.6c.11 0 .2.09.2.2v4.1c0 .11.09.2.2.2h4.1a.2.2 0 0 0 .2-.2V7.552a1.2 1.2 0 0 0-.42-.911L8.13 1.11a.2.2 0 0 0-.26 0z"/>`,
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: {
+        xmlns: 'http://www.w3.org/2000/svg',
+        class: 'kbq-svg-icon',
+        'aria-hidden': 'true',
+        viewBox: '0 0 16 16',
+        width: '16',
+        height: '16'
+    }
+})
+export class KbqHouse16 {}

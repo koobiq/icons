@@ -1,0 +1,19 @@
+// This file is auto-generated. Do not edit it manually!
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+
+@Component({
+    standalone: true,
+    selector: 'svg[kbqRectanglesO16]',
+    template: `<svg:g><svg:path d="M1 10.2v3.6A1.2 1.2 0 0 0 2.2 15h11.6a1.2 1.2 0 0 0 1.2-1.2v-3.6A1.2 1.2 0 0 0 13.8 9H2.2A1.2 1.2 0 0 0 1 10.2m12.4.4v2.8H2.6v-2.8zM1 5.8A1.2 1.2 0 0 0 2.2 7h11.6A1.2 1.2 0 0 0 15 5.8V2.2A1.2 1.2 0 0 0 13.8 1H2.2A1.2 1.2 0 0 0 1 2.2zm1.6-3.2h10.8v2.8H2.6z"/></svg:g>`,
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: {
+        xmlns: 'http://www.w3.org/2000/svg',
+        class: 'kbq-svg-icon',
+        'aria-hidden': 'true',
+        viewBox: '0 0 16 16',
+        width: '16',
+        height: '16'
+    }
+})
+export class KbqRectanglesO16 {}

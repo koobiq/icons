@@ -1,0 +1,19 @@
+// This file is auto-generated. Do not edit it manually!
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+
+@Component({
+    standalone: true,
+    selector: 'svg[kbqCircleChevronRight16]',
+    template: `<svg:path d="M15 8A7 7 0 1 0 1 8a7 7 0 0 0 14 0m-8.19 3.783-.566-.566a.2.2 0 0 1 0-.283L9.178 8 6.244 5.066a.2.2 0 0 1 0-.283l.565-.566a.2.2 0 0 1 .283 0l3.217 3.217.014.016.41.41a.2.2 0 0 1 0 .283l-.565.566-.015.013-3.06 3.06a.2.2 0 0 1-.284 0"/>`,
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: {
+        xmlns: 'http://www.w3.org/2000/svg',
+        class: 'kbq-svg-icon',
+        'aria-hidden': 'true',
+        viewBox: '0 0 16 16',
+        width: '16',
+        height: '16'
+    }
+})
+export class KbqCircleChevronRight16 {}

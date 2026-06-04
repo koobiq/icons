@@ -1,0 +1,19 @@
+// This file is auto-generated. Do not edit it manually!
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+
+@Component({
+    standalone: true,
+    selector: 'svg[kbqCirclePlay24]',
+    template: `<svg:path d="M12 22.5c5.799 0 10.5-4.701 10.5-10.5S17.799 1.5 12 1.5 1.5 6.201 1.5 12 6.201 22.5 12 22.5m5.442-10.89c.31.167.31.613 0 .78l-8.214 4.431a.443.443 0 0 1-.653-.39V7.569c0-.335.358-.55.653-.39z"/>`,
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: {
+        xmlns: 'http://www.w3.org/2000/svg',
+        class: 'kbq-svg-icon',
+        'aria-hidden': 'true',
+        viewBox: '0 0 24 24',
+        width: '24',
+        height: '24'
+    }
+})
+export class KbqCirclePlay24 {}
