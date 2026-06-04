@@ -1,0 +1,21 @@
+{
+    "name": "@koobiq/visuals",
+    "$schema": "../../node_modules/nx/schemas/project.schema.json",
+    "targets": {
+        "build": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "npx tsx scripts/copy-meta-to-dist.ts",
+                "cwd": "{projectRoot}"
+            },
+            "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]
+        },
+        "nx-release-publish": {
+            "executor": "@nx/js:release-publish",
+            "dependsOn": ["build"],
+            "options": {
+                "packageRoot": "{workspaceRoot}/dist/packages/visuals"
+            }
+        }
+    }
+}

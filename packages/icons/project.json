@@ -1,0 +1,72 @@
+{
+    "name": "@koobiq/icons",
+    "$schema": "../../node_modules/nx/schemas/project.schema.json",
+    "targets": {
+        "figma:export-icons": {
+            "executor": "nx:run-commands",
+            "cache": false,
+            "options": {
+                "command": "figma-export use-config .figmaexportrc.mjs",
+                "cwd": "{workspaceRoot}"
+            }
+        },
+        "figma:sync": {
+            "executor": "nx:run-commands",
+            "cache": false,
+            "dependsOn": ["figma:export-icons"],
+            "options": {
+                "command": "node scripts/svg-copy-to-src.mjs",
+                "cwd": "{projectRoot}"
+            }
+        },
+        "build:sprite": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "node svg-sprite.js",
+                "cwd": "{projectRoot}"
+            }
+        },
+        "build:fonts": {
+            "executor": "nx:run-commands",
+            "cache": false,
+            "options": {
+                "command": "fantasticon --config .fantasticonrc.js && node scripts/generate-versioned-font.js",
+                "cwd": "{projectRoot}"
+            }
+        },
+        "build:types": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "json2ts ../../schema.json ../../dist/packages/icons/types/icons.d.ts",
+                "cwd": "{projectRoot}"
+            }
+        },
+        "build": {
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": [
+                    "nx run {projectName}:build:sprite",
+                    "nx run {projectName}:build:fonts",
+                    "nx run {projectName}:build:types",
+                    "node scripts/copy-meta-to-dist.mjs"
+                ],
+                "parallel": false,
+                "cwd": "{projectRoot}"
+            }
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint",
+            "options": {
+                "eslintConfig": "{workspaceRoot}/.eslintrc.js",
+                "lintFilePatterns": ["{projectRoot}/**/*.{js,mjs}"],
+                "ignorePath": "{workspaceRoot}/.eslintignore"
+            }
+        },
+        "nx-release-publish": {
+            "dependsOn": ["build"],
+            "options": {
+                "packageRoot": "{workspaceRoot}/dist/packages/icons"
+            }
+        }
+    }
+}

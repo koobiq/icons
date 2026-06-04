@@ -1,0 +1,12 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "emitDeclarationOnly": true,
+        "skipLibCheck": true,
+        "rootDir": "./src",
+        "outDir": "../../dist/packages/react-icons/dist",
+        "paths": {}
+    },
+    "include": ["src/**/*.tsx", "src/index.ts"],
+    "exclude": ["**/*.test.*", "**/*.stories.*", "scripts/**/*.ts"]
+}

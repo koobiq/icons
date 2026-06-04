@@ -1,0 +1,44 @@
+{
+    "name": "@koobiq/angular-icons",
+    "$schema": "../../node_modules/nx/schemas/project.schema.json",
+    "targets": {
+        "generate": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "npx tsx scripts/generate.ts",
+                "cwd": "{projectRoot}",
+                "assets": ["{workspaceRoot}/packages/icons/svg/**/*.svg"]
+            }
+        },
+        "copy-meta": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "npx tsx scripts/copy-meta-to-dist.ts",
+                "cwd": "{projectRoot}"
+            }
+        },
+        "build": {
+            "executor": "@nx/angular:package",
+            "dependsOn": ["generate", "copy-meta"],
+            "options": {
+                "project": "{projectRoot}/ng-package.json"
+            },
+            "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint",
+            "options": {
+                "eslintConfig": "{projectRoot}/.eslintrc.js",
+                "lintFilePatterns": ["{projectRoot}/**/*.ts"],
+                "ignorePath": "{workspaceRoot}/.eslintignore",
+                "hasTypeAwareRules": true
+            }
+        },
+        "nx-release-publish": {
+            "dependsOn": ["build"],
+            "options": {
+                "packageRoot": "{workspaceRoot}/dist/packages/angular-icons"
+            }
+        }
+    }
+}

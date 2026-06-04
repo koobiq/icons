@@ -1,0 +1,47 @@
+{
+    "name": "@koobiq/react-icons",
+    "$schema": "../../node_modules/nx/schemas/project.schema.json",
+    "targets": {
+        "generate": {
+            "executor": "nx:run-commands",
+            "dependsOn": [
+                {
+                    "projects": ["@koobiq/icons"],
+                    "target": "build"
+                }
+            ],
+            "options": {
+                "command": "npx tsx scripts/generate.ts",
+                "cwd": "{projectRoot}"
+            }
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint",
+            "options": {
+                "eslintConfig": "{projectRoot}/.eslintrc.cjs",
+                "lintFilePatterns": ["{projectRoot}/**/*.{ts,tsx}"],
+                "ignorePath": "{workspaceRoot}/.eslintignore",
+                "hasTypeAwareRules": true
+            }
+        },
+        "build": {
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": [
+                    "nx run {projectName}:generate",
+                    "vite build && tsc -p tsconfig.build.json",
+                    "npx tsx scripts/copy-meta-to-dist.ts"
+                ],
+                "parallel": false,
+                "cwd": "{projectRoot}"
+            },
+            "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]
+        },
+        "nx-release-publish": {
+            "dependsOn": ["build"],
+            "options": {
+                "packageRoot": "{workspaceRoot}/dist/packages/react-icons"
+            }
+        }
+    }
+}

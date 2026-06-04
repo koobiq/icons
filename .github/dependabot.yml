@@ -14,9 +14,30 @@ updates:
       - dependency-name: '*'
         update-types: ['version-update:semver-major']
     groups:
+      nx:
+        patterns:
+          - 'nx'
+          - '@nx/*'
+      angular:
+        patterns:
+          - '@angular/*'
+          - '@angular-eslint/*'
+          - 'ng-packagr'
+      react:
+        patterns:
+          - 'react'
+          - 'react-dom'
+          - '@types/react'
+          - 'eslint-plugin-react*'
+      vite:
+        patterns:
+          - 'vite'
+          - '@vitejs/*'
+          - 'vite-*'
       eslint:
         patterns:
           - 'eslint*'
+          - '@typescript-eslint/*'
           - '@types/eslint'
       commitlint:
         patterns:

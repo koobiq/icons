@@ -1,16 +1,27 @@
 name: Publish
 
 on:
-  push:
-    tags:
-      - '*.*.*'
-      # - '[0-9]+.[0-9]+.[0-9]+'
-      # - '*@*.*.*' for NX integration
+  release:
+    types:
+      - created
+  # Allows you to run this workflow manually
+  workflow_dispatch:
+    inputs:
+      group:
+        description: 'Release group to publish'
+        required: true
+        default: 'icons'
+        type: choice
+        options:
+          - icons
+          - visuals
 
 permissions:
   contents: read
   packages: write
-  id-token: write # needed for provenance data generation
+  # Needed for provenance data generation
+  # https://nx.dev/recipes/nx-release/publish-in-ci-cd#npm-provenance
+  id-token: write
 
 jobs:
   publish:
@@ -19,18 +30,30 @@ jobs:
     if: ${{ github.repository_owner == 'koobiq' }}
     steps:
       - uses: actions/checkout@v6
-
+        with:
+          fetch-depth: 0
       - name: Setup Yarn
         uses: ./.github/workflows/actions/setup-yarn
 
-      - name: Build packages
-        run: yarn run build
-
-      - name: Publish package
+      - name: Release Group
+        id: group
         run: |
-          rm -rf .npmrc && echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN_KOOBIQ" > ~/.npmrc
-          npm run publish:github
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "name=${{ inputs.group }}" >> "$GITHUB_OUTPUT"
+          elif echo "${{ github.event.release.tag_name }}" | grep -q "^@koobiq/visuals@"; then
+            echo "name=visuals" >> "$GITHUB_OUTPUT"
+          else
+            echo "name=icons" >> "$GITHUB_OUTPUT"
+          fi
+
+      - run: nx release publish --group ${{ steps.group.outputs.name }} --registry=https://registry.npmjs.org/
         env:
-          NPM_TOKEN_KOOBIQ: ${{ secrets.NPM_PUBLISH_TOKEN }}
-          MATTERMOST_ENDPOINT_URL: ${{ secrets.MM_WEBHOOK_URL }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_KOOBIQ }}
+          NPM_CONFIG_PROVENANCE: true
+
+      - uses: mattermost/action-mattermost-notify@2.0.0
+        with:
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.MM_WEBHOOK_URL }}
           MATTERMOST_CHANNEL: ${{ secrets.MM_CHANNEL_NAME }}
+          MATTERMOST_USERNAME: ${{ secrets.MM_BOT_NAME }}
+          TEXT: ${{ github.event.release.body }}

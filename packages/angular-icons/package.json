@@ -1,0 +1,24 @@
+{
+    "name": "@koobiq/angular-icons",
+    "version": "11.5.0",
+    "description": "Koobiq Angular SVG Icon Components",
+    "publishConfig": {
+        "access": "public"
+    },
+    "author": "Koobiq Team",
+    "license": "MIT",
+    "keywords": [
+        "design-system",
+        "koobiq",
+        "icons",
+        "svg"
+    ],
+    "peerDependencies": {
+        "@angular/core": ">=19.0.0"
+    },
+    "exports": {
+        "./*": {
+            "default": "./*"
+        }
+    }
+}

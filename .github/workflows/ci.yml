@@ -27,7 +27,7 @@ jobs:
       - name: Linters
         run: |
           yarn run prettier
-          yarn run eslint
+          yarn run lint
 
       - name: Check Mapping
         run: yarn run check-mapping

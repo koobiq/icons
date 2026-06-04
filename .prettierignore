@@ -1,4 +1,12 @@
 **/CHANGELOG.md
 
 # ignore Handlebars templates
-src/templates
+packages/icons/templates
+
+# ignore generated Angular icons
+packages/angular-icons/icons
+
+
+# ignore generated React icons
+packages/react-icons/src/index.ts
+packages/react-icons/manifest.json

@@ -1,0 +1,31 @@
+{
+    "name": "@koobiq/react-icons",
+    "version": "11.5.0",
+    "description": "Koobiq React Icons",
+    "publishConfig": {
+        "access": "public"
+    },
+    "author": "Koobiq Team",
+    "license": "MIT",
+    "keywords": [
+        "design-system",
+        "koobiq",
+        "icons"
+    ],
+    "type": "module",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        },
+        "./manifest.json": "./manifest.json"
+    },
+    "sideEffects": false,
+    "files": [
+        "dist",
+        "manifest.json"
+    ],
+    "peerDependencies": {
+        "react": "18.x || 19.x"
+    }
+}

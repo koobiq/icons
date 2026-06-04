@@ -1,12 +1,13 @@
 {
-    "name": "@koobiq/icons",
-    "version": "11.5.0",
+    "name": "@koobiq/icons-workspace",
+    "version": "0.0.0",
     "description": "",
+    "private": true,
     "license": "MIT",
     "packageManager": "yarn@4.1.1",
-    "publishConfig": {
-        "access": "public"
-    },
+    "workspaces": [
+        "packages/*"
+    ],
     "keywords": [
         "design-system",
         "koobiq",
@@ -14,36 +15,24 @@
         "icons",
         "symbols"
     ],
-    "exports": {
-        "./*": {
-            "default": "./*"
-        }
-    },
     "scripts": {
         "prepare": "husky",
-        "clean": "rimraf temp && rimraf dist",
-        "copy:svg-to-src": "node scripts/svg-copy-to-src.mjs",
-        "copy:copy-meta-to-dist": "node scripts/copy-meta-to-dist.mjs",
-        "check-mapping": "node scripts/check-mapping.mjs",
-        "------RELEASE SCRIPTS------": "------------------------------------------------------------------------------",
-        "stage:commit": "koobiq-cli stage-commit -c \"Icons\" --without-references",
-        "publish:gitlab": "koobiq-cli publish-ci-gitlab",
-        "publish:github": "koobiq-cli publish-ci-github",
+        "clean": "yarn cache clean && nx reset && rimraf temp dist",
+        "check-mapping": "node packages/icons/scripts/check-mapping.mjs",
+        "-----GITHUB_RELEASE-----": "---------------------------------------------------------------------------------",
+        "release": "nx release --skip-publish",
+        "release:preview": "nx release --skip-publish --dry-run",
         "------FIGMA SCRIPTS------": "--------------------------------------------------------------------------------",
-        "figma:export-icons": "figma-export use-config .figmaexportrc.mjs",
-        "figma:sync": "run-s clean figma:export-icons copy:svg-to-src",
+        "figma:export-icons": "nx run @koobiq/icons:figma:export-icons",
+        "figma:sync": "yarn run clean && nx run @koobiq/icons:figma:sync",
         "------BUILD SCRIPTS------": "--------------------------------------------------------------------------------",
-        "build:fonts": "fantasticon --config .fantasticonrc.js",
-        "build:fonts-versioned": "node scripts/generate-versioned-font.js",
-        "build:fonts:all": "yarn run build:fonts && yarn run build:fonts-versioned",
-        "build:sprite": "node src/svg-sprite.js",
-        "build:types": "json2ts schema.json dist/icons/types/icons.d.ts",
-        "build": "run-s copy:copy-meta-to-dist build:sprite build:fonts:all build:types",
+        "build:icons": "nx run @koobiq/icons:build",
+        "build": "nx run-many -t build",
         "-----CI-----": "---------------------------------------------------------------------------------------------",
         "prettier": "prettier --check . --ignore-unknown",
         "prettier:fix": "yarn run prettier --write",
-        "eslint": "eslint . --ext='.js,.mjs'",
-        "eslint:fix": "yarn run eslint --fix"
+        "lint": "nx run-many -t lint",
+        "lint:fix": "nx run-many -t lint -- --fix"
     },
     "release": {
         "packages": [
@@ -51,36 +40,53 @@
         ]
     },
     "devDependencies": {
+        "@angular-eslint/eslint-plugin": "^19.0.0",
+        "@angular/compiler": "^19.0.0",
+        "@angular/compiler-cli": "^19.0.0",
+        "@angular/core": "^19.0.0",
         "@commitlint/cli": "^19.8.1",
         "@commitlint/config-conventional": "^19.8.1",
         "@figma-export/cli": "^6.4.0",
         "@figma-export/output-components-as-svg": "^6.4.0",
         "@figma-export/output-components-as-svgr": "^6.4.0",
         "@figma-export/transform-svg-with-svgo": "^6.4.0",
-        "@koobiq/cli": "^18.39.2",
+        "@nx/angular": "^20.8.4",
+        "@nx/eslint": "^20.8.4",
+        "@nx/react": "^20.8.4",
+        "@nx/vite": "^20.8.4",
+        "@svgr/core": "^8.1.0",
         "@svgr/plugin-jsx": "^8.1.0",
         "@svgr/plugin-prettier": "^8.1.0",
         "@svgr/plugin-svgo": "^8.1.0",
         "@types/eslint": "^8.56.12",
         "@types/fs-extra": "^11.0.4",
         "@types/node": "^24.10.4",
+        "@types/react": "^19.2.7",
+        "@typescript-eslint/eslint-plugin": "^7",
+        "@typescript-eslint/parser": "^7",
+        "@vitejs/plugin-react": "^5.0.0",
         "cross-env": "^7.0.3",
         "dotenv": "^16.6.1",
         "eslint": "^8.57.0",
         "eslint-config-prettier": "^9.1.2",
         "eslint-plugin-prettier": "^5.5.6",
+        "eslint-plugin-react": "^7.37.0",
+        "eslint-plugin-react-hooks": "^5.0.0",
         "fantasticon": "^3.0.0",
-        "fs-extra": "^11.3.4",
+        "fs-extra": "^11.3.3",
+        "handlebars": "^4.7.8",
         "husky": "^9.1.7",
-        "inquirer": "^10.2.2",
         "json-schema-to-typescript": "^15.0.4",
         "lint-staged": "^15.5.2",
-        "npm-run-all": "^4.1.5",
+        "ng-packagr": "^19",
+        "nx": "^20.8.4",
         "prettier": "^3.8.3",
         "rimraf": "^5.0.10",
         "svg-sprite": "^2.0.4",
-        "svgo": "^3.3.3",
-        "ts-node": "^10.9.2",
-        "typescript": "~5.5.4"
+        "svgo": "^3.3.2",
+        "tsx": "^4.0.0",
+        "typescript": "~5.5.4",
+        "vite": "^7.1.0",
+        "vite-tsconfig-paths": "^5.1.4"
     }
 }
