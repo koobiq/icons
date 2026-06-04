@@ -38,7 +38,6 @@
             "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]
         },
         "nx-release-publish": {
-            "executor": "@nx/js:release-publish",
             "dependsOn": ["build"],
             "options": {
                 "packageRoot": "{workspaceRoot}/dist/packages/react-icons"

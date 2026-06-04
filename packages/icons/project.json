@@ -63,7 +63,6 @@
             }
         },
         "nx-release-publish": {
-            "executor": "@nx/js:release-publish",
             "dependsOn": ["build"],
             "options": {
                 "packageRoot": "{workspaceRoot}/dist/packages/icons"
