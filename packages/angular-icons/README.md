@@ -40,16 +40,6 @@ import { KbqPlus16 } from '@koobiq/angular-icons';
 export class MyComponent {}
 ```
 
-Some icons include an accent layer and support a two-tone (duotone) style.
-Override the `--icon-accent-color` [CSS variable](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) to change only the accent color without affecting the base color.
-
-```css
-/* icon.component.css */
-.icon {
-    --icon-accent-color: red;
-}
-```
-
 ```ts
 // icon.component.ts
 import { KbqFilterDot16 } from '@koobiq/angular-icons';
