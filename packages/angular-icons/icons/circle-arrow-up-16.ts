@@ -1,0 +1,19 @@
+// This file is auto-generated. Do not edit it manually!
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+
+@Component({
+    standalone: true,
+    selector: 'svg[kbqCircleArrowUp16]',
+    template: `<svg:path d="M8 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1m-.428 3.13L4.217 7.484a.2.2 0 0 0 0 .283l.566.566a.2.2 0 0 0 .283 0L7.4 5.999V11.8c0 .11.09.2.2.2h.8a.2.2 0 0 0 .2-.2V5.999l2.334 2.334a.2.2 0 0 0 .283 0l.566-.566a.2.2 0 0 0 0-.283l-3.06-3.06-.014-.015-.566-.566a.2.2 0 0 0-.283 0l-.258.258z"/>`,
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: {
+        xmlns: 'http://www.w3.org/2000/svg',
+        class: 'kbq-svg-icon',
+        'aria-hidden': 'true',
+        viewBox: '0 0 16 16',
+        width: '16',
+        height: '16'
+    }
+})
+export class KbqCircleArrowUp16 {}
