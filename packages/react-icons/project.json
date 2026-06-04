@@ -26,9 +26,12 @@
         },
         "build": {
             "executor": "nx:run-commands",
-            "dependsOn": ["generate"],
             "options": {
-                "commands": ["vite build && tsc -p tsconfig.build.json", "npx tsx scripts/copy-meta-to-dist.ts"],
+                "commands": [
+                    "nx run {projectName}:generate",
+                    "vite build && tsc -p tsconfig.build.json",
+                    "npx tsx scripts/copy-meta-to-dist.ts"
+                ],
                 "parallel": false,
                 "cwd": "{projectRoot}"
             },

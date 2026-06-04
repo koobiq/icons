@@ -2970,13 +2970,6 @@ __metadata:
 "@koobiq/angular-icons@workspace:packages/angular-icons":
   version: 0.0.0-use.local
   resolution: "@koobiq/angular-icons@workspace:packages/angular-icons"
-  dependencies:
-    "@angular-eslint/eslint-plugin": "npm:^19.0.0"
-    "@angular/compiler": "npm:^19.0.0"
-    "@angular/compiler-cli": "npm:^19.0.0"
-    "@angular/core": "npm:^19.0.0"
-    ng-packagr: "npm:^19"
-    tsx: "npm:^4.0.0"
   peerDependencies:
     "@angular/core": ">=19.0.0"
   languageName: unknown

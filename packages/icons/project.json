@@ -68,12 +68,6 @@
             "options": {
                 "packageRoot": "{workspaceRoot}/dist/packages/icons"
             }
-        },
-        "nx-release-publish": {
-            "dependsOn": ["build"],
-            "options": {
-                "packageRoot": "{projectRoot}/dist"
-            }
         }
     }
 }

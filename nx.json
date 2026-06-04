@@ -13,8 +13,6 @@
         "figma:export-icons": { "cache": false }
     },
     "release": {
-        "projects": ["packages/*"],
-        "releaseTagPattern": "{version}",
         "git": {
             "commitMessage": "chore(release): bump version to {version} w/ changelog"
         },
