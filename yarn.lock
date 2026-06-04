@@ -56,9 +56,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/compiler-cli@npm:^19.0.0":
-  version: 19.2.24
-  resolution: "@angular/compiler-cli@npm:19.2.24"
+"@angular/compiler-cli@npm:^19.2.25":
+  version: 19.2.25
+  resolution: "@angular/compiler-cli@npm:19.2.25"
   dependencies:
     "@babel/core": "npm:7.26.9"
     "@jridgewell/sourcemap-codec": "npm:^1.4.14"
@@ -69,34 +69,34 @@ __metadata:
     tslib: "npm:^2.3.0"
     yargs: "npm:^17.2.1"
   peerDependencies:
-    "@angular/compiler": 19.2.24
+    "@angular/compiler": 19.2.25
     typescript: ">=5.5 <5.9"
   bin:
     ng-xi18n: bundles/src/bin/ng_xi18n.js
     ngc: bundles/src/bin/ngc.js
     ngcc: bundles/ngcc/index.js
-  checksum: 10c0/17b7b12ec3f949bb547c726ce6980626188223df223a9ea4bba41da3905071d22a829d2b6fdc09f7614d75eb41fca6d3c9a1eb4e00322557e290addb8a5e6388
+  checksum: 10c0/264a2801702f8994c88a76e1690e6ba6833e18a78e6488f14ff37b34c4d135454528b1e47679e4ad9149a25b98ecf0de74caebde1aa929b73affa85f2f027cac
   languageName: node
   linkType: hard
 
-"@angular/compiler@npm:^19.0.0":
-  version: 19.2.24
-  resolution: "@angular/compiler@npm:19.2.24"
+"@angular/compiler@npm:^19.2.25":
+  version: 19.2.25
+  resolution: "@angular/compiler@npm:19.2.25"
   dependencies:
     tslib: "npm:^2.3.0"
-  checksum: 10c0/c06335464ab63652a76480d711b0a88c4348a64ccfc74ecd5fce91e8c3dedd9d3d19218f78e7aa7f6c45b07018fa1fc399434fa19af8ef99344e0233507e8b0c
+  checksum: 10c0/d4abdd66f8e3b6686acac2a551e17694336c667c3e788947a430bcd56439b7af41d92cc11b194039dcdf1d610f89d8701ae72da34260f4e321767297e10e5542
   languageName: node
   linkType: hard
 
-"@angular/core@npm:^19.0.0":
-  version: 19.2.24
-  resolution: "@angular/core@npm:19.2.24"
+"@angular/core@npm:^19.2.25":
+  version: 19.2.25
+  resolution: "@angular/core@npm:19.2.25"
   dependencies:
     tslib: "npm:^2.3.0"
   peerDependencies:
     rxjs: ^6.5.3 || ^7.4.0
     zone.js: ~0.15.0
-  checksum: 10c0/7973b81746059a63714998b45aefc1af4a5630302c47da6ea50580f816a61f4992fda70f18fdfabf2c1c700aa2f4c66dc3e2c195cad5495a8bbd7499ca2c1bb7
+  checksum: 10c0/3db8146d74c911003ddeac103c4ac9daff50c19524f3e7fb1eb56b4355532a232a7c3859b910d1f76ae907ee4e49afd8ec585368300585298eda7f8ba5fe0a14
   languageName: node
   linkType: hard
 
@@ -2980,9 +2980,9 @@ __metadata:
   resolution: "@koobiq/icons-workspace@workspace:."
   dependencies:
     "@angular-eslint/eslint-plugin": "npm:^19.0.0"
-    "@angular/compiler": "npm:^19.0.0"
-    "@angular/compiler-cli": "npm:^19.0.0"
-    "@angular/core": "npm:^19.0.0"
+    "@angular/compiler": "npm:^19.2.25"
+    "@angular/compiler-cli": "npm:^19.2.25"
+    "@angular/core": "npm:^19.2.25"
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
     "@figma-export/cli": "npm:^6.4.0"

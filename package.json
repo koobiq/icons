@@ -41,9 +41,9 @@
     },
     "devDependencies": {
         "@angular-eslint/eslint-plugin": "^19.0.0",
-        "@angular/compiler": "^19.0.0",
-        "@angular/compiler-cli": "^19.0.0",
-        "@angular/core": "^19.0.0",
+        "@angular/compiler": "^19.2.25",
+        "@angular/compiler-cli": "^19.2.25",
+        "@angular/core": "^19.2.25",
         "@commitlint/cli": "^19.8.1",
         "@commitlint/config-conventional": "^19.8.1",
         "@figma-export/cli": "^6.4.0",
