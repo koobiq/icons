@@ -1,6 +1,6 @@
 {
     "name": "@koobiq/react-icons",
-    "version": "11.6.1",
+    "version": "11.6.2",
     "description": "Koobiq React Icons",
     "publishConfig": {
         "access": "public"

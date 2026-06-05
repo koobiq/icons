@@ -1,6 +1,6 @@
 {
     "name": "@koobiq/angular-icons",
-    "version": "11.6.1",
+    "version": "11.6.2",
     "description": "Koobiq Angular SVG Icon Components",
     "publishConfig": {
         "access": "public"
