@@ -1,3 +1,17 @@
+# 12.0.0 (2026-06-05)
+
+### 🚀 Features
+
+- ⚠️  remove visuals images from @koobiq/icons distribution ([a2595a6](https://github.com/koobiq/icons/commit/a2595a6))
+
+### ⚠️  Breaking Changes
+
+- ⚠️  remove visuals images from @koobiq/icons distribution ([a2595a6](https://github.com/koobiq/icons/commit/a2595a6))
+
+### ❤️ Thank You
+
+- Nikita Guryev
+
 ## 11.7.1 (2026-06-05)
 
 ### 🩹 Fixes
