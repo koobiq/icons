@@ -1,8 +1,4 @@
-## 1.0.1 (2026-06-05)
-
-This was a version bump only for @koobiq/visuals to align it with other projects, there were no code changes.
-
-# 1.0.0 (2026-06-05)
+## 11.6.0 (2026-06-05)
 
 ### 🚀 Features
 
