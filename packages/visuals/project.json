@@ -12,8 +12,7 @@
                 ],
                 "parallel": false,
                 "cwd": "{workspaceRoot}"
-            },
-            "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]
+            }
         },
         "nx-release-publish": {
             "executor": "@nx/js:release-publish",
