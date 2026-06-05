@@ -7,8 +7,10 @@
             "options": {
                 "commands": [
                     "npx tsx {projectRoot}/scripts/copy-meta-to-dist.ts",
+                    "npx tsx {projectRoot}/scripts/convert.ts",
                     "npx tsx {projectRoot}/scripts/generate-preview.ts"
                 ],
+                "parallel": false,
                 "cwd": "{workspaceRoot}"
             },
             "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]

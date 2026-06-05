@@ -2,10 +2,16 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { exec } from 'child_process';
 import { promisify } from 'util';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const execAsync = promisify(exec);
 
-const SRC_DIR = 'packages/visuals';
+const SRC_DIR = path.join(__dirname, '..');
+const DIST_DIR = path.join(__dirname, '../../../dist/packages/visuals');
 
 async function findPngFiles(dir: string): Promise<string[]> {
     const results: string[] = [];
@@ -18,10 +24,9 @@ async function findPngFiles(dir: string): Promise<string[]> {
     return results;
 }
 
-async function convertToWebp(pngFile: string): Promise<string> {
-    const webpFile = pngFile.replace(/\.png$/, '.webp');
-    await execAsync(`cwebp -near_lossless 80 "${pngFile}" -o "${webpFile}"`);
-    return webpFile;
+async function convertToWebp(srcPng: string, destWebp: string): Promise<void> {
+    await fs.mkdir(path.dirname(destWebp), { recursive: true });
+    await execAsync(`cwebp -near_lossless 80 "${srcPng}" -o "${destWebp}"`);
 }
 
 async function getFileSize(filePath: string): Promise<number> {
@@ -41,10 +46,13 @@ async function main() {
     let totalWebpSize = 0;
 
     for (const pngFile of pngFiles) {
-        const webpFile = await convertToWebp(pngFile);
+        const relative = path.relative(SRC_DIR, pngFile);
+        const destWebp = path.join(DIST_DIR, relative.replace(/\.png$/, '.webp'));
+
+        await convertToWebp(pngFile, destWebp);
 
         const pngSize = await getFileSize(pngFile);
-        const webpSize = await getFileSize(webpFile);
+        const webpSize = await getFileSize(destWebp);
 
         totalPngSize += pngSize;
         totalWebpSize += webpSize;
