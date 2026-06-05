@@ -14,24 +14,17 @@
     },
     "release": {
         "git": {
-            "commitMessage": "chore(release): bump version w/ changelog"
+            "commitMessage": "chore(release): bump version {version} w/ changelog",
+            "tagSign": true
         },
-        "groups": {
-            "icons": {
-                "projects": ["@koobiq/icons", "@koobiq/angular-icons", "@koobiq/react-icons"],
-                "projectsRelationship": "fixed",
-                "releaseTagPattern": "{version}",
-                "changelog": {
-                    "createRelease": "github",
-                    "file": "packages/icons/CHANGELOG.md"
-                }
+        "changelog": {
+            "workspaceChangelog": {
+                "createRelease": "github"
             },
-            "visuals": {
-                "projects": ["@koobiq/visuals"],
-                "projectsRelationship": "independent",
-                "releaseTagPattern": "{projectName}@{version}",
-                "changelog": { "createRelease": "github" }
-            }
-        }
+            "projectChangelogs": false
+        },
+        "projects": ["@koobiq/icons", "@koobiq/angular-icons", "@koobiq/react-icons", "@koobiq/visuals"],
+        "projectsRelationship": "fixed",
+        "releaseTagPattern": "{version}"
     }
 }

@@ -16,7 +16,7 @@ if (!fs.existsSync(distDir)) {
 
 fs.copyFileSync(join(workspaceRoot, 'LICENSE'), `${distDir}/LICENSE`);
 fs.copyFileSync(join(projectRoot, 'README.md'), `${distDir}/README.md`);
-fs.copyFileSync(join(projectRoot, 'CHANGELOG.md'), `${distDir}/CHANGELOG.md`);
+fs.copyFileSync(join(workspaceRoot, 'CHANGELOG.md'), `${distDir}/CHANGELOG.md`);
 
 if (!fs.existsSync(`${distDir}/info`)) {
     fs.mkdirSync(`${distDir}/info`);

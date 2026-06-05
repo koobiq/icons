@@ -6,15 +6,6 @@ on:
       - created
   # Allows you to run this workflow manually
   workflow_dispatch:
-    inputs:
-      group:
-        description: 'Release group to publish'
-        required: true
-        default: 'icons'
-        type: choice
-        options:
-          - icons
-          - visuals
 
 permissions:
   contents: read
@@ -35,24 +26,8 @@ jobs:
       - name: Setup Yarn
         uses: ./.github/workflows/actions/setup-yarn
 
-      - name: Release Group
-        id: group
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "name=${{ inputs.group }}" >> "$GITHUB_OUTPUT"
-          elif echo "${{ github.event.release.tag_name }}" | grep -q "^@koobiq/visuals@"; then
-            echo "name=visuals" >> "$GITHUB_OUTPUT"
-          else
-            echo "name=icons" >> "$GITHUB_OUTPUT"
-          fi
-
-      - run: yarn nx run-many -t build --projects=tag:$GROUP
+      - run: yarn nx release publish --registry=$REGISTRY
         env:
-          GROUP: ${{ steps.group.outputs.name }}
-
-      - run: yarn nx release publish --group $GROUP --registry=$REGISTRY
-        env:
-          GROUP: ${{ steps.group.outputs.name }}
           REGISTRY: https://registry.npmjs.org/
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
