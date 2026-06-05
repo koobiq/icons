@@ -32,12 +32,9 @@
         "prettier": "prettier --check . --ignore-unknown",
         "prettier:fix": "yarn run prettier --write",
         "lint": "nx run-many -t lint",
-        "lint:fix": "nx run-many -t lint -- --fix"
-    },
-    "release": {
-        "packages": [
-            "icons"
-        ]
+        "lint:fix": "nx run-many -t lint -- --fix",
+        "convert": "npx tsx packages/visuals/scripts/convert.ts",
+        "gen-preview": "npx tsx packages/visuals/scripts/generate-preview.ts"
     },
     "devDependencies": {
         "@angular-eslint/eslint-plugin": "^19.0.0",
@@ -66,6 +63,7 @@
         "@typescript-eslint/parser": "^7",
         "@vitejs/plugin-react": "^5.0.0",
         "cross-env": "^7.0.3",
+        "cwebp-bin": "^8.0.0",
         "dotenv": "^16.6.1",
         "eslint": "^8.57.0",
         "eslint-config-prettier": "^9.1.2",
