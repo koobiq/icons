@@ -1,6 +1,7 @@
 {
     "name": "@koobiq/react-icons",
-    "$schema": "../../node_modules/nx/schemas/project.schema.json",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "tags": ["icons"],
     "targets": {
         "generate": {
             "executor": "nx:run-commands",
@@ -25,17 +26,13 @@
             }
         },
         "build": {
+            "dependsOn": ["generate"],
             "executor": "nx:run-commands",
             "options": {
-                "commands": [
-                    "nx run {projectName}:generate",
-                    "vite build && tsc -p tsconfig.build.json",
-                    "npx tsx scripts/copy-meta-to-dist.ts"
-                ],
+                "commands": ["vite build && tsc -p tsconfig.build.json", "npx tsx scripts/copy-meta-to-dist.ts"],
                 "parallel": false,
                 "cwd": "{projectRoot}"
-            },
-            "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]
+            }
         },
         "nx-release-publish": {
             "dependsOn": ["build"],

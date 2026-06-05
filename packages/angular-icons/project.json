@@ -1,6 +1,7 @@
 {
     "name": "@koobiq/angular-icons",
-    "$schema": "../../node_modules/nx/schemas/project.schema.json",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "tags": ["icons"],
     "targets": {
         "generate": {
             "executor": "nx:run-commands",
@@ -22,8 +23,7 @@
             "dependsOn": ["generate", "copy-meta"],
             "options": {
                 "project": "{projectRoot}/ng-package.json"
-            },
-            "outputs": ["{workspaceRoot}/dist/packages/{projectName}"]
+            }
         },
         "lint": {
             "executor": "@nx/eslint:lint",

@@ -1,6 +1,7 @@
 {
     "name": "@koobiq/icons",
-    "$schema": "../../node_modules/nx/schemas/project.schema.json",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "tags": ["icons"],
     "targets": {
         "figma:export-icons": {
             "executor": "nx:run-commands",
@@ -42,14 +43,10 @@
             }
         },
         "build": {
+            "dependsOn": ["build:sprite", "build:fonts", "build:types"],
             "executor": "nx:run-commands",
             "options": {
-                "commands": [
-                    "nx run {projectName}:build:sprite",
-                    "nx run {projectName}:build:fonts",
-                    "nx run {projectName}:build:types",
-                    "node scripts/copy-meta-to-dist.mjs"
-                ],
+                "command": "node scripts/copy-meta-to-dist.mjs",
                 "parallel": false,
                 "cwd": "{projectRoot}"
             }
