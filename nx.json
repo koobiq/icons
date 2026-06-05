@@ -20,8 +20,11 @@
             "icons": {
                 "projects": ["@koobiq/icons", "@koobiq/angular-icons", "@koobiq/react-icons"],
                 "projectsRelationship": "fixed",
-                "releaseTagPattern": "{projectName}@{version}",
-                "changelog": { "createRelease": "github" }
+                "releaseTagPattern": "{version}",
+                "changelog": {
+                    "createRelease": "github",
+                    "file": "packages/icons/CHANGELOG.md"
+                }
             },
             "visuals": {
                 "projects": ["@koobiq/visuals"],

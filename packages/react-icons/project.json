@@ -1,6 +1,7 @@
 {
     "name": "@koobiq/react-icons",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "tags": ["icons"],
     "targets": {
         "generate": {
             "executor": "nx:run-commands",
