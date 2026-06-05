@@ -54,7 +54,7 @@ jobs:
         env:
           GROUP: ${{ steps.group.outputs.name }}
           REGISTRY: https://registry.npmjs.org/
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_KOOBIQ }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
 
       - uses: mattermost/action-mattermost-notify@2.0.0
