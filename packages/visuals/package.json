@@ -1,6 +1,6 @@
 {
     "name": "@koobiq/visuals",
-    "version": "11.6.2",
+    "version": "11.7.0",
     "description": "Koobiq Visuals",
     "publishConfig": {
         "access": "public"

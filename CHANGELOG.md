@@ -1,3 +1,18 @@
+## 11.7.0 (2026-06-05)
+
+### 🚀 Features
+
+- moved all packages to single release and added single changelog ([590ae8b](https://github.com/koobiq/icons/commit/590ae8b))
+
+### 🩹 Fixes
+
+- added required fields for publishing ([679233c](https://github.com/koobiq/icons/commit/679233c))
+- aligned packages.json version for @koobiq/visuals ([23d4791](https://github.com/koobiq/icons/commit/23d4791))
+
+### ❤️ Thank You
+
+- Nikita Guryev
+
 ## 11.6.2 (2026-06-05)
 
 This was a version bump only for @koobiq/icons to align it with other projects, there were no code changes.
