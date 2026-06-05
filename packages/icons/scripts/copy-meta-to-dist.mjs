@@ -28,8 +28,6 @@ if (!fs.existsSync(`${distDir}/info`)) {
 }
 
 fsExtra.copySync(join(projectRoot, 'svg'), join(distDir, 'svg'));
-fsExtra.copySync(join(workspaceRoot, 'packages/visuals/dark'), join(distDir, 'images/dark'));
-fsExtra.copySync(join(workspaceRoot, 'packages/visuals/light'), join(distDir, 'images/light'));
 
 const mappingJSON = JSON.parse(fsExtra.readFileSync(new URL('../../../mapping.json', import.meta.url)));
 
