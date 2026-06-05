@@ -1,7 +1,6 @@
 {
     "name": "@koobiq/icons",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "tags": ["icons"],
     "targets": {
         "figma:export-icons": {
             "executor": "nx:run-commands",
