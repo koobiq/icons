@@ -1,3 +1,13 @@
+## 11.7.1 (2026-06-05)
+
+### 🩹 Fixes
+
+- returned images dir to @koobiq/icons dist ([ff31b62](https://github.com/koobiq/icons/commit/ff31b62))
+
+### ❤️ Thank You
+
+- Nikita Guryev
+
 ## 11.7.0 (2026-06-05)
 
 ### 🚀 Features
