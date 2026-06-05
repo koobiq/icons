@@ -14,7 +14,7 @@
     },
     "release": {
         "git": {
-            "commitMessage": "chore(release): bump version to {version} w/ changelog"
+            "commitMessage": "chore(release): bump version w/ changelog"
         },
         "groups": {
             "icons": {

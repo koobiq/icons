@@ -46,7 +46,7 @@ jobs:
             echo "name=icons" >> "$GITHUB_OUTPUT"
           fi
 
-      - run: nx release publish --group ${{ steps.group.outputs.name }} --registry=https://registry.npmjs.org/
+      - run: yarn nx release publish --group ${{ steps.group.outputs.name }} --registry=https://registry.npmjs.org/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_KOOBIQ }}
           NPM_CONFIG_PROVENANCE: true
