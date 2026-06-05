@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import fsExtra from 'fs-extra';
-import { dirname, join } from 'path';
+import { basename, dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -14,22 +14,24 @@ if (!fs.existsSync(distDir)) {
     fs.mkdirSync(distDir, { recursive: true });
 }
 
-fs.copyFileSync(join(workspaceRoot, 'LICENSE'), `${distDir}/LICENSE`);
-fs.copyFileSync(join(projectRoot, 'README.md'), `${distDir}/README.md`);
-fs.copyFileSync(join(workspaceRoot, 'CHANGELOG.md'), `${distDir}/CHANGELOG.md`);
+for (const src of [
+    join(workspaceRoot, 'LICENSE'),
+    join(workspaceRoot, 'CHANGELOG.md'),
+    join(projectRoot, 'README.md'),
+    join(projectRoot, 'package.json')
+]) {
+    fs.copyFileSync(src, join(distDir, basename(src)));
+}
 
 if (!fs.existsSync(`${distDir}/info`)) {
     fs.mkdirSync(`${distDir}/info`);
 }
 
-if (!fs.existsSync(`${distDir}/svg`)) {
-    fs.mkdirSync(`${distDir}/svg`);
-}
-
-fsExtra.copySync('./svg', `${distDir}/svg`);
+fsExtra.copySync(join(projectRoot, 'svg'), join(distDir, 'svg'));
+fsExtra.copySync(join(workspaceRoot, 'packages/visuals/dark'), join(distDir, 'images/dark'));
+fsExtra.copySync(join(workspaceRoot, 'packages/visuals/light'), join(distDir, 'images/light'));
 
 const mappingJSON = JSON.parse(fsExtra.readFileSync(new URL('../../../mapping.json', import.meta.url)));
-const packageJSON = JSON.parse(fsExtra.readFileSync(new URL('../package.json', import.meta.url)));
 
 // eslint-disable-next-line no-unused-vars
 const { $schema, ...mapping } = mappingJSON;
@@ -38,25 +40,4 @@ Object.entries(mapping).forEach(([_, value]) => {
     value.code = parseInt(value.code);
 });
 
-function createPackageJson() {
-    return {
-        name: packageJSON.name,
-        version: packageJSON.version,
-        fontVersion: packageJSON.fontVersion,
-        description: packageJSON.description,
-        publishConfig: {
-            access: 'public'
-        },
-        author: packageJSON.author,
-        license: packageJSON.license,
-        keywords: packageJSON.keywords,
-        exports: {
-            './*': {
-                default: './*'
-            }
-        }
-    };
-}
-
-fs.writeFileSync(`${distDir}/info/kbq-icons-info.json`, JSON.stringify(mapping));
-fs.writeFileSync(`${distDir}/package.json`, JSON.stringify(createPackageJson(), null, 4));
+fs.writeFileSync(join(distDir, 'info/kbq-icons-info.json'), JSON.stringify(mapping));
