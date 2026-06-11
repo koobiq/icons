@@ -59,7 +59,12 @@ const componentOptions = {
                                             delete node.attributes.fill;
                                         }
                                     }
-                                    ['color', 'class'].forEach((attr) => {
+                                    // Figma now bakes colors into an inline `style`
+                                    // (semi-transparent P3 palette -> `fill`/`stroke` +
+                                    // `*-opacity`). It would override `fill="currentColor"`
+                                    // and re-introduce baked transparency, so drop it —
+                                    // the design system drives color/opacity via CSS.
+                                    ['color', 'class', 'style'].forEach((attr) => {
                                         if (node.attributes[attr]) {
                                             delete node.attributes[attr];
                                         }
