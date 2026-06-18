@@ -1,3 +1,9 @@
+## 10.10.3 (2026-06-18)
+
+### Icons
+
+ * bug fix  added [@layer](https://github.com/layer) ([#DS-5207](https://github.com/koobiq/icons/issues/issue/DS-5207)) ([#128](https://github.com/koobiq/icons/issues/128)) 6c564eb
+
 ## 10.10.2 (2026-03-05)
 
 Version bump with no changes in source code.
