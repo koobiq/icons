@@ -1,3 +1,13 @@
+## 12.0.1 (2026-06-18)
+
+### 🩹 Fixes
+
+- added @layer (#DS-5207) ([#127](https://github.com/koobiq/icons/pull/127))
+
+### ❤️ Thank You
+
+- lskramarov @lskramarov
+
 # 12.0.0 (2026-06-05)
 
 ### 🚀 Features
