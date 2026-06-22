@@ -57,6 +57,9 @@ function compareBySizeAndName(a: { size?: IconSize; name: string }, b: { size?: 
     return sa === sb ? a.name.localeCompare(b.name) : sa - sb;
 }
 
+const isSecondaryZoneId = (id: string | undefined): boolean =>
+    typeof id === 'string' && /^shape-2(?:[-_].*)?$/.test(id);
+
 function buildEntryFile(entry: string, componentNames: string[]) {
     return `
 ${entry}
@@ -127,22 +130,50 @@ const transformConfig = {
     svgoConfig: {
         plugins: [
             {
-                name: 'replace-values',
-                fn: () => ({
-                    element: {
-                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                        enter: (node: any) => {
-                            if (node.name === 'svg') {
-                                // eslint-disable-next-line no-param-reassign
-                                node.attributes.fill = 'currentColor';
-                            } else if (node.attributes.fill) {
-                                // Existing fill → accent layer for duotone icons
-                                // eslint-disable-next-line no-param-reassign
-                                node.attributes.fill = 'var(--icon-accent-color, currentColor)';
+                name: 'split-zones',
+                fn: () => {
+                    let secondaryDepth = 0;
+                    return {
+                        element: {
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                            enter: (node: any) => {
+                                if (node.name === 'svg') {
+                                    // eslint-disable-next-line no-param-reassign
+                                    node.attributes.fill = 'currentColor';
+                                    return;
+                                }
+                                if (isSecondaryZoneId(node.attributes.id)) {
+                                    secondaryDepth++;
+                                }
+                                if (node.attributes.fill) {
+                                    if (secondaryDepth > 0) {
+                                        // eslint-disable-next-line no-param-reassign
+                                        node.attributes.fill = 'var(--icon-accent-color, currentColor)';
+                                    } else {
+                                        delete node.attributes.fill;
+                                    }
+                                }
+                                ['color', 'class', 'style'].forEach((attr) => {
+                                    if (node.attributes[attr]) {
+                                        delete node.attributes[attr];
+                                    }
+                                });
+                            },
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                            exit: (node: any) => {
+                                if (isSecondaryZoneId(node.attributes.id)) {
+                                    secondaryDepth--;
+                                }
                             }
                         }
-                    }
-                })
+                    };
+                }
+            },
+            {
+                name: 'removeAttrs',
+                params: {
+                    attrs: 'fill-opacity'
+                }
             }
         ]
     },

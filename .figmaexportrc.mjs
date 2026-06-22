@@ -53,7 +53,7 @@ const componentOptions = {
                                     if (node.attributes['fill']) {
                                         if (secondaryDepth > 0) {
                                             // Secondary zone -> driven by the CSS `color` property.
-                                            node.attributes.fill = 'currentColor';
+                                            node.attributes.fill = 'var(--icon-accent-color, currentColor)';
                                         } else {
                                             // Primary zone -> driven by the CSS `fill` property.
                                             delete node.attributes.fill;
