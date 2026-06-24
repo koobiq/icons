@@ -3,8 +3,8 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
 
 @Component({
     standalone: true,
-    selector: 'svg[kbqFlowchartDot24]',
-    template: `<svg:circle cx="19.5" cy="4.5" r="3" fill="var(--icon-accent-color, currentColor)"/><svg:path d="M14.851 5.7H12.9v12.6h3.6v-1.5a.3.3 0 0 1 .3-.3h5.4a.3.3 0 0 1 .3.3v5.4a.3.3 0 0 1-.3.3h-5.4a.3.3 0 0 1-.3-.3v-1.5h-5.7a.3.3 0 0 1-.3-.3v-7.2H7.25a3 3 0 1 1 0-2.4h3.25V3.6a.3.3 0 0 1 .3-.3h4.051a4.8 4.8 0 0 0 0 2.4"/>`,
+    selector: 'svg[kbqFloatingWindow24]',
+    template: `<svg:g><svg:path d="M20.7 3a1.8 1.8 0 0 1 1.8 1.8v3.9h-2.4v-3c0-.166-.134-.3-.3-.3H4.2c-.166 0-.3.134-.3.3v12.6c0 .166.134.3.3.3h3V21H3.3a1.8 1.8 0 0 1-1.8-1.8V4.8A1.8 1.8 0 0 1 3.3 3z"/><svg:path d="M20.7 10.5a1.8 1.8 0 0 1 1.8 1.8v6.9a1.8 1.8 0 0 1-1.8 1.8h-9.9A1.8 1.8 0 0 1 9 19.2v-6.9a1.8 1.8 0 0 1 1.8-1.8z"/></svg:g>`,
     encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush,
     host: {
@@ -16,4 +16,4 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
         height: '24'
     }
 })
-export class KbqFlowchartDot24 {}
+export class KbqFloatingWindow24 {}
