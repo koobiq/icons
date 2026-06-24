@@ -1,3 +1,19 @@
+## 12.1.0 (2026-06-24)
+
+### 🚀 Features
+
+- add floating-window icons (16, 24) (#DS-5187) ([#123](https://github.com/koobiq/icons/pull/123))
+- add retry tags for arrow-rotate-right 16 & 24 (#DS-4878) ([#130](https://github.com/koobiq/icons/pull/130))
+- add nginx_16 and nginx_24 icons (#DS-5218) ([#131](https://github.com/koobiq/icons/pull/131))
+
+### 🩹 Fixes
+
+- split duotone icon zones by layer name instead of color ([#125](https://github.com/koobiq/icons/pull/125))
+
+### ❤️ Thank You
+
+- Roman Turov @rmnturov
+
 ## 12.0.1 (2026-06-18)
 
 ### 🩹 Fixes
