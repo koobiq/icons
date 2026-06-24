@@ -1,0 +1,19 @@
+import { forwardRef } from 'react';
+import type { SVGProps, Ref } from 'react';
+export const IconFloatingWindow24 = forwardRef((props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={24}
+        height={24}
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        ref={ref}
+        {...props}
+    >
+        <g>
+            <path d="M20.7 3a1.8 1.8 0 0 1 1.8 1.8v3.9h-2.4v-3c0-.166-.134-.3-.3-.3H4.2c-.166 0-.3.134-.3.3v12.6c0 .166.134.3.3.3h3V21H3.3a1.8 1.8 0 0 1-1.8-1.8V4.8A1.8 1.8 0 0 1 3.3 3z" />
+            <path d="M20.7 10.5a1.8 1.8 0 0 1 1.8 1.8v6.9a1.8 1.8 0 0 1-1.8 1.8h-9.9A1.8 1.8 0 0 1 9 19.2v-6.9a1.8 1.8 0 0 1 1.8-1.8z" />
+        </g>
+    </svg>
+));
+IconFloatingWindow24.displayName = 'IconFloatingWindow24';
