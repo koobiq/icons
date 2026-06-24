@@ -68,18 +68,16 @@ allowing different parts (zones) to be colored separately using `fill` and `colo
 In the final SVG output:
 
 - **Primary Zone**: No `fill` attribute — inherits the CSS `fill` property.
-- **Secondary Zone(s)**: `fill="currentColor"` — driven by the CSS `color` property.
+- **Secondary Zone(s)**: `fill="var(--icon-accent-color, currentColor)"` — driven by the `--icon-accent-color` CSS custom property, falling back to `currentColor`.
 
 CSS styling:
 
 ```css
 svg {
     fill: #8f99aa; /* Primary zone */
-    color: #00ff00; /* Secondary zone(s) */
+    --icon-accent-color: #00ff00; /* Secondary zone(s) */
 }
 ```
-
-For details, see [CSS-Tricks](https://css-tricks.com/lodge/svg/21-get-two-colors-use/).
 
 ## Figma Conventions
 
@@ -109,6 +107,6 @@ The zone splitting happens during `figma:sync` via the `split-zones` SVGO plugin
 [`.figmaexportrc.mjs`](../../.figmaexportrc.mjs):
 
 - Remove `fill` from the root `<svg>` and from primary-zone nodes.
-- Set secondary-zone (`shape-2`) nodes to `fill="currentColor"`.
+- Set secondary-zone (`shape-2`) nodes to `fill="var(--icon-accent-color, currentColor)"`.
 - Strip baked `style`, `color`, `class`, and `fill-opacity` so color/opacity stay
   CSS-driven.
