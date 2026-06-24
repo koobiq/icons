@@ -128,21 +128,19 @@ const transformConfig = {
         plugins: [
             {
                 name: 'replace-values',
-                fn: () => {
-                    return {
-                        element: {
-                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                            enter: (node: any) => {
-                                if (node.name === 'svg') {
-                                    // eslint-disable-next-line no-param-reassign
-                                    // override svg fill attr for react icons
-                                    node.attributes.fill = 'currentColor';
-                                    return;
-                                }
+                fn: () => ({
+                    element: {
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                        enter: (node: any) => {
+                            if (node.name === 'svg') {
+                                // eslint-disable-next-line no-param-reassign
+                                // override svg fill attr for react icons
+                                node.attributes.fill = 'currentColor';
+                                return;
                             }
                         }
-                    };
-                }
+                    }
+                })
             }
         ]
     },
