@@ -370,8 +370,12 @@
       "name": "IconArrowRotateRight16",
       "size": "16",
       "keywords": [
+        "refresh",
         "reload",
-        "перезагрузка"
+        "retry",
+        "обновить",
+        "перезагрузка",
+        "повторить"
       ]
     },
     {
@@ -2797,6 +2801,11 @@
       ]
     },
     {
+      "name": "IconFloatingWindow16",
+      "size": "16",
+      "description": "плавающее окно"
+    },
+    {
       "name": "IconFloppyDisk16",
       "size": "16",
       "keywords": [
@@ -3859,6 +3868,14 @@
         "несколько",
         "сеть",
         "устройства"
+      ]
+    },
+    {
+      "name": "IconNginx16",
+      "size": "16",
+      "keywords": [
+        "logo",
+        "логотип"
       ]
     },
     {
@@ -5659,8 +5676,10 @@
       "keywords": [
         "refresh",
         "reload",
+        "retry",
         "обновить",
-        "перезагрузка"
+        "перезагрузка",
+        "повторить"
       ]
     },
     {
@@ -7781,6 +7800,11 @@
       ]
     },
     {
+      "name": "IconFloatingWindow24",
+      "size": "24",
+      "description": "плавающее окно"
+    },
+    {
       "name": "IconFloppyDisk24",
       "size": "24",
       "keywords": [
@@ -8674,6 +8698,14 @@
         "switch",
         "роутер",
         "свитч"
+      ]
+    },
+    {
+      "name": "IconNginx24",
+      "size": "24",
+      "keywords": [
+        "logo",
+        "логотип"
       ]
     },
     {
