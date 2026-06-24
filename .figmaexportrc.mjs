@@ -8,16 +8,7 @@ import { config } from './config.mjs';
 
 dotenv.config();
 
-/**
- * Detects the secondary (two-color) zone by Figma layer name instead of by color.
- *
- * Figma is queried with `svg_include_id: true`, so every layer is exported with an
- * `id` matching its Figma name. By convention the secondary zone layer is named
- * `shape-2` (the primary zone is `shape`). Keying off the layer name keeps the
- * duotone mechanism working regardless of the palette used in Figma — previously we
- * matched a hardcoded hex (`#E21D03`), which silently broke every duotone icon when
- * the zone colors changed in Figma.
- */
+/** Detects the secondary duotone zone by Figma layer name `shape-2`. (the primary zone is `shape`) */
 const isSecondaryZoneId = (id) => typeof id === 'string' && /^shape-2(?:[-_].*)?$/.test(id);
 
 /** @type { import('@figma-export/types').ComponentsCommandOptions } */
