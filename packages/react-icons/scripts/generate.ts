@@ -134,11 +134,9 @@ const transformConfig = {
                         enter: (node: any) => {
                             if (node.name === 'svg') {
                                 // eslint-disable-next-line no-param-reassign
+                                // override svg fill attr for react icons
                                 node.attributes.fill = 'currentColor';
-                            } else if (node.attributes.fill) {
-                                // Existing fill → accent layer for duotone icons
-                                // eslint-disable-next-line no-param-reassign
-                                node.attributes.fill = 'var(--icon-accent-color, currentColor)';
+                                return;
                             }
                         }
                     }

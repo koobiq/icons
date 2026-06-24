@@ -8,7 +8,8 @@ import { config } from './config.mjs';
 
 dotenv.config();
 
-const secondaryZoneColorHex = '#E21D03';
+/** Detects the secondary duotone zone by Figma layer name `shape-2`. (the primary zone is `shape`) */
+const isSecondaryZoneId = (id) => typeof id === 'string' && /^shape-2(?:[-_].*)?$/.test(id);
 
 /** @type { import('@figma-export/types').ComponentsCommandOptions } */
 const componentOptions = {
@@ -23,6 +24,55 @@ const componentOptions = {
         transformSvgWithSvgo({
             plugins: [
                 {
+                    // Runs first, on the raw Figma structure, so layer ids (`shape` /
+                    // `shape-2`) are still intact when we decide which zone a node is.
+                    name: 'split-zones',
+                    fn: () => {
+                        // Depth counter: > 0 while we are inside a `shape-2` subtree.
+                        let secondaryDepth = 0;
+                        return {
+                            element: {
+                                enter: (node) => {
+                                    if (node.name === 'svg') {
+                                        // - Remove fill from the root, to customize with inner elements.
+                                        delete node.attributes.fill;
+                                        return;
+                                    }
+                                    if (isSecondaryZoneId(node.attributes.id)) {
+                                        secondaryDepth++;
+                                    }
+                                    if (node.attributes['fill']) {
+                                        if (secondaryDepth > 0) {
+                                            // Secondary zone -> driven by the CSS `color` property.
+                                            node.attributes.fill = 'var(--icon-accent-color, currentColor)';
+                                        } else {
+                                            // Primary zone -> driven by the CSS `fill` property.
+                                            delete node.attributes.fill;
+                                        }
+                                    }
+                                    // Figma now bakes colors into an inline `style`
+                                    // (semi-transparent P3 palette -> `fill`/`stroke` +
+                                    // `*-opacity`). It would override `fill="currentColor"`
+                                    // and re-introduce baked transparency, so drop it —
+                                    // the design system drives color/opacity via CSS.
+                                    ['color', 'class', 'style'].forEach((attr) => {
+                                        if (node.attributes[attr]) {
+                                            delete node.attributes[attr];
+                                        }
+                                    });
+                                },
+                                exit: (node) => {
+                                    if (isSecondaryZoneId(node.attributes.id)) {
+                                        secondaryDepth--;
+                                    }
+                                }
+                            }
+                        };
+                    }
+                },
+                {
+                    // `preset-default` also strips the now-unused `shape` / `shape-2`
+                    // ids (cleanupIds), while keeping ids still referenced by url(#...).
                     name: 'preset-default',
                     params: {
                         overrides: {
@@ -31,40 +81,14 @@ const componentOptions = {
                     }
                 },
                 { name: 'removeComments' },
-                { name: 'cleanupIds' },
                 { name: 'removeEmptyContainers' },
                 {
+                    // `fill-opacity` is stripped so zone colors stay solid: Figma now
+                    // applies 0.85/0.75 opacity to the zones, but the design system
+                    // controls transparency via CSS, not baked into the SVG.
                     name: 'removeAttrs',
                     params: {
-                        attrs: 'stroke|transform'
-                    }
-                },
-                {
-                    name: 'replace-values',
-                    fn: () => {
-                        return {
-                            element: {
-                                enter: (node) => {
-                                    if (node.name === 'svg') {
-                                        // - Remove fill from the root, to customize with inner elements
-                                        delete node.attributes.fill;
-                                    } else if (node.attributes['fill']) {
-                                        // - Remove fill from the primary zone.
-                                        // - Set secondary zones to fill="currentColor".
-                                        if (secondaryZoneColorHex === node.attributes.fill) {
-                                            node.attributes.fill = 'currentColor';
-                                        } else {
-                                            delete node.attributes.fill;
-                                        }
-                                    }
-                                    ['color', 'class'].forEach((attr) => {
-                                        if (node.attributes[attr]) {
-                                            delete node.attributes[attr];
-                                        }
-                                    });
-                                }
-                            }
-                        };
+                        attrs: 'stroke|transform|fill-opacity'
                     }
                 }
             ]
