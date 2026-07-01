@@ -78,7 +78,7 @@
         "lint-staged": "^15.5.2",
         "ng-packagr": "^19",
         "nx": "^20.8.4",
-        "prettier": "^3.8.3",
+        "prettier": "^3.9.4",
         "rimraf": "^5.0.10",
         "svg-sprite": "^2.0.4",
         "svgo": "^3.3.2",
