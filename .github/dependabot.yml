@@ -51,10 +51,6 @@ updates:
       figma-export:
         patterns:
           - '@figma-export/*'
-      fs-extra:
-        patterns:
-          - 'fs-extra'
-          - '@types/fs-extra'
       koobiq:
         patterns:
           - '@koobiq/*'
