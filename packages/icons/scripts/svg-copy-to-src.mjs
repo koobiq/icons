@@ -1,4 +1,4 @@
-import fs from 'fs-extra';
+import fs from 'fs/promises';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { config } from '../../../config.mjs';
@@ -27,7 +27,7 @@ const copyIcons = async (destPath, svgRootDir) => {
 
     for (const item of iconsList) {
         const destFilePath = join(destPath, item.fileName);
-        await fs.copy(item.path, destFilePath);
+        await fs.copyFile(item.path, destFilePath);
     }
 };
 
@@ -36,8 +36,8 @@ const main = async () => {
     const svgRootDir = join(__dirname, `../../../${config.output.tempSvg}`);
 
     try {
-        await fs.remove(destDir);
-        await fs.ensureDir(destDir);
+        await fs.rm(destDir, { recursive: true, force: true });
+        await fs.mkdir(destDir, { recursive: true });
 
         await copyIcons(destDir, svgRootDir);
 

@@ -71,7 +71,6 @@
         "eslint-plugin-react": "^7.37.0",
         "eslint-plugin-react-hooks": "^5.0.0",
         "fantasticon": "^3.0.0",
-        "fs-extra": "^11.3.3",
         "handlebars": "^4.7.8",
         "husky": "^9.1.7",
         "json-schema-to-typescript": "^15.0.4",
