@@ -1,5 +1,4 @@
 import * as fs from 'fs';
-import fsExtra from 'fs-extra';
 import { basename, dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -27,9 +26,9 @@ if (!fs.existsSync(`${distDir}/info`)) {
     fs.mkdirSync(`${distDir}/info`);
 }
 
-fsExtra.copySync(join(projectRoot, 'svg'), join(distDir, 'svg'));
+fs.cpSync(join(projectRoot, 'svg'), join(distDir, 'svg'), { recursive: true });
 
-const mappingJSON = JSON.parse(fsExtra.readFileSync(new URL('../../../mapping.json', import.meta.url)));
+const mappingJSON = JSON.parse(fs.readFileSync(new URL('../../../mapping.json', import.meta.url)));
 
 // eslint-disable-next-line no-unused-vars
 const { $schema, ...mapping } = mappingJSON;
