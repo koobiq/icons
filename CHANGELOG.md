@@ -1,3 +1,13 @@
+## 12.1.1 (2026-07-14)
+
+### 🚀 Features
+
+- update circle-xs icons (#DS-5305) ([#139](https://github.com/koobiq/icons/pull/139))
+
+### ❤️ Thank You
+
+- Roman Turov @rmnturov
+
 ## 12.1.0 (2026-06-24)
 
 ### 🚀 Features
