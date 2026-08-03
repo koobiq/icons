@@ -2787,7 +2787,7 @@ __metadata:
     prettier: "npm:^3.9.6"
     rimraf: "npm:^5.0.10"
     svg-sprite: "npm:^2.0.4"
-    svgo: "npm:^3.3.2"
+    svgo: "npm:^3.3.4"
     tsx: "npm:^4.0.0"
     typescript: "npm:~5.5.4"
     vite: "npm:^7.3.6"
@@ -16537,7 +16537,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svgo@npm:^3.0.2, svgo@npm:^3.2.0, svgo@npm:^3.3.2, svgo@npm:~3.3.2":
+"svgo@npm:^3.0.2, svgo@npm:^3.2.0, svgo@npm:~3.3.2":
   version: 3.3.3
   resolution: "svgo@npm:3.3.3"
   dependencies:
@@ -16551,6 +16551,23 @@ __metadata:
   bin:
     svgo: ./bin/svgo
   checksum: 10c0/06568c6b0430f96748c557f0b17dc7de79b19fa16d13d7523527ede0ec727fc6d8e6a10e13ff106dc4372d2e6063a1dca7c455c495efb1b83857480425f9b965
+  languageName: node
+  linkType: hard
+
+"svgo@npm:^3.3.4":
+  version: 3.3.4
+  resolution: "svgo@npm:3.3.4"
+  dependencies:
+    commander: "npm:^7.2.0"
+    css-select: "npm:^5.1.0"
+    css-tree: "npm:^2.3.1"
+    css-what: "npm:^6.1.0"
+    csso: "npm:^5.0.5"
+    picocolors: "npm:^1.0.0"
+    sax: "npm:^1.5.0"
+  bin:
+    svgo: ./bin/svgo
+  checksum: 10c0/4aeb29f2dc1923e4332ad3b702aca901c0a55692b9e3884fc932ca1d76b7db0dc8ce4b2f493bbf79b16a961c288fa720628fc78bb91915645967dcaa8f92d499
   languageName: node
   linkType: hard
 
