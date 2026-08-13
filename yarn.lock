@@ -2274,83 +2274,83 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@figma-export/cli@npm:^6.4.0":
-  version: 6.4.0
-  resolution: "@figma-export/cli@npm:6.4.0"
+"@figma-export/cli@npm:^6.4.1":
+  version: 6.4.1
+  resolution: "@figma-export/cli@npm:6.4.1"
   dependencies:
-    "@figma-export/core": "npm:^6.4.0"
-    "@figma-export/types": "npm:^6.4.0"
-    ora: "npm:~8.2.0"
-    sade: "npm:~1.8.1"
+    "@figma-export/core": "npm:^6.4.1"
+    "@figma-export/types": "npm:^6.4.1"
+    ora: "npm:^8.2.0"
+    sade: "npm:^1.8.1"
   bin:
     figma-export: bin/run.js
-  checksum: 10c0/d92119528731222fd2945a78167307e7fe20bd2ae547ee1592ce702627f5d51c26fb5e8d5895030d10e14efb7ce9bb091eec8a6fcefcced725cfffe3c18f33d1
+  checksum: 10c0/7625690e9b46151a5ccb3e364c951a9dd6675bf8f305119509d015a282ef65f30ecd4523631dc72f779a08de1f121bad5c77c31976b2576505ca63d0dd68e1fa
   languageName: node
   linkType: hard
 
-"@figma-export/core@npm:^6.4.0":
-  version: 6.4.0
-  resolution: "@figma-export/core@npm:6.4.0"
+"@figma-export/core@npm:^6.4.1":
+  version: 6.4.1
+  resolution: "@figma-export/core@npm:6.4.1"
   dependencies:
-    "@figma-export/types": "npm:^6.4.0"
-    "@figma/rest-api-spec": "npm:^0.34.0"
-    p-limit: "npm:^7.2.0"
-    p-retry: "npm:^7.1.0"
-    undici: "npm:^6.22.0"
-  checksum: 10c0/5187c64bdc6b63238fb1ded55b15fe70f7aced5767c5916878b93b501717cee432f2487cebf7ac07227d0d113ed25c9a7fa7ed518b87f1829c9b5c7cfae8f2b9
+    "@figma-export/types": "npm:^6.4.1"
+    "@figma/rest-api-spec": "npm:^0.40.0"
+    p-limit: "npm:^7.3.0"
+    p-retry: "npm:^7.1.1"
+    undici: "npm:^6.27.0"
+  checksum: 10c0/d5f545b3724d852cea9450d03d7345a05e3d1707f28c425fc1e932b272bf16c2925d7916f01d3d24a6e2b3b5e36844dae91ec75bea87f357ad12f526b7415c5c
   languageName: node
   linkType: hard
 
-"@figma-export/output-components-as-svg@npm:^6.4.0":
-  version: 6.4.0
-  resolution: "@figma-export/output-components-as-svg@npm:6.4.0"
+"@figma-export/output-components-as-svg@npm:^6.4.1":
+  version: 6.4.1
+  resolution: "@figma-export/output-components-as-svg@npm:6.4.1"
   dependencies:
-    "@figma-export/types": "npm:^6.4.0"
-  checksum: 10c0/db1fac12dfbf3f0d329f7312b5eb8d46c2abfc8b7611a1ab8aff882610c1760197f9418de0424af545f8125a793c6f812bd72e7abdc7f6e6c0aa346a6ad44c9a
+    "@figma-export/types": "npm:^6.4.1"
+  checksum: 10c0/597530c71de4b5627a31343aad0d781ba8a6e8131299d85b7617f4267cbeba2f4ab81a9bd21b7414b7a4f828f9326fceef4eeb59e554447d710de049430e3182
   languageName: node
   linkType: hard
 
-"@figma-export/output-components-as-svgr@npm:^6.4.0":
-  version: 6.4.0
-  resolution: "@figma-export/output-components-as-svgr@npm:6.4.0"
+"@figma-export/output-components-as-svgr@npm:^6.4.1":
+  version: 6.4.1
+  resolution: "@figma-export/output-components-as-svgr@npm:6.4.1"
   dependencies:
-    "@figma-export/types": "npm:^6.4.0"
-    "@figma-export/utils": "npm:^6.4.0"
-    "@svgr/core": "npm:~8.1.0"
-  checksum: 10c0/bc4546b8b23f792b028483dc2c3a4ebb6d2007441d9317df9ff2f435d59cc6674ef681e117cc539ba1d66ac428443beeb4864ec1679627cc506bd86e96a2fba3
+    "@figma-export/types": "npm:^6.4.1"
+    "@figma-export/utils": "npm:^6.4.1"
+    "@svgr/core": "npm:^8.1.0"
+  checksum: 10c0/2c344c8d71eb200aa24f1847aa70bbad3819a2a4130c3cec1ba63ded2fa1619a7167a7cb1841483de3a8311804a52e3a7ad74d9c7df612781f51a75ab55ba917
   languageName: node
   linkType: hard
 
-"@figma-export/transform-svg-with-svgo@npm:^6.4.0":
-  version: 6.4.0
-  resolution: "@figma-export/transform-svg-with-svgo@npm:6.4.0"
+"@figma-export/transform-svg-with-svgo@npm:^6.4.1":
+  version: 6.4.1
+  resolution: "@figma-export/transform-svg-with-svgo@npm:6.4.1"
   dependencies:
-    "@figma-export/types": "npm:^6.4.0"
-    svgo: "npm:~3.3.2"
-  checksum: 10c0/1b58e31eee9b18251219108e924b1de98531ae6a68fd9d2d979c297ed33b37d514d745b690139bed355fc3bb9a9b154e700ad96710ecc940eb9c14e437924f59
+    "@figma-export/types": "npm:^6.4.1"
+    svgo: "npm:~3.3.4"
+  checksum: 10c0/76e3a7965c6d1d7726def78e96a1281598c6fcf1e4e46e6b6056256df9e0eb322409260a0e7a75d8391206ecb9092ecb5c44438ceb4f07962172757bd7a90cd3
   languageName: node
   linkType: hard
 
-"@figma-export/types@npm:^6.4.0":
-  version: 6.4.0
-  resolution: "@figma-export/types@npm:6.4.0"
+"@figma-export/types@npm:^6.4.1":
+  version: 6.4.1
+  resolution: "@figma-export/types@npm:6.4.1"
   dependencies:
-    "@figma/rest-api-spec": "npm:^0.34.0"
-  checksum: 10c0/54d969b3dd05e631e62a735c6db0187536c178068e7ad1edf2612a5a425ddb9d0a664eea59f56269d689f0a6928d7bb5b7a40d94551c1c4cb997a1dc7426e0fc
+    "@figma/rest-api-spec": "npm:^0.40.0"
+  checksum: 10c0/ff3339515021acb2275123f95eeb90ba290edfcb02f259cd92ed8d90611af433e7836c0903a2a635fa4adfc9e541d9db01821e83b941fbbc8cb3f4f5735f52e4
   languageName: node
   linkType: hard
 
-"@figma-export/utils@npm:^6.4.0":
-  version: 6.4.0
-  resolution: "@figma-export/utils@npm:6.4.0"
-  checksum: 10c0/832b13308d324206aa33d1c683d59b79076b2d26a5f9e9a562fcf29d651742f8b1b07156c44e6d6cb47ce42750ebbbc7d39325e2d7726eb4ca2118dc9dabc1e0
+"@figma-export/utils@npm:^6.4.1":
+  version: 6.4.1
+  resolution: "@figma-export/utils@npm:6.4.1"
+  checksum: 10c0/a8c12ee48ffe1309fca4ce73960434cf507a6c41115055cc8276b19a03165e5c4e3a10d29293bf97f6c6792a2a37eba62b12f98b36a184e9470d7302d98873ec
   languageName: node
   linkType: hard
 
-"@figma/rest-api-spec@npm:^0.34.0":
-  version: 0.34.0
-  resolution: "@figma/rest-api-spec@npm:0.34.0"
-  checksum: 10c0/0492739dc569417528ebc3dccd739824db9bd8428797f543c1fecfd4fbe582a90e7807c9c3e70708a491fcae87f3d83015b6885619eac8bd8ba3324cc0051056
+"@figma/rest-api-spec@npm:^0.40.0":
+  version: 0.40.0
+  resolution: "@figma/rest-api-spec@npm:0.40.0"
+  checksum: 10c0/11b3b4f8df43219705100820d77320a2fc30604d740051496de512cf4f5b9da1689b2af95835c20628a1bef67d6a58db85205480ac2a75cdcb0a89162f93c4e1
   languageName: node
   linkType: hard
 
@@ -2751,10 +2751,10 @@ __metadata:
     "@angular/core": "npm:^19.0.0"
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
-    "@figma-export/cli": "npm:^6.4.0"
-    "@figma-export/output-components-as-svg": "npm:^6.4.0"
-    "@figma-export/output-components-as-svgr": "npm:^6.4.0"
-    "@figma-export/transform-svg-with-svgo": "npm:^6.4.0"
+    "@figma-export/cli": "npm:^6.4.1"
+    "@figma-export/output-components-as-svg": "npm:^6.4.1"
+    "@figma-export/output-components-as-svgr": "npm:^6.4.1"
+    "@figma-export/transform-svg-with-svgo": "npm:^6.4.1"
     "@nx/angular": "npm:^20.8.4"
     "@nx/eslint": "npm:^20.8.4"
     "@nx/react": "npm:^20.8.4"
@@ -4917,7 +4917,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/core@npm:8.1.0, @svgr/core@npm:^8.1.0, @svgr/core@npm:~8.1.0":
+"@svgr/core@npm:8.1.0, @svgr/core@npm:^8.1.0":
   version: 8.1.0
   resolution: "@svgr/core@npm:8.1.0"
   dependencies:
@@ -13512,7 +13512,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ora@npm:~8.2.0":
+"ora@npm:^8.2.0":
   version: 8.2.0
   resolution: "ora@npm:8.2.0"
   dependencies:
@@ -13622,12 +13622,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"p-limit@npm:^7.2.0":
-  version: 7.3.0
-  resolution: "p-limit@npm:7.3.0"
+"p-limit@npm:^7.3.0":
+  version: 7.3.1
+  resolution: "p-limit@npm:7.3.1"
   dependencies:
     yocto-queue: "npm:^1.2.1"
-  checksum: 10c0/8030f0ccc67d80d9c12f2b4ed277c5ede151f80a09cb1b143ab0ee597940784f2cf6e07e92d54c023fe9836784329750c25c6cd4488a7a326c0ae0ec2efca982
+  checksum: 10c0/49b7d7fcc244d4659fa3b260c7b4e632bc72333c60e76e4cd24c7befdeb9b8e22da644e5064e83df9e2ded75245e3e3b9df0e9cf8500b08db8ebf58ac18c6764
   languageName: node
   linkType: hard
 
@@ -13694,7 +13694,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"p-retry@npm:^7.1.0":
+"p-retry@npm:^7.1.1":
   version: 7.1.1
   resolution: "p-retry@npm:7.1.1"
   dependencies:
@@ -15206,7 +15206,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sade@npm:~1.8.1":
+"sade@npm:^1.8.1":
   version: 1.8.1
   resolution: "sade@npm:1.8.1"
   dependencies:
@@ -16537,7 +16537,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svgo@npm:^3.0.2, svgo@npm:^3.2.0, svgo@npm:~3.3.2":
+"svgo@npm:^3.0.2, svgo@npm:^3.2.0":
   version: 3.3.3
   resolution: "svgo@npm:3.3.3"
   dependencies:
@@ -16554,7 +16554,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svgo@npm:^3.3.4":
+"svgo@npm:^3.3.4, svgo@npm:~3.3.4":
   version: 3.3.4
   resolution: "svgo@npm:3.3.4"
   dependencies:
@@ -17254,10 +17254,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:^6.22.0, undici@npm:^6.25.0":
+"undici@npm:^6.25.0":
   version: 6.26.0
   resolution: "undici@npm:6.26.0"
   checksum: 10c0/cf2b4caf58c33d6582970991290cc7a6486d6e738845f25dcdd16952d708ec844815c6d30362919764fcaf30f719891289341f1ada496f003ce2700310453a47
+  languageName: node
+  linkType: hard
+
+"undici@npm:^6.27.0":
+  version: 6.28.0
+  resolution: "undici@npm:6.28.0"
+  checksum: 10c0/3029a70df06b38b5b2f30732932a1e92544c753cd82c8abdf0d35afad48e0ba91612e79fe3a442dbbb9434d6a9eba2b714d5ea28984c903dda2b5d5444f38354
   languageName: node
   linkType: hard
 
