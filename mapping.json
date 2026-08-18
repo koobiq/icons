@@ -2474,7 +2474,7 @@
     "circle-xs_16": {
         "codepoint": "0xF778",
         "description": "",
-        "tags": ["number", "shape", "six", "круг", "форма", "шесть"]
+        "tags": ["extra small", "маленький круг"]
     },
     "clock-badge-linux_16": {
         "codepoint": "0xF779",
@@ -3939,7 +3939,7 @@
     "circle-xs_24": {
         "codepoint": "0xF899",
         "description": "",
-        "tags": ["number", "shape", "six", "круг", "форма", "шесть"]
+        "tags": ["extra small", "маленький круг"]
     },
     "circle_24": {
         "codepoint": "0xF89A",
