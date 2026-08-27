@@ -20,7 +20,7 @@
         "clean": "yarn cache clean && nx reset && rimraf temp dist",
         "check-mapping": "node packages/icons/scripts/check-mapping.mjs",
         "-----GITHUB_RELEASE-----": "---------------------------------------------------------------------------------",
-        "release": "nx release --skip-publish",
+        "release": "nx release --skip-publish && git push --follow-tags",
         "release:preview": "nx release --skip-publish --dry-run",
         "------FIGMA SCRIPTS------": "--------------------------------------------------------------------------------",
         "figma:export-icons": "nx run @koobiq/icons:figma:export-icons",

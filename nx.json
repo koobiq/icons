@@ -18,9 +18,7 @@
             "tagSign": true
         },
         "changelog": {
-            "workspaceChangelog": {
-                "createRelease": "github"
-            },
+            "workspaceChangelog": {},
             "projectChangelogs": false
         },
         "projects": ["@koobiq/icons", "@koobiq/angular-icons", "@koobiq/react-icons", "@koobiq/visuals"],

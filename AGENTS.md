@@ -100,35 +100,22 @@ yarn nx release --dry-run
 
 ## NX release config
 
-Two release groups in `nx.json`:
-
-- **`icons`** — `@koobiq/icons`, `@koobiq/angular-icons`, `@koobiq/react-icons` — fixed versioning, tag pattern: `{version}` (e.g. `11.6.0`)
-- **`visuals`** — `@koobiq/visuals` — independent versioning, tag pattern: `{projectName}@{version}` (e.g. `@koobiq/visuals@1.0.0`)
+Single fixed release group in `nx.json` covering all four packages (`@koobiq/icons`, `@koobiq/angular-icons`, `@koobiq/react-icons`, `@koobiq/visuals`) — one shared version, one root `CHANGELOG.md`, tag pattern: `{version}` (e.g. `12.1.1`).
 
 Version bumps follow conventional commits: `feat` → minor, `fix` → patch, `BREAKING CHANGE` → major.
 
 ### Releasing
 
-Groups are released independently. `nx release changelog` creates a GitHub Release which triggers the `publish.yml` CI workflow automatically — do not run `nx release publish` manually.
-
-**Icons group** (`@koobiq/icons`, `@koobiq/angular-icons`, `@koobiq/react-icons`):
+`yarn release` (`nx release --skip-publish && git push --follow-tags`) bumps the version, generates the changelog, commits, tags, and pushes. Pushing the tag is what triggers `publish.yml` in CI to actually publish to npm — do not run `nx release publish` manually. GitHub Release page creation is a separate, non-blocking job in `publish.yml` that runs after publish (and can be re-run by hand via `workflow_dispatch` if it ever needs backfilling).
 
 ```sh
 # NX infers the version bump from conventional commits since the last tag.
 # Use --specifier to force an exact version (e.g. for a planned major bump).
-nx release version --group icons [--specifier 12.0.0]
-nx release changelog --group icons
+nx release version [--specifier 12.2.0]
+nx release changelog
 ```
 
-**Visuals** (`@koobiq/visuals`):
-
-```sh
-# Add --first-release if no prior @koobiq/visuals@* tag exists yet.
-nx release version --group visuals [--specifier 1.0.0] [--first-release]
-nx release changelog --group visuals [--first-release]
-```
-
-Always dry-run first: add `--dry-run` to the version command to preview what would change without touching git.
+Always dry-run first: `yarn release:preview` (add `--dry-run` to the version command to preview what would change without touching git).
 
 ## Key conventions
 
