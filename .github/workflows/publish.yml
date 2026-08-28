@@ -3,6 +3,8 @@ name: Publish
 on:
   push:
     tags:
+      # Matches both plain fixed-group tags ({version})
+      # and project-scoped tags ({projectName}@{version}.
       - '*.*.*'
   # Entry point for backfilling or retrying the GitHub Release for a tag that's already on npm.
   # Never republishes to npm — see the `publish` job's `if`.
@@ -39,12 +41,33 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
 
+      # Reads the changelog straight from the checkout (same extraction @koobiq/cli uses
+      # locally, see .github/scripts/release-notify.ts), so the notification doesn't
+      # depend on GitHub at all — not the Release object (created separately by the
+      # `github-release` job below) and not the API.
+      - name: Build release notes
+        id: notes
+        run: |
+          {
+            echo "text<<RELEASE_NOTES_EOF"
+            npx tsx .github/scripts/release-notify.ts "${{ github.ref_name }}"
+            echo "RELEASE_NOTES_EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - uses: mattermost/action-mattermost-notify@2.0.0
+        with:
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.MM_WEBHOOK_URL }}
+          MATTERMOST_CHANNEL: ${{ secrets.MM_CHANNEL_NAME }}
+          MATTERMOST_USERNAME: ${{ secrets.MM_BOT_NAME }}
+          TEXT: '${{ steps.notes.outputs.text }}'
+
   github-release:
     name: GitHub Release
     runs-on: ubuntu-latest
     needs: publish
     # Runs after a successful publish, and also standalone on workflow_dispatch (publish is
-    # skipped there, not failed/cancelled).
+    # skipped there, not failed/cancelled). Purely cosmetic (release page / "Latest" badge) —
+    # never blocks or gates the npm publish above.
     if: ${{ !cancelled() && !failure() && github.repository_owner == 'koobiq' }}
     concurrency:
       group: github-release-latest-badge
@@ -57,11 +80,11 @@ jobs:
       TAG: ${{ inputs.tag || github.ref_name }}
     steps:
       - name: Create GitHub release
-        id: release
         run: |
           set -euo pipefail
 
-          if ! printf '%s' "$TAG" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$'; then
+          # Accepts both plain ({version}) and project-scoped ({projectName}@{version}) tags.
+          if ! printf '%s' "$TAG" | grep -qE '^([A-Za-z0-9._/-]+@)?[0-9]+\.[0-9]+\.[0-9]+$'; then
             echo "::error::\"$TAG\" is not a release tag."
             exit 1
           fi
@@ -69,26 +92,14 @@ jobs:
           # A re-run, or a dispatch for a tag already handled, must neither fail nor duplicate.
           if release_error=$(gh release view "$TAG" 2>&1 1>/dev/null); then
             echo "Release $TAG already exists — nothing to do."
+            exit 0
           elif [ "$release_error" != "release not found" ]; then
             echo "::error::gh release view \"$TAG\" failed: $release_error"
             exit 1
-          else
-            gh release create "$TAG" \
-              --verify-tag \
-              --generate-notes \
-              --title "$TAG" \
-              --latest
           fi
 
-          {
-            echo "body<<GH_RELEASE_BODY_EOF"
-            gh release view "$TAG" --json body --jq .body
-            echo "GH_RELEASE_BODY_EOF"
-          } >> "$GITHUB_OUTPUT"
-
-      - uses: mattermost/action-mattermost-notify@2.0.0
-        with:
-          MATTERMOST_WEBHOOK_URL: ${{ secrets.MM_WEBHOOK_URL }}
-          MATTERMOST_CHANNEL: ${{ secrets.MM_CHANNEL_NAME }}
-          MATTERMOST_USERNAME: ${{ secrets.MM_BOT_NAME }}
-          TEXT: '${{ steps.release.outputs.body }}'
+          gh release create "$TAG" \
+            --verify-tag \
+            --generate-notes \
+            --title "$TAG" \
+            --latest

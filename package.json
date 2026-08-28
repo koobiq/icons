@@ -22,6 +22,7 @@
         "-----GITHUB_RELEASE-----": "---------------------------------------------------------------------------------",
         "release": "nx release --skip-publish && git push --follow-tags",
         "release:preview": "nx release --skip-publish --dry-run",
+        "release:notify:test": "node --import tsx --test .github/scripts/release-notify.spec.ts",
         "------FIGMA SCRIPTS------": "--------------------------------------------------------------------------------",
         "figma:export-icons": "nx run @koobiq/icons:figma:export-icons",
         "figma:sync": "yarn run clean && nx run @koobiq/icons:figma:sync",
