@@ -41,10 +41,10 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
 
-      # Reads the changelog straight from the checkout (same extraction @koobiq/cli uses
-      # locally, see .github/scripts/release-notify.ts), so the notification doesn't
-      # depend on GitHub at all — not the Release object (created separately by the
-      # `github-release` job below) and not the API.
+      # Reads the changelog straight from the checkout via @koobiq/cli/release (see
+      # .github/scripts/release-notify.ts), so the notification doesn't depend on GitHub
+      # at all — not the Release object (created separately by the `github-release` job
+      # below) and not the API.
       - name: Build release notes
         id: notes
         run: |

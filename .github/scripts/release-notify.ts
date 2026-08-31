@@ -1,80 +1,16 @@
 #!/usr/bin/env -S npx tsx
 /**
  * Prints a Mattermost-ready release announcement for a git tag, reading only the
- * already-committed CHANGELOG.md — no GitHub API involved, so the notification
- * isn't gated on GitHub being reachable.
+ * already-committed CHANGELOG.md — no GitHub API involved, so the notification isn't
+ * gated on GitHub being reachable.
  *
- * `isVersionLine` / `extractReleaseNotes` mirror @koobiq/cli's
- * packages/cli/src/release/extract-release-notes.ts exactly, so they can be
- * lifted back into @koobiq/cli unchanged. `parseTag` / `resolveChangelogPath` are
- * the only additions, needed for repos with project-scoped tags (e.g. @koobiq/data-grid's
- * `{projectName}@{version}`) instead of a single workspace-wide `{version}` tag.
+ * Delegates the actual extraction to @koobiq/cli/release (isVersionLine/extractReleaseNotes,
+ * parseTag, resolveChangelogPath), which understands both plain fixed-group tags ({version})
+ * and project-scoped tags ({projectName}@{version}).
  *
  * Usage: npx tsx release-notify.ts <tag>
  */
-import { existsSync, readFileSync } from 'node:fs';
-import { join } from 'node:path';
-
-export const isVersionLine = (line: string): boolean => /\d+\.\d+\.\d+.*\(\d{4}-\d{2}-\d{2}\)/.test(line);
-
-export type ChangelogReleaseNotes = { releaseNotes: string; releaseTitle: string };
-
-export function extractReleaseNotes(changelogPath: string, versionName: string): ChangelogReleaseNotes | null {
-    const changelogContent = readFileSync(changelogPath, 'utf8');
-    const lines = changelogContent.split('\n');
-
-    let releaseTitle = '';
-    let releaseNotes = '';
-
-    for (const line of lines) {
-        const isLineWithReleaseVersion = isVersionLine(line);
-
-        if (isLineWithReleaseVersion && line.includes(versionName)) {
-            releaseTitle = line;
-            continue;
-        }
-
-        if (releaseTitle && isLineWithReleaseVersion) break;
-
-        if (releaseTitle) {
-            releaseNotes += `${line}\n`;
-        }
-    }
-
-    if (!releaseTitle) return null;
-
-    return { releaseNotes, releaseTitle };
-}
-
-export type ParsedTag = { project: string | null; version: string };
-
-/** Splits an nx release tag into its optional project scope and version. */
-export function parseTag(tag: string): ParsedTag {
-    const at = tag.lastIndexOf('@');
-
-    if (at === -1) {
-        return { project: null, version: tag };
-    }
-
-    return { project: tag.slice(0, at), version: tag.slice(at + 1) };
-}
-
-/**
- * Resolves which changelog file to read for a parsed tag: a project's own
- * changelog for a scoped tag, falling back to the workspace root changelog
- * (matches this and @koobiq/data-grid's nx release layout).
- */
-export function resolveChangelogPath(workspaceRoot: string, { project }: ParsedTag): string {
-    if (project) {
-        const projectChangelog = join(workspaceRoot, 'packages', project, 'CHANGELOG.md');
-
-        if (existsSync(projectChangelog)) {
-            return projectChangelog;
-        }
-    }
-
-    return join(workspaceRoot, 'CHANGELOG.md');
-}
+import { extractReleaseNotes, parseTag, resolveChangelogPath } from '@koobiq/cli/release';
 
 function main(): void {
     const tag = process.argv[2];
@@ -85,8 +21,15 @@ function main(): void {
     }
 
     const parsedTag = parseTag(tag);
-    const changelogPath = resolveChangelogPath(process.cwd(), parsedTag);
-    const notes = existsSync(changelogPath) ? extractReleaseNotes(changelogPath, parsedTag.version) : null;
+
+    // resolveChangelogPath throws for a scoped tag with no matching project changelog —
+    // that shouldn't stop the release notification, just fall back to a plain message.
+    let notes = null;
+    try {
+        notes = extractReleaseNotes(resolveChangelogPath(process.cwd(), parsedTag), parsedTag.version);
+    } catch (error) {
+        console.error((error as Error).message);
+    }
 
     if (!notes) {
         console.log(`Released ${tag}`);
