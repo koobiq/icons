@@ -26,7 +26,25 @@ jobs:
       - name: Setup Yarn
         uses: ./.github/workflows/actions/setup-yarn
 
-      - run: yarn nx release publish --registry=$REGISTRY
+      # `latest` must always track the current major line. Without this, publishing a patch on an
+      # older major's maintenance branch (e.g. 10.10.x, v11.7.x) after a newer major has shipped
+      # would flip `latest` backward, since `nx release publish` defaults to tagging `latest`
+      # unconditionally. Older majors get their own `v<major>-lts` tag instead. Resolution itself
+      # lives in @koobiq/cli (`resolve-npm-tag`), shared with every other koobiq npm package, so
+      # this comparison isn't reimplemented per repo. All 4 packages here are one fixed Nx release
+      # group (one shared version), so a single check against @koobiq/icons decides the tag for
+      # the whole `nx release publish --tag=...` run.
+      - name: Determine npm dist-tag
+        id: dist-tag
+        run: |
+          set -euo pipefail
+
+          TAG=$(yarn koobiq-cli resolve-npm-tag --package-name @koobiq/icons -p packages/icons)
+
+          echo "Resolved npm dist-tag: $TAG"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+      - run: yarn nx release publish --registry=$REGISTRY --tag=${{ steps.dist-tag.outputs.tag }}
         env:
           REGISTRY: https://registry.npmjs.org/
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
