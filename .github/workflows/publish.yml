@@ -6,28 +6,21 @@ on:
       # Matches both plain fixed-group tags ({version})
       # and project-scoped tags ({projectName}@{version}.
       - '*.*.*'
-  # Entry point for backfilling or retrying the GitHub Release for a tag that's already on npm.
-  # Never republishes to npm — see the `publish` job's `if`.
+  # Allows you to run this workflow manually
   workflow_dispatch:
-    inputs:
-      tag:
-        description: Existing tag to create the GitHub release for
-        required: true
 
 permissions:
   contents: read
+  packages: write
+  # Needed for provenance data generation
+  # https://nx.dev/recipes/nx-release/publish-in-ci-cd#npm-provenance
+  id-token: write
 
 jobs:
   publish:
     name: Publish
     runs-on: ubuntu-latest
-    if: ${{ github.repository_owner == 'koobiq' && github.event_name == 'push' }}
-    permissions:
-      contents: read
-      packages: write
-      # Needed for provenance data generation
-      # https://nx.dev/recipes/nx-release/publish-in-ci-cd#npm-provenance
-      id-token: write
+    if: ${{ github.repository_owner == 'koobiq' }}
     steps:
       - uses: actions/checkout@v7
         with:
@@ -42,9 +35,8 @@ jobs:
           NPM_CONFIG_PROVENANCE: true
 
       # Reads the changelog straight from the checkout via @koobiq/cli/release (see
-      # .github/scripts/release-notify.ts), so the notification doesn't depend on GitHub
-      # at all — not the Release object (created separately by the `github-release` job
-      # below) and not the API.
+      # .github/scripts/release-notify.ts) instead of github.event.release.body, since a
+      # tag push carries no release payload.
       - name: Build release notes
         id: notes
         run: |
@@ -60,46 +52,3 @@ jobs:
           MATTERMOST_CHANNEL: ${{ secrets.MM_CHANNEL_NAME }}
           MATTERMOST_USERNAME: ${{ secrets.MM_BOT_NAME }}
           TEXT: '${{ steps.notes.outputs.text }}'
-
-  github-release:
-    name: GitHub Release
-    runs-on: ubuntu-latest
-    needs: publish
-    # Runs after a successful publish, and also standalone on workflow_dispatch (publish is
-    # skipped there, not failed/cancelled). Purely cosmetic (release page / "Latest" badge) —
-    # never blocks or gates the npm publish above.
-    if: ${{ !cancelled() && !failure() && github.repository_owner == 'koobiq' }}
-    concurrency:
-      group: github-release-latest-badge
-      cancel-in-progress: false
-    permissions:
-      contents: write # for `gh release create`
-    env:
-      GH_TOKEN: ${{ github.token }}
-      GH_REPO: ${{ github.repository }}
-      TAG: ${{ inputs.tag || github.ref_name }}
-    steps:
-      - name: Create GitHub release
-        run: |
-          set -euo pipefail
-
-          # Accepts both plain ({version}) and project-scoped ({projectName}@{version}) tags.
-          if ! printf '%s' "$TAG" | grep -qE '^([A-Za-z0-9._/-]+@)?[0-9]+\.[0-9]+\.[0-9]+$'; then
-            echo "::error::\"$TAG\" is not a release tag."
-            exit 1
-          fi
-
-          # A re-run, or a dispatch for a tag already handled, must neither fail nor duplicate.
-          if release_error=$(gh release view "$TAG" 2>&1 1>/dev/null); then
-            echo "Release $TAG already exists — nothing to do."
-            exit 0
-          elif [ "$release_error" != "release not found" ]; then
-            echo "::error::gh release view \"$TAG\" failed: $release_error"
-            exit 1
-          fi
-
-          gh release create "$TAG" \
-            --verify-tag \
-            --generate-notes \
-            --title "$TAG" \
-            --latest
