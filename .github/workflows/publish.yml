@@ -35,14 +35,14 @@ jobs:
           NPM_CONFIG_PROVENANCE: true
 
       # Reads the changelog straight from the checkout via @koobiq/cli/release (see
-      # .github/scripts/release-notify.ts) instead of github.event.release.body, since a
+      # tools/release-notify/release-notify.ts) instead of github.event.release.body, since a
       # tag push carries no release payload.
       - name: Build release notes
         id: notes
         run: |
           {
             echo "text<<RELEASE_NOTES_EOF"
-            npx tsx .github/scripts/release-notify.ts "${{ github.ref_name }}"
+            npx tsx tools/release-notify/release-notify.ts "${{ github.ref_name }}"
             echo "RELEASE_NOTES_EOF"
           } >> "$GITHUB_OUTPUT"
 
