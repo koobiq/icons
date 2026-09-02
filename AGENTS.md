@@ -84,11 +84,11 @@ yarn nx run @koobiq/icons:figma:sync
 # Lint all
 yarn nx run-many -t lint
 
-# Release (version bump + changelog + publish)
-yarn nx release
+# Release (version bump + changelog + GitHub Release; publish happens in CI, see below)
+yarn release
 
 # Release dry run
-yarn nx release --dry-run
+yarn release:preview
 ```
 
 ## ESLint setup
@@ -106,7 +106,11 @@ Version bumps follow conventional commits: `feat` → minor, `fix` → patch, `B
 
 ### Releasing
 
-`yarn release` (`nx release --skip-publish && git push --follow-tags`) bumps the version, generates the changelog, commits, tags, and pushes. Pushing the tag is what triggers `publish.yml` in CI to actually publish to npm — do not run `nx release publish` manually. GitHub Release page creation is a separate, non-blocking job in `publish.yml` that runs after publish (and can be re-run by hand via `workflow_dispatch` if it ever needs backfilling).
+`yarn release` (`nx release --skip-publish`) bumps the version, generates the changelog, commits, tags, and creates a GitHub Release — requires GitHub auth on the machine running it.
+
+The tag push is what triggers `publish.yml` to run `nx release publish` in CI.
+
+Do not run `nx release publish` manually.
 
 ```sh
 # NX infers the version bump from conventional commits since the last tag.
@@ -115,7 +119,7 @@ nx release version [--specifier 12.2.0]
 nx release changelog
 ```
 
-Always dry-run first: `yarn release:preview` (add `--dry-run` to the version command to preview what would change without touching git).
+Always dry-run first: `yarn release:preview`.
 
 ## Key conventions
 
