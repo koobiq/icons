@@ -296,7 +296,7 @@
     "arrow-right-to-bracket_16": {
         "codepoint": "0xF556",
         "description": "",
-        "tags": ["import", "импорт"]
+        "tags": []
     },
     "arrow-right-from-bracket_16": {
         "codepoint": "0xF557",
@@ -1023,7 +1023,7 @@
     "bolt_16": {
         "codepoint": "0xF60C",
         "description": "",
-        "tags": ["lightning", "power", "болт", "молния", "энергия"]
+        "tags": ["lightning", "power", "молния", "энергия"]
     },
     "paperclip_16": {
         "codepoint": "0xF60E",
@@ -3468,7 +3468,7 @@
     "arrow-right-from-bracket_24": {
         "codepoint": "0xF83C",
         "description": "",
-        "tags": ["exit", "logout", "выйти", "выход", "стрелка"]
+        "tags": []
     },
     "arrow-right-from-rectangle_24": {
         "codepoint": "0xF83D",
@@ -3488,7 +3488,7 @@
     "arrow-right-to-bracket_24": {
         "codepoint": "0xF840",
         "description": "",
-        "tags": ["upload", "вправо", "скобка", "стрелка"]
+        "tags": []
     },
     "arrow-right-to-line_24": {
         "codepoint": "0xF841",
@@ -3715,7 +3715,7 @@
     "bolt_24": {
         "codepoint": "0xF86C",
         "description": "",
-        "tags": ["alert", "event", "notification", "предупреждение", "событие", "событие", "уведомление"]
+        "tags": ["lightning", "power", "молния", "энергия"]
     },
     "box-archive-arrow-down_24": {
         "codepoint": "0xF86D",
@@ -5580,5 +5580,13 @@
     "replace-reverse_24": {
         "codepoint": "0xF9CE",
         "tags": ["substitute", "заменить обратно"]
+    },
+    "rectangle-bolt_16": {
+        "codepoint": "0xF9CF",
+        "tags": ["ups", "ибп", "прямоугольник", "молния"]
+    },
+    "rectangle-bolt_24": {
+        "codepoint": "0xF9D0",
+        "tags": ["ups", "ибп", "прямоугольник", "молния"]
     }
 }
