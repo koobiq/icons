@@ -1,9 +1,11 @@
 name: Publish
 
 on:
-  release:
-    types:
-      - created
+  push:
+    tags:
+      # Matches both plain fixed-group tags ({version})
+      # and project-scoped tags ({projectName}@{version}.
+      - '*.*.*'
   # Allows you to run this workflow manually
   workflow_dispatch:
 
@@ -31,10 +33,3 @@ jobs:
           REGISTRY: https://registry.npmjs.org/
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
-
-      - uses: mattermost/action-mattermost-notify@2.0.0
-        with:
-          MATTERMOST_WEBHOOK_URL: ${{ secrets.MM_WEBHOOK_URL }}
-          MATTERMOST_CHANNEL: ${{ secrets.MM_CHANNEL_NAME }}
-          MATTERMOST_USERNAME: ${{ secrets.MM_BOT_NAME }}
-          TEXT: ${{ github.event.release.body }}

@@ -84,11 +84,11 @@ yarn nx run @koobiq/icons:figma:sync
 # Lint all
 yarn nx run-many -t lint
 
-# Release (version bump + changelog + publish)
-yarn nx release
+# Release (version bump + changelog + GitHub Release; publish happens in CI, see below)
+yarn release
 
 # Release dry run
-yarn nx release --dry-run
+yarn release:preview
 ```
 
 ## ESLint setup
@@ -100,35 +100,26 @@ yarn nx release --dry-run
 
 ## NX release config
 
-Two release groups in `nx.json`:
-
-- **`icons`** — `@koobiq/icons`, `@koobiq/angular-icons`, `@koobiq/react-icons` — fixed versioning, tag pattern: `{version}` (e.g. `11.6.0`)
-- **`visuals`** — `@koobiq/visuals` — independent versioning, tag pattern: `{projectName}@{version}` (e.g. `@koobiq/visuals@1.0.0`)
+Single fixed release group in `nx.json` covering all four packages (`@koobiq/icons`, `@koobiq/angular-icons`, `@koobiq/react-icons`, `@koobiq/visuals`) — one shared version, one root `CHANGELOG.md`, tag pattern: `{version}` (e.g. `12.1.1`).
 
 Version bumps follow conventional commits: `feat` → minor, `fix` → patch, `BREAKING CHANGE` → major.
 
 ### Releasing
 
-Groups are released independently. `nx release changelog` creates a GitHub Release which triggers the `publish.yml` CI workflow automatically — do not run `nx release publish` manually.
+`yarn release` (`nx release --skip-publish`) bumps the version, generates the changelog, commits, tags, and creates a GitHub Release — requires GitHub auth on the machine running it.
 
-**Icons group** (`@koobiq/icons`, `@koobiq/angular-icons`, `@koobiq/react-icons`):
+The tag push is what triggers `publish.yml` to run `nx release publish` in CI.
+
+Do not run `nx release publish` manually.
 
 ```sh
 # NX infers the version bump from conventional commits since the last tag.
 # Use --specifier to force an exact version (e.g. for a planned major bump).
-nx release version --group icons [--specifier 12.0.0]
-nx release changelog --group icons
+nx release version [--specifier 12.2.0]
+nx release changelog
 ```
 
-**Visuals** (`@koobiq/visuals`):
-
-```sh
-# Add --first-release if no prior @koobiq/visuals@* tag exists yet.
-nx release version --group visuals [--specifier 1.0.0] [--first-release]
-nx release changelog --group visuals [--first-release]
-```
-
-Always dry-run first: add `--dry-run` to the version command to preview what would change without touching git.
+Always dry-run first: `yarn release:preview`.
 
 ## Key conventions
 
