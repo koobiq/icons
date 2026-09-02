@@ -34,21 +34,9 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
 
-      # Reads the changelog straight from the checkout via @koobiq/cli/release (see
-      # tools/release-notify/release-notify.ts) instead of github.event.release.body, since a
-      # tag push carries no release payload.
-      - name: Build release notes
-        id: notes
-        run: |
-          {
-            echo "text<<RELEASE_NOTES_EOF"
-            npx tsx tools/release-notify/release-notify.ts "${{ github.ref_name }}"
-            echo "RELEASE_NOTES_EOF"
-          } >> "$GITHUB_OUTPUT"
-
       - uses: mattermost/action-mattermost-notify@2.0.0
         with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MM_WEBHOOK_URL }}
           MATTERMOST_CHANNEL: ${{ secrets.MM_CHANNEL_NAME }}
           MATTERMOST_USERNAME: ${{ secrets.MM_BOT_NAME }}
-          TEXT: '${{ steps.notes.outputs.text }}'
+          TEXT: ${{ github.event.release.body }}

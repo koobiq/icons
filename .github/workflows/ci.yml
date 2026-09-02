@@ -29,5 +29,5 @@ jobs:
           yarn run prettier
           yarn run lint
 
-      - name: Checks
-        run: yarn run check-mapping && yarn run release:notify:test
+      - name: Check Mapping
+        run: yarn run check-mapping
