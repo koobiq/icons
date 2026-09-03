@@ -19,6 +19,8 @@
         "prepare": "husky",
         "clean": "yarn cache clean && nx reset && rimraf temp dist",
         "check-mapping": "node packages/icons/scripts/check-mapping.mjs",
+        "-----DOCS-----": "---------------------------------------------------------------------------------",
+        "generate:llms": "node packages/icons/scripts/generate-llms-txt.mjs",
         "-----GITHUB_RELEASE-----": "---------------------------------------------------------------------------------",
         "release": "nx release --skip-publish",
         "release:preview": "nx release --skip-publish --dry-run",

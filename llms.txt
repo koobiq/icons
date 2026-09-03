@@ -1,0 +1,19 @@
+# Koobiq Icons
+
+> Icon packages (SVG source, icon font, Angular/React components) for the Koobiq design system.
+
+## Docs
+- [llms-full.txt](https://github.com/koobiq/icons/blob/main/llms-full.txt) — every icon name, sizes, tags, and import examples
+- [Repo conventions](https://github.com/koobiq/icons/blob/main/AGENTS.md) — package structure, build pipeline, naming conventions
+- [SVG color-zones guide](https://github.com/koobiq/icons/blob/main/packages/icons/README.md) — duotone icon usage
+
+## Packages
+- `@koobiq/icons` — SVG source, icon font, SVG sprite, TS types
+- `@koobiq/angular-icons` — Angular standalone components
+- `@koobiq/react-icons` — React components
+- `@koobiq/visuals` — static illustrations
+
+## Icon naming
+Icon keys are `{name}_{size}`, size ∈ 16/24/32/48/64 (not every icon has every size).
+React component: `Icon{PascalCase}{size}`. Angular class: `Kbq{PascalCase}{size}`, selector: `kbq{PascalCase}{size}`.
+Some icons were renamed; if you see an unfamiliar name in existing code, check `deprecated-aliases` in llms-full.txt — it's an old name and should be replaced with the current one shown there.

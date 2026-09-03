@@ -2,6 +2,8 @@ import * as fs from 'fs';
 import { basename, dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
+import { buildLlmsFiles } from './generate-llms-txt.mjs';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -38,3 +40,10 @@ Object.entries(mapping).forEach(([_, value]) => {
 });
 
 fs.writeFileSync(join(distDir, 'info/kbq-icons-info.json'), JSON.stringify(mapping));
+
+const interopMapping = JSON.parse(fs.readFileSync(new URL('../../../mapping-interop.json', import.meta.url)));
+
+const { llmsTxt, llmsFullTxt } = buildLlmsFiles(mapping, interopMapping);
+
+fs.writeFileSync(join(distDir, 'llms.txt'), llmsTxt);
+fs.writeFileSync(join(distDir, 'llms-full.txt'), llmsFullTxt);
