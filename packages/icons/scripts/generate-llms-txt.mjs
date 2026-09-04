@@ -115,8 +115,6 @@ ${lines.join('\n')}
 > Icon packages (SVG source, icon font, Angular/React components) for the Koobiq design system.
 
 ## Docs
-- [llms-full.txt](https://github.com/koobiq/icons/blob/main/llms-full.txt) — every icon name, sizes, tags, and import examples
-- [Repo conventions](https://github.com/koobiq/icons/blob/main/AGENTS.md) — package structure, build pipeline, naming conventions
 - [SVG color-zones guide](https://github.com/koobiq/icons/blob/main/packages/icons/README.md) — duotone icon usage
 
 ## Packages
