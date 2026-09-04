@@ -31,3 +31,6 @@ jobs:
 
       - name: Check Mapping
         run: yarn run check-mapping
+
+      - name: Check llms.txt
+        run: yarn run check-llms

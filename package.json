@@ -21,6 +21,7 @@
         "check-mapping": "node packages/icons/scripts/check-mapping.mjs",
         "-----DOCS-----": "---------------------------------------------------------------------------------",
         "generate:llms": "node packages/icons/scripts/generate-llms-txt.mjs",
+        "check-llms": "node packages/icons/scripts/generate-llms-txt.mjs --check",
         "-----GITHUB_RELEASE-----": "---------------------------------------------------------------------------------",
         "release": "nx release --skip-publish",
         "release:preview": "nx release --skip-publish --dry-run",

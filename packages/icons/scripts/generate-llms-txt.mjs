@@ -137,6 +137,7 @@ Some icons were renamed; if you see an unfamiliar name in existing code, check \
 async function main() {
     const outArg = process.argv.find((arg) => arg.startsWith('--out='));
     const outDir = outArg ? outArg.slice('--out='.length) : WORKSPACE_ROOT;
+    const checkOnly = process.argv.includes('--check');
 
     const mappingJSON = JSON.parse(await readFile(MAPPING_PATH, { encoding: 'utf-8' }));
     // eslint-disable-next-line no-unused-vars
@@ -144,6 +145,21 @@ async function main() {
     const interopMapping = JSON.parse(await readFile(INTEROP_PATH, { encoding: 'utf-8' }));
 
     const { llmsTxt, llmsFullTxt } = buildLlmsFiles(mapping, interopMapping);
+
+    if (checkOnly) {
+        const committedLlmsTxt = await readFile(join(outDir, 'llms.txt'), { encoding: 'utf-8' }).catch(() => null);
+        const committedLlmsFullTxt = await readFile(join(outDir, 'llms-full.txt'), { encoding: 'utf-8' }).catch(
+            () => null
+        );
+
+        if (committedLlmsTxt !== llmsTxt || committedLlmsFullTxt !== llmsFullTxt) {
+            console.error('❌ llms.txt / llms-full.txt are stale — run `yarn generate:llms` and commit the result.');
+            process.exit(1);
+        }
+
+        console.log('✅ llms.txt / llms-full.txt are up to date');
+        return;
+    }
 
     await writeFile(join(outDir, 'llms.txt'), llmsTxt);
     await writeFile(join(outDir, 'llms-full.txt'), llmsFullTxt);
