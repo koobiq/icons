@@ -13,6 +13,9 @@
         "figma:export-icons": { "cache": false }
     },
     "release": {
+        "version": {
+            "preVersionCommand": "yarn generate:llms && git add llms.txt llms-full.txt"
+        },
         "git": {
             "commitMessage": "chore(release): bump version {version} w/ changelog",
             "tagSign": true

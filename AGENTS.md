@@ -125,5 +125,6 @@ Always dry-run first: `yarn release:preview`.
 
 - `packages/icons/svg/` is the single source of truth for SVGs — do not edit files there manually; they are managed by `figma:sync`
 - `mapping.json` must be updated when icons are added/removed; run `yarn check-mapping` to validate
+- `llms.txt`/`llms-full.txt` are regenerated automatically before each release (`nx release`'s `preVersionCommand`, see `nx.json`); run `yarn generate:llms` manually if you want to preview the update sooner
 - Angular component class names: `Kbq{PascalCase}` — selector: `kbq{PascalCase}` (attribute on `<svg>`)
 - React component names: `Icon{PascalCase}{Size}` — exported as named exports from the package index
