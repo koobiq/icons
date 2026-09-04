@@ -101,16 +101,20 @@ export function buildLlmsFiles(mapping, interopMapping = {}) {
         return line;
     });
 
-    const llmsFullTxt = `# Koobiq Icons — Full Reference
+    const llmsFullTxt = `<!-- This file is auto-generated. Do not edit it manually! -->
 
-Auto-generated from mapping.json by packages/icons/scripts/generate-llms-txt.mjs — do not hand-edit.
+# Koobiq Icons — Full Reference
 
-Format: <name> | sizes: <sizes> | tags: <tags> | react: <import> | angular: <import> | deprecated-aliases: <old names, if renamed>
+## Format
+
+\`<name> | sizes: <sizes> | tags: <tags> | react: <import> | angular: <import> | deprecated-aliases: <old names, if renamed>\`
 
 ${lines.join('\n')}
 `;
 
-    const llmsTxt = `# Koobiq Icons
+    const llmsTxt = `<!-- This file is auto-generated. Do not edit it manually! -->
+
+# Koobiq Icons
 
 > Icon packages (SVG source, icon font, Angular/React components) for the Koobiq design system.
 
@@ -118,14 +122,13 @@ ${lines.join('\n')}
 - [SVG color-zones guide](https://github.com/koobiq/icons/blob/main/packages/icons/README.md) — duotone icon usage
 
 ## Packages
-- \`@koobiq/icons\` — SVG source, icon font, SVG sprite, TS types
-- \`@koobiq/angular-icons\` — Angular standalone components
-- \`@koobiq/react-icons\` — React components
-- \`@koobiq/visuals\` — static illustrations
+- [\`@koobiq/icons\`](https://github.com/koobiq/icons/blob/main/packages/icons/README.md) — SVG source, icon font, SVG sprite, TS types
+- [\`@koobiq/angular-icons\`](https://github.com/koobiq/icons/blob/main/packages/angular-icons/README.md) — Angular standalone components
+- [\`@koobiq/react-icons\`](https://github.com/koobiq/icons/blob/main/packages/react-icons/README.md) — React components
+- [\`@koobiq/visuals\`](https://github.com/koobiq/icons/blob/main/packages/visuals/README.md) — static illustrations
 
 ## Icon naming
 Icon keys are \`{name}_{size}\`, size ∈ 16/24/32/48/64 (not every icon has every size).
-React component: \`Icon{PascalCase}{size}\`. Angular class: \`Kbq{PascalCase}{size}\`, selector: \`kbq{PascalCase}{size}\`.
 Some icons were renamed; if you see an unfamiliar name in existing code, check \`deprecated-aliases\` in llms-full.txt — it's an old name and should be replaced with the current one shown there.
 `;
 
