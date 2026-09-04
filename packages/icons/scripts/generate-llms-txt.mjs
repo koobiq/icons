@@ -52,7 +52,8 @@ function buildAliasMap(interopMapping) {
     return aliasesByBaseName;
 }
 
-export function buildLlmsFiles(mapping, interopMapping = {}) {
+export function buildLlmsFiles(mapping, interopMapping = {}, packageVersions = {}) {
+    const packageVersion = (name) => (packageVersions[name] ? `${packageVersions[name]}` : '');
     const aliasesByBaseName = buildAliasMap(interopMapping);
     const icons = Object.create(null);
 
@@ -90,7 +91,7 @@ export function buildLlmsFiles(mapping, interopMapping = {}) {
         const reactImport = `import { Icon${pascal}${firstSize} } from '@koobiq/react-icons'`;
         const angularImport = `import { Kbq${pascal}${firstSize} } from '@koobiq/angular-icons' (selector: kbq${pascal}${firstSize})`;
 
-        let line = `${name} | sizes: ${sizesStr} | tags: ${tagsStr} | react: ${reactImport} | angular: ${angularImport}`;
+        let line = `| ${name} | sizes: ${sizesStr} | tags: ${tagsStr} | react: ${reactImport} | angular: ${angularImport} |`;
 
         const aliases = (aliasesByBaseName[name] ?? []).slice().sort((a, b) => a.localeCompare(b));
 
@@ -107,8 +108,8 @@ export function buildLlmsFiles(mapping, interopMapping = {}) {
 
 ## Format
 
-\`<name> | sizes: <sizes> | tags: <tags> | react: <import> | angular: <import> | deprecated-aliases: <old names, if renamed>\`
-
+|<name> | sizes: <sizes> | tags: <tags> | react: <import> | angular: <import> | deprecated-aliases: <old names, if renamed>|
+| --- | --- | --- | --- | --- | --- |
 ${lines.join('\n')}
 `;
 
@@ -119,20 +120,40 @@ ${lines.join('\n')}
 > Icon packages (SVG source, icon font, Angular/React components) for the Koobiq design system.
 
 ## Docs
-- [SVG color-zones guide](https://github.com/koobiq/icons/blob/main/packages/icons/README.md) — duotone icon usage
+- [SVG color-zones guide](https://github.com/koobiq/icons/tree/${packageVersion('@koobiq/icons')}/packages/icons/README.md) — duotone icon usage
 
 ## Packages
-- [\`@koobiq/icons\`](https://github.com/koobiq/icons/blob/main/packages/icons/README.md) — SVG source, icon font, SVG sprite, TS types
-- [\`@koobiq/angular-icons\`](https://github.com/koobiq/icons/blob/main/packages/angular-icons/README.md) — Angular standalone components
-- [\`@koobiq/react-icons\`](https://github.com/koobiq/icons/blob/main/packages/react-icons/README.md) — React components
-- [\`@koobiq/visuals\`](https://github.com/koobiq/icons/blob/main/packages/visuals/README.md) — static illustrations
+- [\`@koobiq/icons@${packageVersion('@koobiq/icons')}\`](https://github.com/koobiq/icons/tree/${packageVersion('@koobiq/icons')}/packages/icons/README.md) — SVG source, icon font, SVG sprite, TS types
+- [\`@koobiq/angular-icons@${packageVersion('@koobiq/angular-icons')}\`](https://github.com/koobiq/icons/tree/${packageVersion('@koobiq/angular-icons')}/packages/angular-icons/README.md) — Angular standalone components
+- [\`@koobiq/react-icons@${packageVersion('@koobiq/react-icons')}\`](https://github.com/koobiq/icons/tree/${packageVersion('@koobiq/react-icons')}/packages/react-icons/README.md) — React components
+- [\`@koobiq/visuals@${packageVersion('@koobiq/visuals')}\`](https://github.com/koobiq/icons/tree/${packageVersion('@koobiq/visuals')}/packages/visuals/README.md) — static illustrations
 
 ## Icon naming
-Icon keys are \`{name}_{size}\`, size ∈ 16/24/32/48/64 (not every icon has every size).
 Some icons were renamed; if you see an unfamiliar name in existing code, check \`deprecated-aliases\` in llms-full.txt — it's an old name and should be replaced with the current one shown there.
 `;
 
     return { llmsTxt, llmsFullTxt };
+}
+
+const PACKAGE_DIRS = {
+    '@koobiq/icons': 'packages/icons',
+    '@koobiq/angular-icons': 'packages/angular-icons',
+    '@koobiq/react-icons': 'packages/react-icons',
+    '@koobiq/visuals': 'packages/visuals'
+};
+
+async function readPackageVersions() {
+    const versions = Object.create(null);
+
+    for (const [name, dir] of Object.entries(PACKAGE_DIRS)) {
+        const packageJson = JSON.parse(
+            await readFile(join(WORKSPACE_ROOT, dir, 'package.json'), { encoding: 'utf-8' })
+        );
+
+        versions[name] = packageJson.version;
+    }
+
+    return versions;
 }
 
 async function main() {
@@ -143,8 +164,9 @@ async function main() {
     // eslint-disable-next-line no-unused-vars
     const { $schema, ...mapping } = mappingJSON;
     const interopMapping = JSON.parse(await readFile(INTEROP_PATH, { encoding: 'utf-8' }));
+    const packageVersions = await readPackageVersions();
 
-    const { llmsTxt, llmsFullTxt } = buildLlmsFiles(mapping, interopMapping);
+    const { llmsTxt, llmsFullTxt } = buildLlmsFiles(mapping, interopMapping, packageVersions);
 
     await writeFile(join(outDir, 'llms.txt'), llmsTxt);
     await writeFile(join(outDir, 'llms-full.txt'), llmsFullTxt);

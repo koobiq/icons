@@ -34,3 +34,7 @@ yarn nx run @koobiq/icons:figma:sync
 ## License
 
 MIT © [Koobiq Team](https://koobiq.io)
+
+## Icon naming
+
+Icon keys are `{name}_{size}`, size ∈ 16/24/32/48/64 (not every icon has every size).

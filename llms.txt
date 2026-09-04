@@ -6,16 +6,15 @@
 
 ## Docs
 
-- [SVG color-zones guide](https://github.com/koobiq/icons/blob/main/packages/icons/README.md) — duotone icon usage
+- [SVG color-zones guide](https://github.com/koobiq/icons/tree/12.2.0/packages/icons/README.md) — duotone icon usage
 
 ## Packages
 
-- [`@koobiq/icons`](https://github.com/koobiq/icons/blob/main/packages/icons/README.md) — SVG source, icon font, SVG sprite, TS types
-- [`@koobiq/angular-icons`](https://github.com/koobiq/icons/blob/main/packages/angular-icons/README.md) — Angular standalone components
-- [`@koobiq/react-icons`](https://github.com/koobiq/icons/blob/main/packages/react-icons/README.md) — React components
-- [`@koobiq/visuals`](https://github.com/koobiq/icons/blob/main/packages/visuals/README.md) — static illustrations
+- [`@koobiq/icons@12.2.0`](https://github.com/koobiq/icons/tree/12.2.0/packages/icons/README.md) — SVG source, icon font, SVG sprite, TS types
+- [`@koobiq/angular-icons@12.2.0`](https://github.com/koobiq/icons/tree/12.2.0/packages/angular-icons/README.md) — Angular standalone components
+- [`@koobiq/react-icons@12.2.0`](https://github.com/koobiq/icons/tree/12.2.0/packages/react-icons/README.md) — React components
+- [`@koobiq/visuals@12.2.0`](https://github.com/koobiq/icons/tree/12.2.0/packages/visuals/README.md) — static illustrations
 
 ## Icon naming
 
-Icon keys are `{name}_{size}`, size ∈ 16/24/32/48/64 (not every icon has every size).
 Some icons were renamed; if you see an unfamiliar name in existing code, check `deprecated-aliases` in llms-full.txt — it's an old name and should be replaced with the current one shown there.
