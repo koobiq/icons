@@ -28,6 +28,8 @@ yarn add @koobiq/react-icons
 
 ## Usage
 
+Component names follow the pattern `Icon{PascalCase}{size}` — the icon's kebab-case name (e.g. `check`, `filter-dot`) converted to PascalCase, with the size suffix (`16`/`24`/`32`/`48`/`64`) appended.
+
 Import the required icon from the package:
 
 ```tsx

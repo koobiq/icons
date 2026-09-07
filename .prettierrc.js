@@ -13,6 +13,12 @@ const config = {
             options: {
                 tabWidth: 2
             }
+        },
+        {
+            files: ['llms.txt', 'llms-full.txt'],
+            options: {
+                parser: 'markdown'
+            }
         }
     ]
 };

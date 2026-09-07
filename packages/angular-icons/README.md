@@ -27,6 +27,8 @@ pnpm add @koobiq/angular-icons
 
 ## Usage
 
+Component class names follow the pattern `Kbq{PascalCase}{size}`, used as an attribute selector `kbq{PascalCase}{size}` on an `<svg>` — the icon's kebab-case name (e.g. `plus`, `filter-dot`) converted to PascalCase, with the size suffix (`16`/`24`/`32`/`48`/`64`) appended.
+
 Import the required icon component and add it to your template:
 
 ```ts

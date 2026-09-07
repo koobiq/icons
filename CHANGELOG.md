@@ -1,3 +1,16 @@
+## 12.2.0 (2026-09-02)
+
+### 🚀 Features
+
+- add replace-reverse icons (#DS-5448) ([#145](https://github.com/koobiq/icons/pull/145))
+- add rectangle-bolt icons (#DS-5481) ([049bc41](https://github.com/koobiq/icons/commit/049bc41))
+- tag-based publication (#DS-5212) ([#146](https://github.com/koobiq/icons/pull/146))
+
+### ❤️ Thank You
+
+- Nikita Guryev
+- Roman Turov @rmnturov
+
 ## 12.1.1 (2026-07-14)
 
 ### 🚀 Features

@@ -1,0 +1,20 @@
+<!-- This file is auto-generated. Do not edit it manually! -->
+
+# Koobiq Icons
+
+> Icon packages (SVG source, icon font, Angular/React components) for the Koobiq design system.
+
+## Docs
+
+- [SVG color-zones guide](https://github.com/koobiq/icons/tree/12.2.0/packages/icons/README.md) — duotone icon usage
+
+## Packages
+
+- [`@koobiq/icons@12.2.0`](https://github.com/koobiq/icons/tree/12.2.0/packages/icons/README.md) — SVG source, icon font, SVG sprite, TS types
+- [`@koobiq/angular-icons@12.2.0`](https://github.com/koobiq/icons/tree/12.2.0/packages/angular-icons/README.md) — Angular standalone components
+- [`@koobiq/react-icons@12.2.0`](https://github.com/koobiq/icons/tree/12.2.0/packages/react-icons/README.md) — React components
+- [`@koobiq/visuals@12.2.0`](https://github.com/koobiq/icons/tree/12.2.0/packages/visuals/README.md) — static illustrations
+
+## Icon naming
+
+Some icons were renamed; if you see an unfamiliar name in existing code, check `deprecated-aliases` in llms-full.txt — it's an old name and should be replaced with the current one shown there.
