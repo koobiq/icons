@@ -41,7 +41,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          TAG=$(yarn koobiq-cli resolve-npm-tag --package-name @koobiq/icons -p packages/icons)
+          TAG=$(yarn dlx @koobiq/cli@20.3.0 resolve-npm-tag --package-name @koobiq/icons -p packages/icons)
 
           echo "Resolved npm dist-tag: $TAG"
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
