@@ -41,7 +41,19 @@ jobs:
         run: |
           set -euo pipefail
 
-          TAG=$(yarn dlx @koobiq/cli@20.3.0 resolve-npm-tag --package-name @koobiq/icons -p packages/icons)
+          # `yarn dlx` writes its install logs to stdout, so the raw substitution picks them up
+          # alongside the tag, $GITHUB_OUTPUT gets a multi-line value and the step dies with
+          # `Invalid format '➤ YN0000: ┌ Resolution step'`. `--quiet` drops those logs; the grep
+          # keeps only lines shaped like an npm dist-tag, so any leftover yarn chrome (all of it
+          # either starts with `➤` or contains spaces) can never reach the output again.
+          RAW=$(yarn dlx --quiet @koobiq/cli@20.3.0 resolve-npm-tag --package-name @koobiq/icons -p packages/icons)
+          TAG=$(printf '%s\n' "$RAW" | grep -E '^[A-Za-z0-9][A-Za-z0-9._-]*$' | tail -n 1 || true)
+
+          if [ -z "$TAG" ]; then
+            echo "resolve-npm-tag did not return a usable dist-tag. Raw output:" >&2
+            printf '%s\n' "$RAW" >&2
+            exit 1
+          fi
 
           echo "Resolved npm dist-tag: $TAG"
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
