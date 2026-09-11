@@ -14,7 +14,7 @@
     },
     "release": {
         "version": {
-            "preVersionCommand": "yarn generate:llms && git add llms.txt llms-full.txt"
+            "preVersionCommand": "[ \"$NX_DRY_RUN\" = true ] || { yarn generate:llms && git add llms.txt llms-full.txt; }"
         },
         "git": {
             "commitMessage": "chore(release): bump version {version} w/ changelog",

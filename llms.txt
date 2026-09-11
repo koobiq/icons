@@ -3,17 +3,20 @@
 # Koobiq Icons
 
 > Icon packages (SVG source, icon font, Angular/React components) for the Koobiq design system.
+> Repository: github.com/koobiq/icons. Every link below is a path inside it, relative to this
+> file — resolve it against the URL you fetched this file from, and you stay on the same version.
 
 ## Docs
 
-- [SVG color-zones guide](https://github.com/koobiq/icons/tree/12.2.0/packages/icons/README.md) — duotone icon usage
+- [Full icon reference](llms-full.txt) — every icon name, its sizes, tags, and React/Angular imports
+- [SVG color-zones guide](packages/icons/README.md) — duotone icon usage
 
 ## Packages
 
-- [`@koobiq/icons@12.2.0`](https://github.com/koobiq/icons/tree/12.2.0/packages/icons/README.md) — SVG source, icon font, SVG sprite, TS types
-- [`@koobiq/angular-icons@12.2.0`](https://github.com/koobiq/icons/tree/12.2.0/packages/angular-icons/README.md) — Angular standalone components
-- [`@koobiq/react-icons@12.2.0`](https://github.com/koobiq/icons/tree/12.2.0/packages/react-icons/README.md) — React components
-- [`@koobiq/visuals@12.2.0`](https://github.com/koobiq/icons/tree/12.2.0/packages/visuals/README.md) — static illustrations
+- [`@koobiq/icons`](packages/icons/README.md) — SVG source, icon font, SVG sprite, TS types
+- [`@koobiq/angular-icons`](packages/angular-icons/README.md) — Angular standalone components
+- [`@koobiq/react-icons`](packages/react-icons/README.md) — React components
+- [`@koobiq/visuals`](packages/visuals/README.md) — static illustrations
 
 ## Icon naming
 
