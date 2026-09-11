@@ -1,3 +1,18 @@
+## 12.2.1 (2026-09-11)
+
+### 🚀 Features
+
+- added generated llms,llms-full (#DS-4759) ([#152](https://github.com/koobiq/icons/pull/152))
+- add dist tag policy resolution on publish (#DS-4781) ([#147](https://github.com/koobiq/icons/pull/147))
+
+### 🩹 Fixes
+
+- make llms.txt links version-independent (#DS-4759) ([#154](https://github.com/koobiq/icons/pull/154))
+
+### ❤️ Thank You
+
+- Nikita Guryev
+
 ## 12.2.0 (2026-09-02)
 
 ### 🚀 Features
