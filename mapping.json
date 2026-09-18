@@ -1417,7 +1417,7 @@
     "square-multiple-o_16": {
         "codepoint": "0xF67D",
         "description": "",
-        "tags": ["copy", "duplicate", "squares", "дублировать", "квадраты", "копировать"]
+        "tags": ["copy", "копировать"]
     },
     "ellipsis-vertical_16": {
         "codepoint": "0xF67E",
@@ -5097,7 +5097,7 @@
     "square-multiple-o_24": {
         "codepoint": "0xF96D",
         "description": "",
-        "tags": ["shape", "квадрат", "форма"]
+        "tags": ["copy", "копировать"]
     },
     "square_24": {
         "codepoint": "0xF96E",
@@ -5588,5 +5588,13 @@
     "rectangle-bolt_24": {
         "codepoint": "0xF9D0",
         "tags": ["ups", "ибп", "прямоугольник", "молния"]
+    },
+    "square-multiple-plus_16": {
+        "codepoint": "0xF9D1",
+        "tags": ["duplicate", "дублировать"]
+    },
+    "square-multiple-plus_24": {
+        "codepoint": "0xF9D2",
+        "tags": ["duplicate", "дублировать"]
     }
 }
