@@ -1,3 +1,18 @@
+## 12.3.0 (2026-09-25)
+
+### 🚀 Features
+
+- add square-multiple icons (#DS-5594) ([#155](https://github.com/koobiq/icons/pull/155))
+
+### 🩹 Fixes
+
+- keep yarn dlx logs out of the dist-tag output (#DS-4781) ([0565c22](https://github.com/koobiq/icons/commit/0565c22))
+
+### ❤️ Thank You
+
+- Nikita Guryev
+- Roman Turov @rmnturov
+
 ## 12.2.1 (2026-09-11)
 
 ### 🚀 Features
