@@ -4,7 +4,7 @@
     "description": "",
     "private": true,
     "license": "MIT",
-    "packageManager": "yarn@4.1.1",
+    "packageManager": "yarn@4.18.1",
     "workspaces": [
         "packages/*"
     ],
@@ -86,5 +86,10 @@
         "typescript": "~5.5.4",
         "vite": "^7.3.6",
         "vite-tsconfig-paths": "^5.1.4"
+    },
+    "dependenciesMeta": {
+        "cwebp-bin": {
+            "built": true
+        }
     }
 }
