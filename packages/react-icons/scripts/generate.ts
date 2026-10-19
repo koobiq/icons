@@ -7,7 +7,9 @@ import { transform } from '@svgr/core';
 
 const INPUT_DIR = path.resolve('../icons/svg');
 const MANIFEST_FILE = path.resolve('../../mapping.json');
+const INTEROP_FILE = path.resolve('../../mapping-interop.json');
 const OUTPUT_DIR = path.resolve('./src');
+const LEGACY_DIR = path.join(OUTPUT_DIR, 'legacy');
 
 const SIZES = ['16', '24', '32', '48', '64'] as const;
 
@@ -71,6 +73,8 @@ export type IconsManifest = {
         keywords?: string[];
     }[];
 };
+
+export * from './legacy';
 `;
 }
 
@@ -119,6 +123,12 @@ function template(variables: any, { tpl }: any) {
 `;
 }
 
+function withDeprecationNotice(code: string, deprecatedFor: string): string {
+    const comment = `\n/**\n * @deprecated\n * This icon has been deprecated, please use ${deprecatedFor} instead.\n */\n`;
+
+    return code.replace('export const', `${comment}export const`);
+}
+
 const transformConfig = {
     template,
     plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
@@ -147,18 +157,56 @@ const transformConfig = {
     typescript: true
 };
 
-async function run() {
-    const entries = await fsp.readdir(OUTPUT_DIR).catch(() => []);
+async function generateLegacy() {
+    const interop: Record<string, string> = JSON.parse(await fsp.readFile(INTEROP_FILE, 'utf8'));
 
-    await Promise.all(
-        entries.map(async (entry) => {
-            if (entry === 'legacy') return;
+    const legacyMetas = Object.entries(interop)
+        .filter(([, oldName]) => SIZES.some((size) => oldName.endsWith(`_${size}`)))
+        .map(([newKey, oldName]) => ({ newKey, ...parseIconKey(oldName) }));
 
-            const targetPath = path.join(OUTPUT_DIR, entry);
-            await rm(targetPath, { recursive: true, force: true });
+    legacyMetas.sort((a, b) => a.name.localeCompare(b.name));
+
+    await mkdir(LEGACY_DIR, { recursive: true });
+
+    const results = await Promise.allSettled(
+        legacyMetas.map(async (meta) => {
+            const fileKey = `${meta.newKey}.svg`;
+            const filePath = path.join(INPUT_DIR, fileKey);
+
+            let svgCode: string;
+
+            try {
+                svgCode = await fsp.readFile(filePath, 'utf8');
+            } catch {
+                console.warn(`⚠️ Missing SVG: ${fileKey} (skipped, legacy ${meta.name})`);
+
+                return;
+            }
+
+            const tsxCode = await transform(svgCode || '', transformConfig, {
+                componentName: meta.name
+            });
+
+            const outputPath = path.join(LEGACY_DIR, `${meta.name}.tsx`);
+            await fsp.writeFile(outputPath, withDeprecationNotice(tsxCode, parseIconKey(meta.newKey).name));
+            console.log(`✅ (legacy) ${fileKey} → legacy/${meta.name}.tsx`);
         })
     );
 
+    const failed = results.filter((r) => r.status === 'rejected').length;
+
+    if (failed) {
+        console.error(`❌ Legacy generation completed with errors: ${failed}/${results.length} files`);
+    }
+
+    const legacyIndexPath = path.join(LEGACY_DIR, 'index.ts');
+    const legacyExports = legacyMetas.map((meta) => `export * from './${meta.name}';`);
+
+    await fsp.writeFile(legacyIndexPath, `${legacyExports.join('\n')}\n`);
+}
+
+async function run() {
+    await rm(OUTPUT_DIR, { recursive: true, force: true });
     await mkdir(OUTPUT_DIR, { recursive: true });
 
     const iconsInfo = JSON.parse(await fsp.readFile(MANIFEST_FILE, 'utf8'));
@@ -209,11 +257,7 @@ async function run() {
 
     await fsp.writeFile(indexPath, buildEntryFile(entryPoints.join('\n'), names));
 
-    const indexContent = await fsp.readFile(indexPath, 'utf8');
-
-    if (!indexContent.includes(`export * from './legacy'`)) {
-        await fsp.writeFile(indexPath, `${indexContent}\nexport * from './legacy';\n`);
-    }
+    await generateLegacy();
 
     console.log(`🎉 All SVGs successfully converted to React components!`);
 }

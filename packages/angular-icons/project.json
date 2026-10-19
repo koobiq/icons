@@ -7,8 +7,7 @@
             "executor": "nx:run-commands",
             "options": {
                 "command": "npx tsx scripts/generate.ts",
-                "cwd": "{projectRoot}",
-                "assets": ["{workspaceRoot}/packages/icons/svg/**/*.svg"]
+                "cwd": "{projectRoot}"
             }
         },
         "copy-meta": {
