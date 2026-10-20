@@ -22,40 +22,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular-eslint/bundled-angular-compiler@npm:19.8.1":
-  version: 19.8.1
-  resolution: "@angular-eslint/bundled-angular-compiler@npm:19.8.1"
-  checksum: 10c0/743a51b9eeeb9d6a783f224efc34e4100ba95871961be8c3a9f42da4a346d70bc568b754fda587c60d133fd2342b2ca28e0620f11f9c1e5041529dd4a0c74644
-  languageName: node
-  linkType: hard
-
-"@angular-eslint/eslint-plugin@npm:^19.0.0":
-  version: 19.8.1
-  resolution: "@angular-eslint/eslint-plugin@npm:19.8.1"
-  dependencies:
-    "@angular-eslint/bundled-angular-compiler": "npm:19.8.1"
-    "@angular-eslint/utils": "npm:19.8.1"
-  peerDependencies:
-    "@typescript-eslint/utils": ^7.11.0 || ^8.0.0
-    eslint: ^8.57.0 || ^9.0.0
-    typescript: "*"
-  checksum: 10c0/9c215017b8f6f440fd0daccba01287a70b700ee5c5f72a125f87d01c4b3183e4133c7ee29929db2a89c58eabc1ff6357c51d59f0afec52ef13db4ff4ce2b8f3e
-  languageName: node
-  linkType: hard
-
-"@angular-eslint/utils@npm:19.8.1":
-  version: 19.8.1
-  resolution: "@angular-eslint/utils@npm:19.8.1"
-  dependencies:
-    "@angular-eslint/bundled-angular-compiler": "npm:19.8.1"
-  peerDependencies:
-    "@typescript-eslint/utils": ^7.11.0 || ^8.0.0
-    eslint: ^8.57.0 || ^9.0.0
-    typescript: "*"
-  checksum: 10c0/8f8514adbaa823264607dcfb4c3bd509251f86020a9dc1afd986fcdb67ff4159dbd1178c3b041a3f17f80a3e8b955b40725276a555beeb31969372e8ae27fa55
-  languageName: node
-  linkType: hard
-
 "@angular/compiler-cli@npm:^19.0.0":
   version: 19.2.25
   resolution: "@angular/compiler-cli@npm:19.2.25"
@@ -2745,7 +2711,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@koobiq/icons-workspace@workspace:."
   dependencies:
-    "@angular-eslint/eslint-plugin": "npm:^19.0.0"
     "@angular/compiler": "npm:^19.0.0"
     "@angular/compiler-cli": "npm:^19.0.0"
     "@angular/core": "npm:^19.0.0"

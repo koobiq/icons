@@ -39,7 +39,6 @@
         "gen-preview": "npx tsx packages/visuals/scripts/generate-preview.ts"
     },
     "devDependencies": {
-        "@angular-eslint/eslint-plugin": "^19.0.0",
         "@angular/compiler": "^19.0.0",
         "@angular/compiler-cli": "^19.0.0",
         "@angular/core": "^19.0.0",
