@@ -5596,5 +5596,15 @@
     "square-multiple-plus_24": {
         "codepoint": "0xF9D2",
         "tags": ["duplicate", "дублировать"]
+    },
+    "git_16": {
+        "codepoint": "0xF9D3",
+        "description": "гит",
+        "tags": []
+    },
+    "git_24": {
+        "codepoint": "0xF9D4",
+        "description": "гит",
+        "tags": []
     }
 }
