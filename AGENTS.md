@@ -94,11 +94,13 @@ yarn release:preview
 
 ## ESLint setup
 
-- Root `.eslintrc.js` — base config (eslint:recommended + prettier), used by `@koobiq/icons`
-- `packages/angular-icons/.eslintrc.js` — extends root, adds `@typescript-eslint` (no `@angular-eslint`
-  rules — the only `.ts` files it lints are scripts/the entry point, not the generated components)
-- `packages/react-icons/.eslintrc.cjs` — extends root, adds `@typescript-eslint` (no React-specific
-  rules — the only `.ts` files it lints are scripts, not the generated `.tsx` components)
+- Root `.eslintrc.js` — base JS rules (eslint:recommended + prettier) plus the shared `@typescript-eslint`
+  override (`**/*.ts`/`**/*.tsx`) that every package's TS files are linted with — no package has
+  framework-specific (`@angular-eslint`/React) rules, since the only `.ts` files any package lints are
+  scripts/entry points, not the generated components
+- `packages/angular-icons/.eslintrc.js`, `packages/react-icons/.eslintrc.cjs` — extend root; each adds
+  only its own `ignorePatterns` and `parserOptions.project`/`tsconfigRootDir` (can't be shared, has to
+  point at that package's own `tsconfig.json`)
 - Generated files are excluded via `.eslintignore` and per-package `ignorePatterns`
 
 ## NX release config

@@ -7,23 +7,9 @@ const config = {
     overrides: [
         {
             files: ['**/*.ts'],
-            parser: '@typescript-eslint/parser',
             parserOptions: {
                 project: ['tsconfig.json'],
                 tsconfigRootDir: __dirname
-            },
-            plugins: ['@typescript-eslint'],
-            extends: [
-                'plugin:@typescript-eslint/recommended',
-                // should be last
-                'plugin:prettier/recommended'
-            ],
-            rules: {
-                '@typescript-eslint/no-unused-vars': [1, { argsIgnorePattern: '^_' }],
-                '@typescript-eslint/consistent-type-imports': [
-                    'error',
-                    { prefer: 'type-imports', fixStyle: 'separate-type-imports' }
-                ]
             }
         }
     ]
