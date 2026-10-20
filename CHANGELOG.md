@@ -1,3 +1,17 @@
+## 12.4.0 (2026-10-20)
+
+### 🚀 Features
+
+- add git icons (#DS-5765) ([#161](https://github.com/koobiq/icons/pull/161))
+
+### 🩹 Fixes
+
+- align time-messenger-alt keywords (#DS-5765) ([#162](https://github.com/koobiq/icons/pull/162))
+
+### ❤️ Thank You
+
+- Roman Turov @rmnturov
+
 ## 12.3.0 (2026-09-25)
 
 ### 🚀 Features
