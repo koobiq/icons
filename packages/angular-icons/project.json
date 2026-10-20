@@ -10,6 +10,14 @@
                 "cwd": "{projectRoot}"
             }
         },
+        "verify-generated": {
+            "executor": "nx:run-commands",
+            "dependsOn": ["generate"],
+            "options": {
+                "command": "npx tsx scripts/verify-generated.ts",
+                "cwd": "{projectRoot}"
+            }
+        },
         "copy-meta": {
             "executor": "nx:run-commands",
             "options": {
@@ -19,7 +27,7 @@
         },
         "build": {
             "executor": "@nx/angular:package",
-            "dependsOn": ["generate", "copy-meta"],
+            "dependsOn": ["verify-generated", "copy-meta"],
             "options": {
                 "project": "{projectRoot}/ng-package.json"
             }

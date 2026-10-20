@@ -5,15 +5,14 @@ import type { KbqIconMeta, KbqIconsMetadata } from '@koobiq/icons/dist/types/ico
 
 import { transform } from '@svgr/core';
 
+import type { IconMeta, IconSize } from './lib/icon-meta';
+import { compareBySizeAndName, getLegacyMetas, parseIconKey } from './lib/icon-meta';
+
 const INPUT_DIR = path.resolve('../icons/svg');
 const MANIFEST_FILE = path.resolve('../../mapping.json');
 const INTEROP_FILE = path.resolve('../../mapping-interop.json');
 const OUTPUT_DIR = path.resolve('./src');
 const LEGACY_DIR = path.join(OUTPUT_DIR, 'legacy');
-
-const SIZES = ['16', '24', '32', '48', '64'] as const;
-
-type IconSize = (typeof SIZES)[number];
 
 type IconsManifest = {
     icons: {
@@ -23,41 +22,6 @@ type IconsManifest = {
         description?: string;
     }[];
 };
-
-function pascalCase(input: string): string {
-    if (!input) return '';
-
-    const tokens = input
-        .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
-        .split(/[^a-zA-Z0-9]+/g)
-        .filter(Boolean);
-
-    return tokens.map((t) => t.charAt(0).toUpperCase() + t.slice(1).toLowerCase()).join('');
-}
-
-type IconMeta = {
-    key: string;
-    baseName: string;
-    size?: IconSize;
-    name: string;
-};
-
-function parseIconKey(key: string): IconMeta {
-    const [baseName = '', rawSize] = key.split('_');
-
-    const size = SIZES.includes(rawSize as IconSize) ? (rawSize as IconSize) : undefined;
-
-    const name = `Icon${pascalCase(baseName)}${size || ''}`;
-
-    return { key, baseName, size, name };
-}
-
-function compareBySizeAndName(a: { size?: IconSize; name: string }, b: { size?: IconSize; name: string }) {
-    const sa = Number(a.size ?? 0);
-    const sb = Number(b.size ?? 0);
-
-    return sa === sb ? a.name.localeCompare(b.name) : sa - sb;
-}
 
 function buildEntryFile(entry: string, componentNames: string[]) {
     return `
@@ -159,12 +123,7 @@ const transformConfig = {
 
 async function generateLegacy() {
     const interop: Record<string, string> = JSON.parse(await fsp.readFile(INTEROP_FILE, 'utf8'));
-
-    const legacyMetas = Object.entries(interop)
-        .filter(([, oldName]) => SIZES.some((size) => oldName.endsWith(`_${size}`)))
-        .map(([newKey, oldName]) => ({ newKey, ...parseIconKey(oldName) }));
-
-    legacyMetas.sort((a, b) => a.name.localeCompare(b.name));
+    const legacyMetas = getLegacyMetas(interop);
 
     await mkdir(LEGACY_DIR, { recursive: true });
 
@@ -262,7 +221,9 @@ async function run() {
     console.log(`🎉 All SVGs successfully converted to React components!`);
 }
 
-run().catch((err) => {
-    console.error('❌ Error during icon generation:', err);
-    process.exit(1);
-});
+if (import.meta.url === `file://${process.argv[1]}`) {
+    run().catch((err) => {
+        console.error('❌ Error during icon generation:', err);
+        process.exit(1);
+    });
+}

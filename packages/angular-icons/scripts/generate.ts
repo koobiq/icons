@@ -1,6 +1,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
+import { toKebab, toPascalCase } from './lib/icon-name';
+
 const SVG_SOURCE_DIR = path.join(path.dirname(require.resolve('@koobiq/icons/package.json')), 'svg');
 const OUTPUT_DIR = path.resolve(__dirname, '../icons');
 const PUBLIC_API_PATH = path.resolve(__dirname, '../public-api.ts');
@@ -41,19 +43,6 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
 })
 export class ${className} {}
 `;
-
-/** plus_16 → plus-16 */
-function toKebab(name: string): string {
-    return name.replace(/_/g, '-');
-}
-
-/** plus-16 → Plus16 */
-function toPascalCase(kebab: string): string {
-    return kebab
-        .split('-')
-        .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-        .join('');
-}
 
 function extractSvgParts(svg: string): { viewBox: string; width: string; height: string; inner: string } {
     const viewBox = svg.match(/viewBox="([^"]+)"/)?.[1] ?? '0 0 16 16';
@@ -119,4 +108,6 @@ function run(): void {
     fs.writeFileSync(PUBLIC_API_PATH, publicApi, 'utf-8');
 }
 
-run();
+if (require.main === module) {
+    run();
+}
