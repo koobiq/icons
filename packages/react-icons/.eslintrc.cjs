@@ -12,23 +12,15 @@ const config = {
                 project: ['tsconfig.json'],
                 tsconfigRootDir: __dirname
             },
-            plugins: ['@typescript-eslint', 'react-hooks'],
+            plugins: ['@typescript-eslint'],
             extends: [
                 'plugin:@typescript-eslint/recommended',
-                'plugin:react/recommended',
-                'plugin:react/jsx-runtime',
                 // should be last
                 'plugin:prettier/recommended'
             ],
-            settings: {
-                react: { version: 'detect' }
-            },
             rules: {
                 'no-debugger': 'error',
                 'no-alert': 'error',
-                'react-hooks/rules-of-hooks': 'error',
-                'react-hooks/exhaustive-deps': 'off',
-                'react/prop-types': 'off',
                 '@typescript-eslint/no-unused-vars': [1, { argsIgnorePattern: '^_' }],
                 '@typescript-eslint/consistent-type-imports': [
                     'error',

@@ -97,7 +97,8 @@ yarn release:preview
 - Root `.eslintrc.js` — base config (eslint:recommended + prettier), used by `@koobiq/icons`
 - `packages/angular-icons/.eslintrc.js` — extends root, adds `@typescript-eslint` (no `@angular-eslint`
   rules — the only `.ts` files it lints are scripts/the entry point, not the generated components)
-- `packages/react-icons/.eslintrc.cjs` — extends root, adds `eslint-plugin-react`, `react-hooks`, `@typescript-eslint`
+- `packages/react-icons/.eslintrc.cjs` — extends root, adds `@typescript-eslint` (no React-specific
+  rules — the only `.ts` files it lints are scripts, not the generated `.tsx` components)
 - Generated files are excluded via `.eslintignore` and per-package `ignorePatterns`
 
 ## NX release config
