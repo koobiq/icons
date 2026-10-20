@@ -605,6 +605,8 @@ export * from './icons/gear-badge-square-16';
 export * from './icons/gear-badge-square-24';
 export * from './icons/gear-16';
 export * from './icons/gear-24';
+export * from './icons/git-16';
+export * from './icons/git-24';
 export * from './icons/github-alt-16';
 export * from './icons/github-alt-24';
 export * from './icons/github-16';

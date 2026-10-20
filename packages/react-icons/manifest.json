@@ -3075,6 +3075,11 @@
       ]
     },
     {
+      "name": "IconGit16",
+      "size": "16",
+      "description": "гит"
+    },
+    {
       "name": "IconGithub16",
       "size": "16",
       "keywords": [
@@ -8026,6 +8031,11 @@
         "настройка",
         "сборка"
       ]
+    },
+    {
+      "name": "IconGit24",
+      "size": "24",
+      "description": "гит"
     },
     {
       "name": "IconGithub24",
