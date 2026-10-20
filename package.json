@@ -39,7 +39,6 @@
         "gen-preview": "npx tsx packages/visuals/scripts/generate-preview.ts"
     },
     "devDependencies": {
-        "@angular-eslint/eslint-plugin": "^19.0.0",
         "@angular/compiler": "^19.0.0",
         "@angular/compiler-cli": "^19.0.0",
         "@angular/core": "^19.0.0",
@@ -69,8 +68,6 @@
         "eslint": "^8.57.0",
         "eslint-config-prettier": "^9.1.2",
         "eslint-plugin-prettier": "^5.5.6",
-        "eslint-plugin-react": "^7.37.0",
-        "eslint-plugin-react-hooks": "^5.0.0",
         "fantasticon": "^3.0.0",
         "handlebars": "^4.7.8",
         "husky": "^9.1.7",

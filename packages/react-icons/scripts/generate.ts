@@ -5,13 +5,14 @@ import type { KbqIconMeta, KbqIconsMetadata } from '@koobiq/icons/dist/types/ico
 
 import { transform } from '@svgr/core';
 
+import type { IconMeta, IconSize } from './lib/icon-meta';
+import { compareBySizeAndName, getLegacyMetas, parseIconKey } from './lib/icon-meta';
+
 const INPUT_DIR = path.resolve('../icons/svg');
 const MANIFEST_FILE = path.resolve('../../mapping.json');
+const INTEROP_FILE = path.resolve('../../mapping-interop.json');
 const OUTPUT_DIR = path.resolve('./src');
-
-const SIZES = ['16', '24', '32', '48', '64'] as const;
-
-type IconSize = (typeof SIZES)[number];
+const LEGACY_DIR = path.join(OUTPUT_DIR, 'legacy');
 
 type IconsManifest = {
     icons: {
@@ -21,41 +22,6 @@ type IconsManifest = {
         description?: string;
     }[];
 };
-
-function pascalCase(input: string): string {
-    if (!input) return '';
-
-    const tokens = input
-        .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
-        .split(/[^a-zA-Z0-9]+/g)
-        .filter(Boolean);
-
-    return tokens.map((t) => t.charAt(0).toUpperCase() + t.slice(1).toLowerCase()).join('');
-}
-
-type IconMeta = {
-    key: string;
-    baseName: string;
-    size?: IconSize;
-    name: string;
-};
-
-function parseIconKey(key: string): IconMeta {
-    const [baseName = '', rawSize] = key.split('_');
-
-    const size = SIZES.includes(rawSize as IconSize) ? (rawSize as IconSize) : undefined;
-
-    const name = `Icon${pascalCase(baseName)}${size || ''}`;
-
-    return { key, baseName, size, name };
-}
-
-function compareBySizeAndName(a: { size?: IconSize; name: string }, b: { size?: IconSize; name: string }) {
-    const sa = Number(a.size ?? 0);
-    const sb = Number(b.size ?? 0);
-
-    return sa === sb ? a.name.localeCompare(b.name) : sa - sb;
-}
 
 function buildEntryFile(entry: string, componentNames: string[]) {
     return `
@@ -71,6 +37,8 @@ export type IconsManifest = {
         keywords?: string[];
     }[];
 };
+
+export * from './legacy';
 `;
 }
 
@@ -119,6 +87,12 @@ function template(variables: any, { tpl }: any) {
 `;
 }
 
+function withDeprecationNotice(code: string, deprecatedFor: string): string {
+    const comment = `\n/**\n * @deprecated\n * This icon has been deprecated, please use ${deprecatedFor} instead.\n */\n`;
+
+    return code.replace('export const', `${comment}export const`);
+}
+
 const transformConfig = {
     template,
     plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
@@ -147,18 +121,51 @@ const transformConfig = {
     typescript: true
 };
 
-async function run() {
-    const entries = await fsp.readdir(OUTPUT_DIR).catch(() => []);
+async function generateLegacy() {
+    const interop: Record<string, string> = JSON.parse(await fsp.readFile(INTEROP_FILE, 'utf8'));
+    const legacyMetas = getLegacyMetas(interop);
 
-    await Promise.all(
-        entries.map(async (entry) => {
-            if (entry === 'legacy') return;
+    await mkdir(LEGACY_DIR, { recursive: true });
 
-            const targetPath = path.join(OUTPUT_DIR, entry);
-            await rm(targetPath, { recursive: true, force: true });
+    const results = await Promise.allSettled(
+        legacyMetas.map(async (meta) => {
+            const fileKey = `${meta.newKey}.svg`;
+            const filePath = path.join(INPUT_DIR, fileKey);
+
+            let svgCode: string;
+
+            try {
+                svgCode = await fsp.readFile(filePath, 'utf8');
+            } catch {
+                console.warn(`⚠️ Missing SVG: ${fileKey} (skipped, legacy ${meta.name})`);
+
+                return;
+            }
+
+            const tsxCode = await transform(svgCode || '', transformConfig, {
+                componentName: meta.name
+            });
+
+            const outputPath = path.join(LEGACY_DIR, `${meta.name}.tsx`);
+            await fsp.writeFile(outputPath, withDeprecationNotice(tsxCode, parseIconKey(meta.newKey).name));
+            console.log(`✅ (legacy) ${fileKey} → legacy/${meta.name}.tsx`);
         })
     );
 
+    const failed = results.filter((r) => r.status === 'rejected').length;
+
+    if (failed) {
+        console.error(`❌ Legacy generation completed with errors: ${failed}/${results.length} files`);
+    }
+
+    const legacyIndexPath = path.join(LEGACY_DIR, 'index.ts');
+    const legacyExports = legacyMetas.map((meta) => `export * from './${meta.name}';`);
+
+    await fsp.writeFile(legacyIndexPath, `${legacyExports.join('\n')}\n`);
+}
+
+async function run() {
+    await rm(OUTPUT_DIR, { recursive: true, force: true });
     await mkdir(OUTPUT_DIR, { recursive: true });
 
     const iconsInfo = JSON.parse(await fsp.readFile(MANIFEST_FILE, 'utf8'));
@@ -209,16 +216,14 @@ async function run() {
 
     await fsp.writeFile(indexPath, buildEntryFile(entryPoints.join('\n'), names));
 
-    const indexContent = await fsp.readFile(indexPath, 'utf8');
-
-    if (!indexContent.includes(`export * from './legacy'`)) {
-        await fsp.writeFile(indexPath, `${indexContent}\nexport * from './legacy';\n`);
-    }
+    await generateLegacy();
 
     console.log(`🎉 All SVGs successfully converted to React components!`);
 }
 
-run().catch((err) => {
-    console.error('❌ Error during icon generation:', err);
-    process.exit(1);
-});
+if (import.meta.url === `file://${process.argv[1]}`) {
+    run().catch((err) => {
+        console.error('❌ Error during icon generation:', err);
+        process.exit(1);
+    });
+}

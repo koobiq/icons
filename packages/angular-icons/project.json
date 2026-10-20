@@ -7,8 +7,15 @@
             "executor": "nx:run-commands",
             "options": {
                 "command": "npx tsx scripts/generate.ts",
-                "cwd": "{projectRoot}",
-                "assets": ["{workspaceRoot}/packages/icons/svg/**/*.svg"]
+                "cwd": "{projectRoot}"
+            }
+        },
+        "verify-generated": {
+            "executor": "nx:run-commands",
+            "dependsOn": ["generate"],
+            "options": {
+                "command": "npx tsx scripts/verify-generated.ts",
+                "cwd": "{projectRoot}"
             }
         },
         "copy-meta": {
@@ -20,7 +27,7 @@
         },
         "build": {
             "executor": "@nx/angular:package",
-            "dependsOn": ["generate", "copy-meta"],
+            "dependsOn": ["verify-generated", "copy-meta"],
             "options": {
                 "project": "{projectRoot}/ng-package.json"
             }

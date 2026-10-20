@@ -46,3 +46,9 @@ icons-config.json
 .nx/cache
 .nx/workspace-data
 
+# generated icon components (build artifacts, see AGENTS.md)
+packages/angular-icons/icons/
+packages/angular-icons/public-api.ts
+packages/react-icons/src/
+packages/react-icons/manifest.json
+

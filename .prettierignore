@@ -5,8 +5,8 @@ packages/icons/templates
 
 # ignore generated Angular icons
 packages/angular-icons/icons
-
+packages/angular-icons/public-api.ts
 
 # ignore generated React icons
-packages/react-icons/src/index.ts
+packages/react-icons/src
 packages/react-icons/manifest.json

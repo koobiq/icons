@@ -62,6 +62,7 @@ packages/icons/svg/          ← source SVGs (populated by figma:sync)
 | `build:fonts`        | Generates icon font (TTF/WOFF) + CSS/SCSS → `dist/packages/icons/fonts/` (no cache — font timestamps are non-deterministic) |
 | `build:types`        | Generates TS type definitions from `schema.json` → `dist/packages/icons/types/`                                             |
 | `generate`           | Generates Angular/React components from SVGs in `packages/icons/svg/`                                                       |
+| `verify-generated`   | Statically checks the `generate` output (AST-level, no render) against the source SVGs; `build` depends on it, no cache     |
 | `build`              | Compiles/bundles the package (ng-packagr for Angular, Vite+tsc for React); copies LICENSE, README, package.json into dist   |
 | `lint`               | ESLint with package-specific config                                                                                         |
 | `nx-release-publish` | Publishes from `dist/packages/{name}/` to npm                                                                               |
@@ -93,9 +94,13 @@ yarn release:preview
 
 ## ESLint setup
 
-- Root `.eslintrc.js` — base config (eslint:recommended + prettier), used by `@koobiq/icons`
-- `packages/angular-icons/.eslintrc.js` — extends root, adds `@angular-eslint` and `@typescript-eslint`
-- `packages/react-icons/.eslintrc.cjs` — extends root, adds `eslint-plugin-react`, `react-hooks`, `@typescript-eslint`
+- Root `.eslintrc.js` — base JS rules (eslint:recommended + prettier) plus the shared `@typescript-eslint`
+  override (`**/*.ts`/`**/*.tsx`) that every package's TS files are linted with — no package has
+  framework-specific (`@angular-eslint`/React) rules, since the only `.ts` files any package lints are
+  scripts/entry points, not the generated components
+- `packages/angular-icons/.eslintrc.js`, `packages/react-icons/.eslintrc.cjs` — extend root; each adds
+  only its own `ignorePatterns` and `parserOptions.project`/`tsconfigRootDir` (can't be shared, has to
+  point at that package's own `tsconfig.json`)
 - Generated files are excluded via `.eslintignore` and per-package `ignorePatterns`
 
 ## NX release config
@@ -125,6 +130,14 @@ Always dry-run first: `yarn release:preview`.
 
 - `packages/icons/svg/` is the single source of truth for SVGs — do not edit files there manually; they are managed by `figma:sync`
 - `mapping.json` must be updated when icons are added/removed; run `yarn check-mapping` to validate
+- Angular/React icon components are never committed — they're generated on the fly before `build`
+  (`generate` target, `cache: false` in `nx.json`). React's `src/legacy/*` (deprecated aliases) are
+  generated from `mapping-interop.json` entries whose old name ends in a size suffix (`_16` etc.)
+- `verify-generated` (both packages) statically checks the `generate` output against the source
+  SVGs — component shape (`forwardRef`/`@Component` decorator), `width`/`height`/`viewBox` fidelity
+  to the source SVG, and the React legacy `@deprecated` notice. It's a plain AST walk via the
+  TypeScript compiler API (no jsdom/TestBed render), reusing the same name/filter logic as `generate`
+  via `scripts/lib/` so the check can't silently drift from the generator it's checking
 - `llms.txt`/`llms-full.txt` are regenerated automatically before each release (`nx release`'s `preVersionCommand`, see `nx.json`) — skipped under `--dry-run`, so `yarn release:preview` leaves the working tree alone; run `yarn generate:llms` manually if you want to preview the update sooner
 - Angular component class names: `Kbq{PascalCase}` — selector: `kbq{PascalCase}` (attribute on `<svg>`)
 - React component names: `Icon{PascalCase}{Size}` — exported as named exports from the package index

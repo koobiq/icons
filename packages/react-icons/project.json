@@ -16,6 +16,14 @@
                 "cwd": "{projectRoot}"
             }
         },
+        "verify-generated": {
+            "executor": "nx:run-commands",
+            "dependsOn": ["generate"],
+            "options": {
+                "command": "npx tsx scripts/verify-generated.ts",
+                "cwd": "{projectRoot}"
+            }
+        },
         "lint": {
             "executor": "@nx/eslint:lint",
             "options": {
@@ -26,7 +34,7 @@
             }
         },
         "build": {
-            "dependsOn": ["generate"],
+            "dependsOn": ["verify-generated"],
             "executor": "nx:run-commands",
             "options": {
                 "commands": ["vite build && tsc -p tsconfig.build.json", "npx tsx scripts/copy-meta-to-dist.ts"],
