@@ -4,12 +4,12 @@ Icon packages for the [Koobiq](https://koobiq.io) design system.
 
 ## Packages
 
-| Package                                           | Description                                                              |
-| ------------------------------------------------- | ------------------------------------------------------------------------ |
-| [`@koobiq/icons`](packages/icons)                 | SVG source files, icon font (TTF/WOFF), SVG sprite, and TypeScript types |
-| [`@koobiq/angular-icons`](packages/angular-icons) | Angular standalone SVG icon components                                   |
-| [`@koobiq/react-icons`](packages/react-icons)     | React SVG icon components                                                |
-| [`@koobiq/visuals`](packages/visuals)             | Static illustrations and error page images (light/dark)                  |
+| Package                                           | Description                                                                      |
+| ------------------------------------------------- | -------------------------------------------------------------------------------- |
+| [`@koobiq/icons`](packages/icons)                 | SVG source files, icon font (WOFF2, WOFF, TTF), SVG sprite, and TypeScript types |
+| [`@koobiq/angular-icons`](packages/angular-icons) | Angular standalone SVG icon components                                           |
+| [`@koobiq/react-icons`](packages/react-icons)     | React SVG icon components                                                        |
+| [`@koobiq/visuals`](packages/visuals)             | Static illustrations and error page images (light/dark)                          |
 
 ## Development
 

@@ -1,6 +1,6 @@
 const fs = require('fs');
 const packageJSON = require('./package.json');
-const { Handlebars, codepoints } = require('./scripts/fantasticicon-utils');
+const { Handlebars, codepoints, fontTypes } = require('./scripts/fantasticicon-utils');
 
 if (!fs.existsSync('./svg')) {
     console.error('SVG source directory not found. Run figma:sync first.');
@@ -49,7 +49,7 @@ module.exports = {
     codepoints: codepoints,
     inputDir: 'svg',
     outputDir: '../../dist/packages/icons/fonts',
-    fontTypes: ['woff2', 'woff', 'ttf'],
+    fontTypes: fontTypes,
     normalize: true,
     assetTypes: ['css', 'scss', 'html'],
     templates: {
