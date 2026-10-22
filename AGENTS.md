@@ -54,18 +54,18 @@ packages/icons/svg/          ← source SVGs (populated by figma:sync)
 
 ## NX targets (per package)
 
-| Target               | What it does                                                                                                                |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `figma:export-icons` | Exports SVGs from Figma via `.figmaexportrc.mjs` (icons only, no cache)                                                     |
-| `figma:sync`         | Copies exported SVGs from `temp/svg` into `packages/icons/svg/` (no cache)                                                  |
-| `build:sprite`       | Generates SVG symbol sprite → `dist/packages/icons/symbol/`                                                                 |
-| `build:fonts`        | Generates icon font (TTF/WOFF) + CSS/SCSS → `dist/packages/icons/fonts/` (no cache — font timestamps are non-deterministic) |
-| `build:types`        | Generates TS type definitions from `schema.json` → `dist/packages/icons/types/`                                             |
-| `generate`           | Generates Angular/React components from SVGs in `packages/icons/svg/`                                                       |
-| `verify-generated`   | Statically checks the `generate` output (AST-level, no render) against the source SVGs; `build` depends on it, no cache     |
-| `build`              | Compiles/bundles the package (ng-packagr for Angular, Vite+tsc for React); copies LICENSE, README, package.json into dist   |
-| `lint`               | ESLint with package-specific config                                                                                         |
-| `nx-release-publish` | Publishes from `dist/packages/{name}/` to npm                                                                               |
+| Target               | What it does                                                                                                                        |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `figma:export-icons` | Exports SVGs from Figma via `.figmaexportrc.mjs` (icons only, no cache)                                                             |
+| `figma:sync`         | Copies exported SVGs from `temp/svg` into `packages/icons/svg/` (no cache)                                                          |
+| `build:sprite`       | Generates SVG symbol sprite → `dist/packages/icons/symbol/`                                                                         |
+| `build:fonts`        | Generates icon font (WOFF2, WOFF, TTF) + CSS/SCSS → `dist/packages/icons/fonts/` (no cache — font timestamps are non-deterministic) |
+| `build:types`        | Generates TS type definitions from `schema.json` → `dist/packages/icons/types/`                                                     |
+| `generate`           | Generates Angular/React components from SVGs in `packages/icons/svg/`                                                               |
+| `verify-generated`   | Statically checks the `generate` output (AST-level, no render) against the source SVGs; `build` depends on it, no cache             |
+| `build`              | Compiles/bundles the package (ng-packagr for Angular, Vite+tsc for React); copies LICENSE, README, package.json into dist           |
+| `lint`               | ESLint with package-specific config                                                                                                 |
+| `nx-release-publish` | Publishes from `dist/packages/{name}/` to npm                                                                                       |
 
 ## Common commands
 
