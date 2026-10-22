@@ -49,7 +49,7 @@ generateFonts({
     codepoints: codepoints,
     inputDir: './svg',
     outputDir: '../../dist/packages/icons/fonts',
-    fontTypes: [FontAssetType.TTF, FontAssetType.WOFF],
+    fontTypes: [FontAssetType.WOFF2, FontAssetType.WOFF, FontAssetType.TTF],
     normalize: true,
     assetTypes: [OtherAssetType.CSS, OtherAssetType.SCSS, OtherAssetType.HTML],
     templates: {

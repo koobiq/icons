@@ -49,7 +49,7 @@ module.exports = {
     codepoints: codepoints,
     inputDir: 'svg',
     outputDir: '../../dist/packages/icons/fonts',
-    fontTypes: ['ttf', 'woff'],
+    fontTypes: ['woff2', 'woff', 'ttf'],
     normalize: true,
     assetTypes: ['css', 'scss', 'html'],
     templates: {
