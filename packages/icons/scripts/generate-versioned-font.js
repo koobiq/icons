@@ -1,7 +1,7 @@
 const packageJSON = require('../package.json');
 const fs = require('fs');
-const { Handlebars, codepoints } = require('./fantasticicon-utils');
-const { generateFonts, FontAssetType, OtherAssetType } = require('fantasticon');
+const { Handlebars, codepoints, fontTypes } = require('./fantasticicon-utils');
+const { generateFonts, OtherAssetType } = require('fantasticon');
 
 if (!fs.existsSync('./svg')) {
     console.error('SVG source directory not found at ./svg');
@@ -49,7 +49,7 @@ generateFonts({
     codepoints: codepoints,
     inputDir: './svg',
     outputDir: '../../dist/packages/icons/fonts',
-    fontTypes: [FontAssetType.WOFF, FontAssetType.TTF],
+    fontTypes: fontTypes,
     normalize: true,
     assetTypes: [OtherAssetType.CSS, OtherAssetType.SCSS, OtherAssetType.HTML],
     templates: {

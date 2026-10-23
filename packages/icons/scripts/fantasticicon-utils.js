@@ -37,7 +37,11 @@ Object.entries(mapping).forEach(([key, value]) => {
     }
 });
 
+// fantasticon writes @font-face `src` in this order; browsers use the first format they support
+const fontTypes = ['woff2', 'woff', 'ttf'];
+
 module.exports = {
     codepoints,
+    fontTypes,
     Handlebars
 };
