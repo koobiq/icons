@@ -1,3 +1,18 @@
+## 12.5.0 (2026-10-30)
+
+### 🚀 Features
+
+- add WOFF2 icon fonts (#DS-5780) ([#167](https://github.com/koobiq/icons/pull/167))
+- add language, cloud-arrow-up, propeller, square-cut, layer-pair icons (#DS-5810) ([#168](https://github.com/koobiq/icons/pull/168))
+
+### 🩹 Fixes
+
+- prefer WOFF in icon font CSS (#DS-5778) ([#166](https://github.com/koobiq/icons/pull/166))
+
+### ❤️ Thank You
+
+- Roman Turov @rmnturov
+
 ## 12.4.0 (2026-10-20)
 
 ### 🚀 Features
