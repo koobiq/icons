@@ -5606,5 +5606,52 @@
         "codepoint": "0xF9D4",
         "description": "гит",
         "tags": []
+    },
+    "language_16": {
+        "codepoint": "0xF9D5",
+        "tags": [
+            "locale",
+            "localization",
+            "multilingual",
+            "switch language",
+            "translate",
+            "translation",
+            "выбор языка",
+            "локализация",
+            "мультиязычность",
+            "перевести",
+            "перевод",
+            "смена языка",
+            "язык",
+            "языки"
+        ]
+    },
+    "cloud-arrow-up_16": {
+        "codepoint": "0xF9D6",
+        "tags": [
+            "cloud storage",
+            "cloud upload",
+            "send to cloud",
+            "upload",
+            "upload file",
+            "загрузить в облако",
+            "загрузка в облако",
+            "облако",
+            "облачное хранилище",
+            "отправить в облако",
+            "стрелка вверх"
+        ]
+    },
+    "propeller_16": {
+        "codepoint": "0xF9D7",
+        "tags": ["radar", "вентилятор", "дискавери", "обнаружение активов", "пропеллер", "радар"]
+    },
+    "square-cut_16": {
+        "codepoint": "0xF9D8",
+        "tags": ["cutout", "вырез", "квадрат", "пентест", "поиск уязвимостей"]
+    },
+    "layer-pair_16": {
+        "codepoint": "0xF9D9",
+        "tags": ["two layers", "облегченный аудит", "пара слоев", "слои"]
     }
 }
