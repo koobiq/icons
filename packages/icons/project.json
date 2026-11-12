@@ -38,8 +38,12 @@
         "build:types": {
             "executor": "nx:run-commands",
             "options": {
-                "command": "json2ts ../../schema.json ../../dist/packages/icons/types/icons.d.ts",
-                "cwd": "{projectRoot}"
+                "commands": [
+                    "json2ts ../../schema.json ../../dist/packages/icons/types/icons.d.ts",
+                    "node scripts/generate-icon-types.mjs"
+                ],
+                "cwd": "{projectRoot}",
+                "parallel": false
             }
         },
         "build": {
