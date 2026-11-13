@@ -24,6 +24,10 @@
         "symbols"
     ],
     "exports": {
+        "./icon-names/*": {
+            "types": "./icon-names/*.d.ts",
+            "default": "./icon-names/*.mjs"
+        },
         "./*": {
             "types": "./*.d.ts",
             "default": "./*"
