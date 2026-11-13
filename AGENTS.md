@@ -6,6 +6,8 @@
 
 NX monorepo (Yarn 4 workspaces) for the Koobiq design system icon packages. Publishable packages, all built into `dist/packages/` at the workspace root.
 
+How an icon gets from Figma into the packages, the commit and pull request rules: [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Package structure
 
 ```
@@ -57,7 +59,7 @@ packages/icons/svg/          ← source SVGs (populated by figma:sync)
 | Target               | What it does                                                                                                                        |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | `figma:export-icons` | Exports SVGs from Figma via `.figmaexportrc.mjs` (icons only, no cache)                                                             |
-| `figma:sync`         | Copies exported SVGs from `temp/svg` into `packages/icons/svg/` (no cache)                                                          |
+| `figma:sync`         | Replaces `packages/icons/svg/` with the export from `temp/svg` (no cache); run as `yarn figma:sync`, which cleans `temp/` first     |
 | `build:sprite`       | Generates SVG symbol sprite → `dist/packages/icons/symbol/`                                                                         |
 | `build:fonts`        | Generates icon font (WOFF2, WOFF, TTF) + CSS/SCSS → `dist/packages/icons/fonts/` (no cache — font timestamps are non-deterministic) |
 | `build:types`        | Generates TS type definitions from `schema.json` → `dist/packages/icons/types/`                                                     |
@@ -76,11 +78,8 @@ yarn nx run-many -t build
 # Build a single package
 yarn nx run @koobiq/react-icons:build
 
-# Run full publish pipeline for one package (build → prepublish → publish)
-yarn nx run @koobiq/react-icons:nx-release-publish
-
-# Figma sync (exports SVGs from Figma, then copies to packages/icons/svg/)
-yarn nx run @koobiq/icons:figma:sync
+# Figma sync (runs `yarn clean`: yarn cache clean, nx reset, deletes temp/ and dist/; then exports SVGs from Figma and replaces packages/icons/svg/)
+yarn figma:sync
 
 # Lint all
 yarn nx run-many -t lint
@@ -129,7 +128,7 @@ Always dry-run first: `yarn release:preview`.
 ## Key conventions
 
 - `packages/icons/svg/` is the single source of truth for SVGs — do not edit files there manually; they are managed by `figma:sync`
-- `mapping.json` must be updated when icons are added/removed; run `yarn check-mapping` to validate
+- `mapping.json` must be updated when icons are added/removed; run `yarn check-mapping` to validate (every SVG has an entry, every entry has an SVG, codepoints are valid and unique)
 - Angular/React icon components are never committed — they're generated on the fly before `build`
   (`generate` target, `cache: false` in `nx.json`). React's `src/legacy/*` (deprecated aliases) are
   generated from `mapping-interop.json` entries whose old name ends in a size suffix (`_16` etc.)
