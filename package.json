@@ -16,7 +16,7 @@
         "symbols"
     ],
     "scripts": {
-        "prepare": "husky",
+        "postinstall": "husky",
         "clean": "yarn cache clean && nx reset && rimraf temp dist",
         "check-mapping": "node packages/icons/scripts/check-mapping.mjs",
         "-----DOCS-----": "---------------------------------------------------------------------------------",

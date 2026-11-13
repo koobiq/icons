@@ -3,15 +3,19 @@
 /** @type {import('@commitlint/types').UserConfig} */
 const config = {
     extends: ['@commitlint/config-conventional'],
-    'scope-enum': [
-        2,
-        'always',
-        [
-            // Dependabot scopes
-            'deps',
-            'deps-dev'
+    rules: {
+        'scope-enum': [
+            2,
+            'always',
+            [
+                // Dependabot scopes
+                'deps',
+                'deps-dev',
+                // `nx release` commits `chore(release): ...` through the commit-msg hook
+                'release'
+            ]
         ]
-    ]
+    }
 };
 
 module.exports = config;

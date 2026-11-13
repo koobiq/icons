@@ -22,7 +22,11 @@ jobs:
 
       - name: Commitlint
         if: ${{ github.event_name == 'pull_request' }}
-        run: echo "${{ github.event.pull_request.title }}" | yarn commitlint
+        # The title goes through an environment variable, not `${{ }}` in the script: an expression
+        # is pasted into the script before bash runs, so backticks or `$(...)` in a title would run.
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: printf '%s\n' "$PR_TITLE" | yarn commitlint
 
       - name: Linters
         run: |

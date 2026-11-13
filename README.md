@@ -13,7 +13,7 @@ Icon packages for the [Koobiq](https://koobiq.io) design system.
 
 ## Development
 
-**Prerequisites:** Node.js 20+, Yarn 4
+**Prerequisites:** Node.js from [`.nvmrc`](.nvmrc), Yarn 4
 
 ```sh
 yarn install
@@ -25,11 +25,13 @@ Build all packages:
 yarn nx run-many -t build
 ```
 
-Sync icons from Figma (requires `FIGMA_TOKEN` env variable):
+Sync icons from Figma (requires `FIGMA_TOKEN`, see [`.env.example`](.env.example)):
 
 ```sh
-yarn nx run @koobiq/icons:figma:sync
+yarn figma:sync
 ```
+
+How to request an icon, the commit rules and the pull request process are described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
