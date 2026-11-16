@@ -61,7 +61,7 @@ commitlint checks the commit message in the `commit-msg` hook and the pull reque
 ```
 
 - **type**: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore` or `revert`.
-- **scope** (optional): only `deps` and `deps-dev`, which Dependabot uses, and `release` for the release commit. Other changes go without a scope.
+- **scope** (optional): a directory name under `packages/` (`icons`, `angular-icons`, `react-icons`, `visuals`), `deps` and `deps-dev`, which Dependabot uses, or `release` for the release commit. Separate several scopes with commas: `fix(icons,react-icons): ...`. A change across the whole repository goes without a scope.
 - **subject**: in the imperative mood, starting with a lowercase letter, with no period at the end.
 - The header is at most 100 characters. Lines of the body and footer are at most 100 characters.
 - Team members put the task reference at the end of the subject: `(#DS-1234)`. Link a GitHub issue in the pull request description with `Closes #123`.
