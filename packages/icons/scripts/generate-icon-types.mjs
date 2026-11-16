@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const WORKSPACE_ROOT = join(__dirname, '../../..');
-const OUTPUT_DIR = join(WORKSPACE_ROOT, 'dist/packages/icons/icon-names');
+const TYPES_OUTPUT_DIR = join(WORKSPACE_ROOT, 'dist/packages/icons/types');
 const MAPPING_FILE = join(WORKSPACE_ROOT, 'mapping.json');
 const INTEROP_FILE = join(WORKSPACE_ROOT, 'mapping-interop.json');
 
@@ -17,6 +17,38 @@ function sortByName(values) {
 function quote(value) {
     return `'${value.replace(/'/g, "\\'")}'`;
 }
+
+function toPascalCase(name) {
+    const sizeMatch = name.match(/_(\d+)$/);
+    const size = sizeMatch ? sizeMatch[1] : '';
+    const base = sizeMatch ? name.slice(0, -sizeMatch[0].length) : name;
+
+    const pascal = base
+        .split(/[_-]+/)
+        .map((part) => (part.length ? part[0].toUpperCase() + part.slice(1).toLowerCase() : ''))
+        .join('');
+
+    const result = pascal + size;
+    return /^\d/.test(result) ? `I${result}` : result;
+}
+
+function dtsPropertyLine(pascalName, value, deprecatedToPreference) {
+    const preference = deprecatedToPreference[pascalName];
+    if (preference) {
+        return `    /** @deprecated Use \`${preference}\` instead. */\n    readonly ${pascalName}: ${quote(value)};`;
+    }
+    return `    readonly ${pascalName}: ${quote(value)};`;
+}
+
+function mjsPropertyLine(pascalName, value, deprecatedToPreference) {
+    const preference = deprecatedToPreference[pascalName];
+    if (preference) {
+        return `    /** @deprecated Use \`${preference}\` instead. */\n    ${pascalName}: ${quote(value)},`;
+    }
+    return `    ${pascalName}: ${quote(value)},`;
+}
+
+const CONSTANT_NAME = 'KbqIconNames';
 
 async function readJson(path) {
     return JSON.parse(await readFile(path, 'utf8'));
@@ -33,56 +65,73 @@ async function main() {
         throw new Error(`No icon names found in ${MAPPING_FILE}`);
     }
 
-    await mkdir(OUTPUT_DIR, { recursive: true });
+    const pascalNameByName = {};
+    const nameByPascalName = {};
+    for (const name of [...iconNames, ...deprecatedNames]) {
+        const pascalName = toPascalCase(name);
+        if (nameByPascalName[pascalName]) {
+            throw new Error(
+                `PascalCase name collision: both "${name}" and "${nameByPascalName[pascalName]}" map to "${pascalName}"`
+            );
+        }
+        pascalNameByName[name] = pascalName;
+        nameByPascalName[pascalName] = name;
+    }
 
-    // Remove stale files from the previous output location.
-    await rm(join(WORKSPACE_ROOT, 'dist/packages/icons/types/icon-name.d.ts'), { force: true });
-    await rm(join(WORKSPACE_ROOT, 'dist/packages/icons/types/icon-name.js'), { force: true });
+    const deprecatedToPreference = {};
+    for (const [preference, deprecated] of Object.entries(interop)) {
+        deprecatedToPreference[pascalNameByName[deprecated]] = pascalNameByName[preference];
+    }
 
-    const dts = [
+    const allNamesSet = {};
+    for (const name of iconNames) {
+        allNamesSet[name] = true;
+    }
+    for (const name of deprecatedNames) {
+        allNamesSet[name] = true;
+    }
+    const allNames = sortByName(Object.keys(allNamesSet)).map((name) => ({
+        name,
+        pascalName: pascalNameByName[name]
+    }));
+
+    await mkdir(TYPES_OUTPUT_DIR, { recursive: true });
+
+    // Remove stale files from earlier iterations.
+    await rm(join(TYPES_OUTPUT_DIR, 'icon-name.d.ts'), { force: true });
+    await rm(join(TYPES_OUTPUT_DIR, 'icon-name.js'), { force: true });
+    await rm(join(TYPES_OUTPUT_DIR, 'icon-name.d.mts'), { force: true });
+    await rm(join(TYPES_OUTPUT_DIR, '..', 'icon-names'), { force: true, recursive: true });
+
+    const namesDts = [
         HEADER,
         '/** All current icon names. */',
-        'export declare const KBQ_ICON_NAMES: {',
-        ...iconNames.map((name) => `    readonly ${quote(name)}: ${quote(name)};`),
+        `export declare const ${CONSTANT_NAME}: {`,
+        ...allNames.map(({ name, pascalName }) => dtsPropertyLine(pascalName, name, deprecatedToPreference)),
         '};',
         '',
         '/** All current icon names. */',
-        'export type KbqIconName = keyof typeof KBQ_ICON_NAMES;',
+        `export type KbqIconName = (typeof ${CONSTANT_NAME})[keyof typeof ${CONSTANT_NAME}];`,
         '',
-        '/** Backwards-compatible icon aliases.',
-        ' * @deprecated Use `KbqIconName` instead.',
-        ' */',
-        'export declare const KBQ_DEPRECATED_ICON_NAMES: {',
-        ...deprecatedNames.map((name) => `    readonly ${quote(name)}: ${quote(name)};`),
-        '};',
-        '',
-        '/** Backwards-compatible icon aliases.',
-        ' * @deprecated Use `KbqIconName` instead.',
-        ' */',
-        'export type KbqDeprecatedIconName = keyof typeof KBQ_DEPRECATED_ICON_NAMES;',
+        '/** Deprecated icon name aliases. */',
+        'export type KbqDeprecatedIconName =',
+        ...deprecatedNames.map((name) => `    | ${quote(pascalNameByName[name])}`),
         ''
     ].join('\n');
 
-    const mjs = [
+    const namesMjs = [
         HEADER,
         '/** All current icon names. */',
-        'export const KBQ_ICON_NAMES = {',
-        ...iconNames.map((name) => `    ${quote(name)}: ${quote(name)},`),
-        '};',
-        '',
-        '/** Backwards-compatible icon aliases.',
-        ' * @deprecated Use `KBQ_ICON_NAMES` instead.',
-        ' */',
-        'export const KBQ_DEPRECATED_ICON_NAMES = {',
-        ...deprecatedNames.map((name) => `    ${quote(name)}: ${quote(name)},`),
+        `export const ${CONSTANT_NAME} = {`,
+        ...allNames.map(({ name, pascalName }) => mjsPropertyLine(pascalName, name, deprecatedToPreference)),
         '};',
         ''
     ].join('\n');
 
-    await writeFile(join(OUTPUT_DIR, 'icon-name.d.ts'), dts, 'utf8');
-    await writeFile(join(OUTPUT_DIR, 'icon-name.mjs'), mjs, 'utf8');
+    await writeFile(join(TYPES_OUTPUT_DIR, 'names.d.ts'), namesDts, 'utf8');
+    await writeFile(join(TYPES_OUTPUT_DIR, 'names.mjs'), namesMjs, 'utf8');
 
-    console.log(`✅ Generated icon-name types (${iconNames.length} icons + ${deprecatedNames.length} aliases)`);
+    console.log(`✅ Generated icon name types (${iconNames.length} current + ${deprecatedNames.length} aliases)`);
 }
 
 main().catch((err) => {

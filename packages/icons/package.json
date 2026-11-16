@@ -24,9 +24,9 @@
         "symbols"
     ],
     "exports": {
-        "./icon-names/*": {
-            "types": "./icon-names/*.d.ts",
-            "default": "./icon-names/*.mjs"
+        "./types/names": {
+            "types": "./types/names.d.ts",
+            "default": "./types/names.mjs"
         },
         "./*": {
             "types": "./*.d.ts",
