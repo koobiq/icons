@@ -5700,5 +5700,13 @@
     "layer-pair_24": {
         "codepoint": "0xF9DE",
         "tags": ["two layers", "облегченный аудит", "пара слоев", "слои"]
+    },
+    "text-strikethrough_16": {
+        "codepoint": "0xF9DF",
+        "tags": ["crossed-out text", "linethrough", "зачеркивание", "зачеркнутый текст"]
+    },
+    "text-strikethrough_24": {
+        "codepoint": "0xF9E0",
+        "tags": ["crossed-out text", "linethrough", "зачеркивание", "зачеркнутый текст"]
     }
 }
