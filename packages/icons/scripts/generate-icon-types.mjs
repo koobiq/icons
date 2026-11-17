@@ -113,7 +113,7 @@ async function main() {
         '/** All current icon names. */',
         `export type KbqIconName = (typeof ${CONSTANT_NAME})[keyof typeof ${CONSTANT_NAME}];`,
         '',
-        '/** Deprecated icon name aliases. */',
+        '/** @deprecated icon name aliases. Use `KbqIconName` instead */',
         'export type KbqDeprecatedIconName =',
         ...deprecatedNames.map((name) => `    | ${quote(pascalNameByName[name])}`),
         ''
