@@ -5708,5 +5708,37 @@
     "text-strikethrough_24": {
         "codepoint": "0xF9E0",
         "tags": ["crossed-out text", "linethrough", "зачеркивание", "зачеркнутый текст"]
+    },
+    "braces_16": {
+        "codepoint": "0xF9E1",
+        "tags": ["curly braces", "фигурные скобки"]
+    },
+    "braces_24": {
+        "codepoint": "0xF9E2",
+        "tags": ["curly braces", "фигурные скобки"]
+    },
+    "equal_16": {
+        "codepoint": "0xF9E3",
+        "tags": ["равенство", "равно"]
+    },
+    "equal_24": {
+        "codepoint": "0xF9E4",
+        "tags": ["равенство", "равно"]
+    },
+    "heading_16": {
+        "codepoint": "0xF9E5",
+        "tags": ["header", "заголовок"]
+    },
+    "heading_24": {
+        "codepoint": "0xF9E6",
+        "tags": ["header", "заголовок"]
+    },
+    "equal-slash_16": {
+        "codepoint": "0xF9E7",
+        "tags": ["inequality", "not equal", "не равно", "неравенство"]
+    },
+    "equal-slash_24": {
+        "codepoint": "0xF9E8",
+        "tags": ["inequality", "not equal", "не равно", "неравенство"]
     }
 }
