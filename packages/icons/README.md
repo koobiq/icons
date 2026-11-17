@@ -6,7 +6,7 @@
 npm i @koobiq/icons
 ```
 
-# Adding or changing an icon
+## Adding or changing an icon
 
 Icons are drawn in Figma and exported into the [koobiq/icons](https://github.com/koobiq/icons) repository. How to request an icon, how the export works and how a change gets released are described in [CONTRIBUTING.md](https://github.com/koobiq/icons/blob/main/CONTRIBUTING.md).
 
