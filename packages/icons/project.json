@@ -31,7 +31,7 @@
             "executor": "nx:run-commands",
             "cache": false,
             "options": {
-                "command": "fantasticon --config .fantasticonrc.js && node scripts/generate-versioned-font.js && node scripts/generate-codes-scss.js",
+                "command": "rimraf ../../dist/packages/icons/fonts && fantasticon --config .fantasticonrc.js && node scripts/generate-versioned-font.js && node scripts/generate-codes-scss.js && node scripts/patch-font-metadata.js",
                 "cwd": "{projectRoot}"
             }
         },
