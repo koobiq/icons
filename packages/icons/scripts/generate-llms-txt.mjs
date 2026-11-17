@@ -127,9 +127,10 @@ ${lines.join('\n')}
 ## Docs
 - [Full icon reference](llms-full.txt) — every icon name, its sizes, tags, and React/Angular imports
 - [SVG color-zones guide](packages/icons/README.md) — duotone icon usage
+- [Icon codes in Sass](packages/icons/README.md) — an icon's font character by name for \`content\` or a custom property, instead of a hardcoded codepoint
 
 ## Packages
-- [\`@koobiq/icons\`](packages/icons/README.md) — SVG source, icon font, SVG sprite, TS types
+- [\`@koobiq/icons\`](packages/icons/README.md) — SVG source, icon font, Sass icon codes, SVG sprite, TS types
 - [\`@koobiq/angular-icons\`](packages/angular-icons/README.md) — Angular standalone components
 - [\`@koobiq/react-icons\`](packages/react-icons/README.md) — React components
 - [\`@koobiq/visuals\`](packages/visuals/README.md) — static illustrations

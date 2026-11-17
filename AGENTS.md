@@ -10,7 +10,7 @@ NX monorepo (Yarn 4 workspaces) for the Koobiq design system icon packages. Publ
 
 ```
 packages/
-  icons/          @koobiq/icons          — SVG source files, icon font, SVG sprite, type definitions
+  icons/          @koobiq/icons          — SVG source files, icon font, Sass icon codes, SVG sprite, type definitions
   angular-icons/  @koobiq/angular-icons  — Angular standalone components generated from SVGs
   react-icons/    @koobiq/react-icons    — React components generated from SVGs (Vite build)
   visuals/        @koobiq/visuals        — Static PNG illustrations (light/dark themes)
@@ -59,7 +59,7 @@ packages/icons/svg/          ← source SVGs (populated by figma:sync)
 | `figma:export-icons` | Exports SVGs from Figma via `.figmaexportrc.mjs` (icons only, no cache)                                                             |
 | `figma:sync`         | Copies exported SVGs from `temp/svg` into `packages/icons/svg/` (no cache)                                                          |
 | `build:sprite`       | Generates SVG symbol sprite → `dist/packages/icons/symbol/`                                                                         |
-| `build:fonts`        | Generates icon font (WOFF2, WOFF, TTF) + CSS/SCSS → `dist/packages/icons/fonts/` (no cache — font timestamps are non-deterministic) |
+| `build:fonts`        | Icon font (WOFF2, WOFF, TTF), CSS/SCSS and the Sass codes module → `dist/packages/icons/fonts/` (no cache — font timestamps differ) |
 | `build:types`        | Generates TS type definitions from `schema.json` → `dist/packages/icons/types/`                                                     |
 | `generate`           | Generates Angular/React components from SVGs in `packages/icons/svg/`                                                               |
 | `verify-generated`   | Statically checks the `generate` output (AST-level, no render) against the source SVGs; `build` depends on it, no cache             |
@@ -141,3 +141,7 @@ Always dry-run first: `yarn release:preview`.
 - `llms.txt`/`llms-full.txt` are regenerated automatically before each release (`nx release`'s `preVersionCommand`, see `nx.json`) — skipped under `--dry-run`, so `yarn release:preview` leaves the working tree alone; run `yarn generate:llms` manually if you want to preview the update sooner
 - Angular component class names: `Kbq{PascalCase}` — selector: `kbq{PascalCase}` (attribute on `<svg>`)
 - React component names: `Icon{PascalCase}{Size}` — exported as named exports from the package index
+- `fonts/kbq-icons-codes.scss` (and `kbq-icons-codes-<version>.scss` for the versioned font) is a Sass module that `build:fonts`
+  generates from the same `mapping.json`/`mapping-interop.json` as the font: `code('name')` returns the icon's character
+  as a CSS string for `content` or a custom property, `@error`s on an unknown name and `@warn`s on an old name from
+  `mapping-interop.json`
