@@ -1,6 +1,6 @@
 const packageJSON = require('../package.json');
 const fs = require('fs');
-const { Handlebars, codepoints, fontTypes } = require('./fantasticicon-utils');
+const { Handlebars, codepoints, fontFamily, fontTypes } = require('./fantasticicon-utils');
 const { generateFonts, OtherAssetType } = require('fantasticon');
 
 if (!fs.existsSync('./svg')) {
@@ -15,7 +15,7 @@ Handlebars.registerPartial(
     'fontFace',
     `
 @font-face {
-   font-family: "Koobiq Icons ${packageJSON.version}";
+   font-family: "${fontFamily} ${packageJSON.version}";
    font-weight: normal;
    font-style: normal;
    src: {{{ fontSrc }}};
@@ -26,7 +26,7 @@ Handlebars.registerPartial(
     'selector',
     `
 .kbq {
-font-family: "Koobiq Icons ${packageJSON.version}";
+font-family: "${fontFamily} ${packageJSON.version}";
 display:inline-block;
 vertical-align:middle;
 line-height:1;

@@ -1,6 +1,6 @@
 const fs = require('fs');
 const packageJSON = require('./package.json');
-const { Handlebars, codepoints, fontTypes } = require('./scripts/fantasticicon-utils');
+const { Handlebars, codepoints, fontFamily, fontTypes } = require('./scripts/fantasticicon-utils');
 
 if (!fs.existsSync('./svg')) {
     console.error('SVG source directory not found. Run figma:sync first.');
@@ -14,7 +14,7 @@ Handlebars.registerPartial(
     'fontFace',
     `
 @font-face {
-   font-family: "Koobiq Icons";
+   font-family: "${fontFamily}";
    font-weight: normal;
    font-style: normal;
    src: {{{ fontSrc }}};
@@ -26,7 +26,7 @@ Handlebars.registerPartial(
     'selector',
     `
 .kbq {
-font-family: "Koobiq Icons";
+font-family: "${fontFamily}";
 display:inline-block;
 vertical-align:middle;
 line-height:1;

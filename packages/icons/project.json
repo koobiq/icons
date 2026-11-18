@@ -31,7 +31,7 @@
             "executor": "nx:run-commands",
             "cache": false,
             "options": {
-                "command": "fantasticon --config .fantasticonrc.js && node scripts/generate-versioned-font.js",
+                "command": "fantasticon --config .fantasticonrc.js && node scripts/generate-versioned-font.js && node scripts/generate-codes-scss.js",
                 "cwd": "{projectRoot}"
             }
         },

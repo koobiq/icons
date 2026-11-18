@@ -1,23 +1,23 @@
 # Koobiq Icons
 
-# How to use package
+## How to use package
 
 ```sh
 npm i @koobiq/icons
 ```
 
-# Adding or changing an icon
+## Adding or changing an icon
 
 Icons are drawn in Figma and exported into the [koobiq/icons](https://github.com/koobiq/icons) repository. How to request an icon, how the export works and how a change gets released are described in [CONTRIBUTING.md](https://github.com/koobiq/icons/blob/main/CONTRIBUTING.md).
 
-# SVG Color Zones Guide
+## SVG Color Zones Guide
 
-## Overview
+### Overview
 
 This guide explains how duotone icons are structured for dynamic styling via CSS,
 allowing different parts (zones) to be colored separately using `fill` and `color`.
 
-## How It Works
+### How It Works
 
 In the final SVG output:
 
@@ -33,7 +33,7 @@ svg {
 }
 ```
 
-## Figma Conventions
+### Figma Conventions
 
 Zones are detected by **Figma layer name**, not by color. This is the contract
 between the Figma design file and the build system:
@@ -55,7 +55,7 @@ colors in Figma. Any baked color, inline `style`, and `fill-opacity` are strippe
 on export — transparency and color are controlled via CSS in the design system, not
 baked into the SVG.
 
-## Implementation
+### Implementation
 
 The zone splitting happens during `figma:sync` via the `split-zones` SVGO plugin in
 [`.figmaexportrc.mjs`](../../.figmaexportrc.mjs):
@@ -64,3 +64,29 @@ The zone splitting happens during `figma:sync` via the `split-zones` SVGO plugin
 - Set secondary-zone (`shape-2`) nodes to `fill="var(--icon-accent-color, currentColor)"`.
 - Strip baked `style`, `color`, `class`, and `fill-opacity` so color/opacity stay
   CSS-driven.
+
+## Icon codes in Sass
+
+Some styles need an icon's character rather than a `.kbq-*` class: `content` or a custom property.
+Instead of hardcoding codepoints like `'\f733'`, take them by name from the `kbq-icons-codes` Sass module:
+
+```scss
+@use '@koobiq/icons/fonts/kbq-icons'; // loads the font
+@use '@koobiq/icons/fonts/kbq-icons-codes' as icons;
+
+.download::before {
+    font-family: icons.$font-family; // "Koobiq Icons"
+    content: icons.code('arrow-down_16'); // "\f733"
+}
+
+:root {
+    --download-icon: #{icons.code('arrow-down_16')}; // custom properties take a value through #{}
+}
+```
+
+- An unknown name stops the build, so a typo or a removed icon can't silently become an empty glyph.
+- An old name from `mapping-interop.json` still works and warns with the name that replaced it.
+- `icons.code()` keeps the escape and the quotes in compressed output and inside `#{}`.
+- `icons.$codes` (name → hex digits) and `icons.$deprecated` (old name → new name) are public maps.
+- The versioned font has its own module, `kbq-icons-codes-<version>`, whose `$font-family` is the
+  versioned family name.
