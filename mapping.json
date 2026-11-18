@@ -2152,7 +2152,7 @@
     "arrow-down-to-bracket_16": {
         "codepoint": "0xF736",
         "description": "",
-        "tags": ["download", "вниз", "загрузить", "скачать", "стрелка"]
+        "tags": ["download", "export", "вниз", "скачать", "стрелка", "экспортировать"]
     },
     "arrow-left_16": {
         "codepoint": "0xF737",
@@ -2219,7 +2219,7 @@
     "arrow-up-from-bracket_16": {
         "codepoint": "0xF744",
         "description": "",
-        "tags": []
+        "tags": ["share", "поделиться"]
     },
     "arrow-up-s_16": {
         "codepoint": "0xF745",
@@ -3418,7 +3418,7 @@
     "arrow-down-to-bracket_24": {
         "codepoint": "0xF832",
         "description": "",
-        "tags": ["download", "вниз", "скобка", "стрелка"]
+        "tags": ["download", "export", "вниз", "скачать", "стрелка", "экспортировать"]
     },
     "arrow-down-to-line_24": {
         "codepoint": "0xF833",
@@ -3533,12 +3533,12 @@
     "arrow-up-from-bracket_24": {
         "codepoint": "0xF849",
         "description": "",
-        "tags": []
+        "tags": ["share", "поделиться"]
     },
     "arrow-up-from-rectangle_24": {
         "codepoint": "0xF84A",
         "description": "",
-        "tags": ["upload", "вверх", "прямоугольник", "стрелка"]
+        "tags": ["share", "поделиться"]
     },
     "arrow-up-left_24": {
         "codepoint": "0xF84B",
@@ -5541,11 +5541,11 @@
     },
     "arrow-up-to-bracket_16": {
         "codepoint": "0xF9C5",
-        "tags": ["share", "поделиться"]
+        "tags": ["import", "upload", "вверх", "загрузить", "импортировать", "стрелка"]
     },
     "arrow-up-to-bracket_24": {
         "codepoint": "0xF9C6",
-        "tags": ["share", "поделиться"]
+        "tags": ["import", "upload", "вверх", "загрузить", "импортировать", "стрелка"]
     },
     "list-circle-xmark_16": {
         "codepoint": "0xF9C7",
