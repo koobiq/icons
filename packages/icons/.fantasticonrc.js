@@ -1,6 +1,8 @@
 const fs = require('fs');
 const packageJSON = require('./package.json');
-const { Handlebars, codepoints, fontFamily, fontTypes } = require('./scripts/fantasticicon-utils');
+const { Handlebars, codepoints, fontFamily, fontMetadata, fontTypes } = require('./scripts/fantasticicon-utils');
+
+const majorMinor = packageJSON.version.split('.').slice(0, 2).join('.');
 
 if (!fs.existsSync('./svg')) {
     console.error('SVG source directory not found. Run figma:sync first.');
@@ -59,10 +61,11 @@ module.exports = {
     },
     formatOptions: {
         ttf: {
-            url: packageJSON.url,
+            ...fontMetadata,
             description: packageJSON.description,
-            // font version must contain only major and minor
-            version: packageJSON.version.slice(0, -2)
+            familyname: fontFamily,
+            fullname: fontFamily,
+            version: majorMinor
         }
     },
     fontHeight: 512,
