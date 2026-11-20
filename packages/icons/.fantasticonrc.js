@@ -1,6 +1,6 @@
 const fs = require('fs');
 const packageJSON = require('./package.json');
-const { Handlebars, codepoints, fontFamily, fontTypes } = require('./scripts/fantasticicon-utils');
+const { Handlebars, codepoints, fontFamily, fontMetadata, fontTypes } = require('./scripts/fantasticicon-utils');
 
 const majorMinor = packageJSON.version.split('.').slice(0, 2).join('.');
 
@@ -61,11 +61,10 @@ module.exports = {
     },
     formatOptions: {
         ttf: {
-            url: 'https://github.com/koobiq/icons',
+            ...fontMetadata,
             description: packageJSON.description,
-            copyright: 'Copyright (c) 2026 Koobiq Team',
-            familyname: 'Koobiq Icons',
-            fullname: 'Koobiq Icons',
+            familyname: fontFamily,
+            fullname: fontFamily,
             version: majorMinor
         }
     },

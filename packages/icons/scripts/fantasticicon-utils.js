@@ -66,10 +66,21 @@ const fontTypes = ['woff2', 'woff', 'ttf'];
 // `font-family` of the icon font; the versioned font appends the package version to it
 const fontFamily = 'Koobiq Icons';
 
+const fontMetadata = {
+    copyright: 'Copyright (c) 2026 Koobiq Team',
+    manufacturer: 'Koobiq',
+    designer: 'Koobiq Team',
+    license: 'MIT License',
+    licenseURL: 'https://github.com/koobiq/icons/blob/main/LICENSE',
+    url: 'https://github.com/koobiq/icons',
+    achVendID: 'KBQ '
+};
+
 module.exports = {
     codepoints,
     deprecatedNames,
     fontFamily,
+    fontMetadata,
     fontTypes,
     Handlebars,
     mapping
