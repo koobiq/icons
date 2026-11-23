@@ -16,7 +16,7 @@
         "symbols"
     ],
     "scripts": {
-        "postinstall": "husky",
+        "postinstall": "husky && patch-package",
         "clean": "yarn cache clean && nx reset && rimraf temp dist",
         "check-mapping": "node packages/icons/scripts/check-mapping.mjs",
         "-----DOCS-----": "---------------------------------------------------------------------------------",
@@ -75,6 +75,7 @@
         "lint-staged": "^15.5.2",
         "ng-packagr": "^19",
         "nx": "^20.8.4",
+        "patch-package": "^8.0.1",
         "prettier": "^3.9.10",
         "rimraf": "^5.0.10",
         "svg-sprite": "^2.0.4",

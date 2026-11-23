@@ -1,7 +1,9 @@
 const packageJSON = require('../package.json');
 const fs = require('fs');
-const { Handlebars, codepoints, fontFamily, fontTypes } = require('./fantasticicon-utils');
+const { Handlebars, codepoints, fontFamily, fontMetadata, fontTypes } = require('./fantasticicon-utils');
 const { generateFonts, OtherAssetType } = require('fantasticon');
+
+const majorMinor = packageJSON.version.split('.').slice(0, 2).join('.');
 
 if (!fs.existsSync('./svg')) {
     console.error('SVG source directory not found at ./svg');
@@ -59,10 +61,11 @@ generateFonts({
     },
     formatOptions: {
         ttf: {
-            url: packageJSON.url,
+            ...fontMetadata,
             description: packageJSON.description,
-            // font version must contain only major and minor
-            version: packageJSON.version.slice(0, -2)
+            familyname: fontFamily,
+            fullname: `${fontFamily} ${packageJSON.version}`,
+            version: majorMinor
         }
     },
     fontHeight: 512,
